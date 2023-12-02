@@ -1,0 +1,21 @@
+.contactButton {
+	display: inline-block;
+	padding: 5px 40px;
+	border: 1px solid #333; /* Adjust to match the design */
+	border-radius: 20px;
+	text-decoration: none;
+	color: #333; /* Adjust to match the design */
+	font-weight: bold;
+	transition: background-color 0.3s, color 0.3s;
+	font-family: "Montserrat", sans-serif;
+	margin: 15px 0;
+}
+
+.contactButton:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+.getInTouchSection p {
+
+}

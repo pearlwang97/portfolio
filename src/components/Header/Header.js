@@ -1,45 +1,125 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { styled } from "@mui/material/styles";
 import "./Header.css";
+
+const Nav = styled("nav")(({ theme }) => ({
+	padding: "0 20px",
+	minHeight: "9vh",
+	background: "#fefcf3",
+	display: "flex",
+	justifyContent: "space-between",
+	alignItems: "center",
+}));
+
+const Logo = styled("img")(({ theme }) => ({
+	width: "60px",
+	height: "50px",
+}));
+
+const OverLay = styled("div")(({ open, theme }) => ({
+	position: "absolute",
+	height: open ? "91vh" : 0,
+	width: "100vw",
+	background: "#fefcf3",
+	transition: "height 0.4s ease-in-out",
+	zIndex: 1,
+	[theme.breakpoints.up("md")]: {
+		display: "none",
+	},
+}));
+
+const Menu = styled('ul')(({ theme }) => ({
+	listStyle: 'none',
+	display: 'flex',
+	'& li:nth-child(2)': {
+	  margin: '0px 20px',
+	},
+	[theme.breakpoints.down('md')]: {
+	  display: 'none',
+	},
+  }));
+
+const Line = styled("span")(({ open, theme, isSecond }) => ({
+    display: "block",
+    borderRadius: "50px",
+    width: isSecond ? (open ? "40%" : "70%") : "25px",
+    height: "3px",
+    margin: "5px",
+    backgroundColor: "black",
+    transition: "width 0.4s ease-in-out",
+}));
+
+const OverLayMenu = styled("ul")(({ open, theme }) => ({
+	listStyle: "none",
+	position: "absolute",
+	left: "50%",
+	top: "45%",
+	transform: "translate(-50%, -50%)",
+	'& li': {
+		opacity: open ? 1 : 0,
+		fontSize: "25px",
+		margin: "50px 0px",
+		transition: "opacity 0.4s ease-in-out",
+	  },
+	  '& li:nth-child(2)': {
+		margin: "50px 0px",
+	  }
+}));
+
+const NavItem = styled(Link)(({ theme }) => ({
+    color: 'black',
+    textDecoration: 'none',
+    '&:hover': {
+        textDecoration: 'underline',
+    }
+}));
+
+const NavIcon = styled("button")(({ open, theme }) => ({
+	background: 'none',
+	cursor: 'pointer',
+	border: 'none',
+	outline: 'none',
+	[theme.breakpoints.up("md")]: {
+		display: "none",
+	},
+  }));
 
 const Header = () => {
 	const [toggle, toggleNav] = useState(false);
 	return (
 		<>
-			<nav className="nav">
-				<Link className="navItem" to="/">
-					<img className="brandLogo" src="/images/logo.png" alt="Logo" />
-				</Link>
-				<ul className="menu">
+			<Nav>
+				<NavItem to="/">
+					<Logo src="/images/logo.png" alt="Logo" />
+				</NavItem>
+				<Menu>
 					<li>
-						<Link className="navItem" to="/uxdesign">
+						<NavItem to="/uxdesign">
 							UX/UI Design
-						</Link>
+						</NavItem>
 					</li>
 					<li>
-						<Link className="navItem" to="/visualdesign">
+						<NavItem to="/visualdesign">
 							Visual Design
-						</Link>
+						</NavItem>
 					</li>
 					<li>
-						<Link className="navItem" to="/about">
-							Visual Design
-						</Link>
+						<NavItem to="/about">
+							About
+						</NavItem>
 					</li>
-				</ul>
-				<button className="navIcon" onClick={() => toggleNav(!toggle)}>
-					<span className="line" open={toggle} />
-					<span
-						className={`line ${toggle ? "line-short" : "line-long"}`}
-						open={toggle}
-					/>
-					<span className="line" open={toggle} />
-				</button>
-			</nav>
-			<div className={`overlay ${toggle ? "overlay-open" : ""}`}>
-				<ul className="overlay-menu" open={toggle}>
-					<li className={toggle ? "li-visible" : "li-unvisible"}>
-						<Link
+				</Menu>
+				<NavIcon onClick={() => toggleNav(!toggle)}>
+					<Line open={toggle} />
+					<Line open={toggle} isSecond/>
+					<Line open={toggle} />
+				</NavIcon>
+			</Nav>
+			<OverLay className="abc" open={toggle}>
+				<OverLayMenu open={toggle}>
+					<li>
+						<NavItem
 							className="navItem"
 							to="/uxdesign"
 							onClick={() => {
@@ -47,10 +127,10 @@ const Header = () => {
 							}}
 						>
 							UX/UI Design
-						</Link>
+						</NavItem>
 					</li>
-					<li className={toggle ? "li-visible" : "li-unvisible"}>
-						<Link
+					<li>
+						<NavItem
 							className="navItem"
 							to="/visualdesign"
 							onClick={() => {
@@ -58,21 +138,21 @@ const Header = () => {
 							}}
 						>
 							Visual Design
-						</Link>
+						</NavItem>
 					</li>
-					<li className={toggle ? "li-visible" : "li-unvisible"}>
-						<Link
+					<li>
+						<NavItem
 							className="navItem"
 							to="/about"
 							onClick={() => {
 								toggleNav(false);
 							}}
 						>
-							Visual Design
-						</Link>
+							About
+						</NavItem>
 					</li>
-				</ul>
-			</div>
+				</OverLayMenu>
+			</OverLay>
 		</>
 	);
 };
