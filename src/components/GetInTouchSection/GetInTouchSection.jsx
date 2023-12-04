@@ -1,8 +1,65 @@
 import React from "react";
 import { Box } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import "./GetInTouchSection.css";
 
+const StyledH2 = styled("h2")(({ theme }) => ({
+	fontSize: "2.5rem",
+	fontWeight: "bold",
+	textAlign: "center",
+	marginBottom: "50px",
+	[theme.breakpoints.down("md")]: {
+	  fontSize: "2rem",
+	  marginBottom: "25px",
+	},
+	[theme.breakpoints.down("sm")]: {
+	  fontSize: "1.5rem",
+	  marginBottom: "10px",
+	},
+  }));
+
+const StyledP = styled("p")(({ theme }) => ({
+    fontSize: "1rem",
+    textAlign: "center",
+    marginBottom: "40px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "0.75rem",
+      marginBottom: "20px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "0.5rem",
+      marginBottom: "10px",
+    },
+  }));
+
+  const StyledButton = styled("a")(({ theme }) => ({
+    display: "inline-block",
+    padding: "10px 30px",
+    borderRadius: "5px",
+    textDecoration: "none",
+    backgroundColor: "#F0DBDB",
+    color: "#250D00",
+    fontWeight: "bold",
+    transition: "background-color 0.3s, color 0.3s",
+    fontFamily: "'Montserrat', sans-serif",
+    margin: "15px 0",
+    '&:hover': {
+      backgroundColor: "#250D00",
+      color: "#F0DBDB",
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: "5px 15px",
+      fontSize: "0.8rem",
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: "5px 10px",
+      fontSize: "0.7rem",
+    },
+  }));
+
 const SocialMediaSection = () => {
+  const emailAddress = "pearlwang1997@gmail.com";
+  const mailtoHref = `mailto:${emailAddress}`;
 	return (
 		<Box
             className="getInTouchSection"
@@ -12,14 +69,14 @@ const SocialMediaSection = () => {
                 backgroundColor: "#fefcf3",
                 color: "#250d00",
                 paddingTop: "100px",
-
+                pb: "50px",
             }}
         >
-			<h2>Get In Touch</h2>
-			<p>
+			<StyledH2>Get In Touch</StyledH2>
+			<StyledP>
 				Currently looking for new opportunities, please feel free to reach out.
-			</p>
-            <a href="" class="contactButton">Contact</a>
+			</StyledP>
+            <StyledButton href={mailtoHref} target="_blank">Contact</StyledButton>
 		</Box>
 	);
 };

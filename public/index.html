@@ -21,6 +21,7 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+		<link rel="stylesheet" href="%PUBLIC_URL%/fonts.css" />
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 		<!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -32,11 +33,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 		<style>
-			@import url(https://fonts.googleapis.com/css?family=Audiowide);
 			@font-face {
 				font-family: "NewYork";
-				src: url("./fonts/newYork.otf") format("opentype");
-				font-display: swap;
+				src: url("./fonts/NewYork.otf") format("opentype");
 			}
 			.container {
 				height: 100vh;
@@ -55,7 +54,7 @@
 				font-weight: normal;
 				letter-spacing: 4px;
 				text-transform: uppercase;
-				font-family: 'NewYork', sans-serif;
+				font-family: "NewYork", sans-serif;
 				color: #dba39a;
 				animation-name: bounce;
 				animation-duration: 2s;
@@ -115,7 +114,7 @@
 				}
 			}
 		</style>
-		<title>React App</title>
+		<title>Peirong Wang | UI/UX Designer | Graphic Designer</title>
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
