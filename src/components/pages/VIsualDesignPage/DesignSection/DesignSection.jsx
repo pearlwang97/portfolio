@@ -86,6 +86,7 @@ const SubTitle = styled("p")(({ textAlign, theme }) => ({
 		fontSize: "1cqw",
 		textAlign: textAlign,
 	},
+	fontFamily: "utopia-std, serif",
 }));
 
 const DesignDescription = styled("p")(({ textAlign, theme }) => ({
@@ -112,6 +113,7 @@ const Title = styled("h3")(({ theme }) => ({
 		// margin: '10px 0',
 		fontSize: "7cqw",
 	},
+	fontFamily: "utopia-std, serif",
 }));
 
 const StyledImage = styled("img")({
@@ -154,7 +156,7 @@ const DesignSection = () => {
 					<TitleContainer textAlign="right">
 						<Title>01</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="prject-3">
+						<StyledLink to="/project-3">
 							<Title>2D Realistic Radio Vector Art</Title>
 						</StyledLink>
 					</TitleContainer>
@@ -195,7 +197,7 @@ const DesignSection = () => {
 					<TitleContainer textAlign="left">
 						<Title>02</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/prject-4">
+						<StyledLink to="/project-4">
 							<Title>BloomBox Logo Deisgn</Title>
 						</StyledLink>
 					</TitleContainer>
@@ -235,7 +237,7 @@ const DesignSection = () => {
 					}}
 				>
 					<StyledLink to="/project-4">
-						<StyledImage src="/images/design-4.png" />
+						<StyledImage src="/images/design-4.png" alt="bloomBlox photo"/>
 					</StyledLink>
 				</ImageContainer>
 			</StyledContainer>

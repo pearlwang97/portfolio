@@ -86,6 +86,7 @@ const SubTitle = styled("p")(({ textAlign, theme }) => ({
 		fontSize: "1cqw",
 		textAlign: textAlign,
 	},
+	fontFamily: "utopia-std, serif",
 }));
 
 const DesignDescription = styled("p")(({ textAlign, theme }) => ({
@@ -112,6 +113,10 @@ const Title = styled("h3")(({ theme }) => ({
 		// margin: '10px 0',
 		fontSize: "7cqw",
 	},
+    '&:hover': { // Add this block
+		textDecoration: "underline",
+    },
+	fontFamily: "utopia-std, serif",
 }));
 
 const StyledImage = styled("img")({
@@ -147,7 +152,7 @@ const DesignSection = () => {
 			<StyledContainer marginBottom="30px">
 				<ImageContainer width="58%">
 					<StyledLink to="/project-1">
-						<StyledImage src="/images/design-1.png" />
+						<StyledImage src="/images/design-1.png" alt="domino cover"/>
 					</StyledLink>
 				</ImageContainer>
 				<ImageContainer width="36%">
@@ -239,7 +244,7 @@ const DesignSection = () => {
 					}}
 				>
 					<StyledLink to="/project-2">
-						<StyledImage src="/images/design-2.png" />
+						<StyledImage src="/images/design-2.png" alt="bloom photo"/>
 					</StyledLink>
 				</ImageContainer>
 			</StyledContainer>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
 const Nav = styled("nav")(({ theme }) => ({
@@ -9,6 +9,7 @@ const Nav = styled("nav")(({ theme }) => ({
 	display: "flex",
 	justifyContent: "space-between",
 	alignItems: "center",
+	fontSize: "1.1rem",
 }));
 
 const Logo = styled("img")(({ theme }) => ({
@@ -66,12 +67,20 @@ const OverLayMenu = styled("ul")(({ open, theme }) => ({
 	  }
 }));
 
-const NavItem = styled(Link)(({ theme }) => ({
+const NavItem = styled(NavLink)(({ theme }) => ({
     color: 'black',
     textDecoration: 'none',
+	margin: "0 30px",
+	fontFamily: "'Montserrat', sans-serif",
     '&:hover': {
         textDecoration: 'underline',
-    }
+    },
+    '&.active': {
+        textDecoration: 'underline',
+    },
+    [theme.breakpoints.down('sm')]: {
+		fontSize: '0.8rem',
+    },
 }));
 
 const NavIcon = styled("button")(({ open, theme }) => ({
@@ -120,7 +129,7 @@ const Header = () => {
 					<li>
 						<NavItem
 							className="navItem"
-							to="/visualdesgin"
+							to="/uxdesign"
 							onClick={() => {
 								toggleNav(false);
 							}}
@@ -131,7 +140,7 @@ const Header = () => {
 					<li>
 						<NavItem
 							className="navItem"
-							to="/uxdesign"
+							to="/visualdesign"
 							onClick={() => {
 								toggleNav(false);
 							}}

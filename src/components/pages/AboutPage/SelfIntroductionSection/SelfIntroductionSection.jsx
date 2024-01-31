@@ -49,6 +49,7 @@ const StyledH2 = styled("h2")(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		fontSize: "1.5rem",
 	},
+	fontFamily: "utopia-std, serif",
 }));
 
 const StyledP = styled("p")(({ theme }) => ({
@@ -86,13 +87,13 @@ const SelfIntroductionSection = () => {
 		>
 			<StyledContainer>
 				<ImageContainer sx={{ position: "relative" }}width="37%">
-					<StyledImage src="/images/selfie.png" alt="perong" />
-					<SpinImage sx={{width : "20%", position: "absolute", top: 0, left: 0, zIndex: 2}}src="/images/flower.png" alt="perong" />
+					<StyledImage src="/images/selfie.png" alt="peirong wang selfies" />
+					<SpinImage sx={{width : "20%", position: "absolute", top: 0, left: 0, zIndex: 2}}src="/images/flower.png" alt="spinning flower" />
 				</ImageContainer>
 				<ImageContainer width="61%" sx={{ containerType: "inline-size"}}>
 					<StyledH2>Hiii</StyledH2>
-					<StyledH2>I'm Perong!</StyledH2>
-					<StyledP>
+					<StyledH2>I'm Peirong!</StyledH2>
+					<StyledP sx={{lineHeight: "2rem"}}>
 						I'm passionate with a love for design. Born in China and having
 						relocated to Vancouver during my high school years, I've had the
 						chance to experience two distinct worlds and cultures. My past
@@ -102,7 +103,7 @@ const SelfIntroductionSection = () => {
 						vibrant pop culture. In my free time, I enjoy crafting, doing nail
 						art, playing games and hiking with my dog.
 					</StyledP>
-					<StyledP>
+					<StyledP sx={{lineHeight: "2rem"}}>
 						Driven by a foundational background in economics from the University
 						of Victoria, my journey into New Media was serendipitous. I stumbled
 						upon my passion for digital design after graduation. Now in my
@@ -110,7 +111,7 @@ const SelfIntroductionSection = () => {
 						blend my knowledge of marketing strategy with my technical design
 						expertise to provide a positive user experience.
 					</StyledP>
-					<StyledP>
+					<StyledP sx={{lineHeight: "2rem"}}>
 						I believe design builds a channel for communication, connecting my
 						thoughts and ideas with my audience. Therefore, I aspire to create
 						design works that offer solutions and build connections with people.

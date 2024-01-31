@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ScrollTrigger from "react-scroll-trigger";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Typewriter from "typewriter-effect";
+import "./IntroductionSection.css";
 
 const StyledImage = styled("img")({
 	width: "100%",
@@ -65,6 +67,7 @@ const StyledImageContainer = styled(Box)(({ theme }) => ({
 	},
 }));
 
+const StyledScrollTrigger = styled(ScrollTrigger)({});
 const StyledHello = styled("p")(({ theme }) => ({
 	fontSize: "1rem", // Smaller font size on small screens
 	fontFamily: "'Montserrat', sans-serif",
@@ -96,6 +99,7 @@ const Designer = styled("div")(({ theme }) => ({
 	fontWeight: "600", // semi-bold
 	fontFamily: "'New York', serif",
 	marginTop: "10px",
+	transition: "opacity 1s ease-in-out", // Add this line
 	[theme.breakpoints.up("sm")]: {
 		fontSize: "2.25rem", // 3rem font size on small devices and up
 		textAlign: "left",
@@ -113,12 +117,6 @@ const StyledTextContainer = styled(Box)(({ theme }) => ({
 	height: "auto",
 	order: 2,
 	textAlign: "left",
-	[theme.breakpoints.up("sm")]: {
-		width: "50%", // 70% width on small devices and up
-	},
-	[theme.breakpoints.up("md")]: {
-		width: "50%", // 44.5% width on medium devices and up
-	},
 }));
 
 const LearnMoreButton = styled("button")({
@@ -135,12 +133,22 @@ const LearnMoreButton = styled("button")({
 	padding: "10px 10px",
 	marginTop: "20px",
 	"&:hover": {
-		backgroundColor: "#dba39a", // Keep the same color on hover
-		textDecoration: "underline",
+		backgroundColor: "#F0DBDB",
+		color: "#250D00",
 	},
 });
 
 const IntroductionSection = () => {
+	const [animationClass, setAnimationClass] = useState("");
+	const [showDesigner, setShowDesigner] = useState(false);
+	const [showIntroduction, setShowIntroduction] = useState(false);
+	const [showButton, setShowButton] = useState(false);
+
+	useEffect(() => {
+		if (showIntroduction) {
+			setShowButton(true);
+		}
+	}, [showIntroduction]);
 	return (
 		<Box
 			container
@@ -154,40 +162,62 @@ const IntroductionSection = () => {
 			}}
 		>
 			<StyledContainer>
-				<StyledTextContainer>
-					<StyledHello>hello, I’m</StyledHello>
-					<StyledName>
-						<Typewriter
-							onInit={(typewriter) => {
-								typewriter
-									.typeString("Peirong Wang.")
-									.start();
-							}}
-							options={{
-								delay: 50,
-							}}
-						/>
-					</StyledName>
-					<Designer>A Creative Designer.</Designer>
-					<Introduction>
-						I put my passion into crafting meaningful experiences and
-						connections via design. My journey revolves around
-						<StyledLink to="/uxdesign">
-							<strong> UX/UI</strong>
-						</StyledLink>
-						,&nbsp;
-						<StyledLink to="/visualdesign">
-							<strong>Visual Design</strong>
-						</StyledLink>
-						&nbsp; including graphic and branding. Let's dive into impactful
-						visual stories together.
-					</Introduction>
-					<StyledLink to="/about">
-						<LearnMoreButton>LEARN MORE</LearnMoreButton>
-					</StyledLink>
-				</StyledTextContainer>
+				<StyledScrollTrigger
+					onEnter={() => setAnimationClass("animate-down")}
+					onExit={() => setAnimationClass("")}
+					sx={{ width: { xs: "100%", sm: "50%" } }}
+				>
+					<StyledTextContainer className={`textContainer ${animationClass}`}>
+						<StyledHello>hello, I’m</StyledHello>
+						<StyledName>
+							<Typewriter
+								onInit={(typewriter) => {
+									typewriter
+										.pauseFor(1000)
+										.typeString("Peirong Wang.")
+										.callFunction(() => {
+											setShowDesigner(true);
+											setTimeout(() => setShowIntroduction(true), 1000);
+										})
+										.start();
+								}}
+								options={{
+									delay: 50,
+								}}
+							/>
+						</StyledName>
+						{showDesigner && (
+							<Designer className={showDesigner ? animationClass : ""}>
+								A Creative Designer.
+							</Designer>
+						)}
+						{showIntroduction && (
+							<Introduction className={showIntroduction ? animationClass : ""}>
+								I put my passion into crafting meaningful experiences and
+								connections via design. My journey revolves around
+								<StyledLink to="/uxdesign">
+									<strong> UX/UI</strong>
+								</StyledLink>
+								,&nbsp;
+								<StyledLink to="/visualdesign">
+									<strong>Visual Design</strong>
+								</StyledLink>
+								&nbsp; including graphic and branding. Let's dive into impactful
+								visual stories together.
+							</Introduction>
+						)}
+						{showIntroduction && (
+							<StyledLink
+								to="/about"
+								className={showIntroduction ? animationClass : ""}
+							>
+								<LearnMoreButton>LEARN MORE</LearnMoreButton>
+							</StyledLink>
+						)}
+					</StyledTextContainer>
+				</StyledScrollTrigger>
 				<StyledImageContainer>
-					<StyledImage src="/images/Artboard.svg" />
+					<StyledImage src="/images/Artboard.svg" alt="painted woman"/>
 				</StyledImageContainer>
 			</StyledContainer>
 		</Box>

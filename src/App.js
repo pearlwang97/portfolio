@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SocialMediaSection from "./components/SocialMediaSection/SocialMediaSection";
@@ -18,23 +18,27 @@ function App() {
 	const personSchema = {
 		"@context": "http://schema.org",
 		"@type": "Person",
-		"name": "Your Name",
-		"url": "https://your-portfolio-link.com",
-		"image": "https://your-portfolio-link.com/images/selfie.png",
-		"jobTitle": "Your Job Title",
-		"worksFor": {
-		  "@type": "Organization",
-		  "name": "Company or Organization You Work For"
+		name: "Peirong Wang",
+		url: "https://portfolio.peirongwang.com",
+		image: "https://portfolio.peirongwang.com/logo.png", // Replace with your actual image URL
+		jobTitle: "New Media and Web Development Student",
+		alumniOf: "British Columbia Institute of Technology",
+		sameAs: [
+			"https://www.instagram.com/_w_ong/",
+			"https://www.youtube.com/@pearlwang9426",
+			"https://www.linkedin.com/in/peirong-wang-123a83208",
+		],
+		seeks: {
+			"@type": "JobPosting",
+			title: "Job Opportunities in Web Development and New Media", // Modify this based on the type of job you're seeking
 		},
-		"sameAs": [
-		  "https://www.linkedin.com/in/yourprofile",
-		  "https://www.twitter.com/yourprofile",
-		]
-	  };
+	};
 	return (
 		<div className="App">
 			<Helmet>
-				<script type="application/ld+json">{JSON.stringify(personSchema)}</script>
+				<script type="application/ld+json">
+					{JSON.stringify(personSchema)}
+				</script>
 			</Helmet>
 			<Header />
 			<Routes>

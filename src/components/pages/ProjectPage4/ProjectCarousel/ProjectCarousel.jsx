@@ -9,12 +9,14 @@ import "./ProjectCarousel.css";
 const Image = styled("img")({
 	width: "100%",
 	height: "auto",
+	maxWidth: "500px",
+	margin:"0 auto",
 });
 
 const Title = styled("h1")({
-	fontSize: "48px",
+	fontSize: "2rem",
 	fontWeight: "bold",
-	textAlign: "left",
+	textAlign: "center",
 	marginBottom: "50px",
 });
 
@@ -27,7 +29,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 		width: "80%",
 	},
 	[theme.breakpoints.down("sm")]: {
-		width: "90%",
+		width: "85%",
 	},
 }));
 
@@ -51,7 +53,7 @@ const ProjectCarousel = () => {
 							height: "auto",
 						}}
 					>
-						<Image src="/images/project-4-gallery-1.png" alt="bloombox" />
+						<Image src="/images/project-4-gallery-1.png" alt="bloombox gallery image 1" />
 					</Box>
 					<Box
 						sx={{
@@ -59,15 +61,7 @@ const ProjectCarousel = () => {
 							height: "auto",
 						}}
 					>
-						<Image src="/images/project-4-gallery-2.jpeg" alt="bloombox" />
-					</Box>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-4-galler-3.png" alt="bloombox" />
+						<Image src="/images/project-4-gallery-2.jpeg" alt="bloombox gallery image 2" />
 					</Box>
 				</Slider>
 			</StyledContainer>

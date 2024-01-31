@@ -1,7 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
+import ScrollTrigger from "react-scroll-trigger";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import "./FeatureWorkSection.css";
+
+const ScrollTriggerStyled = styled(ScrollTrigger)({
+	width: "auto", // Add this line
+});
 
 const FeatureWorksOverlay = styled("div")({
 	position: "absolute",
@@ -48,18 +54,19 @@ const ImageContainer = styled(Box)({
 });
 
 const StyledH2 = styled("h2")(({ theme }) => ({
-	fontSize: "2.5rem",
+	fontSize: "2rem",
 	fontWeight: "bold",
 	textAlign: "center",
 	marginBottom: "100px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "2rem",
+		fontSize: "1.5rem",
 		marginBottom: "50px",
 	},
 	[theme.breakpoints.down("sm")]: {
-		fontSize: "1.5rem",
+		fontSize: "1rem",
 		marginBottom: "25px",
 	},
+	fontFamily: "utopia-std, serif",
 }));
 const StyledContainer = styled(Box)(({ theme, marginBottom }) => ({
 	width: "60%",
@@ -109,6 +116,10 @@ const StyledLink = styled(Link)(({ theme }) => ({
 const FeatureWorksSection = () => {
 	const containerRef = useRef(null);
 	const [marginBottom, setMarginBottom] = useState("100px");
+	const [animationClass1, setAnimationClass1] = useState("");
+	const [animationClass2, setAnimationClass2] = useState("");
+	const [animationClass3, setAnimationClass3] = useState("");
+	const [animationClass4, setAnimationClass4] = useState("");
 	useEffect(() => {
 		const resizeObserver = new ResizeObserver((entries) => {
 			for (let entry of entries) {
@@ -139,85 +150,104 @@ const FeatureWorksSection = () => {
 		>
 			<StyledH2>Feature Works</StyledH2>
 			<StyledContainer ref={containerRef} marginBottom={marginBottom}>
-				<Box
-					className="imageContainer"
-					sx={{
-						width: "63.5%",
-						position: "relative",
-						overflow: "hidden",
-					}}
+				<ScrollTriggerStyled
+					onEnter={() => setAnimationClass1("animate-left")}
+					onExit={() => setAnimationClass1("")}
+					sx={{ width: "63.5%" }}
 				>
-					<ImageContainer>
-						<StyledLink to="/project-1">
-							<StyledImage src="/images/domino.png" />
-							<FeatureWorksOverlay>
-								<FeatureWorksOverlayText>
-									Domino’s APP Redesign
-								</FeatureWorksOverlayText>
-							</FeatureWorksOverlay>
-						</StyledLink>
-					</ImageContainer>
-				</Box>
-
-				<Box
-					className="imageContainer"
-					sx={{
-						width: "30.01%",
-						position: "relative",
-						overflow: "hidden",
-					}}
+					<Box
+						className={`imageContainer ${animationClass1}`}
+						sx={{
+							position: "relative",
+							overflow: "hidden",
+						}}
+					>
+						<ImageContainer>
+							<StyledLink to="/project-1">
+								<StyledImage src="/images/domino.png" alt="domino redesign cover"/>
+								<FeatureWorksOverlay>
+									<FeatureWorksOverlayText>
+										Domino’s APP Redesign
+									</FeatureWorksOverlayText>
+								</FeatureWorksOverlay>
+							</StyledLink>
+						</ImageContainer>
+					</Box>
+				</ScrollTriggerStyled>
+				<ScrollTriggerStyled
+					onEnter={() => setAnimationClass2("animate-right")}
+					onExit={() => setAnimationClass2("")}
+					sx={{ width: "30.01%" }}
 				>
-					<ImageContainer>
-						<StyledLink to="/project-2">
-							<StyledImage src="/images/bloom.png" />
-							<FeatureWorksOverlay>
-								<FeatureWorksOverlayText>
-									BLOOM APP Design
-								</FeatureWorksOverlayText>
-							</FeatureWorksOverlay>
-						</StyledLink>
-					</ImageContainer>
-				</Box>
+					<Box
+						className={`imageContainer ${animationClass2}`}
+						sx={{
+							position: "relative",
+							overflow: "hidden",
+						}}
+					>
+						<ImageContainer>
+							<StyledLink to="/project-2">
+								<StyledImage src="/images/bloom.png" alt="bloom design cover"/>
+								<FeatureWorksOverlay>
+									<FeatureWorksOverlayText>
+										BLOOM APP Design
+									</FeatureWorksOverlayText>
+								</FeatureWorksOverlay>
+							</StyledLink>
+						</ImageContainer>
+					</Box>
+				</ScrollTriggerStyled>
 			</StyledContainer>
 			<StyledContainer>
-				<Box
-					className="imageContainer"
-					sx={{
-						width: "36.4%",
-						position: "relative",
-						overflow: "hidden",
-					}}
+				<ScrollTriggerStyled
+					onEnter={() => setAnimationClass3("animate-left")}
+					onExit={() => setAnimationClass3("")}
+					sx={{ width: "36.4%" }}
 				>
-					<ImageContainer>
-						<StyledLink to="/project-3">
-							<StyledImage src="/images/radio.png" />
-							<FeatureWorksOverlay>
-								<FeatureWorksOverlayText>
-									2D Realistic Radio Vector Art
-								</FeatureWorksOverlayText>
-							</FeatureWorksOverlay>
-						</StyledLink>
-					</ImageContainer>
-				</Box>
-				<Box
-					className="imageContainer"
-					sx={{
-						width: "57.5%",
-						position: "relative",
-						overflow: "hidden",
-					}}
+					<Box
+						className={`imageContainer ${animationClass3}`}
+						sx={{
+							position: "relative",
+							overflow: "hidden",
+						}}
+					>
+						<ImageContainer>
+							<StyledLink to="/project-3">
+								<StyledImage src="/images/radio.png" alt="radio design cover"/>
+								<FeatureWorksOverlay>
+									<FeatureWorksOverlayText>
+										2D Realistic Radio Vector Art
+									</FeatureWorksOverlayText>
+								</FeatureWorksOverlay>
+							</StyledLink>
+						</ImageContainer>
+					</Box>
+				</ScrollTriggerStyled>
+				<ScrollTriggerStyled
+					onEnter={() => setAnimationClass4("animate-right")}
+					onExit={() => setAnimationClass4("")}
+					sx={{ width: "57.5%" }}
 				>
-					<ImageContainer>
-						<StyledLink to="/project-4">
-							<StyledImage src="/images/bloombox.png" />
-							<FeatureWorksOverlay>
-								<FeatureWorksOverlayText>
-									BloomBox Logo Design
-								</FeatureWorksOverlayText>
-							</FeatureWorksOverlay>
-						</StyledLink>
-					</ImageContainer>
-				</Box>
+					<Box
+						className={`imageContainer ${animationClass4}`}
+						sx={{
+							position: "relative",
+							overflow: "hidden",
+						}}
+					>
+						<ImageContainer>
+							<StyledLink to="/project-4">
+								<StyledImage src="/images/bloombox.png" alt="bloombox design cover"/>
+								<FeatureWorksOverlay>
+									<FeatureWorksOverlayText>
+										BloomBox Logo Design
+									</FeatureWorksOverlayText>
+								</FeatureWorksOverlay>
+							</StyledLink>
+						</ImageContainer>
+					</Box>
+				</ScrollTriggerStyled>
 			</StyledContainer>
 		</Box>
 	);

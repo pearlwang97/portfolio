@@ -9,13 +9,22 @@ import "./ProjectCarousel.css";
 const Image = styled("img")({
 	width: "100%",
 	height: "auto",
+	maxWidth: "500px",
+	margin:"0 auto",
 });
 
 const Title = styled("h1")({
-	fontSize: "48px",
+	fontSize: "2rem",
 	fontWeight: "bold",
-	textAlign: "left",
+	textAlign: "center",
 	marginBottom: "50px",
+});
+
+const StyledSlider = styled(Slider)({
+	width: "100%",
+	maxWidth: "1140px",
+	height: "auto",
+	maxHeight: "300px",
 });
 
 const StyledContainer = styled(Box)(({ theme }) => ({
@@ -27,7 +36,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 		width: "80%",
 	},
 	[theme.breakpoints.down("sm")]: {
-		width: "90%",
+		width: "85%",
 	},
 }));
 
@@ -51,7 +60,7 @@ const ProjectCarousel = () => {
 							height: "auto",
 						}}
 					>
-						<Image src="/images/design-1.png" alt="domino" />
+						<Image src="/images/design-1.png" alt="domino gallery photo" />
 					</Box>
 					<Box
 						sx={{
@@ -59,7 +68,7 @@ const ProjectCarousel = () => {
 							height: "auto",
 						}}
 					>
-						<Image src="/images/project-1-gallery-1.png" alt="domino" />
+						<Image src="/images/project-1-gallery-1.png" alt="domino gallery photo" />
 					</Box>
 					<Box
 						sx={{
@@ -67,7 +76,7 @@ const ProjectCarousel = () => {
 							height: "auto",
 						}}
 					>
-						<Image src="/images/project-1-gallery-2.png" alt="domino" />
+						<Image src="/images/project-1-gallery-2.png" alt="domino gallery photo" />
 					</Box>
 				</Slider>
 			</StyledContainer>

@@ -40,16 +40,16 @@ const StyledSection = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled("h3")(({ theme }) => ({
-	fontSize: "2.5rem", // Smaller font size on small screens
+	fontSize: "1rem", // Smaller font size on small screens
 	fontWeight: "bold",
 	textAlign: "left",
 	textTransform: "uppercase",
 	paddingTop: "2rem",
 	[theme.breakpoints.up("sm")]: {
-		fontSize: "3rem", // 3rem font size on small devices and up
+		fontSize: "1.5rem", // 3rem font size on small devices and up
 	},
 	[theme.breakpoints.up("md")]: {
-		fontSize: "4rem", // Increase font size on medium devices and up
+		fontSize: "2rem", // Increase font size on medium devices and up
 	},
 }));
 
@@ -186,7 +186,7 @@ const OverviewSection = () => {
 							</StyledListItem>
 							<StyledListItem>
 								<StyledListItemKey>Tools</StyledListItemKey>
-								<StyledP>Figma Illustrator</StyledP>
+								<StyledP>Figma, Illustrator</StyledP>
 							</StyledListItem>
 						</StyledList>
 						<Grid container justifyContent="space-between">
@@ -214,7 +214,7 @@ const OverviewSection = () => {
 									marginBottom: "2rem",
 								}}
 							>
-								<StyledImage src="/images/domino.png" alt="domino" />
+								<StyledImage src="/images/domino.png" alt="domino gallery photo" />
 							</Box>
 						</Grid>
 					</StyledSection>
@@ -235,8 +235,8 @@ const OverviewSection = () => {
 							<Grid item container xs={12} justifyContent="center">
 								<StyledImage
 									src="/images/project-1-gallery-4.jpeg"
+									alt="domino gallery photo"
 									sx={{ width: "80%" }}
-									alt="domino"
 								/>
 							</Grid>
 						</Grid>
@@ -259,7 +259,7 @@ const OverviewSection = () => {
 								<StyledImage
 									src="/images/project-1-gallery-5.png"
 									sx={{ width: "80%" }}
-									alt="domino"
+									alt="domino gallery photo"
 								/>
 							</Grid>
 						</Grid>
@@ -294,7 +294,7 @@ const OverviewSection = () => {
 								<StyledImage
 									src="/images/project-1-gallery-6.png"
 									sx={{ width: "80%" }}
-									alt="domino"
+									alt="domino gallery photo"
 								/>
 							</Grid>
 						</Grid>
@@ -356,7 +356,7 @@ const OverviewSection = () => {
 								<StyledImage
 									src="/images/project-1-gallery-7.png"
 									sx={{ width: "80%" }}
-									alt="domino"
+									alt="domino gallery photo"
 								/>
 							</Grid>
 						</Grid>

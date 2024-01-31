@@ -40,16 +40,16 @@ const StyledSection = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled("h3")(({ theme }) => ({
-	fontSize: "2.5rem", // Smaller font size on small screens
+	fontSize: "1rem", // Smaller font size on small screens
 	fontWeight: "bold",
 	textAlign: "left",
 	textTransform: "uppercase",
 	paddingTop: "2rem",
 	[theme.breakpoints.up("sm")]: {
-		fontSize: "3rem", // 3rem font size on small devices and up
+		fontSize: "1.5rem", // 3rem font size on small devices and up
 	},
 	[theme.breakpoints.up("md")]: {
-		fontSize: "4rem", // Increase font size on medium devices and up
+		fontSize: "2rem", // Increase font size on medium devices and up
 	},
 }));
 
@@ -169,7 +169,7 @@ const OverviewSection = () => {
 					<StyledNavItem href="#Inspiration">Inspiration</StyledNavItem>
 					<StyledNavItem href="#outline">Outline</StyledNavItem>
 					<StyledNavItem href="#coloring">coloring</StyledNavItem>
-					<StyledNavItem href="#final">coloring</StyledNavItem>
+					<StyledNavItem href="#final">Finalization</StyledNavItem>
 				</StyledNav>
 				<StyledMainContainer>
 					<StyledSection>
@@ -242,7 +242,7 @@ const OverviewSection = () => {
 							<Grid item xs={12} sm={5}>
 								<StyledImage
 									src="/images/project-3-gallery-2.png"
-									alt="radio"
+									alt="radio gallery photo"
 								/>
 							</Grid>
 						</Grid>
@@ -265,7 +265,7 @@ const OverviewSection = () => {
 							<Grid item xs={12} sm={5}>
 								<StyledImage
 									src="/images/project-3-gallery-1.png"
-									alt="radio"
+									alt="radio gallery photo"
 								/>
 							</Grid>
 							<Grid item xs={12}>
@@ -284,7 +284,7 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between" alignItems="center">
 							<Grid item xs={12} sm={5}>
-								<StyledImage src="/images/design-3.png" alt="radio" />
+								<StyledImage src="/images/design-3.png" alt="radio gallery photo" />
 							</Grid>
 							<Grid item xs={12} sm={5}>
 								<StyledP mb="2rem">

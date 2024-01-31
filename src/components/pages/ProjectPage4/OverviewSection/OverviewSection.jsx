@@ -40,16 +40,16 @@ const StyledSection = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled("h3")(({ theme }) => ({
-	fontSize: "2.5rem", // Smaller font size on small screens
+	fontSize: "1rem", // Smaller font size on small screens
 	fontWeight: "bold",
 	textAlign: "left",
 	textTransform: "uppercase",
-	paddingTop: "2rem",
+	paddingTop: "1.5rem",
 	[theme.breakpoints.up("sm")]: {
-		fontSize: "3rem", // 3rem font size on small devices and up
+		fontSize: "2rem", // 3rem font size on small devices and up
 	},
 	[theme.breakpoints.up("md")]: {
-		fontSize: "4rem", // Increase font size on medium devices and up
+		fontSize: "2rem", // Increase font size on medium devices and up
 	},
 }));
 
@@ -140,7 +140,7 @@ const StyledNav = styled("nav")(({ theme }) => ({
 	alignItems: "center",
 	display: "flex",
 	flexDirection: "column",
-	gap: '1rem',
+	gap: "1rem",
 	height: "calc(100vh - 120px - 2rem)",
 	justifyContent: "space-between",
 	position: "sticky",
@@ -208,6 +208,12 @@ const OverviewSection = () => {
 									themed assortment of fresh flowers delivered periodically.
 								</StyledP>
 							</Grid>
+							<Grid item xs={12}>
+								<StyledImage
+									src="/images/project-4-galler-3.png"
+									alt="bloombox gallery photo"
+								/>
+							</Grid>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
@@ -251,7 +257,7 @@ const OverviewSection = () => {
 							<Grid item xs={12}>
 								<StyledImage
 									src="/images/project-4-gallery-5.png"
-									alt="radio"
+									alt="bloombox gallery photo"
 									sx={{ float: "left", width: "50%", marginRight: "2rem" }}
 								/>
 								<StyledP mb="2rem">
@@ -287,7 +293,7 @@ const OverviewSection = () => {
 								<StyledImage
 									sx={{ float: "right", width: "80%" }}
 									src="/images/project-4-gallery-6.png"
-									alt="radio"
+									alt="bloombox gallery photo"
 								/>
 							</Grid>
 						</Grid>
@@ -303,7 +309,10 @@ const OverviewSection = () => {
 								</StyledP>
 							</Grid>
 							<Grid item xs={12} sm={8} mb="2rem">
-								<StyledImage src="/images/project-4-gallery-1.png" alt="bloombox" />
+								<StyledImage
+									src="/images/project-4-gallery-1.png"
+									alt="bloombox"
+								/>
 							</Grid>
 						</Grid>
 					</StyledSection>

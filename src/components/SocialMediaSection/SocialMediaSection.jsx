@@ -36,14 +36,14 @@ const SocialMediaSection = () => {
 	const isSM = useMediaQuery(theme.breakpoints.down("sm"));
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
 	if (isSM) {
+    var iconSize = 30;
+	var linkedInIconSize = 28.5;
+  } else if (isMD) {
     var iconSize = 50;
 	var linkedInIconSize = 47.5;
-  } else if (isMD) {
+  } else {
     var iconSize = 75;
 	var linkedInIconSize = 71.25;
-  } else {
-    var iconSize = 100;
-	var linkedInIconSize = 95;
   }
 
 	return (
@@ -54,7 +54,7 @@ const SocialMediaSection = () => {
 				alignItems: "center",
 				width: "100%",
 				height: "100%",
-				backgroundColor: "#e0e6f8",
+				backgroundColor: "#F0DBDB",
 				padding: "50px 0",
 			}}
 		>

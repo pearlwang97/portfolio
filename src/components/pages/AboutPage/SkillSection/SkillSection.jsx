@@ -40,18 +40,19 @@ const Divider = styled(Box)(({ theme, alignLeft }) => ({
 }));
 
 const StyledH2 = styled("h2")(({ theme }) => ({
-	fontSize: "1.5rem",
+	fontSize: "2rem",
 	fontWeight: "semi-bold",
 	textAlign: "left",
     margin: "40px 0",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "1.25rem",
+		fontSize: "1.5rem",
         margin: "20px 0",
 	},
 	[theme.breakpoints.down("sm")]: {
 		fontSize: "1rem",
         margin: "20px 0",
 	},
+	fontFamily: "utopia-std, serif",
 }));
 
 const StyledIcon = styled("img")(({ theme }) => ({
@@ -89,18 +90,18 @@ const SkillSection = () => {
                         flexWrap: "wrap",
                     }}
                 >
-						<StyledIcon src="/images/figma-logo.svg" alt="Figma" />
-						<StyledIcon src="/images/id-logo.svg" alt="InDesign" />
-						<StyledIcon src="/images/ai-logo.svg" alt="Illustrator" />
-						<StyledIcon src="/images/ps-logo.svg" alt="Photoshop" />
-						<StyledIcon src="/images/pr-logo.svg" alt="Premierepro" />
-						<StyledIcon src="/images/ae-logo.svg" alt="Aftereffects" />
-						<StyledIcon src="/images/dn-logo.svg" alt="Dimention" />
-						<StyledIcon src="/images/ar-logo.svg" alt="AR" />
-						<StyledIcon src="/images/css-logo.svg" alt="CSS" />
-						<StyledIcon src="/images/html-logo.svg" alt="HTML" />
-						<StyledIcon src="/images/js-logo.svg" alt="Javascript" />
-						<StyledIcon src="/images/wordpress-logo.svg" alt="Wordpress" />
+						<StyledIcon src="/images/figma-logo.svg" alt="Figma logo" />
+						<StyledIcon src="/images/id-logo.svg" alt="InDesign logo" />
+						<StyledIcon src="/images/ai-logo.svg" alt="Illustrator logo" />
+						<StyledIcon src="/images/ps-logo.svg" alt="Photoshop logo" />
+						<StyledIcon src="/images/pr-logo.svg" alt="Premierepro logo" />
+						<StyledIcon src="/images/ae-logo.svg" alt="Aftereffects logo" />
+						<StyledIcon src="/images/dn-logo.svg" alt="Dimention logo" />
+						<StyledIcon src="/images/ar-logo.svg" alt="AR logo" />
+						<StyledIcon src="/images/css-logo.svg" alt="CSS logo" />
+						<StyledIcon src="/images/html-logo.svg" alt="HTML logo" />
+						<StyledIcon src="/images/js-logo.svg" alt="Javascript logo" />
+						<StyledIcon src="/images/wordpress-logo.svg" alt="Wordpress logo" />
                 </Grid>
             </StyledContainer>
         </Box>
