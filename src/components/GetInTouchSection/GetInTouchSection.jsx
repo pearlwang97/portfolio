@@ -76,7 +76,7 @@ const SocialMediaSection = () => {
 			<StyledH2>Get In Touch</StyledH2>
 			<Box sx={{width: {xs: "90%", md: "80%" }, margin: "0 auto"}}>
 				<StyledP>
-					Currently looking for new opportunities, please feel free to reach
+					Currently look for new opportunities, please feel free to reach
 					out.
 				</StyledP>
 			</Box>

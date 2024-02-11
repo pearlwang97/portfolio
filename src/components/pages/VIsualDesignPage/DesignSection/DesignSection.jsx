@@ -187,7 +187,7 @@ const DesignSection = () => {
 					</Box>
 				</ImageContainer>
 			</StyledContainer>
-			<StyledContainer>
+			<StyledContainer marginBottom="30px">
 				<ImageContainer
 					width="39%"
 					sx={{
@@ -237,8 +237,48 @@ const DesignSection = () => {
 					}}
 				>
 					<StyledLink to="/project-4">
-						<StyledImage src="/images/design-4.png" alt="bloomBlox photo"/>
+						<StyledImage src="/images/design-4.png" alt="bloomBlox photo" />
 					</StyledLink>
+				</ImageContainer>
+			</StyledContainer>
+			<StyledContainer>
+				<ImageContainer width="58%">
+					<StyledLink to="/project-5">
+						<StyledImage src="/images/design-5.jpg" />
+					</StyledLink>
+				</ImageContainer>
+				<ImageContainer width="36%">
+					<TitleContainer textAlign="right">
+						<Title>03</Title>
+						{isMobile && <Title>&nbsp;</Title>}
+						<StyledLink to="/project-5">
+							<Title>Papercut Illustrations: Chinese Zodiac Collection</Title>
+						</StyledLink>
+					</TitleContainer>
+					<Divider width="25%" alignLeft={true} />
+					<SubTitle textAlign="left">Goal</SubTitle>
+					<DesignDescription>
+						The aim of this project is to celebrate and promote Chinese cultural
+						heritage through the fusion of traditional art and modern design by
+						reimagining the Chinese zodiacs through the traditional art of
+						papercutting.
+					</DesignDescription>
+					<Divider width="25%" alignLeft={true} />
+					<SubTitle textAlign="left">Role</SubTitle>
+					<DesignDescription> Graphic Designer</DesignDescription>
+					<Divider width="25%" alignLeft={true} />
+					<SubTitle textAlign="left">Tools</SubTitle>
+					<Box
+						sx={{
+							display: "flex",
+							justifyContent: "flex-start",
+							alignItems: "center",
+							gap: "20px",
+						}}
+					>
+						<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						<StyledIcon src="/images/ps-logo.svg" alt="PS" />
+					</Box>
 				</ImageContainer>
 			</StyledContainer>
 		</Box>

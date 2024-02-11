@@ -148,7 +148,7 @@ const FeatureWorksSection = () => {
 				paddingTop: "100px",
 			}}
 		>
-			<StyledH2>Feature Works</StyledH2>
+			<StyledH2>Featured Works</StyledH2>
 			<StyledContainer ref={containerRef} marginBottom={marginBottom}>
 				<ScrollTriggerStyled
 					onEnter={() => setAnimationClass1("animate-left")}

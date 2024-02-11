@@ -1,11 +1,6 @@
 .animate-down {
-    animation: moveInDown 1.5s ease-in;
+    animation: moveInDown 0.5s ease-in;
 }
-
-.animate-up {
-    animation: moveInUp 1.5s ease-in;
-}
-
 
 @keyframes moveInDown {
     0% {

@@ -86,8 +86,8 @@ const SelfIntroductionSection = () => {
 			}}
 		>
 			<StyledContainer>
-				<ImageContainer sx={{ position: "relative" }}width="37%">
-					<StyledImage src="/images/selfie.png" alt="peirong wang selfies" />
+				<ImageContainer sx={{ position: "relative" }}width="31%">
+					<StyledImage src="/images/about-me-selfie.JPG" alt="peirong wang selfies" />
 					<SpinImage sx={{width : "20%", position: "absolute", top: 0, left: 0, zIndex: 2}}src="/images/flower.png" alt="spinning flower" />
 				</ImageContainer>
 				<ImageContainer width="61%" sx={{ containerType: "inline-size"}}>
@@ -98,10 +98,7 @@ const SelfIntroductionSection = () => {
 						relocated to Vancouver during my high school years, I've had the
 						chance to experience two distinct worlds and cultures. My past
 						experience enhanced my adaptability and approach things with an
-						inclusive and diverse mindset. I have always been drawn to various
-						forms of creative expression, such as music, movies, or even the
-						vibrant pop culture. In my free time, I enjoy crafting, doing nail
-						art, playing games and hiking with my dog.
+						inclusive and diverse mindset.
 					</StyledP>
 					<StyledP sx={{lineHeight: "2rem"}}>
 						Driven by a foundational background in economics from the University

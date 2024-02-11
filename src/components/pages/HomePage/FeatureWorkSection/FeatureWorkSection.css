@@ -1,9 +1,9 @@
 .animate-left {
-    animation: moveInDown 1.5s ease-in;
+    animation: moveInDown 0.5s ease-in;
 }
 
 .animate-right {
-    animation: moveInUp 1.5s ease-in;
+    animation: moveInUp 0.5s ease-in;
 }
 
 
