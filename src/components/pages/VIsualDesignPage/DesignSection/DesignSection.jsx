@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
 // import Divider from "../../../Divider/Divider";
@@ -173,8 +173,6 @@ const DesignSection = () => {
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Role</SubTitle>
 					<DesignDescription> Graphic Designer</DesignDescription>
-					<Divider width="25%" alignLeft={true} />
-					<SubTitle textAlign="left">Tools</SubTitle>
 					<Box
 						sx={{
 							display: "flex",
@@ -183,7 +181,9 @@ const DesignSection = () => {
 							gap: "20px",
 						}}
 					>
-						<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						<Tooltip title="Adobe Illustrator">
+							<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						</Tooltip>
 					</Box>
 				</ImageContainer>
 			</StyledContainer>
@@ -213,11 +213,8 @@ const DesignSection = () => {
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Role</SubTitle>
 					<DesignDescription textAlign={isMobile ? "left" : "right"}>
-						{" "}
 						Graphic Designer
 					</DesignDescription>
-					<Divider width="25%" alignLeft={isMobile} />
-					<SubTitle textAlign={isMobile ? "left" : "right"}>Tools</SubTitle>
 					<Box
 						sx={{
 							display: "flex",
@@ -226,8 +223,12 @@ const DesignSection = () => {
 							gap: "20px",
 						}}
 					>
-						<StyledIcon src="/images/ai-logo.svg" alt="AI" />
-						<StyledIcon src="/images/ps-logo.svg" alt="PS" />
+						<Tooltip title="Adobe Illustrator">
+							<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						</Tooltip>
+						<Tooltip title="Adobe Photoshop">
+							<StyledIcon src="/images/ps-logo.svg" alt="PS" />
+						</Tooltip>
 					</Box>
 				</ImageContainer>
 				<ImageContainer
@@ -241,7 +242,7 @@ const DesignSection = () => {
 					</StyledLink>
 				</ImageContainer>
 			</StyledContainer>
-			<StyledContainer>
+			<StyledContainer marginBottom="30px">
 				<ImageContainer width="58%">
 					<StyledLink to="/project-5">
 						<StyledImage src="/images/design-5.jpg" />
@@ -266,8 +267,6 @@ const DesignSection = () => {
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Role</SubTitle>
 					<DesignDescription> Graphic Designer</DesignDescription>
-					<Divider width="25%" alignLeft={true} />
-					<SubTitle textAlign="left">Tools</SubTitle>
 					<Box
 						sx={{
 							display: "flex",
@@ -276,9 +275,67 @@ const DesignSection = () => {
 							gap: "20px",
 						}}
 					>
-						<StyledIcon src="/images/ai-logo.svg" alt="AI" />
-						<StyledIcon src="/images/ps-logo.svg" alt="PS" />
+						<Tooltip title="Adobe Illustrator">
+							<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						</Tooltip>
+						<Tooltip title="Adobe Photoshop">
+							<StyledIcon src="/images/ps-logo.svg" alt="PS" />
+						</Tooltip>
 					</Box>
+				</ImageContainer>
+			</StyledContainer>
+			<StyledContainer>
+				<ImageContainer
+					width="39%"
+					sx={{
+						order: isMobile ? 1 : 0,
+					}}
+				>
+					<TitleContainer textAlign="left">
+						<Title>02</Title>
+						{isMobile && <Title>&nbsp;</Title>}
+						<StyledLink to="/project-6">
+							<Title>Cyber Era Poster Design</Title>
+						</StyledLink>
+					</TitleContainer>
+					<Divider width="25%" alignLeft={isMobile} />
+					<SubTitle textAlign={isMobile ? "left" : "right"}>Goal</SubTitle>
+					<DesignDescription sx={{ textAlign: isMobile ? "left" : "right" }}>
+						The 'Cyber Era' poster was created to deliver a compelling visual
+						narrative for a digital audience, blending photography with original
+						vector illustrations in a non-destructive manner to demonstrate the
+						application of design principles and technical skill.
+					</DesignDescription>
+					<Divider width="25%" alignLeft={isMobile} />
+					<SubTitle textAlign={isMobile ? "left" : "right"}>Role</SubTitle>
+					<DesignDescription textAlign={isMobile ? "left" : "right"}>
+						Graphic Designer
+					</DesignDescription>
+					<Box
+						sx={{
+							display: "flex",
+							justifyContent: isMobile ? "flex-start" : "flex-end",
+							alignItems: "center",
+							gap: "20px",
+						}}
+					>
+						<Tooltip title="Adobe Illustrator">
+							<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						</Tooltip>
+						<Tooltip title="Adobe Photoshop">
+							<StyledIcon src="/images/ps-logo.svg" alt="PS" />
+						</Tooltip>
+					</Box>
+				</ImageContainer>
+				<ImageContainer
+					width="58%"
+					sx={{
+						order: isMobile ? 0 : 1,
+					}}
+				>
+					<StyledLink to="/project-6">
+						<StyledImage src="/images/cyber-era-1.jpg" alt="bloomBlox photo" />
+					</StyledLink>
 				</ImageContainer>
 			</StyledContainer>
 		</Box>

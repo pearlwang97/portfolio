@@ -13,8 +13,8 @@ const Nav = styled("nav")(({ theme }) => ({
 }));
 
 const Logo = styled("img")(({ theme }) => ({
-	width: "60px",
-	height: "50px",
+	width: "78px",
+	height: "65px",
 }));
 
 const OverLay = styled("div")(({ open, theme }) => ({

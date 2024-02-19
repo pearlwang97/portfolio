@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
 // import Divider from "../../../Divider/Divider";
@@ -113,9 +113,10 @@ const Title = styled("h3")(({ theme }) => ({
 		// margin: '10px 0',
 		fontSize: "7cqw",
 	},
-    '&:hover': { // Add this block
+	"&:hover": {
+		// Add this block
 		textDecoration: "underline",
-    },
+	},
 	fontFamily: "utopia-std, serif",
 }));
 
@@ -152,7 +153,7 @@ const DesignSection = () => {
 			<StyledContainer marginBottom="30px">
 				<ImageContainer width="58%">
 					<StyledLink to="/project-1">
-						<StyledImage src="/images/design-1.png" alt="domino cover"/>
+						<StyledImage src="/images/design-1.png" alt="domino cover" />
 					</StyledLink>
 				</ImageContainer>
 				<ImageContainer width="36%">
@@ -168,17 +169,13 @@ const DesignSection = () => {
 					<DesignDescription>
 						The objective of this project is to create a user-centered, modern
 						interface for the existing Domino’s App using Figma and Adobe
-						Illustrator in UI / UX Strategy 1 course (MDIA2540). The primary aim
-						of this project is to demonstrate how the student apply user
-						research principles and utilize Figma & Adobe Illustrator
-						effectively to construct UI elements and interactive design to
-						enhance usability and user experience.
+						Illustrator. It highlights the application of user research
+						principles and the strategic use of design tools to improve
+						usability and user experience.
 					</DesignDescription>
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Role</SubTitle>
 					<DesignDescription> UI/UX Designer</DesignDescription>
-					<Divider width="25%" alignLeft={true} />
-					<SubTitle textAlign="left">Tools</SubTitle>
 					<Box
 						sx={{
 							display: "flex",
@@ -187,8 +184,42 @@ const DesignSection = () => {
 							gap: "20px",
 						}}
 					>
-						<StyledIcon src="/images/figma-logo.svg" alt="Figma" />
-						<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						<Tooltip
+							title="Figma"
+							componentsProps={{
+								tooltip: {
+									sx: {
+										fontSize: "0.75rem",
+										textAlign: "center",
+										backgroundColor: "#dba39a",
+										color: "#fff",
+										fontFamily: "montserrat, sans-serif",
+										borderRadius: "4px",
+										padding: "10px",
+									},
+								},
+							}}
+						>
+							<StyledIcon src="/images/figma-logo.svg" alt="Figma" />
+						</Tooltip>
+						<Tooltip
+							title="Adobe Illustrator"
+							componentsProps={{
+								tooltip: {
+									sx: {
+										fontSize: "0.75rem",
+										textAlign: "center",
+										backgroundColor: "#dba39a",
+										color: "#fff",
+										fontFamily: "montserrat, sans-serif",
+										borderRadius: "4px",
+										padding: "10px",
+									},
+								},
+							}}
+						>
+							<StyledIcon src="/images/ai-logo.svg" alt="AI" />
+						</Tooltip>
 					</Box>
 				</ImageContainer>
 			</StyledContainer>
@@ -221,11 +252,8 @@ const DesignSection = () => {
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Role</SubTitle>
 					<DesignDescription textAlign={isMobile ? "left" : "right"}>
-						{" "}
 						UI/UX Designer
 					</DesignDescription>
-					<Divider width="25%" alignLeft={isMobile} />
-					<SubTitle textAlign={isMobile ? "left" : "right"}>Tools</SubTitle>
 					<Box
 						sx={{
 							display: "flex",
@@ -234,7 +262,24 @@ const DesignSection = () => {
 							gap: "20px",
 						}}
 					>
-						<StyledIcon src="/images/figma-logo.svg" alt="Figma" />
+						<Tooltip
+							title="Figma"
+							componentsProps={{
+								tooltip: {
+									sx: {
+										fontSize: "0.75rem",
+										textAlign: "center",
+										backgroundColor: "#dba39a",
+										color: "#fff",
+										fontFamily: "montserrat, sans-serif",
+										borderRadius: "4px",
+										padding: "10px",
+									},
+								},
+							}}
+						>
+							<StyledIcon src="/images/figma-logo.svg" alt="Figma" />
+						</Tooltip>
 					</Box>
 				</ImageContainer>
 				<ImageContainer
@@ -244,7 +289,7 @@ const DesignSection = () => {
 					}}
 				>
 					<StyledLink to="/project-2">
-						<StyledImage src="/images/design-2.png" alt="bloom photo"/>
+						<StyledImage src="/images/design-2.png" alt="bloom photo" />
 					</StyledLink>
 				</ImageContainer>
 			</StyledContainer>

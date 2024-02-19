@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-scroll";
 import { Grid, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
@@ -24,7 +25,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 const StyledMainContainer = styled(Box)(({ theme }) => ({
 	overflow: "hidden",
 	position: "relative",
-	border: "1px solid #6b6b6b",
+	// border: "1px solid #6b6b6b",
 	borderRadius: "50px",
 	[theme.breakpoints.down("sm")]: {
 		border: "none",
@@ -44,9 +45,9 @@ const Title = styled("h3")(({ theme }) => ({
 	fontWeight: "bold",
 	textAlign: "left",
 	textTransform: "uppercase",
-	paddingTop: "1.5rem",
+	paddingTop: "2rem",
 	[theme.breakpoints.up("sm")]: {
-		fontSize: "2rem", // 3rem font size on small devices and up
+		fontSize: "1.5rem", // 3rem font size on small devices and up
 	},
 	[theme.breakpoints.up("md")]: {
 		fontSize: "2rem", // Increase font size on medium devices and up
@@ -92,11 +93,11 @@ const StyledList = styled("ul")(({ theme }) => ({
 	},
 }));
 
-const StyledNavItem = styled("a")(({ theme }) => ({
+const StyledNavItem = styled(Link)(({ theme }) => ({
+	color: "inherit",
 	display: "flex",
 	alignItems: "center",
 	cursor: "pointer",
-	color: "inherit",
 	fontSize: "16px",
 	fontWeight: "semi-bold",
 	justifyContent: "center",
@@ -113,12 +114,10 @@ const StyledNavItem = styled("a")(({ theme }) => ({
 	"&:visited": {
 		color: "inherit", // Add this line
 	},
+	"&.active": {
+		textDecoration: "underline",
+	},
 }));
-
-const StyledImage = styled("img")({
-	width: "100%",
-	height: "auto",
-});
 
 const Divider = styled(Box)(({ theme }) => ({
 	marginTop: "10px",
@@ -140,7 +139,6 @@ const StyledNav = styled("nav")(({ theme }) => ({
 	alignItems: "center",
 	display: "flex",
 	flexDirection: "column",
-	gap: "1rem",
 	height: "calc(100vh - 120px - 2rem)",
 	justifyContent: "space-between",
 	position: "sticky",
@@ -165,16 +163,55 @@ const OverviewSection = () => {
 		>
 			<StyledContainer>
 				<StyledNav>
-					<StyledNavItem href="#1">overview</StyledNavItem>
-					<StyledNavItem href="#2">Brainstorm</StyledNavItem>
-					<StyledNavItem href="#3">logo sketch</StyledNavItem>
-					<StyledNavItem href="#4">logo design</StyledNavItem>
-					<StyledNavItem href="#5">Typography and Color</StyledNavItem>
-					<StyledNavItem href="#6">Branding Finalization</StyledNavItem>
+					<StyledNavItem
+						to="1-0"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						overview
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-1"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						BRAINSTORM
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-2"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						LOGO DESIGN
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-3"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						TYPOGRAPHY AND COLOR
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-4"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						FINALIZATION
+					</StyledNavItem>
 				</StyledNav>
 				<StyledMainContainer>
 					<StyledSection>
-						<Title id="1">OVERViEW</Title>
+						<Title id="1-0">OVERViEW</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<StyledList>
 							<StyledListItem>
@@ -191,7 +228,7 @@ const OverviewSection = () => {
 							</StyledListItem>
 						</StyledList>
 						<Grid container justifyContent="space-between">
-							<Grid item sm={6} xs={12}>
+							<Grid item>
 								<StyledP>
 									The aim of this assignment is to develop multiple logo
 									variations for a product or service. This project highlights
@@ -199,8 +236,6 @@ const OverviewSection = () => {
 									branding, showcasing proficiency in visual design, brand
 									consistency, and technical skills in Adobe Illustrator.
 								</StyledP>
-							</Grid>
-							<Grid item sm={5} xs={12}>
 								<StyledP>
 									BloomBox, a Vancouver-based floral service, offers convenient
 									flower purchase options, including one-time buys and a monthly
@@ -208,112 +243,109 @@ const OverviewSection = () => {
 									themed assortment of fresh flowers delivered periodically.
 								</StyledP>
 							</Grid>
-							<Grid item xs={12}>
-								<StyledImage
-									src="/images/project-4-galler-3.png"
-									alt="bloombox gallery photo"
-								/>
-							</Grid>
+							<Box
+								component="img"
+								src="/images/bloom-box-overview.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="2">Brainstorming</Title>
+						<Title id="1-1">BRAINSTORM</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
-							<Grid item xs={12} sm={6}>
-								<StyledP mb="2rem">
+							<Box sx={{ display: "block" }}>
+								<StyledP sx={{ marginTop: "1rem" }}>
 									The brainstorming phase focused on integrating BloomBox’s
 									essence into the design, combining floral elements with their
 									distinct box delivery. The designs aimed for simplicity and
 									modernity, reflecting bloom, growth, and tranquility.
 								</StyledP>
-							</Grid>
-							<Grid item xs={12} sm={5}>
-								<StyledImage
-									src="/images/project-4-gallery-4.jpeg"
-									alt="bloombox"
+								<Box
+									component="img"
+									src="/images/bloom-box-brainstorm.jpg"
+									alt="concept"
+									sx={{
+										marginBottom: "10px",
+										width: { sm: "100%" },
+									}}
 								/>
-							</Grid>
+							</Box>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="3">Logo Sketch</Title>
+						<Title id="1-2">LOGO DESIGN</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between" alignItems="center">
-							<Grid item xs={12}>
-								<StyledP mb="2rem">
-									The sketching phase produced six unique designs, blending
-									geometric shapes with abstract floral motifs, setting the
-									direction for the final logos.
-								</StyledP>
-							</Grid>
+						<Grid container justifyContent="space-between">
+							<StyledP>
+								In the sketching phase, I came up with six designs that combined
+								geometric shapes and abstract floral patterns. These sketches
+								laid the groundwork for the final logos.
+							</StyledP>
+							<StyledP>
+								From these initial ideas, I selected one to develop into the
+								main logo, a secondary logo, and a submark. The main logo
+								showcases an abstract flower inside a square, representing a
+								petal unfolding and a delivery box. The secondary logo displays
+								the brand name in a horizontal layout. The submark simplifies
+								BloomBox's "B," ensuring the brand remains consistent across all
+								versions.
+							</StyledP>
+							<Box
+								component="img"
+								src="/images/bloom-box-logo-design.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="4">Logo Design</Title>
+						<Title id="1-3">TYPOGRAPHY AND COLOR</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between" alignItems="center">
-							<Grid item xs={12} sm={5}></Grid>
-							<Grid item xs={12}>
-								<StyledImage
-									src="/images/project-4-gallery-5.png"
-									alt="bloombox gallery photo"
-									sx={{ float: "left", width: "50%", marginRight: "2rem" }}
-								/>
-								<StyledP mb="2rem">
-									Out of the sketches, one was chosen to develop the primary
-									logo, secondary logo, and submark. The primary logo featured
-									an abstract flower in a square, symbolizing petal unfolding
-									and the delivery box. The secondary logo presented the brand
-									name horizontally, while the submark offered a minimalistic
-									take on BloomBox’s "B," maintaining brand consistency.
-								</StyledP>
-							</Grid>
+						<Grid container justifyContent="space-between">
+							<StyledP>
+								Antipol VF was selected as the primary font for its modernity,
+								and Century Gothic Pro as the secondary font for clarity. The
+								color palette consisted of soft pastels in pink and green,
+								representing flowers and leaves, complemented by off-white for
+								contrast and readability.
+							</StyledP>
+							<Box
+								component="img"
+								src="/images/bloom-box-color.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="5">Typography and Color</Title>
+						<Title id="1-4">FINALIZATION</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between" alignItems="center">
-							<Grid
-								item
-								container
-								xs={12}
-								mb="2rem"
-								alignItems="center"
-								justifyContent="center"
-							>
-								<StyledP mb="2rem">
-									Antipol VF was selected as the primary font for its modernity,
-									and Century Gothic Pro as the secondary font for clarity. The
-									color palette consisted of soft pastels in pink and green,
-									representing flowers and leaves, complemented by off-white for
-									contrast and readability.
-								</StyledP>
-								<StyledImage
-									sx={{ float: "right", width: "80%" }}
-									src="/images/project-4-gallery-6.png"
-									alt="bloombox gallery photo"
-								/>
-							</Grid>
-						</Grid>
-					</StyledSection>
-					<StyledSection>
-						<Title id="6">Branding Finalization</Title>
-						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between" alignItems="center">
-							<Grid item xs={12} sm={3}>
-								<StyledP mb="2rem">
-									The final stage combined the selected colors and typography,
-									culminating in the complete BloomBox logo.
-								</StyledP>
-							</Grid>
-							<Grid item xs={12} sm={8} mb="2rem">
-								<StyledImage
-									src="/images/project-4-gallery-1.png"
-									alt="bloombox"
-								/>
-							</Grid>
+						<Grid container justifyContent="space-between">
+							<StyledP>
+								In the final stage, I brought together the chosen colors and
+								typography to finalize the BloomBox logo. We also created
+								mockups to showcase the logo in various applications.
+							</StyledP>
+							<Box
+								component="img"
+								src="/images/bloom-box-final.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
 				</StyledMainContainer>

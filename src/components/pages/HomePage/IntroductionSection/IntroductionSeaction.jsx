@@ -141,16 +141,18 @@ const LearnMoreButton = styled("button")({
 
 const IntroductionSection = () => {
 	const [animationClass, setAnimationClass] = useState("");
-	const [showDesigner, setShowDesigner] = useState(false);
-	const [showIntroduction, setShowIntroduction] = useState(false);
-	const [showButton, setShowButton] = useState(false);
-	const { animationTriggered, setAnimationTriggered } =
-		useContext(AnimationContext);
-	useEffect(() => {
-		if (showIntroduction) {
-			setShowButton(true);
-		}
-	}, [showIntroduction]);
+	// const [showDesigner, setShowDesigner] = useState(false);
+	// const [showIntroduction, setShowIntroduction] = useState(false);
+	// const [showButton, setShowButton] = useState(false);
+	const {
+		animationTriggered,
+		setAnimationTriggered,
+	} = useContext(AnimationContext);
+	// useEffect(() => {
+	// 	if (showIntroduction) {
+	// 		setShowButton(true);
+	// 	}
+	// }, [showIntroduction]);
 	const handleEnter = () => {
 		if (!animationTriggered) {
 			setAnimationClass("animate-down");
@@ -183,10 +185,10 @@ const IntroductionSection = () => {
 								onInit={(typewriter) => {
 									typewriter
 										.typeString("Peirong Wang.")
-										.callFunction(() => {
-											setShowDesigner(true);
-											setTimeout(() => setShowIntroduction(true), 1000);
-										})
+										// .callFunction(() => {
+										// 	setShowDesigner(true);
+										// 	setTimeout(() => setShowIntroduction(true), 1000);
+										// })
 										.start();
 								}}
 								options={{

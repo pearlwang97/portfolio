@@ -73,17 +73,15 @@ const SocialMediaSection = () => {
 				pb: "50px",
 			}}
 		>
-			<StyledH2>Get In Touch</StyledH2>
-			<Box sx={{width: {xs: "90%", md: "80%" }, margin: "0 auto"}}>
+			{/* <StyledH2>Get In Touch</StyledH2> */}
+			<Box sx={{ width: { xs: "90%", md: "80%" }, margin: "5rem auto 5rem auto" }}>
 				<StyledP>
-					Currently look for new opportunities, please feel free to reach
-					out.
+					Currently look for new opportunities, please feel free to reach out.
 				</StyledP>
+				<StyledButton href={mailtoHref} target="_blank">
+					Contact
+				</StyledButton>
 			</Box>
-
-			<StyledButton href={mailtoHref} target="_blank">
-				Contact
-			</StyledButton>
 		</Box>
 	);
 };

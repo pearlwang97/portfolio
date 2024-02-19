@@ -20,18 +20,18 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 	},
 }));
 
-const SpinImage = styled('img')({
-	animation: 'spin 4s linear infinite',
+const SpinImage = styled("img")({
+	animation: "spin 4s linear infinite",
 	height: "auto",
-	'@keyframes spin': {
-	  from: {
-		transform: 'rotate(0deg)',
-	  },
-	  to: {
-		transform: 'rotate(360deg)',
-	  },
+	"@keyframes spin": {
+		from: {
+			transform: "rotate(0deg)",
+		},
+		to: {
+			transform: "rotate(360deg)",
+		},
 	},
-  });
+});
 
 const StyledImage = styled("img")({
 	width: "100%",
@@ -74,6 +74,25 @@ const ImageContainer = styled(Box)(({ theme, width }) => ({
 	},
 }));
 
+const LearnMoreButton = styled("button")({
+	backgroundColor: "#dba39a",
+	color: "#250d00",
+	textDecoration: "none",
+	border: "none",
+	width: "9rem",
+	textAlign: "center",
+	fontFamily: "'Montserrat', sans-serif",
+	fontWeight: "600", // semi-bold
+	fontSize: "15px",
+	borderRadius: "7px",
+	padding: "10px 10px",
+	marginTop: "20px",
+	"&:hover": {
+		backgroundColor: "#F0DBDB",
+		color: "#250D00",
+	},
+});
+
 const SelfIntroductionSection = () => {
 	return (
 		<Box
@@ -86,21 +105,37 @@ const SelfIntroductionSection = () => {
 			}}
 		>
 			<StyledContainer>
-				<ImageContainer sx={{ position: "relative" }}width="31%">
-					<StyledImage src="/images/about-me-selfie.JPG" alt="peirong wang selfies" />
-					<SpinImage sx={{width : "20%", position: "absolute", top: 0, left: 0, zIndex: 2}}src="/images/flower.png" alt="spinning flower" />
+				<ImageContainer sx={{ position: "relative" }} width="31%">
+					<StyledImage
+						src="/images/about-me-selfie.JPG"
+						alt="peirong wang selfies"
+					/>
+					<SpinImage
+						sx={{
+							width: "20%",
+							position: "absolute",
+							top: 0,
+							left: 0,
+							zIndex: 2,
+						}}
+						src="/images/flower.png"
+						alt="spinning flower"
+					/>
 				</ImageContainer>
-				<ImageContainer width="61%" sx={{ containerType: "inline-size"}}>
+				<ImageContainer
+					width="61%"
+					sx={{ containerType: "inline-size", textAlign: "left" }}
+				>
 					<StyledH2>Hiii</StyledH2>
 					<StyledH2>I'm Peirong!</StyledH2>
-					<StyledP sx={{lineHeight: "2rem"}}>
+					<StyledP sx={{ lineHeight: "2rem" }}>
 						I'm passionate with a love for design. Born in China and having
 						relocated to Vancouver during my high school years, I've had the
 						chance to experience two distinct worlds and cultures. My past
 						experience enhanced my adaptability and approach things with an
 						inclusive and diverse mindset.
 					</StyledP>
-					<StyledP sx={{lineHeight: "2rem"}}>
+					<StyledP sx={{ lineHeight: "2rem" }}>
 						Driven by a foundational background in economics from the University
 						of Victoria, my journey into New Media was serendipitous. I stumbled
 						upon my passion for digital design after graduation. Now in my
@@ -108,11 +143,14 @@ const SelfIntroductionSection = () => {
 						blend my knowledge of marketing strategy with my technical design
 						expertise to provide a positive user experience.
 					</StyledP>
-					<StyledP sx={{lineHeight: "2rem"}}>
+					<StyledP sx={{ lineHeight: "2rem" }}>
 						I believe design builds a channel for communication, connecting my
 						thoughts and ideas with my audience. Therefore, I aspire to create
 						design works that offer solutions and build connections with people.
 					</StyledP>
+					<a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">
+						<LearnMoreButton>Resume</LearnMoreButton>
+					</a>
 				</ImageContainer>
 			</StyledContainer>
 		</Box>

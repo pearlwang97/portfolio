@@ -13,6 +13,7 @@ import ProjectPage2 from "./components/pages/ProjectPage2/ProjectPage2";
 import ProjectPage3 from "./components/pages/ProjectPage3/ProjectPage3";
 import ProjectPage4 from "./components/pages/ProjectPage4/ProjectPage4";
 import ProjectPage5 from "./components/pages/ProjectPage5/ProjectPage5";
+import ProjectPage6 from "./components/pages/ProjectPage6/ProjectPage6";
 import "./App.css";
 import AnimationContext from "./components/Context/AnimationContextProvider";
 
@@ -53,6 +54,7 @@ function App() {
 					<Route path="/project-3" element={<ProjectPage3 />} />
 					<Route path="/project-4" element={<ProjectPage4 />} />
 					<Route path="/project-5" element={<ProjectPage5 />} />
+					<Route path="/project-6" element={<ProjectPage6 />} />
 					<Route path="/about" element={<AboutPage />} />
 				</Routes>
 				<GetInTouchSection />

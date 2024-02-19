@@ -1,7 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProjectCarousel.css";
@@ -9,7 +8,7 @@ import "./ProjectCarousel.css";
 const Image = styled("img")({
 	width: "100%",
 	height: "auto",
-	maxWidth: "500px",
+	// maxWidth: "500px",
 	margin:"0 auto",
 });
 
@@ -46,32 +45,7 @@ const ProjectCarousel = () => {
 		>
 			<StyledContainer>
 				<Title>Papercut Illustrations: Chinese Zodiac Collection</Title>
-				<Slider>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-5-gallery-1.jpg" alt="chinese zodiac gallery image 1" />
-					</Box>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/design-5.jpg" alt="chinese zodiac gallery image 2" />
-					</Box>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-5-gallery-5.jpg" alt="chinese zodiac gallery image 3" />
-					</Box>
-				</Slider>
+				<Image src="images/chinese-zodiac-banner.jpg" alt="cyber era banner" />
 			</StyledContainer>
 		</Box>
 	);

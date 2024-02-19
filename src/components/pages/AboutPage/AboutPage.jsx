@@ -3,14 +3,15 @@ import SelfIntrocutionSection from "./SelfIntroductionSection/SelfIntroductionSe
 import SkillSection from "./SkillSection/SkillSection";
 import WorkExperienceSection from "./WorkExperienceSection/WorkExperienceSection";
 import FloatingGallery from "./FloatingGallery/FloatingGallery";
-// import IntroductionSection from "./IntroductionSection/IntroductionSeaction";
-// import FeatureWorksSection from "./FeatureWorkSection/FeatureWorkSection";
+import EducationSection from "./EducationSection/EducationSection";
+
 const AboutPage = () => {
     return (
         <div>
             <SelfIntrocutionSection />
             <SkillSection />
             <WorkExperienceSection />
+            <EducationSection />
             <FloatingGallery />
         </div>
     );

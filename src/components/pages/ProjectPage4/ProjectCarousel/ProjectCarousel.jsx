@@ -1,7 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProjectCarousel.css";
@@ -9,7 +8,7 @@ import "./ProjectCarousel.css";
 const Image = styled("img")({
 	width: "100%",
 	height: "auto",
-	maxWidth: "500px",
+	// maxWidth: "500px",
 	margin:"0 auto",
 });
 
@@ -46,24 +45,7 @@ const ProjectCarousel = () => {
 		>
 			<StyledContainer>
 				<Title>BloomBox Logo Design</Title>
-				<Slider>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-4-gallery-1.png" alt="bloombox gallery image 1" />
-					</Box>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-4-gallery-2.jpeg" alt="bloombox gallery image 2" />
-					</Box>
-				</Slider>
+				<Image src="images/bloom-box-banner.jpg" alt="cyber era banner" />
 			</StyledContainer>
 		</Box>
 	);

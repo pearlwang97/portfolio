@@ -1,8 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
 import ScrollTrigger from "react-scroll-trigger";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { AnimationContext } from "../../../Context/AnimationContext";
 import "./FeatureWorkSection.css";
 
 const ScrollTriggerStyled = styled(ScrollTrigger)({
@@ -94,6 +95,7 @@ const FeatureWorksOverlayText = styled("p")(({ theme }) => ({
 	textAlign: "center",
 	fontSize: "0.5rem", // 18px assuming the root font-size is 16px
 	zIndex: 1,
+	textDecoration: "underline",
 	".imageContainer:hover &": {
 		transform: "translateY(0)",
 		opacity: 1, // Show the text
@@ -120,10 +122,50 @@ const FeatureWorksSection = () => {
 	const [animationClass2, setAnimationClass2] = useState("");
 	const [animationClass3, setAnimationClass3] = useState("");
 	const [animationClass4, setAnimationClass4] = useState("");
+	const {
+		animation1Triggered,
+		setAnimation1Triggered,
+		animation2Triggered,
+		setAnimation2Triggered,
+		animation3Triggered,
+		setAnimation3Triggered,
+		animation4Triggered,
+		setAnimation4Triggered,
+	} = useContext(AnimationContext);
+
+
+	const handleEnter1 = () => {
+		if (!animation1Triggered) {
+			setAnimationClass1("animate-left");
+			setAnimation1Triggered(true);
+		}
+	};
+
+	const handleEnter2 = () => {
+		if (!animation2Triggered) {
+			setAnimationClass2("animate-right");
+			setAnimation2Triggered(true);
+		}
+	};
+
+	const handleEnter3 = () => {
+		if (!animation3Triggered) {
+			setAnimationClass3("animate-left");
+			setAnimation3Triggered(true);
+		}
+	};
+
+	const handleEnter4 = () => {
+		if (!animation4Triggered) {
+			setAnimationClass4("animate-right");
+			setAnimation4Triggered(true);
+		}
+	};
+
 	useEffect(() => {
 		const resizeObserver = new ResizeObserver((entries) => {
 			for (let entry of entries) {
-				setMarginBottom(`${entry.contentRect.height * 0.21}px`);
+				setMarginBottom(`${entry.contentRect.height * 0.05}px`);
 			}
 		});
 
@@ -151,9 +193,9 @@ const FeatureWorksSection = () => {
 			<StyledH2>Featured Works</StyledH2>
 			<StyledContainer ref={containerRef} marginBottom={marginBottom}>
 				<ScrollTriggerStyled
-					onEnter={() => setAnimationClass1("animate-left")}
+					onEnter={handleEnter1}
 					onExit={() => setAnimationClass1("")}
-					sx={{ width: "63.5%" }}
+					sx={{ width: "66%" }}
 				>
 					<Box
 						className={`imageContainer ${animationClass1}`}
@@ -175,9 +217,9 @@ const FeatureWorksSection = () => {
 					</Box>
 				</ScrollTriggerStyled>
 				<ScrollTriggerStyled
-					onEnter={() => setAnimationClass2("animate-right")}
+					onEnter={handleEnter2}
 					onExit={() => setAnimationClass2("")}
-					sx={{ width: "30.01%" }}
+					sx={{ width: "31.5%" }}
 				>
 					<Box
 						className={`imageContainer ${animationClass2}`}
@@ -201,9 +243,9 @@ const FeatureWorksSection = () => {
 			</StyledContainer>
 			<StyledContainer>
 				<ScrollTriggerStyled
-					onEnter={() => setAnimationClass3("animate-left")}
+					onEnter={handleEnter3}
 					onExit={() => setAnimationClass3("")}
-					sx={{ width: "36.4%" }}
+					sx={{ width: "38%" }}
 				>
 					<Box
 						className={`imageContainer ${animationClass3}`}
@@ -225,9 +267,9 @@ const FeatureWorksSection = () => {
 					</Box>
 				</ScrollTriggerStyled>
 				<ScrollTriggerStyled
-					onEnter={() => setAnimationClass4("animate-right")}
+					onEnter={handleEnter4}
 					onExit={() => setAnimationClass4("")}
-					sx={{ width: "57.5%" }}
+					sx={{ width: "60%" }}
 				>
 					<Box
 						className={`imageContainer ${animationClass4}`}

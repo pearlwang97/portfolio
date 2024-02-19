@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-scroll";
 import { Grid, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
@@ -24,7 +25,7 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 const StyledMainContainer = styled(Box)(({ theme }) => ({
 	overflow: "hidden",
 	position: "relative",
-	border: "1px solid #6b6b6b",
+	// border: "1px solid #6b6b6b",
 	borderRadius: "50px",
 	[theme.breakpoints.down("sm")]: {
 		border: "none",
@@ -92,7 +93,7 @@ const StyledList = styled("ul")(({ theme }) => ({
 	},
 }));
 
-const StyledNavItem = styled("a")(({ theme }) => ({
+const StyledNavItem = styled(Link)(({ theme }) => ({
 	color: "inherit",
 	display: "flex",
 	alignItems: "center",
@@ -112,6 +113,9 @@ const StyledNavItem = styled("a")(({ theme }) => ({
 	},
 	"&:visited": {
 		color: "inherit", // Add this line
+	},
+	"&.active": {
+		textDecoration: "underline",
 	},
 }));
 
@@ -164,12 +168,42 @@ const OverviewSection = () => {
 		>
 			<StyledContainer>
 				<StyledNav>
-					<StyledNavItem href="#1-0">overview</StyledNavItem>
-					<StyledNavItem href="#1-1">planning</StyledNavItem>
-					<StyledNavItem href="#1-5">Prototype</StyledNavItem>
-					
-					<StyledNavItem href="#1-6">Test</StyledNavItem>
-					<StyledNavItem href="#1-8">Finalize</StyledNavItem>
+					<StyledNavItem
+						to="1-0"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						overview
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-1"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						planning
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-3"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						design & development
+					</StyledNavItem>
+					<StyledNavItem
+						to="1-5"
+						spy={true}
+						smooth={true}
+						duration={500}
+						activeClass="active"
+					>
+						Finalization
+					</StyledNavItem>
 				</StyledNav>
 				<StyledMainContainer>
 					<StyledSection>
@@ -190,175 +224,153 @@ const OverviewSection = () => {
 							</StyledListItem>
 						</StyledList>
 						<Grid container justifyContent="space-between">
-							<Grid item sm={5} xs={12}>
+							<Grid item xs={12}>
 								<StyledP>
 									The objective of this project is to create a user-centered,
 									modern interface for the existing Domino’s App using Figma and
-									Adobe Illustrator in UI / UX Strategy 1 course (MDIA2540).
+									Adobe Illustrator. It highlights the application of user
+									research principles and the strategic use of design tools to
+									improve usability and user experience.
 								</StyledP>
+								<StyledImage src="/images/project-1-timeline.jpg" />
 							</Grid>
-							<Grid item sm={5} xs={12}>
-								<StyledP>
-									The primary aim of this project is to demonstrate how the
-									student apply user research principles and utilize Figma &
-									Adobe Illustrator effectively to construct UI elements and
-									interactive design to enhance usability and user experience.
+						</Grid>
+					</StyledSection>
+					<StyledSection>
+						<Title id="1-1">Initiation and Research</Title>
+						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
+						<Grid container justifyContent="space-between">
+							<Box sx={{ display: "block" }}>
+								<Box
+									component="img"
+									src="/images/project-1-problem.jpg"
+									alt="Problem"
+									sx={{
+										float: "right",
+										marginLeft: "20px",
+										marginBottom: "10px",
+										width: { sm: "100%", md: "50%" },
+									}}
+								/>
+								<StyledP sx={{ marginTop: "1rem" }}>
+									The project came out with an initial planning phase to
+									identify the main issues with the current Domino's App
+									interface and brainstorm solutions. Initial research involved
+									collecting user feedback directly from platforms such as
+									Apple's App Store and Google Play, and conducting a detailed
+									survey via Google Forms to understand users' habits with
+									Domino's. This dual approach ensured a solid foundation for
+									user-centered design decisions.
 								</StyledP>
-							</Grid>
-							<Box
-								sx={{
-									display: "flex",
-									justifyContent: "center",
-									width: "100%",
-									marginTop: "2rem",
-									marginBottom: "2rem",
-								}}
-							>
-								<StyledImage src="/images/domino.png" alt="domino gallery photo" />
+								<Box
+									component="img"
+									src="/images/project-1-user-review.jpg"
+									alt="Problem"
+									sx={{
+										marginBottom: "10px",
+										width: { sm: "100%" },
+									}}
+								/>
 							</Box>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="1-1">Initial Planning and Research</Title>
+						<Title id="1-2">Competitive Analysis and User Insight</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									The project began with a planning phase, identifying core
-									problems and issues with the existing app interface and
-									proposing solutions. This led to setting clear project
-									objectives. User research was then initiated, gathering
-									feedback from current users on platforms like Apple's App
-									Store and Google Play.
-								</StyledP>
-							</Grid>
-							<Grid item container xs={12} justifyContent="center">
-								<StyledImage
-									src="/images/project-1-gallery-4.jpeg"
-									alt="domino gallery photo"
-									sx={{ width: "80%" }}
-								/>
-							</Grid>
+							<StyledP>
+								A detailed competitive analysis was conducted, comparing the
+								Domino's App with its competitor, the Boston Pizza App, to
+								identify strengths, weaknesses, and opportunities for
+								improvement based on user ratings and feedback. Insights from
+								this analysis helped in understanding the typical users of the
+								Domino's App, leading to the creation of user personas and
+								stories. This step was crucial for implementing the design to
+								meet real user needs.
+							</StyledP>
+							<Box
+								component="img"
+								src="/images/project-1-competitive-analysis.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
+							<Box
+								component="img"
+								src="/images/project-1-user-type.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="1-2">Conduct Survey</Title>
+						<Title id="1-3">Design and Development</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									The project began with a planning phase, identifying core
-									problems and issues with the existing app interface and
-									proposing solutions. This led to setting clear project
-									objectives. User research was then initiated, gathering
-									feedback from current users on platforms like Apple's App
-									Store and Google Play.
-								</StyledP>
-							</Grid>
-							<Grid item container xs={12} justifyContent="center">
-								<StyledImage
-									src="/images/project-1-gallery-5.png"
-									sx={{ width: "80%" }}
-									alt="domino gallery photo"
-								/>
-							</Grid>
+							<StyledP>
+								With a clear understanding of the user base, I moved to the
+								design phase. The hand drawn wireframes were created to visually
+								conceptualize the proposed changes and solutions, and then it
+								turned into hi-fi wireframes and prototypes that incorporated
+								user feedback and competitive insights. This prototype was then
+								rigorously tested with identified user personas to ensure the
+								design effectively addressed their needs and preferences.
+							</StyledP>
+							<Box
+								component="img"
+								src="/images/project-1-iteration.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
 					<StyledSection>
-						<Title id="1-3">Competitive Analysis</Title>
+						<Title id="1-4">Testing</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									A competitive analysis compared the Domino's App with the
-									Boston Pizza App. Both apps shared similar features but
-									differed in user ratings and feedback. This analysis offered
-									valuable insights for the Domino’s App's improvement.
-								</StyledP>
-							</Grid>
+							<StyledP>
+								Testing revealed key areas for improvement, prompting a series
+								of refinements to enhance the app's usability and user
+								experience. Feedback from these sessions was integral in
+								refining the design, ensuring the final product resonated with
+								our target audience.
+							</StyledP>
+							<Box
+								component="img"
+								src="/images/project-1-test.jpg"
+								alt="Problem"
+								sx={{
+									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
 						</Grid>
 					</StyledSection>
-					<StyledSection>
-						<Title id="1-4">Identify User Type</Title>
+					<StyledSection sx={{ mb: "2rem" }}>
+						<Title id="1-5">Finalization</Title>
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									After the analysis, typical users of the Domino's mobile app
-									were identified, leading to the creation of user personas and
-									stories. This helped understand the user group and ensure the
-									design resonated with actual users.
-								</StyledP>
-							</Grid>
-							<Grid item container xs={12} justifyContent="center">
-								<StyledImage
-									src="/images/project-1-gallery-6.png"
-									sx={{ width: "80%" }}
-									alt="domino gallery photo"
-								/>
-							</Grid>
-						</Grid>
-					</StyledSection>
-					<StyledSection>
-						<Title id="1-5">Create Prototype</Title>
-						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									After the analysis, typical users of the Domino's mobile app
-									were identified, leading to the creation of user personas and
-									stories. This helped understand the user group and ensure the
-									design resonated with actual users.
-								</StyledP>
-							</Grid>
-						</Grid>
-					</StyledSection>
-					<StyledSection>
-						<Title id="1-6">Testing</Title>
-						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									After the analysis, typical users of the Domino's mobile app
-									were identified, leading to the creation of user personas and
-									stories. This helped understand the user group and ensure the
-									design resonated with actual users.
-								</StyledP>
-							</Grid>
-						</Grid>
-					</StyledSection>
-					<StyledSection>
-						<Title id="1-7">Refinement</Title>
-						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									After comprehensive testing and improvements, the project was
-									finalized. The entire process was documented in a case study
-									and presented to the class.
-								</StyledP>
-							</Grid>
-						</Grid>
-					</StyledSection>
-					<StyledSection sx={{mb: "2rem"}}>
-						<Title id="1-8">Finalize the Project</Title>
-						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
-						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<StyledP>
-									Following the presentation, the project was revisited. Based
-									on insights and critiques, additional screens were added to
-									the design in Figma. Finally, several finishing touches were
-									applied to complete the project.
-								</StyledP>
-							</Grid>
-							<Grid item container xs={12} justifyContent="center">
-								<StyledImage
-									src="/images/project-1-gallery-7.png"
-									sx={{ width: "80%" }}
-									alt="domino gallery photo"
-								/>
-							</Grid>
+							<StyledP>
+								The project culminated with the addition of final touches based
+								on critique and insights from the presentation phase. Additional
+								screens were developed in Figma, completing the redesign.
+							</StyledP>
+							<Box>
+								<iframe
+									width="450"
+									height="500"
+									src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfQF5Uochvt75Ijt4J4oe2X%2FDomino-Redesign%3Ftype%3Ddesign%26node-id%3D1-11%26t%3DiIeOpNetOoiM7BKO-1%26scaling%3Dscale-down%26page-id%3D1%253A2%26starting-point-node-id%3D1%253A619%26mode%3Ddesign"
+									allowFullScreen
+								></iframe>
+							</Box>
 						</Grid>
 					</StyledSection>
 				</StyledMainContainer>

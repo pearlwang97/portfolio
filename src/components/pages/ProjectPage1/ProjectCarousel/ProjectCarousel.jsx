@@ -1,7 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProjectCarousel.css";
@@ -9,7 +8,7 @@ import "./ProjectCarousel.css";
 const Image = styled("img")({
 	width: "100%",
 	height: "auto",
-	maxWidth: "500px",
+	// maxWidth: "500px",
 	margin:"0 auto",
 });
 
@@ -18,13 +17,6 @@ const Title = styled("h1")({
 	fontWeight: "bold",
 	textAlign: "center",
 	marginBottom: "50px",
-});
-
-const StyledSlider = styled(Slider)({
-	width: "100%",
-	maxWidth: "1140px",
-	height: "auto",
-	maxHeight: "300px",
 });
 
 const StyledContainer = styled(Box)(({ theme }) => ({
@@ -53,32 +45,7 @@ const ProjectCarousel = () => {
 		>
 			<StyledContainer>
 				<Title>Domino’s APP Redesign</Title>
-				<Slider>
-				<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/design-1.png" alt="domino gallery photo" />
-					</Box>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-1-gallery-1.png" alt="domino gallery photo" />
-					</Box>
-					<Box
-						sx={{
-							width: "100%",
-							height: "auto",
-						}}
-					>
-						<Image src="/images/project-1-gallery-2.png" alt="domino gallery photo" />
-					</Box>
-				</Slider>
+				<Image src="images/project-1-banner.jpg" alt="domino banner" />
 			</StyledContainer>
 		</Box>
 	);
