@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { Box } from "@mui/material";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SocialMediaSection from "./components/SocialMediaSection/SocialMediaSection";
@@ -37,7 +38,9 @@ function App() {
 		},
 	};
 	return (
-		<div className="App">
+		<Box sx={{
+			backgroundColor: "#fefcf3",
+		}}>
 			<Helmet>
 				<script type="application/ld+json">
 					{JSON.stringify(personSchema)}
@@ -61,7 +64,7 @@ function App() {
 				<SocialMediaSection />
 				<Footer />
 			</AnimationContext>
-		</div>
+		</Box>
 	);
 }
 

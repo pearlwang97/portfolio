@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
-// import Divider from "../../../Divider/Divider";
+import Link from "components/shared/StyledLink/StyledLink";
 
 const StyledContainer = styled(Box)(({ theme, marginBottom }) => ({
 	width: "60%",
@@ -67,11 +66,6 @@ const ImageContainer = styled(Box)(({ theme, width }) => ({
 		width: width,
 	},
 }));
-
-const StyledLink = styled(Link)({
-	textDecoration: "none",
-	color: "inherit",
-});
 
 const SubTitle = styled("p")(({ textAlign, theme }) => ({
 	fontSize: "0.875rem",
@@ -148,17 +142,17 @@ const DesignSection = () => {
 		>
 			<StyledContainer marginBottom="30px">
 				<ImageContainer width="58%">
-					<StyledLink to="/project-3">
+					<Link to="/project-3">
 						<StyledImage src="/images/design-3.png" />
-					</StyledLink>
+					</Link>
 				</ImageContainer>
 				<ImageContainer width="36%">
 					<TitleContainer textAlign="right">
 						<Title>01</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/project-3">
+						<Link to="/project-3">
 							<Title>2D Realistic Radio Vector Art</Title>
-						</StyledLink>
+						</Link>
 					</TitleContainer>
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Goal</SubTitle>
@@ -197,9 +191,9 @@ const DesignSection = () => {
 					<TitleContainer textAlign="left">
 						<Title>02</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/project-4">
-							<Title>BloomBox Logo Deisgn</Title>
-						</StyledLink>
+						<Link to="/project-4">
+							<Title>BloomBox Logo Design</Title>
+						</Link>
 					</TitleContainer>
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Goal</SubTitle>
@@ -237,24 +231,24 @@ const DesignSection = () => {
 						order: isMobile ? 0 : 1,
 					}}
 				>
-					<StyledLink to="/project-4">
+					<Link to="/project-4">
 						<StyledImage src="/images/design-4.png" alt="bloomBlox photo" />
-					</StyledLink>
+					</Link>
 				</ImageContainer>
 			</StyledContainer>
 			<StyledContainer marginBottom="30px">
 				<ImageContainer width="58%">
-					<StyledLink to="/project-5">
+					<Link to="/project-5">
 						<StyledImage src="/images/design-5.jpg" />
-					</StyledLink>
+					</Link>
 				</ImageContainer>
 				<ImageContainer width="36%">
 					<TitleContainer textAlign="right">
 						<Title>03</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/project-5">
+						<Link to="/project-5">
 							<Title>Papercut Illustrations: Chinese Zodiac Collection</Title>
-						</StyledLink>
+						</Link>
 					</TitleContainer>
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Goal</SubTitle>
@@ -292,11 +286,11 @@ const DesignSection = () => {
 					}}
 				>
 					<TitleContainer textAlign="left">
-						<Title>02</Title>
+						<Title>04</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/project-6">
+						<Link to="/project-6">
 							<Title>Cyber Era Poster Design</Title>
-						</StyledLink>
+						</Link>
 					</TitleContainer>
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Goal</SubTitle>
@@ -333,9 +327,9 @@ const DesignSection = () => {
 						order: isMobile ? 0 : 1,
 					}}
 				>
-					<StyledLink to="/project-6">
+					<Link to="/project-6">
 						<StyledImage src="/images/cyber-era-1.jpg" alt="bloomBlox photo" />
-					</StyledLink>
+					</Link>
 				</ImageContainer>
 			</StyledContainer>
 		</Box>

@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
-// import Divider from "../../../Divider/Divider";
+import Link from "components/shared/StyledLink/StyledLink";
 
 const StyledContainer = styled(Box)(({ theme, marginBottom }) => ({
 	width: "60%",
@@ -67,11 +66,6 @@ const ImageContainer = styled(Box)(({ theme, width }) => ({
 		width: width,
 	},
 }));
-
-const StyledLink = styled(Link)({
-	textDecoration: "none",
-	color: "inherit",
-});
 
 const SubTitle = styled("p")(({ textAlign, theme }) => ({
 	fontSize: "0.875rem",
@@ -152,17 +146,17 @@ const DesignSection = () => {
 		>
 			<StyledContainer marginBottom="30px">
 				<ImageContainer width="58%">
-					<StyledLink to="/project-1">
+					<Link to="/project-1">
 						<StyledImage src="/images/design-1.png" alt="domino cover" />
-					</StyledLink>
+					</Link>
 				</ImageContainer>
 				<ImageContainer width="36%">
 					<TitleContainer textAlign="right">
 						<Title>01</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/project-1">
+						<Link to="/project-1">
 							<Title>Domino’s APP Redesign</Title>
-						</StyledLink>
+						</Link>
 					</TitleContainer>
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Goal</SubTitle>
@@ -233,9 +227,9 @@ const DesignSection = () => {
 					<TitleContainer textAlign="left">
 						<Title>02</Title>
 						{isMobile && <Title>&nbsp;</Title>}
-						<StyledLink to="/project-2">
+						<Link to="/project-2">
 							<Title>Bloom APP Design</Title>
-						</StyledLink>
+						</Link>
 					</TitleContainer>
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Goal</SubTitle>
@@ -288,9 +282,9 @@ const DesignSection = () => {
 						order: isMobile ? 0 : 1,
 					}}
 				>
-					<StyledLink to="/project-2">
+					<Link to="/project-2">
 						<StyledImage src="/images/design-2.png" alt="bloom photo" />
-					</StyledLink>
+					</Link>
 				</ImageContainer>
 			</StyledContainer>
 		</Box>

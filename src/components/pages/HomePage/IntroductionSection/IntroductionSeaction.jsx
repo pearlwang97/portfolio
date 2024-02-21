@@ -1,82 +1,48 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import ScrollTrigger from "react-scroll-trigger";
 import { Box } from "@mui/material";
-import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Typewriter from "typewriter-effect";
-import { AnimationContext } from "../../../Context/AnimationContext";
+import { AnimationContext } from "components/Context/AnimationContext";
+import Button from "components/shared/Button/Button";
+import Link from "components/shared/StyledLink/StyledLink";
+import StyledP from "components/shared/StyledP/StyledP";
+import MainContainer from "components/shared/MainContainer/MainContainer";
+import Image from "components/shared/Image/Image";
 import "./IntroductionSection.css";
 
-const StyledImage = styled("img")({
-	width: "100%",
+const StyledImageContainer = styled(Box)(({ theme }) => ({
+	width: "50%",
 	height: "auto",
-});
-
-const Introduction = styled("div")(({ theme }) => ({
-	fontSize: "0.875rem", // Smaller font size on small screens
-	marginTop: "5px",
-	fontFamily: "'Montserrat', sans-serif",
-	[theme.breakpoints.up("sm")]: {
-		marginTop: "10px",
-		fontSize: "1rem", // 1.5rem font size on small devices and up
-	},
-	[theme.breakpoints.up("md")]: {
-		marginTop: "10px",
-		fontSize: "1.25rem", // Increase font size on medium devices and up
-	},
-}));
-
-const StyledLink = styled(Link)({
-	color: "inherit",
-	// textDecoration: "none",
-	"&:hover": {
-		textDecoration: "underline",
-	},
-});
-
-const StyledContainer = styled(Box)(({ theme, marginBottom }) => ({
-	width: "60%",
-	maxWidth: "1140px",
-	display: "flex",
-	flexWrap: "wrap",
-	justifyContent: "space-between",
-	alignItems: "center",
-	height: "auto",
-	margin: "0 auto",
-	marginBottom: marginBottom || 0,
+	order: 2,
 	[theme.breakpoints.down("md")]: {
-		width: "80%",
-		order: 1,
+		width: "50%",
+		order: 2,
 	},
 	[theme.breakpoints.down("sm")]: {
-		width: "90%",
+		width: "100%",
 		order: 1,
 	},
 }));
 
-const StyledImageContainer = styled(Box)(({ theme }) => ({
-	width: "100%", // Full width on small screens
+const StyledTextContainer = styled(Box)(({ theme }) => ({
+	marginTop: "50px",
+	width: "100%",
 	height: "auto",
-	order: 1,
-	[theme.breakpoints.up("sm")]: {
-		width: "44.5%", // 70% width on small devices and up
-		order: 2,
-	},
-	[theme.breakpoints.up("md")]: {
-		width: "44.5%", // 44.5% width on medium devices and up
-		order: 2,
-	},
+	order: 2,
+	textAlign: "left",
 }));
 
 const StyledScrollTrigger = styled(ScrollTrigger)({});
 const StyledHello = styled("p")(({ theme }) => ({
-	fontSize: "1rem", // Smaller font size on small screens
+	fontSize: "2rem",
 	fontFamily: "'Montserrat', sans-serif",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "1.5rem", // 2rem font size on small devices and up
+	marginBottom: "10px",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "1.5rem",
 	},
-	[theme.breakpoints.up("md")]: {
-		fontSize: "2rem", // Increase font size on medium devices and up
+	[theme.breakpoints.down("sm")]: {
+		fontSize: "1rem",
 	},
 }));
 
@@ -84,75 +50,35 @@ const StyledName = styled("p")(({ theme }) => ({
 	backgroundColor: "#DBA39A",
 	color: "#FEFCF3",
 	display: "inline-block",
-	fontSize: "1.25rem", // Smaller font size on small screens
+	fontSize: "2.5rem",
+	marginBottom: "10px",
 	width: "auto",
-	marginTop: "10px",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "1.875rem", // 3rem font size on small devices and up
+	[theme.breakpoints.down("md")]: {
+		fontSize: "1.875rem",
 	},
-	[theme.breakpoints.up("md")]: {
-		fontSize: "2.5rem", // Increase font size on medium devices and up
+	[theme.breakpoints.down("sm")]: {
+		fontSize: "1.25rem",
 	},
 }));
 
 const Designer = styled("div")(({ theme }) => ({
-	fontSize: "1.5rem", // Smaller font size on small screens
-	fontWeight: "600", // semi-bold
+	fontSize: "3rem",
+	fontWeight: "600",
 	fontFamily: "'New York', serif",
-	marginTop: "10px",
-	transition: "opacity 0.5s ease-in-out", // Add this line
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "2.25rem", // 3rem font size on small devices and up
-		textAlign: "left",
-		marginTop: "15px",
+	marginBottom: "10px",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "2.25rem", 
 	},
-	[theme.breakpoints.up("md")]: {
-		fontSize: "3rem", // Increase font size on medium devices and up
-		textAlign: "left",
-		marginTop: "15px",
+	[theme.breakpoints.down("sm")]: {
+		fontSize: "1.5rem",
 	},
 }));
 
-const StyledTextContainer = styled(Box)(({ theme }) => ({
-	width: "100%", // Full width on small screens
-	height: "auto",
-	order: 2,
-	textAlign: "left",
-}));
-
-const LearnMoreButton = styled("button")({
-	backgroundColor: "#dba39a",
-	color: "#250d00",
-	textDecoration: "none",
-	border: "none",
-	width: "9rem",
-	textAlign: "center",
-	fontFamily: "'Montserrat', sans-serif",
-	fontWeight: "600", // semi-bold
-	fontSize: "15px",
-	borderRadius: "7px",
-	padding: "10px 10px",
-	marginTop: "20px",
-	"&:hover": {
-		backgroundColor: "#F0DBDB",
-		color: "#250D00",
-	},
-});
 
 const IntroductionSection = () => {
 	const [animationClass, setAnimationClass] = useState("");
-	// const [showDesigner, setShowDesigner] = useState(false);
-	// const [showIntroduction, setShowIntroduction] = useState(false);
-	// const [showButton, setShowButton] = useState(false);
-	const {
-		animationTriggered,
-		setAnimationTriggered,
-	} = useContext(AnimationContext);
-	// useEffect(() => {
-	// 	if (showIntroduction) {
-	// 		setShowButton(true);
-	// 	}
-	// }, [showIntroduction]);
+	const { animationTriggered, setAnimationTriggered } =
+		useContext(AnimationContext);
 	const handleEnter = () => {
 		if (!animationTriggered) {
 			setAnimationClass("animate-down");
@@ -161,76 +87,56 @@ const IntroductionSection = () => {
 	};
 
 	return (
-		<Box
-			container
-			justifyContent={"center"}
-			sx={{
-				width: "100%",
-				height: "100%",
-				backgroundColor: "#fefcf3",
-				color: "#250d00",
-				paddingTop: "100px",
-			}}
-		>
-			<StyledContainer>
+			<MainContainer
+				sx={{
+					marginBottom: {
+						sm: "50px",
+						md: "75px",
+						lg: "100px",
+					},
+				}}
+			>
 				<StyledScrollTrigger
 					onEnter={handleEnter}
 					onExit={() => setAnimationClass("")}
 					sx={{ width: { xs: "100%", sm: "50%" } }}
 				>
-					<StyledTextContainer className={`textContainer ${animationClass}`}>
+					<StyledTextContainer className={`${animationClass}`}>
 						<StyledHello>hello, I’m</StyledHello>
 						<StyledName>
 							<Typewriter
 								onInit={(typewriter) => {
-									typewriter
-										.typeString("Peirong Wang.")
-										// .callFunction(() => {
-										// 	setShowDesigner(true);
-										// 	setTimeout(() => setShowIntroduction(true), 1000);
-										// })
-										.start();
+									typewriter.typeString("Peirong Wang.").start();
 								}}
 								options={{
 									delay: 18,
-									//speedup
 								}}
 							/>
 						</StyledName>
 
-						{/* {showDesigner && ( */}
 						<Designer>A Creative Designer.</Designer>
-						{/* )} */}
-						{/* {showIntroduction && ( */}
-						<Introduction>
+						<StyledP>
 							I put my passion into crafting meaningful experiences and
 							connections via design. My journey revolves around &nbsp;
-							<StyledLink to="/uxdesign">
+							<Link sx={{ textDecoration: "underline" }} to="/uxdesign">
 								<strong>UX/UI</strong>
-							</StyledLink>
+							</Link>
 							,&nbsp;
-							<StyledLink to="/visualdesign">
+							<Link sx={{ textDecoration: "underline" }} to="/visualdesign">
 								<strong>Visual Design</strong>
-							</StyledLink>
+							</Link>
 							&nbsp; including graphic and branding. Let's dive into impactful
 							visual stories together.
-						</Introduction>
-						{/* )} */}
-						{/* {showButton && ( */}
-						<StyledLink
-							to="/about"
-							// className={showIntroduction ? animationClass : ""}
-						>
-							<LearnMoreButton>LEARN MORE</LearnMoreButton>
-						</StyledLink>
-						{/* )} */}
+						</StyledP>
+						<Link to="/about">
+							<Button>LEARN MORE</Button>
+						</Link>
 					</StyledTextContainer>
 				</StyledScrollTrigger>
 				<StyledImageContainer>
-					<StyledImage src="/images/Artboard.svg" alt="painted woman" />
+					<Image src="/images/Artboard.svg" alt="painted woman" />
 				</StyledImageContainer>
-			</StyledContainer>
-		</Box>
+			</MainContainer>
 	);
 };
 

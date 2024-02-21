@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-// import DesignSection from "./DesignSection/DesignSection";
-import ProjectCarousel from "./ProjectCarousel/ProjectCarousel";
 import OverviewSection from "./OverviewSection/OverviewSection";
+import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
 
 const ProjectPage6 = () => {
 	useEffect(() => {
@@ -9,7 +8,10 @@ const ProjectPage6 = () => {
 	}, []);
 	return (
 		<div>
-			<ProjectCarousel />
+			<ProjectBanner
+				title="Cyber Era Poster Design"
+				imageSrc="images/cyber-era-1.jpg"
+			/>
 			<OverviewSection />
 		</div>
 	);

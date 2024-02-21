@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Box } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
@@ -96,7 +97,9 @@ const NavIcon = styled("button")(({ open, theme }) => ({
 const Header = () => {
 	const [toggle, toggleNav] = useState(false);
 	return (
-		<>
+		<Box sx={{
+			marginBottom: "50px",
+		}}>
 			<Nav>
 				<NavItem to="/">
 					<Logo src="/images/logo.png" alt="Logo" />
@@ -161,7 +164,7 @@ const Header = () => {
 					</li>
 				</OverLayMenu>
 			</OverLay>
-		</>
+		</Box>
 	);
 };
 

@@ -26,9 +26,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
 const StyledLink = styled('a')(({ theme }) => ({
 	  color: 'inherit',
 	  textDecoration: 'none',
-	//   '&:hover': {
-	// 	textDecoration: 'underline',
-	//   },
 }));
 
 const SocialMediaSection = () => {

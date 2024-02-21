@@ -3,55 +3,31 @@ import { Box, useTheme, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import AboutMeCarousel from "../AboutMeCarousel/AboutMeCarousel";
 import { gsap } from "gsap";
-
-const StyledImage = styled("img")({
-	height: "auto",
-});
-
-const StyledP = styled("p")(({ theme }) => ({
-	fontSize: "1rem",
-	[theme.breakpoints.down("md")]: {
-		fontSize: "1rem",
-	},
-	[theme.breakpoints.down("sm")]: {
-		fontSize: "1rem",
-	},
-}));
-
-const StyledH2 = styled("h2")(({ theme }) => ({
-	fontSize: "2rem",
-	fontWeight: "semi-bold",
-	textAlign: "center",
-	[theme.breakpoints.down("md")]: {
-		fontSize: "1.5rem",
-	},
-	[theme.breakpoints.down("sm")]: {
-		fontSize: "1rem",
-	},
-	fontFamily: "utopia-std, serif",
-}));
+import Image from "components/shared/Image/Image";
+import StyledP from "components/shared/StyledP/StyledP";
+import H2 from "components/shared/H2/H2";
 
 const StyledMainContainer = styled(Box)(({ theme, isSmallScreen }) => ({
-	width: "60%",
+	width: "100%",
 	maxWidth: "1140px",
-	backgroundColor: "#fefcf3",
-	color: "#250d00",
-	paddingTop: "100px",
+	// backgroundColor: "#fefcf3",
+	// color: "#250d00",
+	// paddingTop: "100px",
 	position: "relative",
 	minHeight: "100vh",
-	[theme.breakpoints.down("md")]: {
-		width: "80%",
-		height: "auto",
-		minHeight: "0",
-	},
-	[theme.breakpoints.down("sm")]: {
-		width: "90%",
-		height: "auto",
-		minHeight: "0",
-	},
+	// [theme.breakpoints.down("md")]: {
+	// 	width: "80%",
+	// 	height: "auto",
+	// 	minHeight: "0",
+	// },
+	// [theme.breakpoints.down("sm")]: {
+	// 	width: "90%",
+	// 	height: "auto",
+	// 	minHeight: "0",
+	// },
 	"& .title": {
 		position: "absolute",
-		top: isSmallScreen ? "0%" : "45%",
+		top: isSmallScreen ? "0%" : "30%",
 		left: "50%",
 		transform: "translateX(-50%)",
 		color: "#250d00",
@@ -167,6 +143,9 @@ const FloatingGallery = () => {
 			requestAnimationFrameId = null;
 		}
 	};
+	if (isSmallScreen) {
+		return <AboutMeCarousel />;
+	}
 	return (
 		<Box
 			sx={{
@@ -189,65 +168,67 @@ const FloatingGallery = () => {
 				{!isSmallScreen && (
 					<>
 						<Box className="plane" ref={plane1}>
-							<StyledImage
+							<Image
 								sx={{ width: "180px" }}
 								src="/images/about-me-gallery-1.jpg"
 								alt="plane1"
 							/>
-							<StyledImage
+							<Image
 								sx={{ width: "120px" }}
 								src="/images/about-me-gallery-2.jpg"
 								alt="plane2"
 							/>
-							<StyledImage
+							<Image
 								sx={{ width: "120px" }}
 								src="/images/about-me-gallery-3.jpg"
 								alt="plane3"
 							/>
 						</Box>
 						<Box className="plane" ref={plane2}>
-							<StyledImage
+							<Image
 								sx={{ width: "180px" }}
 								src="/images/about-me-gallery-4.jpg"
 								alt="plane1"
 							/>
-							<StyledImage
+							<Image
 								sx={{ width: "180px" }}
 								src="/images/about-me-gallery-5.jpg"
 								alt="plane2"
 							/>
-							<StyledImage
+							<Image
 								sx={{ width: "180px" }}
 								src="/images/about-me-gallery-6.jpg"
 								alt="plane3"
 							/>
 						</Box>
 						<Box className="plane" ref={plane3}>
-							<StyledImage
+							<Image
 								sx={{ width: "120px" }}
 								src="/images/about-me-gallery-7.jpg"
 								alt="plane1"
 							/>
-							<StyledImage
+							<Image
 								sx={{ width: "180px" }}
 								src="/images/about-me-gallery-8.jpg"
 								alt="plane2"
 							/>
 						</Box>
+						<Box
+							className="title"
+							sx={{
+								marginBottom: "20px",
+							}}
+						>
+							<H2>More About Me</H2>
+							<StyledP>
+								I have always been drawn to various forms of creative
+								expression. In my free time, you can find me watching movies,
+								engaging in crafts and DIY projects, playing games, and enjoying
+								the outdoors with my lovely dog. Moreover, I love traveling, as
+								seeing something different and new is very appealing to me.
+							</StyledP>
+						</Box>
 					</>
-				)}
-				<Box className="title">
-					<StyledH2>More About Me</StyledH2>
-					<StyledP>
-						I have always been drawn to various forms of creative expression. In
-						my free time, you can find me watching movies, engaging in crafts
-						and DIY projects, playing games, and enjoying the outdoors with my
-						lovely dog. Moreover, I love traveling, as seeing something
-						different and new is very appealing to me.
-					</StyledP>
-				</Box>
-				{isSmallScreen && (
-					<AboutMeCarousel />
 				)}
 			</StyledMainContainer>
 		</Box>

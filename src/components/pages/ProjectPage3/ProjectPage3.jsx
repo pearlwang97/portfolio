@@ -1,18 +1,21 @@
 import React, { useEffect } from "react";
-import ProjectCarousel from "./ProjectCarousel/ProjectCarousel";
 import OverviewSection from "./OverviewSection/OverviewSection";
+import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
 
 const ProjectPage3 = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }
-    , []);
-    return (
-        <div>
-            <ProjectCarousel />
-            <OverviewSection />
-        </div>
-    );
-}
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	return (
+		<div>
+			{/* <ProjectCarousel /> */}
+			<ProjectBanner
+				title="2D Realistic Radio Vector Art"
+				imageSrc="/images/project-3-gallery-3.png"
+			/>
+			<OverviewSection />
+		</div>
+	);
+};
 
 export default ProjectPage3;

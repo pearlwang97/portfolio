@@ -1,7 +1,7 @@
 import React from "react";
 
-import IntroductionSection from "./IntroductionSection/IntroductionSeaction";
-import FeatureWorksSection from "./FeatureWorkSection/FeatureWorkSection";
+import IntroductionSection from "components/pages/HomePage/IntroductionSection/IntroductionSeaction";
+import FeatureWorksSection from "components/pages/HomePage/FeatureWorkSection/FeatureWorkSection";
 
 const HomePage = () => {
     return (
