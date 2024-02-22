@@ -14,6 +14,19 @@ const StyledUl = styled("ul")({
 const StyledLi = styled("li")({
 	margin: "10px 0",
 	paddingLeft: "16px",
+	fontSize: "1rem",
+});
+
+const Time = styled("p")({
+	fontStyle: "italic",
+	fontWeight: "light",
+	fontSize: "1.1rem",
+	marginBottom: "20px",
+});
+
+const Company = styled("p")({
+	fontSize: "1.2rem",
+	marginBottom: "10px",
 });
 
 const WorkExperienceSection = () => {
@@ -56,61 +69,58 @@ const WorkExperienceSection = () => {
 				container
 				sx={{
 					width: "100%",
-					justifyContent: "start",
-					gap: { xs: "0px", md: "30px" },
+					justifyContent: "space-between",
 					alignItems: "top",
 					textAlign: "left",
 					fontFamily: "'Montserrat', sans-serif",
 				}}
 			>
-				<Grid item xs={12} md={5}>
+				<Grid item xs={12} md={5.5}>
 					<H3>Marketing Coordinator</H3>
-					<StyledP>Amber Financial Services Corp.</StyledP>
-					<StyledP>Jan 2021 – Jan 2022</StyledP>
+					<Company>Amber Financial Services Corp.</Company>
+					<Time>Jan 2021 – Jan 2022</Time>
 					<StyledUl>
 						<StyledLi>
-							<StyledP>
-								Develop strategic marketing initiatives and activities.
-							</StyledP>
+							{/* <StyledP> */}
+							Designed and implemented targeted marketing campaigns aligned with
+							the company's branding
+							{/* </StyledP> */}
 						</StyledLi>
 						<StyledLi>
-							<StyledP>
-								Create, maintain and strengthen the organization’s overall brand
-								though all media avenues.
-							</StyledP>
+							{/* <StyledP> */}
+							Developed strategic marketing initiatives for market goal and
+							conducted competitive analysis to inform marketing strategies
+							{/* </StyledP> */}
 						</StyledLi>
 						<StyledLi>
-							<StyledP>Design and implement marketing campaign.</StyledP>
+							{/* <StyledP> */}
+							Enhanced brand presence across multiple media platforms
+							{/* </StyledP> */}
 						</StyledLi>
 						<StyledLi>
-							<StyledP>
-								Organize monthly activities for products/services.
-							</StyledP>
-						</StyledLi>
-						<StyledLi>
-							<StyledP>Identify and analyze competitors.</StyledP>
+							{/* <StyledP> */}
+							Coordinated monthly activities, improving service visibility and
+							customer engagement
+							{/* </StyledP> */}
 						</StyledLi>
 					</StyledUl>
 				</Grid>
-				<Grid item sx={12} md={5}>
-					<H3>Front Desk</H3>
-					<StyledP>PIU Entertainment Ltd.</StyledP>
-					<StyledP>Feb 2019 – Sept 2020</StyledP>
+				<Grid item sx={12} md={5.5}>
+					<H3>Front Desk Admin</H3>
+					<Company>PIU Entertainment Ltd.</Company>
+					<Time>Feb 2019 – Sept 2020</Time>
 					<StyledUl>
 						<StyledLi>
-							<StyledP>
-								Assist with clients inquiries and help to solve technical
-								problem.
-							</StyledP>
+							{/* <StyledP> */}
+							Provided client support by addressing inquiries and resolving
+							technical issues
+							{/* </StyledP> */}
 						</StyledLi>
 						<StyledLi>
-							<StyledP>
-								Possess a working knowledge of related products and promotional
-								resources.
-							</StyledP>
-						</StyledLi>
-						<StyledLi>
-							<StyledP>Create documents for reports.</StyledP>
+							{/* <StyledP> */}
+							Generated and structured reports to support business operations
+							and management
+							{/* </StyledP> */}
 						</StyledLi>
 					</StyledUl>
 				</Grid>

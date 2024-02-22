@@ -44,11 +44,14 @@ const SelfIntroductionSection = () => {
 			}}
 		>
 			<Grid container></Grid>
-			<Grid container sx={{
-				alignItems: "top",
-				justifyContent: "space-between",
-				// gap: "2rem",
-			}}>
+			<Grid
+				container
+				sx={{
+					alignItems: "top",
+					justifyContent: "space-between",
+					// gap: "2rem",
+				}}
+			>
 				<Grid
 					item
 					xs={12}
@@ -59,23 +62,26 @@ const SelfIntroductionSection = () => {
 				>
 					{/* <H1 sx={{ visibility: "hidden" }}>Hiii</H1>
 					<H1 sx={{ visibility: "hidden" }}>I'm Peirong!</H1> */}
-					<Image sx={{
-						maxWidth: "475px",
-					}}src="/images/about-me-selfie.JPG" alt="peirong wang selfies" />
-				</Grid>
-				<Grid
-					item
-					xs={12}
-					lg={6}
-				>
-					<Grid
+					<Image
 						sx={{
-							lineHeight: "1.26",
+							maxWidth: "475px",
 						}}
-					>
-						<H1>Hiii</H1>
-						<H1>I'm Peirong!</H1>
-						<StyledP>
+						src="/images/about-me-selfie.JPG"
+						alt="peirong wang selfies"
+					/>
+				</Grid>
+				<Grid item xs={12} lg={6}>
+					<Grid>
+						<Box
+							sx={{
+								marginBottom: "20px",
+							}}
+						>
+							<H1>Hiii</H1>
+							<H1>I'm Peirong!</H1>
+						</Box>
+
+						{/* <StyledP>
 							I'm passionate with a love for design. Born in China and having
 							relocated to Vancouver during my high school years, I've had the
 							chance to experience two distinct worlds and cultures. My past
@@ -96,7 +102,41 @@ const SelfIntroductionSection = () => {
 							thoughts and ideas with my audience. Therefore, I aspire to create
 							design works that offer solutions and build connections with
 							people.
-						</StyledP>
+						</StyledP> */}
+						<Box
+							sx={{
+								lineHeight: "1.73",
+							}}
+						>
+							<StyledP
+								sx={{
+									marginBottom: "20px",
+								}}
+							>
+								A graphic designer who is originally from China, currently based
+								in Vancouver, BC.
+							</StyledP>
+							<StyledP
+								sx={{
+									marginBottom: "20px",
+								}}
+							>
+								With a solid foundation in economics from the University of
+								Victoria, I discovered my passion for new media design
+								post-graduation.
+							</StyledP>
+							<StyledP
+								sx={{
+									marginBottom: "20px",
+								}}
+							>
+								Committed to creating meaningful, user-centric graphics, I
+								infuse each project with passion and a diverse mindset. Eager to
+								continually learn and grow in the dynamic world of design, I'm
+								dedicated to bridging cultures and ideas through innovative and
+								impactful visual solutions.
+							</StyledP>
+						</Box>
 						<a
 							href="/files/resume.pdf"
 							target="_blank"

@@ -9,7 +9,7 @@ const StyledP = styled("p")(({ theme }) => ({
 		fontSize: "1rem",
 	},
 	[theme.breakpoints.down("sm")]: {
-		fontSize: "0.75rem",
+		fontSize: "1rem",
 	},
 }));
 

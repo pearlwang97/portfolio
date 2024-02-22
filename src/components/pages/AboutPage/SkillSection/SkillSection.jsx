@@ -82,7 +82,7 @@ const SkillSection = () => {
 					<StyledIcon src="/images/dn-logo.svg" alt="Dimension logo" />
 				</IconTooltip>
 				<IconTooltip title="AR">
-					<StyledIcon src="/images/ar-logo.svg" alt="AR logo" />
+					<StyledIcon src="/images/ar-logo.jpg" alt="AR logo" />
 				</IconTooltip>
 				<IconTooltip title="CSS">
 					<StyledIcon src="/images/css-logo.svg" alt="CSS logo" />

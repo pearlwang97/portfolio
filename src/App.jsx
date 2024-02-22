@@ -17,6 +17,26 @@ import ProjectPage5 from "./components/pages/ProjectPage5/ProjectPage5";
 import ProjectPage6 from "./components/pages/ProjectPage6/ProjectPage6";
 import "./App.css";
 import AnimationContext from "./components/Context/AnimationContextProvider";
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+`;
 
 function App() {
 	const personSchema = {
@@ -41,6 +61,7 @@ function App() {
 		<Box sx={{
 			backgroundColor: "#fefcf3",
 		}}>
+			<GlobalStyle />
 			<Helmet>
 				<script type="application/ld+json">
 					{JSON.stringify(personSchema)}

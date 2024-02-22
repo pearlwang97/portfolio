@@ -69,19 +69,32 @@ const OverLayMenu = styled("ul")(({ open, theme }) => ({
 }));
 
 const NavItem = styled(NavLink)(({ theme }) => ({
+    position: 'relative',
     color: 'black',
     textDecoration: 'none',
-	margin: "0 30px",
-	fontFamily: "'Montserrat', sans-serif",
-	fontSize: "1.2rem",
-    '&:hover': {
-        textDecoration: 'underline',
-    },
-    '&.active': {
-        textDecoration: 'underline',
-    },
+    margin: "0 30px",
+    fontFamily: "'Montserrat', sans-serif",
+    fontSize: "1.2rem",
     [theme.breakpoints.down('sm')]: {
-		fontSize: '0.8rem',
+        fontSize: '0.8rem',
+    },
+    '&:after': {
+        content: '""',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: '2px',
+        backgroundColor: '#dba39a',
+        transform: 'scaleX(0)',
+        transition: 'transform 0.3s ease-in-out',
+		bottom: '-10px',
+    },
+    '&:hover:after': {
+        transform: 'scaleX(1)',
+    },
+    '&.active:after': {
+        transform: 'scaleX(1)',
     },
 }));
 

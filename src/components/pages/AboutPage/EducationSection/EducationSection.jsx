@@ -4,47 +4,25 @@ import MainContainer from "components/shared/MainContainer/MainContainer";
 import Divider from "components/shared/Divider/Divider";
 import H2 from "components/shared/H2/H2";
 import H3 from "components/shared/H3/H3";
-import StyledP from "components/shared/StyledP/StyledP";
-
-const Company = styled("div")(({ theme }) => ({
-	fontSize: "0.75rem", // Smaller font size on small screens
-	margin: "10px 0",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "1rem", // 1.25rem font size on small devices and up
-	},
-	[theme.breakpoints.up("md")]: {
-		fontSize: "1.25rem", // Increase font size on medium devices and up
-	},
-}));
-
-const StyledH3 = styled("h3")(({ theme }) => ({
-	fontSize: "1rem", // Smaller font size on small screens
-	fontWeight: 500, // medium
-	margin: "10px 0",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "1.25rem", // 1.75rem font size on small devices and up
-	},
-	[theme.breakpoints.up("md")]: {
-		fontSize: "1.5rem", // Increase font size on medium devices and up
-	},
-}));
-
-const Period = styled("div")(({ theme }) => ({
-	fontSize: "0.75rem", // Smaller font size on small screens
-	margin: "10px 0",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "0.75rem", // 1.5rem font size on small devices and up
-	},
-	[theme.breakpoints.up("md")]: {
-		fontSize: "1rem", // Increase font size on medium devices and up
-	},
-}));
+import Image from "components/shared/Image/Image";
 
 const SytledLogo = styled("img")(({ theme }) => ({
 	height: "auto",
 	width: "100%",
 	maxWidth: "100px",
 }));
+
+const Time = styled("p")({
+	fontStyle: "italic",
+	fontWeight: "light",
+	fontSize: "1.1rem",
+	marginBottom: "20px",
+});
+
+const Company = styled("p")({
+	fontSize: "1.2rem",
+	marginBottom: "10px",
+});
 
 const EducationSection = () => {
 	return (
@@ -86,30 +64,38 @@ const EducationSection = () => {
 				direction="row"
 				sx={{
 					width: "100%",
-					justifyContent: "start",
+					justifyContent: "space-between",
 					gap: "30px",
 					alignItems: "top",
 					textAlign: "left",
 					fontFamily: "'Montserrat', sans-serif",
 				}}
 			>
-				<Grid item xs={12} md={5}>
-					<SytledLogo
-						src="images/bcit.svg"
+				<Grid item xs={12} md={5.5}>
+					<Image
+						sx={{
+							maxWidth: "240px",
+							maxHeight: "84px",
+						}}
+						src="images/bcit-logo.svg"
 						alt="British Columbia Institute of Technology logo"
 					/>
-					<H3>New Media Design and Web Development Program</H3>
-					<StyledP>British Columbia Institute of Technology</StyledP>
-					<StyledP>Jan 2023 – Present</StyledP>
+					<H3>New Media Design & Web Development</H3>
+					<Company>British Columbia Institute of Technology</Company>
+					<Time>Jan 2023 – Present</Time>
 				</Grid>
-				<Grid item xs={12} md={5}>
-					<SytledLogo
-						src="images/uvic.jpeg"
+				<Grid item xs={12} md={5.5}>
+					<Image
+						sx={{
+							maxWidth: "240px",
+							maxHeight: "84px",
+						}}
+						src="images/uvic-logo.svg"
 						alt="University of Victoria logo"
 					/>
-					<H3>Economic Bachelor's degree</H3>
-					<StyledP>University of Victoria</StyledP>
-					<StyledP>Sep 2016 – Apr 2020</StyledP>
+					<H3>Economics</H3>
+					<Company>University of Victoria</Company>
+					<Time>Sep 2016 – Apr 2020</Time>
 				</Grid>
 			</Grid>
 		</MainContainer>
