@@ -21,14 +21,23 @@ const WorkExperienceSection = () => {
 		<MainContainer
 			sx={{
 				marginBottom: {
-					sm: "50px",
+					xs: "50px",
 					md: "75px",
 					lg: "100px",
 				},
 			}}
 		>
 			<Box sx={{ width: "100%" }}>
-				<Divider width={"25%"} alignLeft={true} />
+				<Divider
+					sx={{
+						width: {
+							xs: "50%",
+							md: "40%",
+							lg: "25%",
+						},
+					}}
+					alignLeft={true}
+				/>
 				<H2
 					sx={{
 						textAlign: "left",
@@ -48,7 +57,7 @@ const WorkExperienceSection = () => {
 				sx={{
 					width: "100%",
 					justifyContent: "start",
-					gap: "30px",
+					gap: { xs: "0px", md: "30px" },
 					alignItems: "top",
 					textAlign: "left",
 					fontFamily: "'Montserrat', sans-serif",
@@ -60,17 +69,27 @@ const WorkExperienceSection = () => {
 					<StyledP>Jan 2021 – Jan 2022</StyledP>
 					<StyledUl>
 						<StyledLi>
-							Develop strategic marketing initiatives and activities.
+							<StyledP>
+								Develop strategic marketing initiatives and activities.
+							</StyledP>
 						</StyledLi>
 						<StyledLi>
-							Create, maintain and strengthen the organization’s overall brand
-							though all media avenues.
+							<StyledP>
+								Create, maintain and strengthen the organization’s overall brand
+								though all media avenues.
+							</StyledP>
 						</StyledLi>
-						<StyledLi>Design and implement marketing campaign.</StyledLi>
 						<StyledLi>
-							Organize monthly activities for products/services.
+							<StyledP>Design and implement marketing campaign.</StyledP>
 						</StyledLi>
-						<StyledLi>Identify and analyze competitors.</StyledLi>
+						<StyledLi>
+							<StyledP>
+								Organize monthly activities for products/services.
+							</StyledP>
+						</StyledLi>
+						<StyledLi>
+							<StyledP>Identify and analyze competitors.</StyledP>
+						</StyledLi>
 					</StyledUl>
 				</Grid>
 				<Grid item sx={12} md={5}>
@@ -79,13 +98,20 @@ const WorkExperienceSection = () => {
 					<StyledP>Feb 2019 – Sept 2020</StyledP>
 					<StyledUl>
 						<StyledLi>
-							Assist with clients inquiries and help to solve technical problem.
+							<StyledP>
+								Assist with clients inquiries and help to solve technical
+								problem.
+							</StyledP>
 						</StyledLi>
 						<StyledLi>
-							Possess a working knowledge of related products and promotional
-							resources.
+							<StyledP>
+								Possess a working knowledge of related products and promotional
+								resources.
+							</StyledP>
 						</StyledLi>
-						<StyledLi>Create documents for reports.</StyledLi>
+						<StyledLi>
+							<StyledP>Create documents for reports.</StyledP>
+						</StyledLi>
 					</StyledUl>
 				</Grid>
 			</Grid>

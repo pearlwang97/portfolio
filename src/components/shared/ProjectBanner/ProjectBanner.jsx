@@ -15,10 +15,13 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 	maxWidth: "1140px",
 	height: "auto",
 	margin: "0 auto",
-	[theme.breakpoints.down("md")]: {
+	[theme.breakpoints.up("lg")]: {
+		minWidth: "1140px",
+	},
+	[theme.breakpoints.down("lg")]: {
 		width: "80%",
 	},
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down("md")]: {
 		width: "85%",
 	},
 }));
@@ -28,7 +31,7 @@ const ProjectCarousel = ({ title, imageSrc }) => {
 		<StyledContainer
         sx={{
             marginBottom: {
-                sm: "50px",
+                xs: "50px",
                 md: "75px",
                 lg: "100px",
             },

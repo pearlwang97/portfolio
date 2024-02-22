@@ -58,9 +58,9 @@ const StyledListItemKey = styled("span")(({ theme }) => ({
 	fontWeight: "bold",
 	paddingRight: "0.5rem",
 	textTransform: "uppercase",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "1.2rem",
-	},
+	// [theme.breakpoints.up("sm")]: {
+	// 	fontSize: "1.2rem",
+	// },
 }));
 
 const StyledP = styled("p")(({ theme, mb }) => ({
@@ -176,15 +176,21 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<StyledList>
 							<StyledListItem>
-								<StyledListItemKey>TIMELINE</StyledListItemKey>
+								<StyledListItemKey>
+									<StyledP>TIMELINE</StyledP>
+								</StyledListItemKey>
 								<StyledP>MAY - JUN 2023</StyledP>
 							</StyledListItem>
 							<StyledListItem>
-								<StyledListItemKey>ROLE</StyledListItemKey>
+								<StyledListItemKey>
+									<StyledP>ROLE</StyledP>
+								</StyledListItemKey>
 								<StyledP>UI/UX Designer</StyledP>
 							</StyledListItem>
 							<StyledListItem>
-								<StyledListItemKey>Tools</StyledListItemKey>
+								<StyledListItemKey>
+									<StyledP>Tools </StyledP>
+								</StyledListItemKey>
 								<StyledP>Figma, Illustrator</StyledP>
 							</StyledListItem>
 						</StyledList>

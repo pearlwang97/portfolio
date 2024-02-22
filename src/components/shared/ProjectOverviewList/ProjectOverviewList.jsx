@@ -2,15 +2,13 @@ import React from "react";
 
 import { styled } from "@mui/material/styles";
 import StyledP from "components/shared/StyledP/StyledP";
+import H3 from "components/shared/H3/H3";
 
 const StyledListItemKey = styled("span")(({ theme }) => ({
 	fontSize: "1rem",
 	fontWeight: "bold",
 	paddingRight: "0.5rem",
 	textTransform: "uppercase",
-	[theme.breakpoints.up("sm")]: {
-		fontSize: "1.2rem",
-	},
 }));
 
 const StyledListItem = styled("li")(({ theme }) => ({
@@ -34,16 +32,24 @@ const StyledList = styled("ul")(({ theme }) => ({
 }));
 
 const ProjectOverviewList = ({ listItems }) => {
-    return (
-        <StyledList>
-            {listItems.map((item, index) => (
-                <StyledListItem key={index}>
-                    <StyledListItemKey>{item.key}</StyledListItemKey>
-                    <StyledP>{item.value}</StyledP>
-                </StyledListItem>
-            ))}
-        </StyledList>
-    );
-}
+	return (
+		<StyledList>
+			{listItems.map((item, index) => (
+				<StyledListItem key={index}>
+					<StyledListItemKey>
+						<H3
+							sx={{
+								margin: "0",
+							}}
+						>
+							{item.key}
+						</H3>
+					</StyledListItemKey>
+					<StyledP>{item.value}</StyledP>
+				</StyledListItem>
+			))}
+		</StyledList>
+	);
+};
 
 export default ProjectOverviewList;

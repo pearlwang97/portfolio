@@ -33,7 +33,14 @@ const StyledTextContainer = styled(Box)(({ theme }) => ({
 	textAlign: "left",
 }));
 
-const StyledScrollTrigger = styled(ScrollTrigger)({});
+const StyledScrollTrigger = styled(ScrollTrigger)(({ theme }) => ({
+	width: "50%",
+	order: 2,
+	[theme.breakpoints.down("sm")]: {
+		width: "100%",
+		order: 1,
+	},
+}));
 const StyledHello = styled("p")(({ theme }) => ({
 	fontSize: "2rem",
 	fontFamily: "'Montserrat', sans-serif",
@@ -67,13 +74,12 @@ const Designer = styled("div")(({ theme }) => ({
 	fontFamily: "'New York', serif",
 	marginBottom: "10px",
 	[theme.breakpoints.down("md")]: {
-		fontSize: "2.25rem", 
+		fontSize: "2.25rem",
 	},
 	[theme.breakpoints.down("sm")]: {
 		fontSize: "1.5rem",
 	},
 }));
-
 
 const IntroductionSection = () => {
 	const [animationClass, setAnimationClass] = useState("");
@@ -87,19 +93,19 @@ const IntroductionSection = () => {
 	};
 
 	return (
-			<MainContainer
-				sx={{
-					marginBottom: {
-						sm: "50px",
-						md: "75px",
-						lg: "100px",
-					},
-				}}
-			>
+		<MainContainer
+			sx={{
+				marginBottom: {
+					xs: "50px",
+					md: "75px",
+					lg: "100px",
+				},
+			}}
+		>
 				<StyledScrollTrigger
 					onEnter={handleEnter}
 					onExit={() => setAnimationClass("")}
-					sx={{ width: { xs: "100%", sm: "50%" } }}
+					// sx={{ width: { sm: "100%", md: "50%" } }}
 				>
 					<StyledTextContainer className={`${animationClass}`}>
 						<StyledHello>hello, I’m</StyledHello>
@@ -136,7 +142,7 @@ const IntroductionSection = () => {
 				<StyledImageContainer>
 					<Image src="/images/Artboard.svg" alt="painted woman" />
 				</StyledImageContainer>
-			</MainContainer>
+		</MainContainer>
 	);
 };
 

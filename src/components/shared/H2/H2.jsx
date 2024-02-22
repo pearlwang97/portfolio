@@ -5,11 +5,11 @@ const H2 = styled("h2")(({ theme }) => ({
 	fontWeight: "bold",
 	textAlign: "center",
     fontFamily: "utopia-std, serif",
-	[theme.breakpoints.down("md")]: {
+	[theme.breakpoints.down("lg")]: {
 		fontSize: "1.5rem",
 	},
-	[theme.breakpoints.down("sm")]: {
-		fontSize: "1rem",
+	[theme.breakpoints.down("md")]: {
+		fontSize: "1.5rem",
 	},
 
 }));

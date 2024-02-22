@@ -51,14 +51,23 @@ const EducationSection = () => {
 		<MainContainer
 			sx={{
 				marginBottom: {
-					sm: "50px",
+					xs: "50px",
 					md: "75px",
 					lg: "100px",
 				},
 			}}
 		>
 			<Box sx={{ width: "100%" }}>
-				<Divider width={"25%"} alignLeft={true} />
+				<Divider
+					sx={{
+						width: {
+							xs: "50%",
+							md: "40%",
+							lg: "25%",
+						},
+					}}
+					alignLeft={true}
+				/>
 				<H2
 					sx={{
 						textAlign: "left",

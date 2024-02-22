@@ -73,6 +73,7 @@ const NavItem = styled(NavLink)(({ theme }) => ({
     textDecoration: 'none',
 	margin: "0 30px",
 	fontFamily: "'Montserrat', sans-serif",
+	fontSize: "1.2rem",
     '&:hover': {
         textDecoration: 'underline',
     },
@@ -98,6 +99,7 @@ const Header = () => {
 	const [toggle, toggleNav] = useState(false);
 	return (
 		<Box sx={{
+			paddingTop: "35px",
 			marginBottom: "50px",
 		}}>
 			<Nav>

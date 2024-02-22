@@ -13,7 +13,7 @@ const SocialMediaSection = () => {
 			sx={{
 				textAlign: "center",
 				marginBottom: {
-					sm: "50px",
+					xs: "50px",
 					md: "75px",
 					lg: "100px",
 				},

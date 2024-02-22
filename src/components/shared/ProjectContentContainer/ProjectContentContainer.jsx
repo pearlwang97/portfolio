@@ -12,10 +12,10 @@ const OuterContainer = styled(Box)(({ theme }) => ({
 	display: "grid",
 	columnGap: "2rem",
 	gridTemplateColumns: "auto 1fr",
-	[theme.breakpoints.down("md")]: {
+	[theme.breakpoints.down("lg")]: {
 		width: "80%",
 	},
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down("md")]: {
 		width: "90%",
 	},
 }));
@@ -23,9 +23,9 @@ const OuterContainer = styled(Box)(({ theme }) => ({
 const InnerContainer = styled(Box)(({ theme }) => ({
 	overflow: "hidden",
 	position: "relative",
-	[theme.breakpoints.down("sm")]: {
-		border: "none",
-	},
+	// [theme.breakpoints.down("sm")]: {
+	// 	border: "none",
+	// },
 }));
 
 const ProjectContentContainer = ({ navItems, children}) => {

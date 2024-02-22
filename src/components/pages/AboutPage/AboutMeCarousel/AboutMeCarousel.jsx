@@ -51,27 +51,25 @@ const AboutMeCarousel = () => {
 				height: "100%",
 				backgroundColor: "#fefcf3",
 				color: "#250d00",
-				// paddingTop: "100px",
+				marginBottom: { xs: "50px", md: "75px", lg: "100px" },
 			}}
 		>
-			<Box
-				sx={{
-					marginBottom: "50px",
-				}}
-			>
-				<H2>More About Me</H2>
-				<StyledP>
-					I have always been drawn to various forms of creative expression. In
-					my free time, you can find me watching movies, engaging in crafts and
-					DIY projects, playing games, and enjoying the outdoors with my lovely
-					dog. Moreover, I love traveling, as seeing something different and new
-					is very appealing to me.
-				</StyledP>
-			</Box>
 			<StyledContainer>
-				<Carousel
-					swipe
+				<Box
+					sx={{
+						marginBottom: "50px",
+					}}
 				>
+					<H2>More About Me</H2>
+					<StyledP>
+						I have always been drawn to various forms of creative expression. In
+						my free time, you can find me watching movies, engaging in crafts
+						and DIY projects, playing games, and enjoying the outdoors with my
+						lovely dog. Moreover, I love traveling, as seeing something
+						different and new is very appealing to me.
+					</StyledP>
+				</Box>
+				<Carousel swipe>
 					{items.map((item, i) => (
 						<Image key={i} src={item.image} alt={item.name} />
 					))}
