@@ -41,6 +41,8 @@ const SelfIntroductionSection = () => {
 					md: "75px",
 					lg: "100px",
 				},
+				display: "flex",
+				flexWrap: "wrap",
 			}}
 		>
 			<Grid container></Grid>

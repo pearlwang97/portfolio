@@ -1,16 +1,12 @@
 import { Grid, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Divider from "components/shared/Divider/Divider";
 import H2 from "components/shared/H2/H2";
 import H3 from "components/shared/H3/H3";
 import Image from "components/shared/Image/Image";
-
-const SytledLogo = styled("img")(({ theme }) => ({
-	height: "auto",
-	width: "100%",
-	maxWidth: "100px",
-}));
 
 const Time = styled("p")({
 	fontStyle: "italic",
@@ -24,6 +20,15 @@ const Company = styled("p")({
 	marginBottom: "10px",
 });
 
+const EducationLogo = styled(Image)(({ theme }) => ({
+	maxWidth: "240px",
+	maxHeight: "84px",
+	[theme.breakpoints.down("sm")]: {
+		maxWidth: "192px",
+		maxHeight: "67.2px",
+	},
+}));
+
 const EducationSection = () => {
 	return (
 		<MainContainer
@@ -33,6 +38,8 @@ const EducationSection = () => {
 					md: "75px",
 					lg: "100px",
 				},
+				display: "flex",
+				flexWrap: "wrap",
 			}}
 		>
 			<Box sx={{ width: "100%" }}>
@@ -72,11 +79,7 @@ const EducationSection = () => {
 				}}
 			>
 				<Grid item xs={12} md={5.5}>
-					<Image
-						sx={{
-							maxWidth: "240px",
-							maxHeight: "84px",
-						}}
+					<EducationLogo
 						src="images/bcit-logo.svg"
 						alt="British Columbia Institute of Technology logo"
 					/>
@@ -85,11 +88,7 @@ const EducationSection = () => {
 					<Time>Jan 2023 – Present</Time>
 				</Grid>
 				<Grid item xs={12} md={5.5}>
-					<Image
-						sx={{
-							maxWidth: "240px",
-							maxHeight: "84px",
-						}}
+					<EducationLogo
 						src="images/uvic-logo.svg"
 						alt="University of Victoria logo"
 					/>

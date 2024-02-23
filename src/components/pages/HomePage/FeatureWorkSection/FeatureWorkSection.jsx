@@ -116,24 +116,6 @@ const FeatureWorksSection = () => {
 		}
 	};
 
-	useEffect(() => {
-		const resizeObserver = new ResizeObserver((entries) => {
-			for (let entry of entries) {
-				setMarginBottom(`${entry.contentRect.height * 0.05}px`);
-			}
-		});
-
-		if (containerRef.current) {
-			resizeObserver.observe(containerRef.current);
-		}
-
-		return () => {
-			if (containerRef.current) {
-				resizeObserver.unobserve(containerRef.current);
-			}
-		};
-	}, []);
-
 	return (
 		<Box
 			sx={{
@@ -144,7 +126,13 @@ const FeatureWorksSection = () => {
 				},
 			}}
 		>
-			<MainContainer ref={containerRef} marginBottom={marginBottom}>
+			<MainContainer
+				sx={{
+					display: "flex",
+					flexWrap: "wrap",
+				}}
+				ref={containerRef}
+			>
 				<H2
 					sx={{
 						width: "100%",
@@ -208,8 +196,6 @@ const FeatureWorksSection = () => {
 						</ImageContainer>
 					</Box>
 				</ScrollTriggerStyled>
-			</MainContainer>
-			<MainContainer>
 				<ScrollTriggerStyled
 					onEnter={handleEnter3}
 					onExit={() => setAnimationClass3("")}

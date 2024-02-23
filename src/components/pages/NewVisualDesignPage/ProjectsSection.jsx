@@ -15,22 +15,27 @@ const projects = [
       particularly in mastering the fundamental tools for shaping objects
       and intricacies of crafting vector designs.`,
 		image: "/images/design-3.png",
-        tools: "Adobe Illustrator",
+		tools: "Adobe Illustrator",
 	},
 ];
 
 const ProjectsSection = () => {
-   return (
-      <MainContainer>
-         <Grid container spacing={2}>
-            {projects.map((project, index) => (
-               <Grid item xs={12} sm={6} md={4} key={index}>
-                  <ProjectCard {...project} />
-               </Grid>
-            ))}
-         </Grid>
-      </MainContainer>
-   );
-}
+	return (
+		<MainContainer
+			sx={{
+				display: "flex",
+				flexWrap: "wrap",
+			}}
+		>
+			<Grid container spacing={2}>
+				{projects.map((project, index) => (
+					<Grid item xs={12} sm={6} md={4} key={index}>
+						<ProjectCard {...project} />
+					</Grid>
+				))}
+			</Grid>
+		</MainContainer>
+	);
+};
 
 export default ProjectsSection;

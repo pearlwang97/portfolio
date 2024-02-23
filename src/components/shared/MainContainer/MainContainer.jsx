@@ -4,8 +4,8 @@ import { styled } from "@mui/material/styles";
 const MainContainer = styled(Box)(({ theme }) => ({
 	// width: "60%",
 	width: "1140px",
-	display: "flex",
-	flexWrap: "wrap",
+	// display: "flex",
+	// flexWrap: "wrap",
 	justifyContent: "space-between",
 	height: "auto",
 	margin: "0 auto",
@@ -14,7 +14,7 @@ const MainContainer = styled(Box)(({ theme }) => ({
     // },
 	[theme.breakpoints.down("lg")]: {
 		// width: "70%",
-		width: "840px",
+		width: "540px",
 		maxWidth: "912px",
 	},
 	[theme.breakpoints.down("md")]: {

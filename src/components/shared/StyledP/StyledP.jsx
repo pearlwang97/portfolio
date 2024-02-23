@@ -5,10 +5,10 @@ const StyledP = styled("p")(({ theme }) => ({
 	// textAlign: "center",
     fontFamily: "'Montserrat', sans-serif",
 	marginBottom: "10px",
-	[theme.breakpoints.down("md")]: {
+	[theme.breakpoints.down("lg")]: {
 		fontSize: "1rem",
 	},
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down("md")]: {
 		fontSize: "1rem",
 	},
 }));

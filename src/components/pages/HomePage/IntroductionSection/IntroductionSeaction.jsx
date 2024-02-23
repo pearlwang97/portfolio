@@ -100,48 +100,50 @@ const IntroductionSection = () => {
 					md: "75px",
 					lg: "100px",
 				},
+				display: "flex",
+				flexWrap: "wrap",
 			}}
 		>
-				<StyledScrollTrigger
-					onEnter={handleEnter}
-					onExit={() => setAnimationClass("")}
-					// sx={{ width: { sm: "100%", md: "50%" } }}
-				>
-					<StyledTextContainer className={`${animationClass}`}>
-						<StyledHello>hello, I’m</StyledHello>
-						<StyledName>
-							<Typewriter
-								onInit={(typewriter) => {
-									typewriter.typeString("Peirong Wang.").start();
-								}}
-								options={{
-									delay: 18,
-								}}
-							/>
-						</StyledName>
+			<StyledScrollTrigger
+				onEnter={handleEnter}
+				onExit={() => setAnimationClass("")}
+				// sx={{ width: { sm: "100%", md: "50%" } }}
+			>
+				<StyledTextContainer className={`${animationClass}`}>
+					<StyledHello>hello, I’m</StyledHello>
+					<StyledName>
+						<Typewriter
+							onInit={(typewriter) => {
+								typewriter.typeString("Peirong Wang.").start();
+							}}
+							options={{
+								delay: 18,
+							}}
+						/>
+					</StyledName>
 
-						<Designer>A Creative Designer.</Designer>
-						<StyledP>
-							I put my passion into crafting meaningful experiences and
-							connections via design. My journey revolves around &nbsp;
-							<Link sx={{ textDecoration: "underline" }} to="/uxdesign">
-								<strong>UX/UI</strong>
-							</Link>
-							,&nbsp;
-							<Link sx={{ textDecoration: "underline" }} to="/visualdesign">
-								<strong>Visual Design</strong>
-							</Link>
-							&nbsp; including graphic and branding. Let's dive into impactful
-							visual stories together.
-						</StyledP>
-						<Link to="/about">
-							<Button>LEARN MORE</Button>
+					<Designer>A Creative Designer.</Designer>
+					<StyledP>
+						I put my passion into crafting meaningful experiences and
+						connections via design. My journey revolves around &nbsp;
+						<Link sx={{ textDecoration: "underline" }} to="/uxdesign">
+							<strong>UX/UI</strong>
 						</Link>
-					</StyledTextContainer>
-				</StyledScrollTrigger>
-				<StyledImageContainer>
-					<Image src="/images/Artboard.svg" alt="painted woman" />
-				</StyledImageContainer>
+						,&nbsp;
+						<Link sx={{ textDecoration: "underline" }} to="/visualdesign">
+							<strong>Visual Design</strong>
+						</Link>
+						&nbsp; including graphic and branding. Let's dive into impactful
+						visual stories together.
+					</StyledP>
+					<Link to="/about">
+						<Button>LEARN MORE</Button>
+					</Link>
+				</StyledTextContainer>
+			</StyledScrollTrigger>
+			<StyledImageContainer>
+				<Image src="/images/Artboard.svg" alt="painted woman" />
+			</StyledImageContainer>
 		</MainContainer>
 	);
 };

@@ -38,6 +38,8 @@ const WorkExperienceSection = () => {
 					md: "75px",
 					lg: "100px",
 				},
+				display: "flex",
+				flexWrap: "wrap",
 			}}
 		>
 			<Box sx={{ width: "100%" }}>

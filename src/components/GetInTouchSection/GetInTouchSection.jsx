@@ -12,6 +12,8 @@ const SocialMediaSection = () => {
 		<MainContainer
 			sx={{
 				textAlign: "center",
+				display: "flex",
+				flexWrap: "wrap",
 				marginBottom: {
 					xs: "50px",
 					md: "75px",
