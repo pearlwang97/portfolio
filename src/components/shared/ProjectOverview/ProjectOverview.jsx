@@ -4,7 +4,7 @@ import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Link from "components/shared/StyledLink/StyledLink";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import H3 from "components/shared/H3/H3";
 import Divider from "components/shared/Divider/Divider";
 import IconTooltip from "components/shared/IconTooltip/IconTooltip";
@@ -119,10 +119,10 @@ const ProjectOverview = ({
 				</TitleContainer>
 				<Divider width="25%" alignLeft={textAlign === "left" ? true : false} />
 				<SubTitle textAlign={textAlign}>Goal</SubTitle>
-				<StyledP sx={{ textAlign: textAlign }}>{goal}</StyledP>
+				<Body1 sx={{ textAlign: textAlign }}>{goal}</Body1>
 				<Divider width="25%" alignLeft={textAlign === "left" ? true : false} />
 				<SubTitle textAlign={textAlign}>Role</SubTitle>
-				<StyledP sx={{ textAlign: textAlign }}>{role}</StyledP>
+				<Body1 sx={{ textAlign: textAlign }}>{role}</Body1>
 				<Box
 					sx={{
 						display: "flex",

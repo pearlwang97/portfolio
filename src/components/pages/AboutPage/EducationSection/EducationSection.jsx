@@ -1,22 +1,20 @@
 import { Grid, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Divider from "components/shared/Divider/Divider";
 import H2 from "components/shared/H2/H2";
 import H3 from "components/shared/H3/H3";
+import H4 from "components/shared/H4/H4";
+import H5 from "components/shared/H5/H5";
 import Image from "components/shared/Image/Image";
 
-const Time = styled("p")({
+const Time = styled(H5)({
 	fontStyle: "italic",
 	fontWeight: "light",
-	fontSize: "1.1rem",
 	marginBottom: "20px",
 });
 
-const Company = styled("p")({
-	fontSize: "1.2rem",
+const Company = styled(H4)({
 	marginBottom: "10px",
 });
 

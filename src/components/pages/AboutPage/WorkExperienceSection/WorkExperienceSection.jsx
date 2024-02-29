@@ -3,8 +3,9 @@ import { styled } from "@mui/material/styles";
 import Divider from "components/shared/Divider/Divider";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import StyledP from "components/shared/StyledP/StyledP";
 import H3 from "components/shared/H3/H3";
+import H4 from "components/shared/H4/H4";
+import H5 from "components/shared/H5/H5";
 
 const StyledUl = styled("ul")({
 	paddingLeft: "20px",
@@ -14,18 +15,18 @@ const StyledUl = styled("ul")({
 const StyledLi = styled("li")({
 	margin: "10px 0",
 	paddingLeft: "16px",
-	fontSize: "1rem",
+	// fontSize: "1rem",
 });
 
-const Time = styled("p")({
+const Time = styled(H5)({
 	fontStyle: "italic",
 	fontWeight: "light",
-	fontSize: "1.1rem",
+	// fontSize: "1.1rem",
 	marginBottom: "20px",
 });
 
-const Company = styled("p")({
-	fontSize: "1.2rem",
+const Company = styled(H4)({
+	// fontSize: "1.2rem",
 	marginBottom: "10px",
 });
 
@@ -83,27 +84,27 @@ const WorkExperienceSection = () => {
 					<Time>Jan 2021 – Jan 2022</Time>
 					<StyledUl>
 						<StyledLi>
-							{/* <StyledP> */}
+							{/* <Body1> */}
 							Designed and implemented targeted marketing campaigns aligned with
 							the company's branding
-							{/* </StyledP> */}
+							{/* </Body1> */}
 						</StyledLi>
 						<StyledLi>
-							{/* <StyledP> */}
+							{/* <Body1> */}
 							Developed strategic marketing initiatives for market goal and
 							conducted competitive analysis to inform marketing strategies
-							{/* </StyledP> */}
+							{/* </Body1> */}
 						</StyledLi>
 						<StyledLi>
-							{/* <StyledP> */}
+							{/* <Body1> */}
 							Enhanced brand presence across multiple media platforms
-							{/* </StyledP> */}
+							{/* </Body1> */}
 						</StyledLi>
 						<StyledLi>
-							{/* <StyledP> */}
+							{/* <Body1> */}
 							Coordinated monthly activities, improving service visibility and
 							customer engagement
-							{/* </StyledP> */}
+							{/* </Body1> */}
 						</StyledLi>
 					</StyledUl>
 				</Grid>
@@ -113,16 +114,16 @@ const WorkExperienceSection = () => {
 					<Time>Feb 2019 – Sept 2020</Time>
 					<StyledUl>
 						<StyledLi>
-							{/* <StyledP> */}
+							{/* <Body1> */}
 							Provided client support by addressing inquiries and resolving
 							technical issues
-							{/* </StyledP> */}
+							{/* </Body1> */}
 						</StyledLi>
 						<StyledLi>
-							{/* <StyledP> */}
+							{/* <Body1> */}
 							Generated and structured reports to support business operations
 							and management
-							{/* </StyledP> */}
+							{/* </Body1> */}
 						</StyledLi>
 					</StyledUl>
 				</Grid>

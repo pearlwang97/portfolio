@@ -63,7 +63,7 @@ const StyledListItemKey = styled("span")(({ theme }) => ({
 	// },
 }));
 
-const StyledP = styled("p")(({ theme, mb }) => ({
+const Body1 = styled("p")(({ theme, mb }) => ({
 	fontSize: "1rem",
 	fontWeight: "normal",
 	marginBottom: mb || "0.5rem",
@@ -177,38 +177,38 @@ const OverviewSection = () => {
 						<StyledList>
 							<StyledListItem>
 								<StyledListItemKey>
-									<StyledP>TIMELINE</StyledP>
+									<Body1>TIMELINE</Body1>
 								</StyledListItemKey>
-								<StyledP>MAY - JUN 2023</StyledP>
+								<Body1>MAY - JUN 2023</Body1>
 							</StyledListItem>
 							<StyledListItem>
 								<StyledListItemKey>
-									<StyledP>ROLE</StyledP>
+									<Body1>ROLE</Body1>
 								</StyledListItemKey>
-								<StyledP>UI/UX Designer</StyledP>
+								<Body1>UI/UX Designer</Body1>
 							</StyledListItem>
 							<StyledListItem>
 								<StyledListItemKey>
-									<StyledP>Tools </StyledP>
+									<Body1>Tools </Body1>
 								</StyledListItemKey>
-								<StyledP>Figma, Illustrator</StyledP>
+								<Body1>Figma, Illustrator</Body1>
 							</StyledListItem>
 						</StyledList>
 						<Grid container justifyContent="space-between">
 							<Grid item sm={5} xs={12}>
-								<StyledP>
+								<Body1>
 									The objective of this project is to create a user-centered,
 									modern interface for the existing Domino’s App using Figma and
 									Adobe Illustrator in UI / UX Strategy 1 course (MDIA2540).
-								</StyledP>
+								</Body1>
 							</Grid>
 							<Grid item sm={5} xs={12}>
-								<StyledP>
+								<Body1>
 									The primary aim of this project is to demonstrate how the
 									student apply user research principles and utilize Figma &
 									Adobe Illustrator effectively to construct UI elements and
 									interactive design to enhance usability and user experience.
-								</StyledP>
+								</Body1>
 							</Grid>
 						</Grid>
 					</StyledSection>
@@ -217,13 +217,13 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									The project started with extensive research, focusing on the
 									main challenge: making flower purchasing and delivery more
 									accessible. Target groups were identified as consumers seeking
 									effortless flower gifting and streamlined order management.
 									The goal for Bloom was to simplify online flower purchasing.
-								</StyledP>
+								</Body1>
 							</Grid>
 							<Grid item xs={12}>
 								<StyledImage
@@ -238,13 +238,13 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									Five users were interviewed to understand their experiences
 									with online flower services. Insights revealed preferences for
 									simplicity in sign-up processes, punctuality, and quality in
 									service. Many favored pre-designed bouquets over customizable
 									options, influencing the app's design approach.
-								</StyledP>
+								</Body1>
 							</Grid>
 						</Grid>
 					</StyledSection>
@@ -253,12 +253,12 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									From these interviews, a user persona emerged: a busy
 									professional female who prefers an easy online shopping
 									experience with curated bouquet options. A user story was
 									developed, focusing on this persona's needs and challenges.
-								</StyledP>
+								</Body1>
 							</Grid>
 						</Grid>
 					</StyledSection>
@@ -267,12 +267,12 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									A comparison of two flower delivery apps, Flo and Interflora,
 									was conducted. The analysis highlighted design flaws in
 									existing apps, particularly in intuitiveness, guiding Bloom's
 									design to focus on a more user-friendly experience.
-								</StyledP>
+								</Body1>
 							</Grid>
 						</Grid>
 					</StyledSection>
@@ -281,18 +281,18 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									A user flow was created, mapping out the customer's journey
 									from browsing to purchase. A sitemap followed, laying out the
 									app's structure to ensure an easy user experience.
-								</StyledP>
+								</Body1>
 							</Grid>
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									A user flow was created, mapping out the customer's journey
 									from browsing to purchase. A sitemap followed, laying out the
 									app's structure to ensure an easy user experience.
-								</StyledP>
+								</Body1>
 							</Grid>
 							<Grid item xs={12}>
 								<StyledImage
@@ -307,7 +307,7 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									An initial paper wireframe was developed, later digitized in
 									Figma as a black-and-white design. This focused on usability,
 									minimizing distractions. Based on the graphic designer's style
@@ -315,7 +315,7 @@ const OverviewSection = () => {
 									design system. Detailed mockups were created in Figma and
 									enhanced into interactive prototypes, simulating real app
 									behavior.
-								</StyledP>
+								</Body1>
 							</Grid>
 							<Grid item xs={12}>
 								<StyledImage
@@ -330,11 +330,11 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									User testing with four individuals revealed the need for a
 									review function in the app. Based on this feedback, a review
 									feature was added to enhance the design.
-								</StyledP>
+								</Body1>
 							</Grid>
 						</Grid>
 					</StyledSection>
@@ -343,14 +343,14 @@ const OverviewSection = () => {
 						<Divider width="90%" sx={{ paddingTop: "1.2rem" }} />
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
-								<StyledP>
+								<Body1>
 									The completed project was presented to the class, receiving
 									feedback from an instructor-client perspective.
 									Post-presentation, the project underwent a self-review.
 									Adjustments were made to improve color contrast for better
 									accessibility. With these final changes, the Bloom project was
 									concluded.
-								</StyledP>
+								</Body1>
 							</Grid>
 							<Grid item xs={12}>
 								<StyledImage

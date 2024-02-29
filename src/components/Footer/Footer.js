@@ -1,11 +1,17 @@
 import React from "react";
-import "./Footer.css";
+import { Box } from "@mui/system";
+import Body1 from "components/shared/Body1/Body1";
 
 const Footer = () => {
     return (
-        <div className="footer">
-            <div><p>&#169; 2023 All Rights Reserved | Peirong Wang</p></div>
-        </div>
+        <Box sx={{
+            margin: 0,
+            padding: "10px 0",
+            textAlign: "center",
+
+        }}>
+            <Box><Body1>&#169; 2023 All Rights Reserved | Peirong Wang</Body1></Box>
+        </Box>
     );
 }
 

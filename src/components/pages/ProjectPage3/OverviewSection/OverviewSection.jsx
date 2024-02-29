@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Box } from "@mui/material";
 import Image from "components/shared/Image/Image";
 import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
 
@@ -24,7 +24,7 @@ const OverviewSection = () => {
 			<ProjectStepSection title="Overview" id="1">
 				<ProjectOverviewList listItems={listItems} />
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						The project produces a photo-realistic 2D illustration that achieves
 						a 3D effect,utilizing the essential tools in Adobe Illustrator. The
 						objective of this project is to showcase the ability to create
@@ -32,19 +32,19 @@ const OverviewSection = () => {
 						objects. It demonstrates the expertise as a digital designer,
 						particularly in mastering the fundamental tools for shaping objects
 						and intricacies of crafting vector designs.
-					</StyledP>
+					</Body1>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Inspiration" id="2">
 				<Grid container justifyContent="space-between">
-					<StyledP sx={{ marginTop: "1rem" }}>
+					<Body1 sx={{ marginTop: "1rem" }}>
 						A reference photograph of a radio set the stage for this project,
 						chosen for its complex mix of components. This photograph was
 						imported into Illustrator and set as the base layer. This crucial
 						step provided a precise reference for accurately capturing the
 						intricate details and correct proportions in the vector
 						illustration.
-					</StyledP>
+					</Body1>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Outline and Color" id="3">
@@ -60,11 +60,11 @@ const OverviewSection = () => {
 								width: { sm: "100%", md: "50%" },
 							}}
 						/>
-						<StyledP>
+						<Body1>
 							In the initial phase of crafting the vector art, I outlined the
 							radio, drawing each line with precision to ensure the vector
 							closely mimicked the real object's form.
-						</StyledP>
+						</Body1>
 						<Image
 							src="/images/project-3-gallery-1.png"
 							sx={{
@@ -74,32 +74,25 @@ const OverviewSection = () => {
 								float: "left",
 							}}
 						/>
-						<StyledP>
+						<Body1>
 							The coloring phase was integral to bringing the radio to life. I
 							primarily used shades of grey, created by adjusting the tints of
 							pure black in Adobe Illustrator. To amplify realism, the free-form
 							gradient tool was mostly used, this accurately captured the
 							interplay of light and shadow on the radio and everything from
 							reflections to subtle shadows.
-						</StyledP>
-						<StyledP>
+						</Body1>
+						<Body1>
 							The biggest challenge here was the numerous small holes in the
 							radio, each of them required a distinct light and shadow effect.
 							After a long time of tweaking them one by one, the final look was
 							perfectly close to what it would look like in reality.
-						</StyledP>
+						</Body1>
 					</Box>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Final Touch" id="5">
 				<Grid container justifyContent="space-between">
-					<Image
-						src="/images/project-1-iteration.jpg"
-						sx={{
-							marginBottom: "10px",
-							width: { sm: "100%" },
-						}}
-					/>
 					<Box sx={{ display: "block" }}>
 						<Image
 							src="/images/design-3.png"
@@ -111,7 +104,7 @@ const OverviewSection = () => {
 								width: { sm: "100%", md: "50%" },
 							}}
 						/>
-						<StyledP>
+						<Body1>
 							In the final stage, I added even more details to give the radio a
 							3D effect. This included putting text and icons on the digital
 							display. To make the illustration look more realistic, I chose a
@@ -121,7 +114,7 @@ const OverviewSection = () => {
 							texture effect to give the radio's surface a realistic texture.
 							Finally, a realistic 2D vector illustration of a radio was
 							completed with its 3D essence.
-						</StyledP>
+						</Body1>
 					</Box>
 				</Grid>
 			</ProjectStepSection>

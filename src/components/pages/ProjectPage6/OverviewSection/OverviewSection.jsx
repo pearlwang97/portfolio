@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Box } from "@mui/material";
 import Image from "components/shared/Image/Image";
 import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
 
@@ -26,19 +26,19 @@ const OverviewSection = () => {
 				<ProjectOverviewList listItems={listItems} />
 				<Grid container justifyContent="space-between">
 					<Grid item xs={12}>
-						<StyledP>
+						<Body1>
 							The 'Cyber Era' poster was created to deliver a compelling visual
 							narrative for a digital audience, blending photography with
 							original vector illustrations in a non-destructive manner to
 							demonstrate the application of design principles and technical
 							skill.
-						</StyledP>
+						</Body1>
 					</Grid>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Conceptualization" id="2">
 				<Grid container justifyContent="space-between">
-					<StyledP sx={{ marginTop: "1rem" }}>
+					<Body1 sx={{ marginTop: "1rem" }}>
 						The design process began with selecting a character to serve as the
 						focal point of the poster. The character's image was refined to fit
 						the futuristic concept by digitally painting over a created mask,
@@ -46,7 +46,7 @@ const OverviewSection = () => {
 						and highlights to add depth and a surreal appearance. The eyeballs
 						were colored to shift from a natural human look to a more robotic
 						appearance, aligning with the cybernetic theme.
-					</StyledP>
+					</Body1>
 					<Image
 						src="/images/project-6-concept.jpg"
 						alt="Problem"
@@ -59,13 +59,13 @@ const OverviewSection = () => {
 			</ProjectStepSection>
 			<ProjectStepSection title="Design" id="3">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						Attention then turned to integrating goggles, which were designed in
 						Illustrator and brought into Photoshop for enhancement. Here, they
 						received a realistic glow and three-dimensional appearance through
 						strategic use of bevel, emboss, and overlay layers, further
 						anchoring the character in a futuristic realm.
-					</StyledP>
+					</Body1>
 					<Box
 						component="img"
 						src="/images/cyber-era-glass.jpg"
@@ -85,7 +85,7 @@ const OverviewSection = () => {
 								width: { sm: "100%", md: "50%" },
 							}}
 						/>
-						<StyledP>
+						<Body1>
 							Next I proceeded to create cybernetic details, using the pen tool
 							to draw lines across the body and face, simulating artificial
 							carvings by applying bevel and emboss effects. To depict the AI
@@ -94,25 +94,25 @@ const OverviewSection = () => {
 							layers and the pen tool to achieve a humanoid appearance. The arms
 							were created utilizing a photograph of a microchip to maintain the
 							cybernetic theme.
-						</StyledP>
+						</Body1>
 					</Box>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Composition" id="4">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						The background was composed of a cityscape photo merged with line
 						art vectors from Illustrator, enriched with sparkling diamond
 						shapes, smoke effects, and a Matrix-inspired binary code rain. This
 						binary code was transformed from text to shapes and layered to
 						create depth, then highlighted with glow effects to underscore the
 						cyber atmosphere.
-					</StyledP>
+					</Body1>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Finalization" id="5">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						To finalize the visual concept, I incorporated a digital glitch
 						effect that simulated the appearance of a technological malfunction.
 						This was achieved by employing a palette of contrasting neon colors
@@ -121,15 +121,15 @@ const OverviewSection = () => {
 						Additional adjustments were made across the design to ensure visual
 						harmony and to solidify the connection between the poster elements
 						and the narrative of the TV series.
-					</StyledP>
+					</Body1>
 					<Image src="/images/cyber-era-final.jpg" alt="Problem" />
-					<StyledP>
+					<Body1>
 						All elements are from real photographs or vectors I made. And aim to
 						create a non-destructive design. Creative and skilled usage of the
 						Principles of Design and Elements of Art. Compositional Unity
 						achieved. Creative and exemplary technical skills demonstrated in
 						file construction.
-					</StyledP>
+					</Body1>
 				</Grid>
 			</ProjectStepSection>
 		</ProjectContentContainer>

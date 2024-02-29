@@ -3,7 +3,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import Image from "components/shared/Image/Image";
 import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
 
@@ -26,7 +26,7 @@ const OverviewSection = () => {
 				<ProjectOverviewList listItems={listItems} />
 				<Grid container justifyContent="space-between">
 					<Grid item xs={12}>
-						<StyledP>
+						<Body1>
 							The aim of this assignment is to develop multiple logo variations
 							for a product or service. This project highlights the student's
 							skill in combining creativity with strategic branding, showcasing
@@ -36,19 +36,19 @@ const OverviewSection = () => {
 							one-time buys and a monthly subscription. Their signature service
 							is a mystery box with a themed assortment of fresh flowers
 							delivered periodically.
-						</StyledP>
+						</Body1>
 						<Image src="/images/bloom-box-overview.jpg" />
 					</Grid>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="BrainStorm" id="2">
 				<Grid container justifyContent="space-between">
-					<StyledP sx={{ marginTop: "1rem" }}>
+					<Body1 sx={{ marginTop: "1rem" }}>
 						The brainstorming phase focused on integrating BloomBox’s essence
 						into the design, combining floral elements with their distinct box
 						delivery. The designs aimed for simplicity and modernity, reflecting
 						bloom, growth, and tranquility.
-					</StyledP>
+					</Body1>
 					<Image
 						src="/images/bloom-box-brainstorm.jpg"
 						alt="Problem"
@@ -61,7 +61,7 @@ const OverviewSection = () => {
 			</ProjectStepSection>
 			<ProjectStepSection title="Logo Design" id="3">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						In the sketching phase, I came up with six designs that combined
 						geometric shapes and abstract floral patterns. These sketches laid
 						the groundwork for the final logos. From these initial ideas, I
@@ -71,7 +71,7 @@ const OverviewSection = () => {
 						logo displays the brand name in a horizontal layout. The submark
 						simplifies BloomBox's "B," ensuring the brand remains consistent
 						across all versions.
-					</StyledP>
+					</Body1>
 					<Image
 						src="/images/bloom-box-logo-design.jpg"
 						alt="Problem"
@@ -84,13 +84,13 @@ const OverviewSection = () => {
 			</ProjectStepSection>
 			<ProjectStepSection title="Typography and Color" id="4">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						Antipol VF was selected as the primary font for its modernity, and
 						Century Gothic Pro as the secondary font for clarity. The color
 						palette consisted of soft pastels in pink and green, representing
 						flowers and leaves, complemented by off-white for contrast and
 						readability.
-					</StyledP>
+					</Body1>
 					<Image
 						src="/images/bloom-box-color.jpg"
 						sx={{
@@ -102,11 +102,11 @@ const OverviewSection = () => {
 			</ProjectStepSection>
 			<ProjectStepSection title="Finalization" id="5">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						In the final stage, I brought together the chosen colors and
 						typography to finalize the BloomBox logo. We also created mockups to
 						showcase the logo in various applications.
-					</StyledP>
+					</Body1>
 					<Image
 						src="/images/bloom-box-final.jpg"
 						alt="Problem"

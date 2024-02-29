@@ -51,7 +51,6 @@ const SocialMediaSection = () => {
 				alignItems: "center",
 				width: "100%",
 				height: "100%",
-				backgroundColor: "#F0DBDB",
 				padding: "50px 0",
 			}}
 		>

@@ -3,7 +3,7 @@ import React from "react";
 import { Grid, Box } from "@mui/material";
 import Image from "components/shared/Image/Image";
 import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
 
@@ -25,7 +25,7 @@ const OverviewSection = () => {
 				<ProjectOverviewList listItems={listItems} />
 				<Grid container justifyContent="space-between">
 					<Grid item xs={12}>
-						<StyledP>
+						<Body1>
 							The Chinese zodiac is a big part of Chinese traditions, it is a
 							classification scheme based on the lunar calendar, the cycle
 							repeats every 12 years with a represented zodiac animal. This
@@ -42,7 +42,7 @@ const OverviewSection = () => {
 							beauty and wisdom of the Chinese zodiac. The final deliverables
 							include a mock-up informational website about the Chinese zodiacs
 							and design mockups, including red bag designs.
-						</StyledP>
+						</Body1>
 					</Grid>
 				</Grid>
 			</ProjectStepSection>
@@ -59,7 +59,7 @@ const OverviewSection = () => {
 								width: { sm: "100%", md: "50%" },
 							}}
 						/>
-						<StyledP sx={{ marginTop: "1rem" }}>
+						<Body1 sx={{ marginTop: "1rem" }}>
 							In this initial phase, inspiration was drawn from ancient Chinese
 							art and symbols, including Dunhuang drawings and traditional
 							motifs. The goal was to present the 12 Chinese zodiac signs
@@ -73,13 +73,13 @@ const OverviewSection = () => {
 							rich brick red complemented by a soft cream. This palette
 							showcases the historical roots of the art form while introducing a
 							contemporary elegance.
-						</StyledP>
+						</Body1>
 					</Box>
 				</Grid>
 			</ProjectStepSection>
 			<ProjectStepSection title="Graphic Desin" id="3">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						Using Adobe Illustrator, each zodiac sign was designed with a focus
 						on realism transformed into paper cuts. The designs were infused
 						with classic Chinese elements and symbols reflecting the unique
@@ -87,7 +87,7 @@ const OverviewSection = () => {
 						incorporation of Chinese typography next to each zodiac sign added a
 						sense of cultural authenticity and visual interest. This decision
 						aimed to enhance the overall narrative of the collection.
-					</StyledP>
+					</Body1>
 					<Image
 						src="/images/project-5-gallery-3.jpg"
 						alt="Problem"
@@ -100,12 +100,12 @@ const OverviewSection = () => {
 			</ProjectStepSection>
 			<ProjectStepSection title="Finalization" id="4">
 				<Grid container justifyContent="space-between">
-					<StyledP>
+					<Body1>
 						The final step involved bringing the illustrations to life through
 						mockups created in Illustrator and Photoshop. This stage was about
 						showcases practical applications and engaging presentations of the
 						zodiac signs, aiming to make the artwork more relatable.
-					</StyledP>
+					</Body1>
 					<Grid item container xs={12}>
 						<Grid item xs={12} sm={5.85}>
 							<Image

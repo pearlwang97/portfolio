@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import Image from "components/shared/Image/Image";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import ProjectCard from "components/pages/NewVisualDesignPage/ProjectCard";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 

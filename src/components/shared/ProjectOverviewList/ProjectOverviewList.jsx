@@ -1,7 +1,7 @@
 import React from "react";
 
 import { styled } from "@mui/material/styles";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import H3 from "components/shared/H3/H3";
 
 const StyledListItemKey = styled("span")(({ theme }) => ({
@@ -45,7 +45,7 @@ const ProjectOverviewList = ({ listItems }) => {
 							{item.key}
 						</H3>
 					</StyledListItemKey>
-					<StyledP>{item.value}</StyledP>
+					<Body1>{item.value}</Body1>
 				</StyledListItem>
 			))}
 		</StyledList>

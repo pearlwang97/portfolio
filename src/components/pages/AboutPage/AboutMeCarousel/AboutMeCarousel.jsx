@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import H2 from "components/shared/H2/H2";
 
 const Image = styled("img")({
@@ -61,13 +61,13 @@ const AboutMeCarousel = () => {
 					}}
 				>
 					<H2>More About Me</H2>
-					<StyledP>
+					<Body1>
 						I have always been drawn to various forms of creative expression. In
 						my free time, you can find me watching movies, engaging in crafts
 						and DIY projects, playing games, and enjoying the outdoors with my
 						lovely dog. Moreover, I love traveling, as seeing something
 						different and new is very appealing to me.
-					</StyledP>
+					</Body1>
 				</Box>
 				<Carousel swipe>
 					{items.map((item, i) => (

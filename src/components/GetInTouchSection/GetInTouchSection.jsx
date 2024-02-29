@@ -1,9 +1,8 @@
 import React from "react";
 import { Box } from "@mui/system";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import Button from "components/shared/Button/Button";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import "./GetInTouchSection.css";
 
 const SocialMediaSection = () => {
 	const emailAddress = "pearlwang1997@gmail.com";
@@ -14,10 +13,15 @@ const SocialMediaSection = () => {
 				textAlign: "center",
 				display: "flex",
 				flexWrap: "wrap",
+				marginTop: {
+					sm: "100px",
+					md: "150px",
+					lg: "200px",
+				},
 				marginBottom: {
-					xs: "50px",
-					md: "75px",
-					lg: "100px",
+					sm: "100px",
+					md: "150px",
+					lg: "200px",
 				},
 			}}
 		>
@@ -26,11 +30,12 @@ const SocialMediaSection = () => {
 					width: "100%",
 					display: "flex",
 					justifyContent: "center",
+					marginBottom: "50px",
 				}}
 			>
-				<StyledP>
+				<Body1>
 					Currently look for new opportunities, please feel free to reach out.
-				</StyledP>
+				</Body1>
 			</Box>
 
 			<Box

@@ -3,7 +3,7 @@ import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import Button from "components/shared/Button/Button";
 
 const SpinImage = styled("img")({
@@ -83,14 +83,14 @@ const SelfIntroductionSection = () => {
 							<H1>I'm Peirong!</H1>
 						</Box>
 
-						{/* <StyledP>
+						{/* <Body1>
 							I'm passionate with a love for design. Born in China and having
 							relocated to Vancouver during my high school years, I've had the
 							chance to experience two distinct worlds and cultures. My past
 							experience enhanced my adaptability and approach things with an
 							inclusive and diverse mindset.
-						</StyledP>
-						<StyledP>
+						</Body1>
+						<Body1>
 							Driven by a foundational background in economics from the
 							University of Victoria, my journey into New Media was
 							serendipitous. I stumbled upon my passion for digital design after
@@ -98,27 +98,27 @@ const SelfIntroductionSection = () => {
 							digital designer. I want to blend my knowledge of marketing
 							strategy with my technical design expertise to provide a positive
 							user experience.
-						</StyledP>
-						<StyledP>
+						</Body1>
+						<Body1>
 							I believe design builds a channel for communication, connecting my
 							thoughts and ideas with my audience. Therefore, I aspire to create
 							design works that offer solutions and build connections with
 							people.
-						</StyledP> */}
+						</Body1> */}
 						<Box
 							sx={{
 								lineHeight: "1.73",
 							}}
 						>
-							<StyledP
+							<Body1
 								sx={{
 									marginBottom: "20px",
 								}}
 							>
 								A graphic designer who is originally from China, currently based
 								in Vancouver, BC.
-							</StyledP>
-							<StyledP
+							</Body1>
+							<Body1
 								sx={{
 									marginBottom: "20px",
 								}}
@@ -126,8 +126,8 @@ const SelfIntroductionSection = () => {
 								With a solid foundation in economics from the University of
 								Victoria, I discovered my passion for new media design
 								post-graduation.
-							</StyledP>
-							<StyledP
+							</Body1>
+							<Body1
 								sx={{
 									marginBottom: "20px",
 								}}
@@ -137,7 +137,7 @@ const SelfIntroductionSection = () => {
 								continually learn and grow in the dynamic world of design, I'm
 								dedicated to bridging cultures and ideas through innovative and
 								impactful visual solutions.
-							</StyledP>
+							</Body1>
 						</Box>
 						<a
 							href="/files/resume.pdf"

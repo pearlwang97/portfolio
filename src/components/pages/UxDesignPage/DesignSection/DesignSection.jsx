@@ -4,7 +4,7 @@ import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Link from "components/shared/StyledLink/StyledLink";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import H3 from "components/shared/H3/H3";
 import Divider from "components/shared/Divider/Divider";
 import IconTooltip from "components/shared/IconTooltip/IconTooltip";
@@ -102,16 +102,16 @@ const DesignSection = () => {
 					</TitleContainer>
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Goal</SubTitle>
-					<StyledP>
+					<Body1>
 						The objective of this project is to create a user-centered, modern
 						interface for the existing Domino’s App using Figma and Adobe
 						Illustrator. It highlights the application of user research
 						principles and the strategic use of design tools to improve
 						usability and user experience.
-					</StyledP>
+					</Body1>
 					<Divider width="25%" alignLeft={true} />
 					<SubTitle textAlign="left">Role</SubTitle>
-					<StyledP> UI/UX Designer</StyledP>
+					<Body1> UI/UX Designer</Body1>
 					<Box
 						sx={{
 							display: "flex",
@@ -155,7 +155,7 @@ const DesignSection = () => {
 					</TitleContainer>
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Goal</SubTitle>
-					<StyledP sx={{ textAlign: isMobile ? "left" : "right" }}>
+					<Body1 sx={{ textAlign: isMobile ? "left" : "right" }}>
 						The goal of this project is to create a user-friendly flower
 						delivery app "Bloom" using Figma for the Project Management course
 						(MDIA2092). As the UI/UX designer, Peirong collaborated with team
@@ -164,16 +164,16 @@ const DesignSection = () => {
 						the student's ability to integrate user research principles into
 						Figma, creating effective design components and fostering a seamless
 						interactive design through team collaboration.
-					</StyledP>
+					</Body1>
 					<Divider width="25%" alignLeft={isMobile} />
 					<SubTitle textAlign={isMobile ? "left" : "right"}>Role</SubTitle>
-					<StyledP
+					<Body1
 						sx={{
 							textAlign: isMobile ? "left" : "right",
 						}}
 					>
 						UI/UX Designer
-					</StyledP>
+					</Body1>
 					<Box
 						sx={{
 							display: "flex",

@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 import { AnimationContext } from "components/Context/AnimationContext";
 import Button from "components/shared/Button/Button";
 import Link from "components/shared/StyledLink/StyledLink";
-import StyledP from "components/shared/StyledP/StyledP";
+import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
 import "./IntroductionSection.css";
@@ -102,6 +102,7 @@ const IntroductionSection = () => {
 				},
 				display: "flex",
 				flexWrap: "wrap",
+				alignItems: "center",
 			}}
 		>
 			<StyledScrollTrigger
@@ -123,7 +124,7 @@ const IntroductionSection = () => {
 					</StyledName>
 
 					<Designer>A Creative Designer.</Designer>
-					<StyledP>
+					<Body1>
 						I put my passion into crafting meaningful experiences and
 						connections via design. My journey revolves around &nbsp;
 						<Link sx={{ textDecoration: "underline" }} to="/uxdesign">
@@ -135,7 +136,7 @@ const IntroductionSection = () => {
 						</Link>
 						&nbsp; including graphic and branding. Let's dive into impactful
 						visual stories together.
-					</StyledP>
+					</Body1>
 					<Link to="/about">
 						<Button>LEARN MORE</Button>
 					</Link>
