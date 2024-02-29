@@ -6,6 +6,7 @@ import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import FeatureWorkItem from "components/pages/HomePage/FeatureWorksItem/FeatureWorksItem";
 import Link from "components/shared/StyledLink/StyledLink";
+import AnimatedButton from "components/shared/AnimatedButton/AnimatedButton";
 
 const FeatureWorksSection = () => {
 	const FeatureWorkItems = [
@@ -49,9 +50,9 @@ const FeatureWorksSection = () => {
 		<Box
 			sx={{
 				marginBottom: {
-					xs: "50px",
-					md: "75px",
-					lg: "100px",
+					xs: "75px",
+					md: "100px",
+					lg: "150px",
 				},
 			}}
 		>
@@ -95,20 +96,9 @@ const FeatureWorksSection = () => {
 					}}
 				>
 					<Link to="/visualdesign">
-						<Button
-							sx={{
-								color: "black",
-							}}
-							endIcon={<ArrowOutwardIcon />}
-						>
-							<Body1
-								sx={{
-									margin: 0,
-								}}
-							>
-								View more
-							</Body1>
-						</Button>
+						<AnimatedButton>
+							VIEW MORE
+						</AnimatedButton>
 					</Link>
 				</Box>
 			</MainContainer>

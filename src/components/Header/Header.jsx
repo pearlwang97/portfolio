@@ -14,8 +14,8 @@ const Nav = styled("nav")(({ theme }) => ({
 }));
 
 const Logo = styled("img")(({ theme }) => ({
-	width: "78px",
-	height: "65px",
+	width: "62.4px",
+	height: "52px",
 }));
 
 const OverLay = styled("div")(({ open, theme }) => ({
@@ -65,7 +65,8 @@ const OverLayMenu = styled("ul")(({ open, theme }) => ({
 	  },
 	  '& li:nth-child(2)': {
 		margin: "50px 0px",
-	  }
+	  },
+	  padding: 0,
 }));
 
 const NavItem = styled(NavLink)(({ theme }) => ({
@@ -74,10 +75,10 @@ const NavItem = styled(NavLink)(({ theme }) => ({
     textDecoration: 'none',
     margin: "0 30px",
     fontFamily: "'Montserrat', sans-serif",
-    fontSize: "1.2rem",
-    [theme.breakpoints.down('sm')]: {
-        fontSize: '0.8rem',
-    },
+    fontSize: "1.1rem",
+    // [theme.breakpoints.down('sm')]: {
+    //     fontSize: '1.1rem',
+    // },
     '&:after': {
         content: '""',
         position: 'absolute',

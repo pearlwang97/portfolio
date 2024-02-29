@@ -51,7 +51,6 @@ const SelfIntroductionSection = () => {
 				sx={{
 					alignItems: "top",
 					justifyContent: "space-between",
-					// gap: "2rem",
 				}}
 			>
 				<Grid
@@ -62,8 +61,6 @@ const SelfIntroductionSection = () => {
 						width: { sm: "100%", md: "50%" },
 					}}
 				>
-					{/* <H1 sx={{ visibility: "hidden" }}>Hiii</H1>
-					<H1 sx={{ visibility: "hidden" }}>I'm Peirong!</H1> */}
 					<Image
 						sx={{
 							maxWidth: "475px",

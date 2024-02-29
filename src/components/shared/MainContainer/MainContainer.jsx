@@ -2,11 +2,8 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const MainContainer = styled(Box)(({ theme }) => ({
-	// width: "60%",
-	width: "1140px",
-	// display: "flex",
-	// flexWrap: "wrap",
-	justifyContent: "space-between",
+	width: "1000px",
+	// justifyContent: "space-between",
 	height: "auto",
 	margin: "0 auto",
 	[theme.breakpoints.down("lg")]: {

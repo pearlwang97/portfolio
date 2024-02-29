@@ -85,6 +85,12 @@ const FeatureWorksItem = ({
 						<H2
 							sx={{
 								textAlign: "left",
+								margin: {
+									xs: "5px 0",
+									sm: "5px 0",
+									md: "10px 0",
+									lg: "10px 0",
+								},
 							}}
 						>
 							{title}

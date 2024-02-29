@@ -9,7 +9,7 @@ import Link from "components/shared/StyledLink/StyledLink";
 import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
-import "./IntroductionSection.css";
+import AnimatedButton from "components/shared/AnimatedButton/AnimatedButton";
 
 const StyledImageContainer = styled(Box)(({ theme }) => ({
 	width: "50%",
@@ -35,10 +35,10 @@ const StyledTextContainer = styled(Box)(({ theme }) => ({
 
 const StyledScrollTrigger = styled(ScrollTrigger)(({ theme }) => ({
 	width: "50%",
-	order: 2,
+	order: 1,
 	[theme.breakpoints.down("sm")]: {
 		width: "100%",
-		order: 1,
+		order: 2,
 	},
 }));
 const StyledHello = styled("p")(({ theme }) => ({
@@ -70,7 +70,7 @@ const StyledName = styled("p")(({ theme }) => ({
 
 const Designer = styled("div")(({ theme }) => ({
 	fontSize: "3rem",
-	fontWeight: "600",
+	fontWeight: "500",
 	fontFamily: "'New York', serif",
 	marginBottom: "10px",
 	[theme.breakpoints.down("md")]: {
@@ -108,14 +108,14 @@ const IntroductionSection = () => {
 			<StyledScrollTrigger
 				onEnter={handleEnter}
 				onExit={() => setAnimationClass("")}
-				// sx={{ width: { sm: "100%", md: "50%" } }}
 			>
 				<StyledTextContainer className={`${animationClass}`}>
 					<StyledHello>hello, I’m</StyledHello>
+					<Designer>Peirong Wang.</Designer>
 					<StyledName>
 						<Typewriter
 							onInit={(typewriter) => {
-								typewriter.typeString("Peirong Wang.").start();
+								typewriter.typeString("A Creative Designer").start();
 							}}
 							options={{
 								delay: 18,
@@ -123,7 +123,7 @@ const IntroductionSection = () => {
 						/>
 					</StyledName>
 
-					<Designer>A Creative Designer.</Designer>
+					{/* <Designer>A Creative Designer.</Designer> */}
 					<Body1>
 						I put my passion into crafting meaningful experiences and
 						connections via design. My journey revolves around &nbsp;
@@ -138,7 +138,9 @@ const IntroductionSection = () => {
 						visual stories together.
 					</Body1>
 					<Link to="/about">
-						<Button>LEARN MORE</Button>
+						<AnimatedButton
+
+						>LEARN MORE</AnimatedButton>
 					</Link>
 				</StyledTextContainer>
 			</StyledScrollTrigger>

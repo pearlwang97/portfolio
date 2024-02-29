@@ -6,12 +6,14 @@ const StyledButton = styled("button")({
     textDecoration: "none",
     border: "none",
     width: "9rem",
-    textAlign: "center",
-    fontFamily: "'Montserrat', sans-serif",
+    borderRadius: "7px",
     fontWeight: "600", // semi-bold
     fontSize: "15px",
-    borderRadius: "7px",
     padding: "10px 10px",
+    textAlign: "center",
+    fontFamily: "'Montserrat', sans-serif",
+
+
     marginTop: "20px",
     "&:hover": {
         backgroundColor: "#F0DBDB",

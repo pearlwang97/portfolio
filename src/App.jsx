@@ -81,8 +81,8 @@ function App() {
 					<Route path="/project-6" element={<ProjectPage6 />} />
 					<Route path="/about" element={<AboutPage />} />
 				</Routes>
-				<GetInTouchSection />
-				<SocialMediaSection />
+				{/* <GetInTouchSection /> */}
+				{/* <SocialMediaSection /> */}
 				<Footer />
 			</AnimationContext>
 		</Box>
