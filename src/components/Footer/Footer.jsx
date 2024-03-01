@@ -100,7 +100,12 @@ const Footer = () => {
 						margin: "20px 0 0 0",
 						// textAlign: "center",
 						color: "white",
-						fontSize: "0.8rem",
+						fontSize: {
+                            xs: "0.8rem",
+                            sm: "0.8rem",
+                            md: "0.8rem",
+                            lg: "0.8rem",
+                        }
 					}}
 				>
 					&#169; 2024 All Rights Reserved | Peirong Wang

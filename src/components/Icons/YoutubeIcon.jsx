@@ -1,9 +1,19 @@
 import { React } from "react";
 import SvgIcon from "@mui/material/SvgIcon";
+import { styled } from "@mui/material/styles";
+
+const StyledSvgIcon = styled(SvgIcon)({
+    '& path': {
+        transition: 'fill 0.3s ease-in-out', // Add a transition to the fill property
+    },
+    '&:hover path': {
+        fill: "#dcdddd", // Change the fill on hover
+    },
+});
 
 const YoutubeIcon = ({ sx, fill }) => {
 	return (
-		<SvgIcon
+		<StyledSvgIcon
 			viewBox="0 0 48 48"
 			sx={{...sx}}
 			fill="none"
@@ -16,7 +26,7 @@ const YoutubeIcon = ({ sx, fill }) => {
 				fill="white"
 			/>
 			<path d="M21.6001 28.8V20.8L28.0001 24.8001L21.6001 28.8Z" fill={fill} />
-		</SvgIcon>
+		</StyledSvgIcon>
 	);
 };
 

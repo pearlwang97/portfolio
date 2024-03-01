@@ -91,13 +91,13 @@ const FeatureWorksSection = () => {
 				<Box
 					sx={{
 						display: "flex",
-						justifyContent: "flex-end",
+						justifyContent: "center",
 						width: "100%", // take full width of the parent
 					}}
 				>
-					<Link to="/visualdesign">
+					<Link sx={{marginTop: "30px"}}to="/visualdesign">
 						<AnimatedButton>
-							VIEW MORE
+							MORE WORKS 
 						</AnimatedButton>
 					</Link>
 				</Box>

@@ -1,9 +1,19 @@
 import { React } from "react";
 import SvgIcon from "@mui/material/SvgIcon";
+import { styled } from "@mui/material/styles";
+
+const StyledSvgIcon = styled(SvgIcon)({
+    '& path': {
+        transition: 'fill 0.3s ease-in-out', // Add a transition to the fill property
+    },
+    '&:hover path': {
+        fill: "#dcdddd", // Change the fill on hover
+    },
+});
 
 const InstagramIcon = ({ sx, fill }) => {
 	return (
-		<SvgIcon
+		<StyledSvgIcon
 			viewBox="0 0 48 48"
 			fill="none"
 			sx={{...sx}}
@@ -25,7 +35,7 @@ const InstagramIcon = ({ sx, fill }) => {
 				d="M24.0011 19.7334C26.3574 19.7334 28.2678 21.6436 28.2678 24.0001C28.2678 26.3564 26.3574 28.2668 24.0011 28.2668C21.6445 28.2668 19.7344 26.3564 19.7344 24.0001C19.7344 21.6436 21.6445 19.7334 24.0011 19.7334Z"
 				fill={fill}
 			/>
-		</SvgIcon>
+		</StyledSvgIcon>
 	);
 };
 
