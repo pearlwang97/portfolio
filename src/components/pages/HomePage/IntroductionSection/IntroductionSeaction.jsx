@@ -1,10 +1,8 @@
 import React, { useState, useContext } from "react";
-import ScrollTrigger from "react-scroll-trigger";
+import { motion } from "framer-motion";
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Typewriter from "typewriter-effect";
-import { AnimationContext } from "components/Context/AnimationContext";
-import Button from "components/shared/Button/Button";
 import Link from "components/shared/StyledLink/StyledLink";
 import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
@@ -33,7 +31,7 @@ const StyledTextContainer = styled(Box)(({ theme }) => ({
 	textAlign: "left",
 }));
 
-const StyledScrollTrigger = styled(ScrollTrigger)(({ theme }) => ({
+const StyledScrollTrigger = styled(motion.div)(({ theme }) => ({
 	width: "50%",
 	order: 1,
 	[theme.breakpoints.down("sm")]: {
@@ -82,16 +80,6 @@ const Designer = styled("div")(({ theme }) => ({
 }));
 
 const IntroductionSection = () => {
-	const [animationClass, setAnimationClass] = useState("");
-	const { animationTriggered, setAnimationTriggered } =
-		useContext(AnimationContext);
-	const handleEnter = () => {
-		if (!animationTriggered) {
-			setAnimationClass("animate-down");
-			setAnimationTriggered(true);
-		}
-	};
-
 	return (
 		<MainContainer
 			sx={{
@@ -106,10 +94,12 @@ const IntroductionSection = () => {
 			}}
 		>
 			<StyledScrollTrigger
-				onEnter={handleEnter}
-				onExit={() => setAnimationClass("")}
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.5 }}
+				transition={{ duration: 0.5, ease: "easeOut" }}
 			>
-				<StyledTextContainer className={`${animationClass}`}>
+				<StyledTextContainer>
 					<StyledHello>hello, I’m</StyledHello>
 					<Designer>Peirong Wang.</Designer>
 					<StyledName>
@@ -138,9 +128,7 @@ const IntroductionSection = () => {
 						visual stories together.
 					</Body1>
 					<Link to="/about">
-						<AnimatedButton
-
-						>LEARN MORE</AnimatedButton>
+						<AnimatedButton>LEARN MORE</AnimatedButton>
 					</Link>
 				</StyledTextContainer>
 			</StyledScrollTrigger>

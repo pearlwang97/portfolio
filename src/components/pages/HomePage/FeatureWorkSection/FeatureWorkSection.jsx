@@ -1,51 +1,14 @@
 import React from "react";
-import { Box, Grid, Button } from "@mui/material";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import Body1 from "components/shared/Body1/Body1";
+import { Box, Grid } from "@mui/material";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import FeatureWorkItem from "components/pages/HomePage/FeatureWorksItem/FeatureWorksItem";
 import Link from "components/shared/StyledLink/StyledLink";
 import AnimatedButton from "components/shared/AnimatedButton/AnimatedButton";
+import { projects } from "components/constants/constants";
 
 const FeatureWorksSection = () => {
-	const FeatureWorkItems = [
-		{
-			title: "Domino’s APP Redesign",
-			image: "/images/feature-work-1.jpg",
-			link: "/project-1",
-			description:
-				"Create a user-centered, modern interface for the existing Domino's App.",
-			category: "UI/UX Design",
-			tools: ["Figma", "Illustrator"],
-		},
-		{
-			title: "2D Realistic Radio Vector Art",
-			image: "/images/feature-work-2.jpg",
-			link: "/project-3",
-			description:
-				"Produce a photo-realistic 2D illustration that achieves a 3D effect.",
-			category: "Graphic Design",
-			tools: ["Illustrator"],
-		},
-		{
-			title: "BloomBox Logo Design",
-			image: "/images/feature-work-3.jpg",
-			link: "/project-4",
-			description: "Develop multiple logo variations for brand BloomBox.",
-			category: "Graphic Design",
-			tools: ["Illustrator"],
-		},
-		{
-			title: "Chinese Zodiac Collection",
-			image: "/images/feature-work-4.jpg",
-			link: "/project-5",
-			category: "Graphic Design",
-			description:
-				"Reimagine the Chinese zodiacs through the traditional art of papercutting.",
-			tools: ["Illustrator", "Photoshop"],
-		},
-	];
+	const FeatureWorkItems = projects.slice(0, 4);
 	return (
 		<Box
 			sx={{

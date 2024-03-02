@@ -3,20 +3,19 @@ import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import SocialMediaSection from "./components/SocialMediaSection/SocialMediaSection";
-import GetInTouchSection from "./components/GetInTouchSection/GetInTouchSection";
 import HomePage from "./components/pages/HomePage/HomePage";
 import AboutPage from "./components/pages/AboutPage/AboutPage";
-import UxDesignPage from "./components/pages/UxDesignPage/UxDesignPage";
-import VisualDesignPage from "./components/pages/VIsualDesignPage/VisualDesignPage";
-import ProjectPage1 from "./components/pages/ProjectPage1/ProjectPage1";
-import ProjectPage2 from "./components/pages/ProjectPage2/ProjectPage2";
-import ProjectPage3 from "./components/pages/ProjectPage3/ProjectPage3";
-import ProjectPage4 from "./components/pages/ProjectPage4/ProjectPage4";
-import ProjectPage5 from "./components/pages/ProjectPage5/ProjectPage5";
-import ProjectPage6 from "./components/pages/ProjectPage6/ProjectPage6";
+import ProjectsPage from "./components/pages/ProjectsPage/ProjectsPage";
+import DominoAppRedesign from "./components/pages/DominoAppRedesign/DominoAppRedesign";
+import BloomAppDesign from "./components/pages/BloomAppDesign/BloomAppDesign";
+import RadioVectorArt from "./components/pages/RadioVectorArt/RadioVectorArt";
+import BloomBoxLogoDesign from "./components/pages/BloomBoxLogoDesign/BloomBoxLogoDesign";
+import ChineseZodiac from "./components/pages/ChineseZodiac/ChineseZodiac";
+import CyberEraPoster from "./components/pages/CyberEraPoster/CyberEraPoster";
+import FurnitureBannerDesign from "components/pages/FurnitureBannerDesign/FurnitureBannerDesign";
+
+
 import "./App.css";
-import AnimationContext from "./components/Context/AnimationContextProvider";
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -68,23 +67,21 @@ function App() {
 				</script>
 			</Helmet>
 			<Header />
-			<AnimationContext>
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/uxdesign" element={<UxDesignPage />} />
-					<Route path="/visualdesign" element={<VisualDesignPage />} />
-					<Route path="/project-1" element={<ProjectPage1 />} />
-					<Route path="/project-2" element={<ProjectPage2 />} />
-					<Route path="/project-3" element={<ProjectPage3 />} />
-					<Route path="/project-4" element={<ProjectPage4 />} />
-					<Route path="/project-5" element={<ProjectPage5 />} />
-					<Route path="/project-6" element={<ProjectPage6 />} />
+					{/* <Route path="/uxdesign" element={<UxDesignPage />} />
+					<Route path="/visualdesign" element={<VisualDesignPage />} /> */}
+					<Route path="/domino-app-redesign" element={<DominoAppRedesign />} />
+					<Route path="/2d-radio-vector-art" element={<RadioVectorArt />} />
+					<Route path="/bloom-app-design" element={<BloomAppDesign />} />
+					<Route path="/bloom-box-logo" element={<BloomBoxLogoDesign />} />
+					<Route path="/chinese-zodiac" element={<ChineseZodiac />} />
+					<Route path="/cyber-era-poster" element={<CyberEraPoster />} />
 					<Route path="/about" element={<AboutPage />} />
+					<Route path="/works" element={<ProjectsPage />} />
+					<Route path="/furniture-banner-deisgn" element={<FurnitureBannerDesign />} />
 				</Routes>
-				{/* <GetInTouchSection /> */}
-				{/* <SocialMediaSection /> */}
 				<Footer />
-			</AnimationContext>
 		</Box>
 	);
 }

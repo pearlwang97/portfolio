@@ -32,7 +32,12 @@ const ProjectContentContainer = ({ navItems, children}) => {
     return (
         <OuterContainer
             sx={{
-                marginBottom: "50px",
+                marginBottom:{
+					lg: "200px",
+					md: "150px",
+					sm: "100px",
+					xs: "100px",
+				}
             }}
         >
             <ProjectNavBar navItems={navItems} />

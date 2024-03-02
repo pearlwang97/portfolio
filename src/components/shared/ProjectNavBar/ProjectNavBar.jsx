@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import { styled } from "@mui/material/styles";
 
@@ -37,7 +37,21 @@ const StyledNavItem = styled(Link)(({ theme }) => ({
 		color: "inherit",
 	},
     "&.active": {
-        textDecoration: "underline",
+		color: "#dba39a"
+    },
+	'&:after': {
+		content: '""',
+		position: 'absolute',
+		top: 0,
+		right: '20px', // Adjust the position of the pseudo-element
+		width: '1.5px',
+		height: '100%',
+		backgroundColor: '#dba39a',
+		transform: 'scaleY(0)',
+		transition: 'transform 0.3s ease-in-out',
+	},
+    '&.active::after': {
+		transform: 'scaleY(1)',
     },
 }));
 

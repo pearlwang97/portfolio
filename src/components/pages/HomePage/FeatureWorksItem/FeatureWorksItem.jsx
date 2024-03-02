@@ -38,11 +38,11 @@ const FeatureWorksItem = ({
 			}}
 		>
 			<Link to={link}>
-				<motion.div // Step 2: Use motion.div here
-					initial={{ opacity: 0, y: 50 }} // Step 3: Define initial state
-					whileInView={{ opacity: 1, y: 0 }} // Animate to this state when in view
-					viewport={{ once: true, amount: 0.5 }} // Step 4: Trigger when 50% in view
-					transition={{ duration: 0.5, ease: "easeOut" }} // Animation details
+				<motion.div
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, amount: 0.5 }}
+					transition={{ duration: 0.5, ease: "easeOut" }}
 				>
 					<Image
 						src={image}

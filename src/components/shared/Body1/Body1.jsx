@@ -4,7 +4,7 @@ const Body1 = styled("p")(({ theme }) => ({
 	fontSize: "1.125rem",
     fontFamily: "'Montserrat', sans-serif",
 	marginBottom: "10px",
-	lineHeight: "1.5",
+	lineHeight: "1.75",
 	[theme.breakpoints.down("lg")]: {
 		fontSize: "1.1rem",
 	},

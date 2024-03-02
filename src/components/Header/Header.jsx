@@ -122,13 +122,8 @@ const Header = () => {
 				</NavItem>
 				<Menu>
 					<li>
-						<NavItem to="/uxdesign">
-							UX/UI Design
-						</NavItem>
-					</li>
-					<li>
-						<NavItem to="/visualdesign">
-							Visual Design
+						<NavItem to="/works">
+							Work
 						</NavItem>
 					</li>
 					<li>
@@ -148,23 +143,12 @@ const Header = () => {
 					<li>
 						<NavItem
 							className="navItem"
-							to="/uxdesign"
+							to="/works"
 							onClick={() => {
 								toggleNav(false);
 							}}
 						>
-							UX/UI Design
-						</NavItem>
-					</li>
-					<li>
-						<NavItem
-							className="navItem"
-							to="/visualdesign"
-							onClick={() => {
-								toggleNav(false);
-							}}
-						>
-							Visual Design
+							Work
 						</NavItem>
 					</li>
 					<li>
