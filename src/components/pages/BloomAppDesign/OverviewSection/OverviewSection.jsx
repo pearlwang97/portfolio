@@ -9,11 +9,9 @@ import ProjectContentContainer from "components/shared/ProjectContentContainer/P
 
 const OverviewSection = () => {
 	const navItems = [
-		{ to: "1", label: "Overview" },
-		{ to: "2", label: "Initiation" },
-		{ to: "3", label: "Conceptualization" },
-		{ to: "4", label: "Prototype" },
-		{ to: "5", label: "Finalization" },
+		{ to: "1", label: "overview" },
+		{ to: "2", label: "design process" },
+		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "MAY - JUN 2023" },
@@ -123,6 +121,10 @@ const OverviewSection = () => {
 						and user-friendly app interface, led by my focus on UI design, all
 						within the educational scope of the project.
 					</Body1>
+				</Grid>
+			</ProjectStepSection>
+			<ProjectStepSection title="Deliverable" id="6">
+				<Grid container justifyContent="space-between">
 					<Box
 						component="img"
 						src="/images/project-2-gallery-8.png"

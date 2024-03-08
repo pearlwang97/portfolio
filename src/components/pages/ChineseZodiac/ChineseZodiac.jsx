@@ -10,7 +10,7 @@ const ChineseZodiac = () => {
 		<div>
 			<ProjectBanner
 				title="Papercut Illustrations: Chinese Zodiac Collection"
-				imageSrc="images/chinese-zodiac-banner.jpg"
+				imageSrc="images/chinese-zodiac-banner.webp"
 			/>
 			<OverviewSection />
 		</div>

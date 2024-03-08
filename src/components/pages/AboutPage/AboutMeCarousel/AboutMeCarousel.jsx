@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
 import Body1 from "components/shared/Body1/Body1";
 import H2 from "components/shared/H2/H2";
+import MainContainer from "components/shared/MainContainer/MainContainer";
 
 const Image = styled("img")({
 	width: "100%",
@@ -29,19 +30,35 @@ const AboutMeCarousel = () => {
 	const items = [
 		{
 			name: "Selfie1",
-			image: "/images/about-me-gallery-3.jpg",
+			image: "/images/about-me-gallery-1-carousel.webp",
 		},
 		{
 			name: "Selfie2",
-			image: "/images/about-me-gallery-2.jpg",
+			image: "/images/about-me-gallery-2.webp",
 		},
 		{
 			name: "Selfie3",
-			image: "/images/about-me-gallery-7.jpg",
+			image: "/images/about-me-gallery-3.webp",
 		},
 		{
 			name: "Selfie4",
-			image: "/images/about-me-gallery-6.jpg",
+			image: "/images/about-me-gallery-4-carousel.webp",
+		},
+		{
+			name: "Selfie5",
+			image: "/images/about-me-gallery-5-carousel.webp",
+		},
+		{
+			name: "Selfie6",
+			image: "/images/about-me-gallery-6.webp",
+		},
+		{
+			name: "Selfie7",
+			image: "/images/about-me-gallery-7.webp",
+		},
+		{
+			name: "Selfie8",
+			image: "/images/about-me-gallery-8-carousel.webp",
 		},
 	];
 	return (
@@ -54,13 +71,22 @@ const AboutMeCarousel = () => {
 				marginBottom: { xs: "50px", md: "75px", lg: "100px" },
 			}}
 		>
-			<StyledContainer>
+			<MainContainer>
 				<Box
 					sx={{
 						marginBottom: "50px",
 					}}
 				>
-					<H2>More About Me</H2>
+					<H2
+						sx={{
+							margin: {
+								xs: "20px 0",
+								sm: "20px 0",
+								md: "40px 0",
+								lg: "40px 0",
+							},
+						}}
+					>More About Me</H2>
 					<Body1>
 						I have always been drawn to various forms of creative expression. In
 						my free time, you can find me watching movies, engaging in crafts
@@ -74,7 +100,7 @@ const AboutMeCarousel = () => {
 						<Image key={i} src={item.image} alt={item.name} />
 					))}
 				</Carousel>
-			</StyledContainer>
+			</MainContainer>
 		</Box>
 	);
 };

@@ -73,7 +73,7 @@ const SelfIntroductionSection = () => {
 					<Grid>
 						<Box
 							sx={{
-								marginBottom: "20px",
+								marginBottom: "10px",
 							}}
 						>
 							<H1>Hiii</H1>
@@ -108,26 +108,32 @@ const SelfIntroductionSection = () => {
 							}}
 						>
 							<Body1
-								sx={{
-									marginBottom: "20px",
-								}}
+								sx={
+									{
+										// marginBottom: "20px",
+									}
+								}
 							>
 								A graphic designer who is originally from China, currently based
 								in Vancouver, BC.
 							</Body1>
 							<Body1
-								sx={{
-									marginBottom: "20px",
-								}}
+								sx={
+									{
+										// marginBottom: "20px",
+									}
+								}
 							>
 								With a solid foundation in economics from the University of
 								Victoria, I discovered my passion for new media design
 								post-graduation.
 							</Body1>
 							<Body1
-								sx={{
-									marginBottom: "20px",
-								}}
+								sx={
+									{
+										// marginBottom: "20px",
+									}
+								}
 							>
 								Committed to creating meaningful, user-centric graphics, I
 								infuse each project with passion and a diverse mindset. Eager to
@@ -140,8 +146,39 @@ const SelfIntroductionSection = () => {
 							href="/files/resume.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
+							style={{
+								marginRight: "20px",
+							}}
 						>
-							<Button>View Resume</Button>
+							<Button
+								sx={{
+									"&:hover": {
+										color: "#333333",
+									},
+								}}
+							>
+								View Resume
+							</Button>
+						</a>
+
+						<a
+							href="mailto:pearlwang1997@gmail.com"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Button
+								sx={{
+									border: "1px solid #dba39a",
+									backgroundColor: "transparent",
+									color: "#d5927c",
+									"&:hover": {
+										backgroundColor: "#dba39a",
+										color: "white",
+									},
+								}}
+							>
+								Contact Me
+							</Button>
 						</a>
 					</Grid>
 				</Grid>

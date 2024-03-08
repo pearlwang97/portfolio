@@ -10,10 +10,8 @@ import ProjectContentContainer from "components/shared/ProjectContentContainer/P
 const OverviewSection = () => {
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "2", label: "brainstorm" },
-		{ to: "3", label: "logo design" },
-		{ to: "4", label: "Typography & Color" },
-		{ to: "5", label: "Finalization" },
+		{ to: "2", label: "design process" },
+		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "MAY - JUN 2023" },
@@ -50,7 +48,7 @@ const OverviewSection = () => {
 						bloom, growth, and tranquility.
 					</Body1>
 					<Image
-						src="/images/bloom-box-brainstorm.jpg"
+						src="/images/bloom-box-brainstorm.webp"
 						alt="Problem"
 						sx={{
 							marginBottom: "10px",
@@ -107,8 +105,12 @@ const OverviewSection = () => {
 						typography to finalize the BloomBox logo. We also created mockups to
 						showcase the logo in various applications.
 					</Body1>
+				</Grid>
+			</ProjectStepSection>
+			<ProjectStepSection title="Deliverable" id="6">
+				<Grid container justifyContent="space-between">
 					<Image
-						src="/images/bloom-box-final.jpg"
+						src="/images/bloom-box-final.webp"
 						alt="Problem"
 						sx={{
 							marginBottom: "10px",

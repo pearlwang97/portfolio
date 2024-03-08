@@ -10,10 +10,8 @@ import ProjectContentContainer from "components/shared/ProjectContentContainer/P
 const OverviewSection = () => {
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "2", label: "conceptualization" },
-		{ to: "3", label: "design" },
-		{ to: "4", label: "composition" },
-		{ to: "5", label: "finalization" },
+		{ to: "2", label: "design process" },
+		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "MAR - APR 2023" },
@@ -77,7 +75,7 @@ const OverviewSection = () => {
 					/>
 					<Box sx={{ display: "block" }}>
 						<Image
-							src="/images/cyber-era-vertical.jpg"
+							src="/images/cyber-era-vertical.webp"
 							sx={{
 								float: "right",
 								marginLeft: "20px",
@@ -122,7 +120,6 @@ const OverviewSection = () => {
 						harmony and to solidify the connection between the poster elements
 						and the narrative of the TV series.
 					</Body1>
-					<Image src="/images/cyber-era-final.jpg" alt="Problem" />
 					<Body1>
 						All elements are from real photographs or vectors I made. And aim to
 						create a non-destructive design. Creative and skilled usage of the
@@ -130,6 +127,11 @@ const OverviewSection = () => {
 						achieved. Creative and exemplary technical skills demonstrated in
 						file construction.
 					</Body1>
+				</Grid>
+			</ProjectStepSection>
+			<ProjectStepSection title="Deliverable" id="6">
+				<Grid container justifyContent="space-between">
+					<Image src="/images/cyber-era-final.jpg" alt="Problem" />
 				</Grid>
 			</ProjectStepSection>
 		</ProjectContentContainer>

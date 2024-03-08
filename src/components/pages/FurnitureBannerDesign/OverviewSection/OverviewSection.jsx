@@ -85,7 +85,7 @@ const OverviewSection = () => {
 			</ProjectStepSection>
 			<ProjectStepSection title="Deliverable" id="6">
 				<Grid container justifyContent="space-between">
-					<Image src="/images/feature-work-7.jpg" alt="Furniture Banner Design" />
+					<Image src="/images/feature-work-7.webp" alt="Furniture Banner Design" />
 				</Grid>
 			</ProjectStepSection>
 		</ProjectContentContainer>

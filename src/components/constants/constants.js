@@ -53,7 +53,7 @@ export const projects = [
     },
     {
         title: "Furniture Banner Design",
-        image: "/images/feature-work-7.jpg",
+        image: "/images/feature-work-7.webp",
         link: "/furniture-banner-deisgn",
         description:
             "Create a series of banner designs for a furniture store.",

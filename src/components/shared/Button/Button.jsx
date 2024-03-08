@@ -12,7 +12,7 @@ const StyledButton = styled("button")({
     padding: "10px 10px",
     textAlign: "center",
     fontFamily: "'Montserrat', sans-serif",
-
+    transition: 'background-color 0.3s ease-in-out', // Add a transition to the background-color property
 
     marginTop: "20px",
     "&:hover": {

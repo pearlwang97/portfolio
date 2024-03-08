@@ -58,7 +58,7 @@ const FeatureWorksSection = () => {
 						width: "100%", // take full width of the parent
 					}}
 				>
-					<Link sx={{marginTop: "30px"}}to="/visualdesign">
+					<Link sx={{marginTop: "30px"}}to="/works">
 						<AnimatedButton>
 							MORE WORKS 
 						</AnimatedButton>

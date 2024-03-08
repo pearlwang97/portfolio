@@ -11,7 +11,7 @@ const RadioVectorArt = () => {
 			{/* <ProjectCarousel /> */}
 			<ProjectBanner
 				title="2D Realistic Radio Vector Art"
-				imageSrc="/images/project-3-gallery-3.png"
+				imageSrc="/images/design-3.webp"
 			/>
 			<OverviewSection />
 		</div>

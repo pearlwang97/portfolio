@@ -9,10 +9,9 @@ import ProjectContentContainer from "components/shared/ProjectContentContainer/P
 
 const OverviewSection = () => {
 	const navItems = [
-		{ to: "1-1", label: "overview" },
-		{ to: "1-2", label: "planning" },
-		{ to: "1-4", label: "design & development" },
-		{ to: "1-6", label: "Finalization" },
+		{ to: "1", label: "overview" },
+		{ to: "2", label: "design process" },
+		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "MAY - JUN 2023" },
@@ -21,7 +20,7 @@ const OverviewSection = () => {
 	];
 	return (
 		<ProjectContentContainer navItems={navItems}>
-			<ProjectStepSection title="Overview" id="1-1">
+			<ProjectStepSection title="Overview" id="1">
 				<ProjectOverviewList listItems={listItems} />
 				<Grid container justifyContent="space-between">
 					<Grid item xs={12}>
@@ -36,20 +35,20 @@ const OverviewSection = () => {
 					</Grid>
 				</Grid>
 			</ProjectStepSection>
-			<ProjectStepSection title="Initiation and Research" id="1-2">
+			<ProjectStepSection title="Initiation and Research" id="2">
 				<Grid container justifyContent="space-between">
-					<Box sx={{ display: "block" }}>
+					<Grid item xs={12} md={6}>
 						<Image
-							src="/images/project-1-problem.jpg"
+							src="/images/project-1-problem.png"
 							alt="Problem"
 							sx={{
-								float: "right",
-								marginLeft: "20px",
 								marginBottom: "10px",
-								width: { sm: "100%", md: "50%" },
+								width: "100%",
 							}}
 						/>
-						<Body1 sx={{ marginTop: "1rem" }}>
+					</Grid>
+					<Grid item xs={12} md={6}>
+						<Body1>
 							The project came out with an initial planning phase to identify
 							the main issues with the current Domino's App interface and
 							brainstorm solutions. Initial research involved collecting user
@@ -58,19 +57,20 @@ const OverviewSection = () => {
 							understand users' habits with Domino's. This dual approach ensured
 							a solid foundation for user-centered design decisions.
 						</Body1>
-						<Box
-							component="img"
-							src="/images/project-1-user-review.jpg"
-							alt="Problem"
-							sx={{
-								marginBottom: "10px",
-								width: { sm: "100%" },
-							}}
-						/>
-					</Box>
+					</Grid>
+
+					<Box
+						component="img"
+						src="/images/project-1-user-review.jpg"
+						alt="Problem"
+						sx={{
+							marginBottom: "10px",
+							width: "100%",
+						}}
+					/>
 				</Grid>
 			</ProjectStepSection>
-			<ProjectStepSection title="Competitive Analysis and User Insight" id="1-3">
+			<ProjectStepSection title="Competitive Analysis and User Insight" id="3">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						A detailed competitive analysis was conducted, comparing the
@@ -90,7 +90,7 @@ const OverviewSection = () => {
 						}}
 					/>
 					<Image
-						src="/images/project-1-user-type.jpg"
+						src="/images/project-1-user-type.webp"
 						alt="Problem"
 						sx={{
 							marginBottom: "10px",
@@ -99,7 +99,7 @@ const OverviewSection = () => {
 					/>
 				</Grid>
 			</ProjectStepSection>
-			<ProjectStepSection title="Design and Development" id="1-4">
+			<ProjectStepSection title="Design and Development" id="4">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						With a clear understanding of the user base, I moved to the design
@@ -119,7 +119,7 @@ const OverviewSection = () => {
 					/>
 				</Grid>
 			</ProjectStepSection>
-			<ProjectStepSection title="Testing" id="1-5">
+			<ProjectStepSection title="Testing" id="5">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						Testing revealed key areas for improvement, prompting a series of
@@ -128,25 +128,37 @@ const OverviewSection = () => {
 						ensuring the final product resonated with our target audience.
 					</Body1>
 					<Image
-						src="/images/project-1-test.jpg"
+						src="/images/project-1-test.webp"
 						alt="Problem"
 						sx={{
 							marginBottom: "10px",
-							width: { sm: "100%" },
+							width: "100%",
 						}}
 					/>
 				</Grid>
 			</ProjectStepSection>
-			<ProjectStepSection title="Finalization" id="1-6">
+			<ProjectStepSection title="Finalization" id="6">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						The project culminated with the addition of final touches based on
 						critique and insights from the presentation phase. Additional
 						screens were developed in Figma, completing the redesign.
 					</Body1>
-					<Box>
+				</Grid>
+			</ProjectStepSection>
+			<ProjectStepSection title="Deliverable" id="6">
+				<Grid container justifyContent="space-between">
+					<Image
+						src="/images/domino_figma.webp"
+						alt="Problem"
+						sx={{
+							marginBottom: "10px",
+							width: "100%",
+						}}
+					/>
+					<Box sx={{ width: "100%" }}>
 						<iframe
-							width="450"
+							width="100%"
 							height="500"
 							src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfQF5Uochvt75Ijt4J4oe2X%2FDomino-Redesign%3Ftype%3Ddesign%26node-id%3D1-11%26t%3DiIeOpNetOoiM7BKO-1%26scaling%3Dscale-down%26page-id%3D1%253A2%26starting-point-node-id%3D1%253A619%26mode%3Ddesign"
 							allowFullScreen

@@ -10,7 +10,7 @@ const FurnitureBannerDesign = () => {
 		<div>
 			<ProjectBanner
 				title="Furniture Banner Design"
-				imageSrc="images/furniture-banner-design-banner.jpg"
+				imageSrc="images/furniture-banner-design-banner.webp"
 			/>
 			<OverviewSection />
 		</div>

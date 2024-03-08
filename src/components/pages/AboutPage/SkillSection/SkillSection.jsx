@@ -43,8 +43,10 @@ const SkillSection = () => {
 				<H2
 					sx={{
 						margin: {
+							xs: "20px 0",
 							sm: "20px 0",
 							md: "40px 0",
+							lg: "40px 0",
 						},
 						textAlign: "left",
 					}}

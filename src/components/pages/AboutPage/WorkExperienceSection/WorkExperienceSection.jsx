@@ -15,7 +15,7 @@ const StyledUl = styled("ul")({
 const StyledLi = styled("li")({
 	margin: "10px 0",
 	paddingLeft: "16px",
-	// fontSize: "1rem",
+	lineHeight: "1.5",
 });
 
 const Time = styled(H5)({
@@ -26,7 +26,6 @@ const Time = styled(H5)({
 });
 
 const Company = styled(H4)({
-	// fontSize: "1.2rem",
 	marginBottom: "10px",
 });
 
@@ -35,9 +34,10 @@ const WorkExperienceSection = () => {
 		<MainContainer
 			sx={{
 				marginBottom: {
-					xs: "50px",
-					md: "75px",
-					lg: "100px",
+					xs: "20px",
+					sm: "30px",
+					md: "40px",
+					lg: "50px",
 				},
 				display: "flex",
 				flexWrap: "wrap",
@@ -58,8 +58,10 @@ const WorkExperienceSection = () => {
 					sx={{
 						textAlign: "left",
 						margin: {
+							xs: "20px 0",
 							sm: "20px 0",
 							md: "40px 0",
+							lg: "40px 0",
 						},
 					}}
 				>
@@ -79,8 +81,32 @@ const WorkExperienceSection = () => {
 				}}
 			>
 				<Grid item xs={12} md={5.5}>
-					<H3>Marketing Coordinator</H3>
-					<Company>Amber Financial Services Corp.</Company>
+					<H3
+						sx={{
+							fontSize: {
+								xs: "1.125rem",
+								sm: "1.125rem",
+								md: "1.25rem",
+								lg: "1.375rem",
+							},
+							fontWeight: '550',
+							marginTop: "0",
+						}}
+					>
+						Marketing Coordinator
+					</H3>
+					<Company
+						sx={{
+							fontSize: {
+								xs: "1.025rem",
+								sm: "1.025rem",
+								md: "1.15rem",
+								lg: "1.275rem",
+							},
+						}}
+					>
+						Amber Financial Services Corp.
+					</Company>
 					<Time>Jan 2021 – Jan 2022</Time>
 					<StyledUl>
 						<StyledLi>
@@ -109,8 +135,32 @@ const WorkExperienceSection = () => {
 					</StyledUl>
 				</Grid>
 				<Grid item sx={12} md={5.5}>
-					<H3>Front Desk Admin</H3>
-					<Company>PIU Entertainment Ltd.</Company>
+					<H3
+						sx={{
+							fontSize: {
+								xs: "1.125rem",
+								sm: "1.125rem",
+								md: "1.25rem",
+								lg: "1.375rem",
+							},
+							fontWeight: '550',
+							marginTop: "0",
+						}}
+					>
+						Front Desk Admin
+					</H3>
+					<Company
+						sx={{
+							fontSize: {
+								xs: "1.025rem",
+								sm: "1.025rem",
+								md: "1.15rem",
+								lg: "1.275rem",
+							},
+						}}
+					>
+						PIU Entertainment Ltd.
+					</Company>
 					<Time>Feb 2019 – Sept 2020</Time>
 					<StyledUl>
 						<StyledLi>

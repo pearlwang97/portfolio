@@ -37,6 +37,7 @@ const Project = ({ title, image, link, description, category, tools }) => {
 					<Body2
 						sx={{
 							marginTop: "10px",
+							fontFamily: "'Lato', sans-serif !important",
 						}}
 					>
 						{category}
@@ -51,6 +52,12 @@ const Project = ({ title, image, link, description, category, tools }) => {
 									md: "10px 0",
 									lg: "10px 0",
 								},
+								fontSize: {
+									xs: "1.45rem",
+									sm: "1.55rem",
+									md: "1.65rem",
+									lg: "1.75rem",
+								},
 							}}
 						>
 							{title}
@@ -64,7 +71,14 @@ const Project = ({ title, image, link, description, category, tools }) => {
 							variant="outlined"
 							label={tool}
 							key={tool}
-							sx={{ marginRight: "5px", color: "black" }}
+							sx={{
+								marginRight: "5px",
+								color: "black",
+								"& .MuiChip-label": {
+									// Target the label inside the Chip
+									fontFamily: "'Lato', sans-serif !important",
+								},
+							}}
 						/>
 					))}
 				</Box>

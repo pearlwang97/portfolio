@@ -10,9 +10,8 @@ import ProjectContentContainer from "components/shared/ProjectContentContainer/P
 const OverviewSection = () => {
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "2", label: "inspiration" },
-		{ to: "3", label: "graphic design" },
-		{ to: "4", label: "finalization" },
+		{ to: "2", label: "design process" },
+		{ to: "5", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "DEC 2023 - JAN 2024" },
@@ -50,7 +49,7 @@ const OverviewSection = () => {
 				<Grid container justifyContent="space-between">
 					<Box sx={{ display: "block" }}>
 						<Image
-							src="/images/project-5-gallery-2.jpg"
+							src="/images/project-5-gallery-2.webp"
 							alt="Problem"
 							sx={{
 								float: "right",
@@ -77,7 +76,7 @@ const OverviewSection = () => {
 					</Box>
 				</Grid>
 			</ProjectStepSection>
-			<ProjectStepSection title="Graphic Desin" id="3">
+			<ProjectStepSection title="Graphic Design" id="3">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						Using Adobe Illustrator, each zodiac sign was designed with a focus
@@ -106,21 +105,25 @@ const OverviewSection = () => {
 						showcases practical applications and engaging presentations of the
 						zodiac signs, aiming to make the artwork more relatable.
 					</Body1>
+				</Grid>
+			</ProjectStepSection>
+			<ProjectStepSection title="Deliverable" id="5">
+				<Grid container justifyContent="space-between">
 					<Grid item container xs={12}>
 						<Grid item xs={12} sm={5.85}>
 							<Image
-								src="/images/project-5-gallery-1.jpg"
+								src="/images/project-5-gallery-1.webp"
 								alt="chinese zodiac gallery image 3"
 							/>
 						</Grid>
 						<Grid item xs={12} sm={6.15}>
 							<Image
-								src="/images/project-5-gallery-5.jpg"
+								src="/images/project-5-gallery-5.webp"
 								alt="chinese zodiac gallery image 4"
 							/>
 						</Grid>
 						<Image
-							src="/images/chinese-zodiac-banner.jpg"
+							src="/images/chinese-zodiac-banner.webp"
 							alt="chinese zodiac gallery image 4"
 						/>
 					</Grid>

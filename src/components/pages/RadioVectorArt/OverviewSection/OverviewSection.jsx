@@ -10,9 +10,8 @@ import ProjectContentContainer from "components/shared/ProjectContentContainer/P
 const OverviewSection = () => {
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "2", label: "inspiration" },
-		{ to: "3", label: "outline & color" },
-		{ to: "4", label: "final touch" },
+		{ to: "2", label: "design process" },
+		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "MAY - JUN 2023" },
@@ -50,11 +49,6 @@ const OverviewSection = () => {
 			<ProjectStepSection title="Outline and Color" id="3">
 				<Grid container justifyContent="space-between">
 					<Box
-						sx={{
-							// display: "flex",
-							// flexDirection: "column",
-							// alignItems: "center",
-						}}
 					>
 						<Image
 							src="/images/project-3-gallery-2.png"
@@ -96,14 +90,6 @@ const OverviewSection = () => {
 			<ProjectStepSection title="Final Touch" id="5">
 				<Grid container justifyContent="space-between">
 					<Box sx={{ display: "block" }}>
-						<Image
-							src="/images/design-3.png"
-							alt="Problem"
-							sx={{
-								marginBottom: "10px",
-								width: { sm: "100%", md: "50%" },
-							}}
-						/>
 						<Body1>
 							In the final stage, I added even more details to give the radio a
 							3D effect. This included putting text and icons on the digital
@@ -115,6 +101,19 @@ const OverviewSection = () => {
 							Finally, a realistic 2D vector illustration of a radio was
 							completed with its 3D essence.
 						</Body1>
+					</Box>
+				</Grid>
+			</ProjectStepSection>
+			<ProjectStepSection title="Deliverable" id="6">
+				<Grid container justifyContent="space-between">
+					<Box sx={{ display: "block" }}>
+						<Image
+							src="/images/design-3.webp"
+							sx={{
+								marginBottom: "10px",
+								width: { sm: "100%", md: "100%" },
+							}}
+						/>
 					</Box>
 				</Grid>
 			</ProjectStepSection>

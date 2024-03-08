@@ -1,17 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, Tabs, Tab } from "@mui/material";
+import { useLocation } from "react-router-dom";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Project from "components/pages/ProjectsPage/Project/Project";
 import { projects } from "components/constants/constants";
 
 const ProjectsSection = () => {
-
+	const location = useLocation();
 	const [selectedTab, setSelectedTab] = useState(0);
 
 	const handleTabChange = (event, newValue) => {
 		setSelectedTab(newValue);
 	};
+
+	useEffect(() => {
+		const params = new URLSearchParams(location.search);
+		const category = params.get("category");
+
+		if (category === "ux-ui") {
+			setSelectedTab(1);
+		} else if (category === "graphic-design") {
+			setSelectedTab(2);
+		} else {
+			setSelectedTab(0);
+		}
+	}, [location]);
+
 	return (
 		<Box
 			sx={{
@@ -39,13 +54,21 @@ const ProjectsSection = () => {
 						},
 					}}
 				>
-					My Works
+					My Projects
 				</H2>
 				<Tabs
 					sx={{
 						marginBottom: "50px",
 						"& .Mui-selected": { color: "#dba39a !important" }, // Increase the specificity
 						"& .MuiTabs-indicator": { backgroundColor: "#dba39a" },
+						"& .MuiTab-root": {
+							// Target the root of the Tab
+							fontSize: {
+								xs: "0.75rem", // Set the font size for xs screens
+								sm: "0.875rem", // Set the font size for sm screens
+								md: "1rem", // Set the font size for md screens and up
+							},
+						},
 					}}
 					value={selectedTab}
 					onChange={handleTabChange}

@@ -13,6 +13,7 @@ import BloomBoxLogoDesign from "./components/pages/BloomBoxLogoDesign/BloomBoxLo
 import ChineseZodiac from "./components/pages/ChineseZodiac/ChineseZodiac";
 import CyberEraPoster from "./components/pages/CyberEraPoster/CyberEraPoster";
 import FurnitureBannerDesign from "components/pages/FurnitureBannerDesign/FurnitureBannerDesign";
+import ScrollTop from "components/shared/ScrollUp/ScrollUp";
 
 
 import "./App.css";
@@ -81,6 +82,7 @@ function App() {
 					<Route path="/works" element={<ProjectsPage />} />
 					<Route path="/furniture-banner-deisgn" element={<FurnitureBannerDesign />} />
 				</Routes>
+				<ScrollTop />
 				<Footer />
 		</Box>
 	);

@@ -51,7 +51,7 @@ const Footer = () => {
 						textAlign: "left",
 						color: "white",
 						margin: "30px 0",
-                        fontFamily: "'Montserrat', sans-serif",
+						fontFamily: "'Montserrat', sans-serif",
 						width: {
 							xs: "100%",
 							sm: "100%",
@@ -60,7 +60,16 @@ const Footer = () => {
 						},
 					}}
 				>
-					Currently look for new opportunities, please feel free to reach out.
+					Currently looking for new opportunities and would love to connect.
+					Please don't hesitate to {" "}
+					<Link
+						href="mailto:pearlwang1997@gmail.com"
+						target="_blank"
+						sx={{ textDecoration: "underline",
+						color: "#007bff"}}
+					>
+						send me an email.
+					</Link>
 				</Body1>
 				<Box
 					sx={{
@@ -101,11 +110,11 @@ const Footer = () => {
 						// textAlign: "center",
 						color: "white",
 						fontSize: {
-                            xs: "0.8rem",
-                            sm: "0.8rem",
-                            md: "0.8rem",
-                            lg: "0.8rem",
-                        }
+							xs: "0.8rem",
+							sm: "0.8rem",
+							md: "0.8rem",
+							lg: "0.8rem",
+						},
 					}}
 				>
 					&#169; 2024 All Rights Reserved | Peirong Wang

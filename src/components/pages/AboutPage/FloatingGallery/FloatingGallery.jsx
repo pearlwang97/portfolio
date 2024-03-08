@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import Image from "components/shared/Image/Image";
 import Body1 from "components/shared/Body1/Body1";
 import H2 from "components/shared/H2/H2";
+import MainContainer from "components/shared/MainContainer/MainContainer";
 
 const StyledMainContainer = styled(Box)(({ theme, isSmallScreen }) => ({
 	width: "100%",
@@ -147,7 +148,7 @@ const FloatingGallery = () => {
 		return <AboutMeCarousel />;
 	}
 	return (
-		<Box
+		<MainContainer
 			sx={{
 				width: "100%",
 				height: "100%",
@@ -170,46 +171,46 @@ const FloatingGallery = () => {
 						<Box className="plane" ref={plane1}>
 							<Image
 								sx={{ width: "180px" }}
-								src="/images/about-me-gallery-1.jpg"
+								src="/images/about-me-gallery-1.webp"
 								alt="plane1"
 							/>
 							<Image
 								sx={{ width: "120px" }}
-								src="/images/about-me-gallery-2.jpg"
+								src="/images/about-me-gallery-2.webp"
 								alt="plane2"
 							/>
 							<Image
 								sx={{ width: "120px" }}
-								src="/images/about-me-gallery-3.jpg"
+								src="/images/about-me-gallery-3.webp"
 								alt="plane3"
 							/>
 						</Box>
 						<Box className="plane" ref={plane2}>
 							<Image
 								sx={{ width: "180px" }}
-								src="/images/about-me-gallery-4.jpg"
+								src="/images/about-me-gallery-4.webp"
 								alt="plane1"
 							/>
 							<Image
 								sx={{ width: "180px" }}
-								src="/images/about-me-gallery-5.jpg"
+								src="/images/about-me-gallery-5.webp"
 								alt="plane2"
 							/>
 							<Image
 								sx={{ width: "180px" }}
-								src="/images/about-me-gallery-6.jpg"
+								src="/images/about-me-gallery-6.webp"
 								alt="plane3"
 							/>
 						</Box>
 						<Box className="plane" ref={plane3}>
 							<Image
 								sx={{ width: "120px" }}
-								src="/images/about-me-gallery-7.jpg"
+								src="/images/about-me-gallery-7.webp"
 								alt="plane1"
 							/>
 							<Image
 								sx={{ width: "180px" }}
-								src="/images/about-me-gallery-8.jpg"
+								src="/images/about-me-gallery-8.webp"
 								alt="plane2"
 							/>
 						</Box>
@@ -231,7 +232,7 @@ const FloatingGallery = () => {
 					</>
 				)}
 			</StyledMainContainer>
-		</Box>
+		</MainContainer>
 	);
 };
 

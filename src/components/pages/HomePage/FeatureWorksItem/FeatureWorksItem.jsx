@@ -78,6 +78,7 @@ const FeatureWorksItem = ({
 								border: "1px solid white",
 								borderRadius: "10px",
 								padding: "5px 10px",
+								fontFamily: "'Lato', sans-serif !important",
 							}}
 						>
 							{category}
@@ -91,6 +92,13 @@ const FeatureWorksItem = ({
 									md: "10px 0",
 									lg: "10px 0",
 								},
+								fontSize: {
+									xs: "1.45rem",
+									sm: "1.55rem",
+									md: "1.65rem",
+									lg: "1.75rem",
+								},
+
 							}}
 						>
 							{title}
@@ -102,7 +110,14 @@ const FeatureWorksItem = ({
 								variant="outlined"
 								label={tool}
 								key={tool}
-								sx={{ marginRight: "5px", color: "white" }}
+								sx={{
+									marginRight: "5px",
+									color: "white",
+									"& .MuiChip-label": {
+										// Target the label inside the Chip
+										fontFamily: "'Lato', sans-serif !important",
+									},
+								}}
 							/>
 						))}
 					</Box>

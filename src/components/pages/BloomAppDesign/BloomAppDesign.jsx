@@ -10,7 +10,7 @@ const BloomAppDesign = () => {
 		<div>
 			<ProjectBanner
 				title="Bloom App Design"
-				imageSrc="/images/bloom-app-banner.jpg"
+				imageSrc="/images/bloom-app-banner.webp"
 			/>
 			<OverviewSection />
 		</div>

@@ -10,7 +10,7 @@ const DominoAppRedesign = () => {
 		<div>
 			<ProjectBanner
 				title="Domino’s APP Redesign"
-				imageSrc="images/project-1-banner.jpg"
+				imageSrc="images/project-1-banner.webp"
 			/>
 			<OverviewSection />
 		</div>

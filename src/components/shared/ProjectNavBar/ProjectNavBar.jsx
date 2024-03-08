@@ -29,6 +29,7 @@ const StyledNavItem = styled(Link)(({ theme }) => ({
 	transform: "rotate(180deg)",
 	writingMode: "vertical-rl",
 	textDecoration: "none",
+	fontFamily: "'Lato', sans-serif",
 	"&:hover": {
 		color: "inherit",
 		textDecoration: "none",
@@ -66,7 +67,7 @@ const ProjectNavBar = ({ navItems }) => {
 					spy={true}
 					smooth={true}
 					duration={500}
-                   
+					offset={-200}
 				>
 					{navItem.label}
 				</StyledNavItem>

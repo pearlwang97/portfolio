@@ -32,9 +32,10 @@ const EducationSection = () => {
 		<MainContainer
 			sx={{
 				marginBottom: {
-					xs: "50px",
-					md: "75px",
-					lg: "100px",
+					xs: "20px",
+					sm: "30px",
+					md: "40px",
+					lg: "50px",
 				},
 				display: "flex",
 				flexWrap: "wrap",
@@ -55,8 +56,10 @@ const EducationSection = () => {
 					sx={{
 						textAlign: "left",
 						margin: {
+							xs: "20px 0",
 							sm: "20px 0",
 							md: "40px 0",
+							lg: "40px 0",
 						},
 					}}
 				>
@@ -81,8 +84,31 @@ const EducationSection = () => {
 						src="images/bcit-logo.svg"
 						alt="British Columbia Institute of Technology logo"
 					/>
-					<H3>New Media Design & Web Development</H3>
-					<Company>British Columbia Institute of Technology</Company>
+					<H3
+						sx={{
+							fontSize: {
+								xs: "1.125rem",
+								sm: "1.125rem",
+								md: "1.25rem",
+								lg: "1.375rem",
+							},
+							fontWeight: "550",
+						}}
+					>
+						New Media Design & Web Development
+					</H3>
+					<Company
+						sx={{
+							fontSize: {
+								xs: "1.025rem",
+								sm: "1.025rem",
+								md: "1.15rem",
+								lg: "1.275rem",
+							},
+						}}
+					>
+						British Columbia Institute of Technology
+					</Company>
 					<Time>Jan 2023 – Present</Time>
 				</Grid>
 				<Grid item xs={12} md={5.5}>
@@ -90,8 +116,31 @@ const EducationSection = () => {
 						src="images/uvic-logo.svg"
 						alt="University of Victoria logo"
 					/>
-					<H3>Economics</H3>
-					<Company>University of Victoria</Company>
+					<H3
+						sx={{
+							fontSize: {
+								xs: "1.125rem",
+								sm: "1.125rem",
+								md: "1.25rem",
+								lg: "1.375rem",
+							},
+							fontWeight: "550",
+						}}
+					>
+						Bachelor in Economics
+					</H3>
+					<Company
+						sx={{
+							fontSize: {
+								xs: "1.025rem",
+								sm: "1.025rem",
+								md: "1.15rem",
+								lg: "1.275rem",
+							},
+						}}
+					>
+						University of Victoria
+					</Company>
 					<Time>Sep 2016 – Apr 2020</Time>
 				</Grid>
 			</Grid>

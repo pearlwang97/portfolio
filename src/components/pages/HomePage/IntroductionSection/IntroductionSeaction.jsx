@@ -40,9 +40,9 @@ const StyledScrollTrigger = styled(motion.div)(({ theme }) => ({
 	},
 }));
 const StyledHello = styled("p")(({ theme }) => ({
-	fontSize: "2rem",
+	fontSize: "1.6rem",
 	fontFamily: "'Montserrat', sans-serif",
-	marginBottom: "10px",
+	// marginBottom: "10px",
 	[theme.breakpoints.down("md")]: {
 		fontSize: "1.5rem",
 	},
@@ -70,7 +70,7 @@ const Designer = styled("div")(({ theme }) => ({
 	fontSize: "3rem",
 	fontWeight: "500",
 	fontFamily: "'New York', serif",
-	marginBottom: "10px",
+	// marginBottom: "10px",
 	[theme.breakpoints.down("md")]: {
 		fontSize: "2.25rem",
 	},
@@ -117,12 +117,30 @@ const IntroductionSection = () => {
 					<Body1>
 						I put my passion into crafting meaningful experiences and
 						connections via design. My journey revolves around &nbsp;
-						<Link sx={{ textDecoration: "underline" }} to="/uxdesign">
-							<strong>UX/UI</strong>
+						<Link
+							sx={{
+								textDecoration: "underline",
+								"&:hover": {
+									color: "#333333",
+									textDecorationColor: "#333333",
+								},
+							}}
+							to="/works?category=ux-ui"
+						>
+							<Box component="strong">UX/UI</Box>
 						</Link>
 						,&nbsp;
-						<Link sx={{ textDecoration: "underline" }} to="/visualdesign">
-							<strong>Visual Design</strong>
+						<Link
+							sx={{
+								textDecoration: "underline",
+								"&:hover": {
+									color: "#333333",
+									textDecorationColor: "#333333",
+								},
+							}}
+							to="/works?category=graphic-design"
+						>
+							<Box component="strong">Graphic Design</Box>
 						</Link>
 						&nbsp; including graphic and branding. Let's dive into impactful
 						visual stories together.
