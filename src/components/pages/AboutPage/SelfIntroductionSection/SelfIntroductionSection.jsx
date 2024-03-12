@@ -1,23 +1,11 @@
 import React from "react";
+import { css } from "@emotion/react";
 import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
 import Body1 from "components/shared/Body1/Body1";
 import Button from "components/shared/Button/Button";
-
-const SpinImage = styled("img")({
-	animation: "spin 4s linear infinite",
-	height: "auto",
-	"@keyframes spin": {
-		from: {
-			transform: "rotate(0deg)",
-		},
-		to: {
-			transform: "rotate(360deg)",
-		},
-	},
-});
 
 const H1 = styled("h1")(({ theme }) => ({
 	fontSize: "2.5rem",
@@ -80,42 +68,23 @@ const SelfIntroductionSection = () => {
 							<H1>I'm Peirong!</H1>
 						</Box>
 
-						{/* <Body1>
-							I'm passionate with a love for design. Born in China and having
-							relocated to Vancouver during my high school years, I've had the
-							chance to experience two distinct worlds and cultures. My past
-							experience enhanced my adaptability and approach things with an
-							inclusive and diverse mindset.
-						</Body1>
-						<Body1>
-							Driven by a foundational background in economics from the
-							University of Victoria, my journey into New Media was
-							serendipitous. I stumbled upon my passion for digital design after
-							graduation. Now in my career, I aim to establish myself as a
-							digital designer. I want to blend my knowledge of marketing
-							strategy with my technical design expertise to provide a positive
-							user experience.
-						</Body1>
-						<Body1>
-							I believe design builds a channel for communication, connecting my
-							thoughts and ideas with my audience. Therefore, I aspire to create
-							design works that offer solutions and build connections with
-							people.
-						</Body1> */}
 						<Box
 							sx={{
 								lineHeight: "1.73",
 							}}
 						>
-							<Body1
-								sx={
-									{
-										// marginBottom: "20px",
-									}
-								}
-							>
-								A graphic designer who is originally from China, currently based
-								in Vancouver, BC.
+							<Body1>
+								A{" "}
+								<span
+									style={{
+										backgroundImage:
+											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
+										// backgroundSize: "100% 200%",
+									}}
+								>
+									UI/UX and graphic designer
+								</span>{" "}
+								who is originally from China, currently based in Vancouver, BC.
 							</Body1>
 							<Body1
 								sx={
@@ -136,10 +105,27 @@ const SelfIntroductionSection = () => {
 								}
 							>
 								Committed to creating meaningful, user-centric graphics, I
-								infuse each project with passion and a diverse mindset. Eager to
-								continually learn and grow in the dynamic world of design, I'm
-								dedicated to bridging cultures and ideas through innovative and
-								impactful visual solutions.
+								infuse each project with{" "}
+								<span
+									style={{
+										backgroundImage:
+											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
+									}}
+								>
+									passion
+								</span>{" "}
+								and a{" "}
+								<span
+									style={{
+										backgroundImage:
+											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
+									}}
+								>
+									diverse
+								</span>{" "}
+								mindset. Eager to continually learn and grow in the dynamic
+								world of design, I'm dedicated to bridging cultures and ideas
+								through innovative and impactful visual solutions.
 							</Body1>
 						</Box>
 						<a

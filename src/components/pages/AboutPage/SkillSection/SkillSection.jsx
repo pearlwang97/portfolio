@@ -51,7 +51,7 @@ const SkillSection = () => {
 						textAlign: "left",
 					}}
 				>
-					Skill
+					Skills
 				</H2>
 			</Box>
 			<Grid

@@ -103,7 +103,9 @@ const FeatureWorksItem = ({
 						>
 							{title}
 						</H2>
-						<Body1>{description}</Body1>
+						<Body1 sx={{
+							lineHeight: "1.4",
+						}}>{description}</Body1>
 						{tools.map((tool, index) => (
 							<Chip
 								// color="white"

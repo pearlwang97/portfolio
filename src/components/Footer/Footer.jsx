@@ -61,12 +61,11 @@ const Footer = () => {
 					}}
 				>
 					Currently looking for new opportunities and would love to connect.
-					Please don't hesitate to {" "}
+					Please don't hesitate to{" "}
 					<Link
 						href="mailto:pearlwang1997@gmail.com"
 						target="_blank"
-						sx={{ textDecoration: "underline",
-						color: "#007bff"}}
+						sx={{ textDecoration: "underline" }}
 					>
 						send me an email.
 					</Link>

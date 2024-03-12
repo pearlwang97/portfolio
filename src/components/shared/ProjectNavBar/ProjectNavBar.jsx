@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { styled } from "@mui/material/styles";
+// StyledNavItem.js
+import { useContext } from "react";
+import InViewContext from "components/context/InViewContext";
 
 const StyledNav = styled("nav")(({ theme }) => ({
 	alignItems: "center",
@@ -37,41 +40,45 @@ const StyledNavItem = styled(Link)(({ theme }) => ({
 	"&:visited": {
 		color: "inherit",
 	},
-    "&.active": {
-		color: "#dba39a"
-    },
-	'&:after': {
-		content: '""',
-		position: 'absolute',
-		top: 0,
-		right: '20px', // Adjust the position of the pseudo-element
-		width: '1.5px',
-		height: '100%',
-		backgroundColor: '#dba39a',
-		transform: 'scaleY(0)',
-		transition: 'transform 0.3s ease-in-out',
+	"&.active": {
+		color: "#dba39a",
 	},
-    '&.active::after': {
-		transform: 'scaleY(1)',
-    },
+	"&:after": {
+		content: '""',
+		position: "absolute",
+		top: 0,
+		right: "20px", // Adjust the position of the pseudo-element
+		width: "1.5px",
+		height: "100%",
+		backgroundColor: "#dba39a",
+		transform: "scaleY(0)",
+		transition: "transform 0.3s ease-in-out",
+	},
+	"&.active::after": {
+		transform: "scaleY(1)",
+	},
 }));
 
 const ProjectNavBar = ({ navItems }) => {
+	// Inside your component
+	const [inView1, inView2, inView3] = useContext(InViewContext);
 	return (
 		<StyledNav>
-			{navItems.map((navItem, index) => (
-				<StyledNavItem
-					key={index}
-					to={navItem.to}
-                    activeClass="active"
-					spy={true}
-					smooth={true}
-					duration={500}
-					offset={-200}
-				>
-					{navItem.label}
-				</StyledNavItem>
-			))}
+			{navItems.map((navItem, index) => {
+				const inView = index === 0 ? inView1 : index === 1 ? inView2 : inView3;
+				return (
+					<StyledNavItem
+						key={index}
+						to={navItem.to}
+						spy={true}
+						smooth={true}
+						duration={500}
+						className={inView ? "active" : ""}
+					>
+						{navItem.label}
+					</StyledNavItem>
+				);
+			})}
 		</StyledNav>
 	);
 };

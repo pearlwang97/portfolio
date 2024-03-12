@@ -123,7 +123,7 @@ const Header = () => {
 				<Menu>
 					<li>
 						<NavItem to="/works">
-							Project
+							Projects
 						</NavItem>
 					</li>
 					<li>
@@ -148,7 +148,7 @@ const Header = () => {
 								toggleNav(false);
 							}}
 						>
-							Project
+							Projects
 						</NavItem>
 					</li>
 					<li>
