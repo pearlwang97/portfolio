@@ -76,9 +76,6 @@ const NavItem = styled(NavLink)(({ theme }) => ({
     margin: "0 30px",
     fontFamily: "'Montserrat', sans-serif",
     fontSize: "1.1rem",
-    // [theme.breakpoints.down('sm')]: {
-    //     fontSize: '1.1rem',
-    // },
     '&:after': {
         content: '""',
         position: 'absolute',

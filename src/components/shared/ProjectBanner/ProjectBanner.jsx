@@ -15,31 +15,29 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 	maxWidth: "1140px",
 	height: "auto",
 	margin: "0 auto",
-	[theme.breakpoints.up("lg")]: {
-		minWidth: "1140px",
-	},
 	[theme.breakpoints.down("lg")]: {
 		width: "80%",
 	},
 	[theme.breakpoints.down("md")]: {
-		width: "85%",
+		width: "90%",
 	},
 }));
 
-const ProjectCarousel = ({ title, imageSrc }) => {
+const ProjectBanner = ({ title, imageSrc }) => {
 	return (
 		<StyledContainer
-        sx={{
-            marginBottom: {
-                xs: "50px",
-                md: "75px",
-                lg: "100px",
-            },
-        }}>
+			sx={{
+				marginBottom: {
+					xs: "50px",
+					md: "75px",
+					lg: "100px",
+				},
+			}}
+		>
 			<Title>{title}</Title>
 			<Image src={imageSrc} />
 		</StyledContainer>
 	);
 };
 
-export default ProjectCarousel;
+export default ProjectBanner;

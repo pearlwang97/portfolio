@@ -5,10 +5,38 @@ import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Project from "components/pages/ProjectsPage/Project/Project";
 import { projects } from "components/constants/constants";
+import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
 
 const ProjectsSection = () => {
 	const location = useLocation();
 	const [selectedTab, setSelectedTab] = useState(0);
+
+	const [isPastHalf, setIsPastHalf] = useState(false);
+
+	const filteredProjects = projects.filter((project) => {
+		if (selectedTab === 0) {
+			return true;
+		} else if (selectedTab === 1) {
+			return project.category === "UI/UX Design";
+		} else if (selectedTab === 2) {
+			return project.category === "Graphic Design";
+		} else if (selectedTab === 3) {
+			return project.category === "Video Production";
+		}
+	});
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const isPastHalf = window.scrollY >= document.body.offsetHeight / 2;
+			setIsPastHalf(isPastHalf);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	const handleTabChange = (event, newValue) => {
 		setSelectedTab(newValue);
@@ -56,7 +84,12 @@ const ProjectsSection = () => {
 				>
 					My Projects
 				</H2>
+				{!isPastHalf && filteredProjects.length > 2 && <ScrollDownIndicator />}
 				<Tabs
+					role="navigation"
+					variant="scrollable"
+					scrollButtons="auto"
+					allowScrollButtonsMobile
 					sx={{
 						marginBottom: "50px",
 						"& .Mui-selected": { color: "#dba39a !important" }, // Increase the specificity
@@ -73,32 +106,23 @@ const ProjectsSection = () => {
 					value={selectedTab}
 					onChange={handleTabChange}
 				>
-					<Tab label="All" />
-					<Tab label="UI/UX Design" />
-					<Tab label="Graphic Design" />
+					<Tab label="All" sx={{ minWidth: "auto" }} />
+					<Tab label="UI/UX Design" sx={{ minWidth: "auto" }} />
+					<Tab label="Graphic Design" sx={{ minWidth: "auto" }} />
+					<Tab label="Others" sx={{ minWidth: "auto" }} />
 				</Tabs>
 				<Grid container justifyContent={{ xs: "center", md: "space-between" }}>
-					{projects
-						.filter((project) => {
-							if (selectedTab === 0) {
-								return true;
-							} else if (selectedTab === 1) {
-								return project.category === "UI/UX Design";
-							} else if (selectedTab === 2) {
-								return project.category === "Graphic Design";
-							}
-						})
-						.map((item, index) => (
-							<Project
-								key={item.title}
-								title={item.title}
-								image={item.image}
-								link={item.link}
-								description={item.description}
-								category={item.category}
-								tools={item.tools}
-							/>
-						))}
+					{filteredProjects.map((item, index) => (
+						<Project
+							key={item.title}
+							title={item.title}
+							image={item.image}
+							link={item.link}
+							description={item.description}
+							category={item.category}
+							tools={item.tools}
+						/>
+					))}
 				</Grid>
 			</MainContainer>
 		</Box>

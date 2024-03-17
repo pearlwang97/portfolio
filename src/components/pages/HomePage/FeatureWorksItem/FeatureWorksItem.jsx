@@ -62,7 +62,7 @@ const FeatureWorksItem = ({
 							right: 0,
 							bottom: 0,
 							background: "rgba(0, 0, 0, 0.5)",
-							transition: "opacity 0.3s ease",
+							transition: "opacity 1s ease",
 							padding: {
 								xs: "30px 22.5px",
 								sm: "36px 27px",
@@ -70,6 +70,10 @@ const FeatureWorksItem = ({
 								lg: "60px 45px",
 							},
 							color: "white",
+							opacity: 0, // Hide the overlay and text by default
+							"&:hover": {
+								opacity: 1, // Show the overlay and text when the user hovers over the image
+							},
 						}}
 					>
 						<Body2
@@ -98,14 +102,17 @@ const FeatureWorksItem = ({
 									md: "1.65rem",
 									lg: "1.75rem",
 								},
-
 							}}
 						>
 							{title}
 						</H2>
-						<Body1 sx={{
-							lineHeight: "1.4",
-						}}>{description}</Body1>
+						<Body1
+							sx={{
+								lineHeight: "1.4",
+							}}
+						>
+							{description}
+						</Body1>
 						{tools.map((tool, index) => (
 							<Chip
 								// color="white"

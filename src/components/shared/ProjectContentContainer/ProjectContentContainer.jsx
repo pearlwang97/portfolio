@@ -5,47 +5,49 @@ import { styled } from "@mui/material/styles";
 import ProjectNavBar from "components/shared/ProjectNavBar/ProjectNavBar";
 
 const OuterContainer = styled(Box)(({ theme }) => ({
-	width: "60%",
-	maxWidth: "1140px",
-	height: "auto",
-	margin: "0 auto",
-	display: "grid",
-	columnGap: "2rem",
-	gridTemplateColumns: "auto 1fr",
-	[theme.breakpoints.down("lg")]: {
-		width: "80%",
-	},
-	[theme.breakpoints.down("md")]: {
-		width: "90%",
-	},
+    width: "60%",
+    maxWidth: "1140px",
+    height: "auto",
+    margin: "0 auto",
+    display: "flex",
+    justifyContent: 'center',
+    columnGap: "2rem",
+    gridTemplateColumns: "auto 1fr",
+    [theme.breakpoints.down("lg")]: {
+        width: "80%",
+    },
+    [theme.breakpoints.down("md")]: {
+        width: "90%",
+    },
 }));
 
 const InnerContainer = styled(Box)(({ theme }) => ({
 	overflow: "hidden",
 	position: "relative",
-	// [theme.breakpoints.down("sm")]: {
-	// 	border: "none",
-	// },
+	width: "100%",
+	// display: "flex",
+	// justifyContent: "center",
 }));
 
-const ProjectContentContainer = ({ navItems, children}) => {
-    return (
-        <OuterContainer
-            sx={{
-                marginBottom:{
+const ProjectContentContainer = ({ navItems, children }) => {
+	return (
+
+		<OuterContainer
+			sx={{
+				marginBottom: {
 					lg: "200px",
 					md: "150px",
 					sm: "100px",
 					xs: "100px",
-				}
-            }}
-        >
-            <ProjectNavBar navItems={navItems} />
-            <InnerContainer>
-                {children}
-            </InnerContainer>
-        </OuterContainer>
-    );
-}
+				},
+			}}
+		>
+			<ProjectNavBar navItems={navItems} />
+			<InnerContainer>
+				{children}
+			</InnerContainer>
+		</OuterContainer>
+	);
+};
 
 export default ProjectContentContainer;

@@ -14,10 +14,10 @@ import ChineseZodiac from "./components/pages/ChineseZodiac/ChineseZodiac";
 import CyberEraPoster from "./components/pages/CyberEraPoster/CyberEraPoster";
 import FurnitureBannerDesign from "components/pages/FurnitureBannerDesign/FurnitureBannerDesign";
 import ScrollTop from "components/shared/ScrollUp/ScrollUp";
-
+// import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
 
 import "./App.css";
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar {
@@ -58,9 +58,11 @@ function App() {
 		},
 	};
 	return (
-		<Box sx={{
-			backgroundColor: "#fefcf3",
-		}}>
+		<Box
+			sx={{
+				backgroundColor: "#fefcf3",
+			}}
+		>
 			<GlobalStyle />
 			<Helmet>
 				<script type="application/ld+json">
@@ -68,22 +70,24 @@ function App() {
 				</script>
 			</Helmet>
 			<Header />
-				<Routes>
-					<Route path="/" element={<HomePage />} />
-					{/* <Route path="/uxdesign" element={<UxDesignPage />} />
-					<Route path="/visualdesign" element={<VisualDesignPage />} /> */}
-					<Route path="/domino-app-redesign" element={<DominoAppRedesign />} />
-					<Route path="/2d-radio-vector-art" element={<RadioVectorArt />} />
-					<Route path="/bloom-app-design" element={<BloomAppDesign />} />
-					<Route path="/bloom-box-logo" element={<BloomBoxLogoDesign />} />
-					<Route path="/chinese-zodiac" element={<ChineseZodiac />} />
-					<Route path="/cyber-era-poster" element={<CyberEraPoster />} />
-					<Route path="/about" element={<AboutPage />} />
-					<Route path="/works" element={<ProjectsPage />} />
-					<Route path="/furniture-banner-deisgn" element={<FurnitureBannerDesign />} />
-				</Routes>
-				<ScrollTop />
-				<Footer />
+			{/* <ScrollDownIndicator /> */}
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/domino-app-redesign" element={<DominoAppRedesign />} />
+				<Route path="/2d-radio-vector-art" element={<RadioVectorArt />} />
+				<Route path="/bloom-app-design" element={<BloomAppDesign />} />
+				<Route path="/bloom-box-logo" element={<BloomBoxLogoDesign />} />
+				<Route path="/chinese-zodiac" element={<ChineseZodiac />} />
+				<Route path="/cyber-era-poster" element={<CyberEraPoster />} />
+				<Route path="/about" element={<AboutPage />} />
+				<Route path="/works" element={<ProjectsPage />} />
+				<Route
+					path="/furniture-banner-deisgn"
+					element={<FurnitureBannerDesign />}
+				/>
+			</Routes>
+			<ScrollTop />
+			<Footer />
 		</Box>
 	);
 }

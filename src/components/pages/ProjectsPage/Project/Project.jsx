@@ -8,6 +8,8 @@ import Body2 from "components/shared/Body2/Body2";
 import StyledLink from "components/shared/StyledLink/StyledLink";
 
 const Project = ({ title, image, link, description, category, tools }) => {
+	const isVideo = category === "Video Production";
+
 	return (
 		<Grid
 			item
@@ -31,7 +33,50 @@ const Project = ({ title, image, link, description, category, tools }) => {
 				transition={{ duration: 0.5, ease: "easeOut" }}
 			>
 				<StyledLink to={link}>
-					<Image src={image} alt={title} />
+					{!isVideo ? (
+						<Box
+							sx={{
+								overflow: "hidden",
+								"&:hover": {
+									"& img": {
+										transform: "scale(1.1)",
+									},
+								},
+							}}
+						>
+							<Image
+								src={image}
+								alt={title}
+								sx={{
+									height: "100%",
+									transition: "transform 0.3s ease-in-out",
+								}}
+							/>
+						</Box>
+					) : (
+						<Box
+							sx={{
+								width: "100%",
+								paddingTop: "75%", // This creates an aspect ratio box with a ratio of 4:3
+								position: "relative",
+							}}
+						>
+							<iframe
+								style={{
+									position: "absolute",
+									top: 0,
+									left: 0,
+									width: "100%",
+									height: "100%",
+								}}
+								src="https://www.youtube.com/embed/6uoTv0i-57Q?si=r04rmSMHP1AodJlO"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</Box>
+					)}
 				</StyledLink>
 				<Box>
 					<Body2

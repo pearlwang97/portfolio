@@ -73,7 +73,7 @@ const OverviewSection = () => {
 									alt="Problem"
 									sx={{
 										marginBottom: "10px",
-										width: { sm: "100%", md: "50%" },
+										// width: { sm: "100%", md: "50%" },
 									}}
 								/>
 								<Body1>
@@ -85,7 +85,7 @@ const OverviewSection = () => {
 									src="/images/project-3-gallery-1.png"
 									sx={{
 										marginRight: "20px",
-										width: { sm: "100%", md: "50%" },
+										// width: { sm: "100%", md: "50%" },
 									}}
 								/>
 								<Body1>

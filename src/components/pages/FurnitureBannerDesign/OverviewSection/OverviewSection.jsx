@@ -16,7 +16,7 @@ const OverviewSection = () => {
 	});
 	const [ref2, inView2] = useInView({
 		triggerOnce: false,
-		threshold: 0.35,
+		threshold: 0.2,
 	});
 	const [ref3, inView3] = useInView({
 		triggerOnce: false,
@@ -28,9 +28,13 @@ const OverviewSection = () => {
 		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
-		{ key: "TIMELINE", value: "Feb 2024" },
+		{ key: "TIMELINE", value: "March 2024" },
 		{ key: "ROLE", value: "Graphic Designer" },
-		{ key: "Tools", value: "Illustrator, Photoshop" },
+		{ key: "Tools", value: "InDesign, Illustrator, Photoshop" },
+		{
+			key: "Skills",
+			value: "Branding & Marketing, Layout Design, Digital Campaign Creation",
+		},
 	];
 	return (
 		<InViewContext.Provider value={[inView1, inView2, inView3]}>
@@ -41,74 +45,82 @@ const OverviewSection = () => {
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
 								<Body1>
-									The project began with an analysis of the client's
-									requirements for their Spring Sale promotion. This involved
-									identifying the target audience, the key message of offering
-									up to 30% off, and the desired action I wanted the audience to
-									take—visiting the website to make a purchase.
+									Designed a catalog and a series of digital campaign for a home
+									& lifestyle brand Weekends, spotlighting their home goods in
+									Vancouver, boosting brand visibility and engagement.
 								</Body1>
+							</Grid>
+							<Grid container justifyContent="space-between">
+								<Image src="/images/weekend-slogan.png" alt="weekend slogan" />
 							</Grid>
 						</Grid>
 					</ProjectStepSection>
 				</div>
 				<div ref={ref2}>
-					<ProjectStepSection title="Understanding the Brief" id="2">
+					<ProjectStepSection title="Branding" id="2">
 						<Grid container justifyContent="space-between">
 							<Body1 sx={{ marginTop: "1rem" }}>
-								The design process began with selecting a character to serve as
-								the focal point of the poster. The character's image was refined
-								to fit the futuristic concept by digitally painting over a
-								created mask, enhancing the hair and body with smooth gradients,
-								subtle shading, and highlights to add depth and a surreal
-								appearance. The eyeballs were colored to shift from a natural
-								human look to a more robotic appearance, aligning with the
-								cybernetic theme.
+								The branding process for "Weekends" began with selecting a
+								soothing and sophisticated color palette to reflect the brand’s
+								ethos of comfort and leisure. A combination of muted earth tones
+								and serene blues were chosen to evoke a sense of calm and
+								relaxation. Combine with modern, readable typography, a cohesive
+								visual identity that resonates with the "enjoy home just like
+								weekends" concept of the brand was set.
 							</Body1>
 						</Grid>
 					</ProjectStepSection>
-					<ProjectStepSection title="Concept Development" id="3">
+					<ProjectStepSection title="Catalog" id="3">
 						<Grid container justifyContent="space-between">
 							<Body1>
-								The next step involved brainstorming and sketching initial
-								concepts. The focus was on how to effectively communicate the
-								sale's value proposition across different banner sizes while
-								ensuring a unified look and feel. This phase resulted in the
-								selection of a fresh color scheme and a clear call to action
-								that would be consistent across all banners.
+								In designing the "Weekends" catalog, the emphasis was on
+								high-quality imagery and detailed product descriptions to both
+								inform and allure customers. I utilized ample space to feature
+								products with clear, attractive visuals and supportive text,
+								trying to achieve a balance that reflects the brand’s ethos and
+								resonates with the target audience’s expectations of a
+								leisurely, weekend lifestyle at home.
 							</Body1>
+							<Image
+								src="/images/weekend-mockup-1.png"
+								alt="weekend mockup 1"
+							/>
+							<Image
+								src="/images/weekend-mockup-2.png"
+								alt="weekend mockup 2"
+							/>
+							<Image
+								src="/images/weekend-mockup-3.png"
+								alt="weekend mockup 3"
+							/>
+							<Image
+								src="/images/weekend-mockup-4.png"
+								alt="weekend mockup 4"
+							/>
 						</Grid>
 					</ProjectStepSection>
-					<ProjectStepSection title="Design Execution" id="4">
+					<ProjectStepSection title="Digital Banner" id="4">
 						<Grid container justifyContent="space-between">
 							<Body1>
-								This involved creating the visual elements, selecting
-								typography, and placing the call to action in a prominent
-								position. Each banner size was optimized with its layout while
-								maintaining the overall design language and message coherence.
-								For better readability and visual appeal, modifying text sizes,
-								repositioning images, and adjusting elements were achieved to
-								fit within the constraints of each banner size.
+								The digital banner suite was designed to effectively communicate
+								the Spring Sale message, ensuring clarity and visual consistency
+								across various sizes.
 							</Body1>
-						</Grid>
-					</ProjectStepSection>
-					<ProjectStepSection title="Review and Refinement" id="5">
-						<Grid container justifyContent="space-between">
-							<Body1>
-								In the final phase, the designs went through a review for
-								consistency, message clarity, and visual impact. This involved
-								seeking feedback from peers and potential users, ensuring the
-								banner package was polished and effectively communicated its
-								intended message.
-							</Body1>
+							<Image src="/images/weekend-banners.png" alt="weekend banners" />
 						</Grid>
 					</ProjectStepSection>
 				</div>
 				<div ref={ref3}>
-					<ProjectStepSection title="Deliverable" id="6">
+					<ProjectStepSection title="Social Posts" id="5">
 						<Grid container justifyContent="space-between">
+							<Body1>
+								Committing to an earth and sky-inspired color combo, the social
+								posts for "Weekends" feature attractive images and engaging
+								captions within a creatively designed layout.
+							</Body1>
 							<Image
-								src="/images/feature-work-7.webp"
-								alt="Furniture Banner Design"
+								src="/images/weekend-social-poster.png"
+								alt="weekend social poster"
 							/>
 						</Grid>
 					</ProjectStepSection>

@@ -84,7 +84,7 @@ const OverviewSection = () => {
 								language that would make the app intuitive and engaging for
 								users.
 							</Body1>
-							<Box
+							{/* <Box
 								component="img"
 								src="/images/project-2-gallery-5.png"
 								alt="Problem"
@@ -92,7 +92,7 @@ const OverviewSection = () => {
 									marginBottom: "10px",
 									width: "100%",
 								}}
-							/>
+							/> */}
 							<Box sx={{ display: "block" }}>
 								<Body1>
 									Next I proceeded to create cybernetic details, using the pen
