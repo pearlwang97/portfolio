@@ -1,14 +1,31 @@
-import React from "react";
-import { Fab, useScrollTrigger, Zoom } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import IconButton from "@mui/material/IconButton";
+import { Zoom } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import CircularProgress from "@mui/material/CircularProgress";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
-const ScrollTop = () => {
+const ScrollTopButton = () => {
+	const [progress, setProgress] = useState(0);
+
 	const trigger = useScrollTrigger({
 		disableHysteresis: true,
 		threshold: 100,
 	});
+	const handleScroll = () => {
+		const totalHeight =
+			document.documentElement.scrollHeight - window.innerHeight;
+		const scrollPosition = window.scrollY;
+		const scrolledPercentage = (scrollPosition / totalHeight) * 100;
+		setProgress(scrolledPercentage);
+	};
 
-	const handleClick = (event) => {
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	const handleClick = () => {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
@@ -17,16 +34,26 @@ const ScrollTop = () => {
 
 	return (
 		<Zoom in={trigger}>
-			<Fab
-				size="small"
-				aria-label="scroll back to top"
+			<IconButton
 				onClick={handleClick}
-				sx={{ position: "fixed", bottom: 16, right: 16}}
+				aria-label="scroll back to top"
+				sx={{
+					position: "fixed",
+					bottom: 20,
+					right: 20,
+				}}
 			>
-				<KeyboardArrowUpIcon />
-			</Fab>
+				<CircularProgress
+					variant="determinate"
+					value={progress}
+					size={48}
+					thickness={1}
+					sx={{ color: "black" }}
+				/>
+				<KeyboardArrowUpIcon sx={{ position: "absolute" }} />
+			</IconButton>
 		</Zoom>
 	);
 };
 
-export default ScrollTop;
+export default ScrollTopButton;

@@ -11,19 +11,22 @@ const Title = styled("h1")({
 });
 
 const StyledContainer = styled(Box)(({ theme }) => ({
-	width: "60%",
-	maxWidth: "1140px",
+	width: "1000px",
 	height: "auto",
 	margin: "0 auto",
 	[theme.breakpoints.down("lg")]: {
-		width: "80%",
+		width: "840px",
+		maxWidth: "912px",
 	},
 	[theme.breakpoints.down("md")]: {
-		width: "90%",
+		width: "540px",
+	},
+	[theme.breakpoints.down("sm")]: {
+		width: "320px",
 	},
 }));
 
-const ProjectBanner = ({ title, imageSrc }) => {
+const ProjectBanner = ({ title, imageSrc, videoSrc }) => {
 	return (
 		<StyledContainer
 			sx={{
@@ -35,7 +38,31 @@ const ProjectBanner = ({ title, imageSrc }) => {
 			}}
 		>
 			<Title>{title}</Title>
-			<Image src={imageSrc} />
+			{videoSrc && (
+				<Box
+					sx={{
+						width: "100%",
+						paddingTop: "42%", // This creates an aspect ratio box with a ratio of 4:3
+						position: "relative",
+					}}
+				>
+					<iframe
+						style={{
+							position: "absolute",
+							top: 0,
+							left: 0,
+							width: "100%",
+							height: "100%",
+						}}
+						src={videoSrc}
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
+				</Box>
+			)}
+			{imageSrc && <Image src={imageSrc} />}
 		</StyledContainer>
 	);
 };

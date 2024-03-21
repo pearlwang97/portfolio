@@ -5,13 +5,18 @@ import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Project from "components/pages/ProjectsPage/Project/Project";
 import { projects } from "components/constants/constants";
-import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
+// import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ProjectsSection = () => {
 	const location = useLocation();
 	const [selectedTab, setSelectedTab] = useState(0);
 
 	const [isPastHalf, setIsPastHalf] = useState(false);
+
+    const theme = useTheme();
+    const isMidOrAbove = useMediaQuery(theme.breakpoints.up('md'));
 
 	const filteredProjects = projects.filter((project) => {
 		if (selectedTab === 0) {
@@ -21,7 +26,7 @@ const ProjectsSection = () => {
 		} else if (selectedTab === 2) {
 			return project.category === "Graphic Design";
 		} else if (selectedTab === 3) {
-			return project.category === "Video Production";
+			return project.category === "Motion Graphic";
 		}
 	});
 
@@ -84,7 +89,7 @@ const ProjectsSection = () => {
 				>
 					My Projects
 				</H2>
-				{!isPastHalf && filteredProjects.length > 2 && <ScrollDownIndicator />}
+				{/* {isMidOrAbove && !isPastHalf && filteredProjects.length > 2 && <ScrollDownIndicator />} */}
 				<Tabs
 					role="navigation"
 					variant="scrollable"
@@ -109,7 +114,7 @@ const ProjectsSection = () => {
 					<Tab label="All" sx={{ minWidth: "auto" }} />
 					<Tab label="UI/UX Design" sx={{ minWidth: "auto" }} />
 					<Tab label="Graphic Design" sx={{ minWidth: "auto" }} />
-					<Tab label="Others" sx={{ minWidth: "auto" }} />
+					<Tab label="Motion Graphic" sx={{ minWidth: "auto" }} />
 				</Tabs>
 				<Grid container justifyContent={{ xs: "center", md: "space-between" }}>
 					{filteredProjects.map((item, index) => (

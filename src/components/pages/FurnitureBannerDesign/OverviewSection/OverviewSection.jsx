@@ -25,7 +25,7 @@ const OverviewSection = () => {
 	const navItems = [
 		{ to: "1", label: "overview" },
 		{ to: "2", label: "design process" },
-		{ to: "6", label: "deliverable" },
+		{ to: "5", label: "deliverable" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "March 2024" },
@@ -68,6 +68,10 @@ const OverviewSection = () => {
 								visual identity that resonates with the "enjoy home just like
 								weekends" concept of the brand was set.
 							</Body1>
+							<Image
+								src="/images/weekend-style-guide.jpg"
+								alt="weekend style guide"
+							/>
 						</Grid>
 					</ProjectStepSection>
 					<ProjectStepSection title="Catalog" id="3">
@@ -82,19 +86,19 @@ const OverviewSection = () => {
 								leisurely, weekend lifestyle at home.
 							</Body1>
 							<Image
-								src="/images/weekend-mockup-1.png"
+								src="/images/weekend-mockup-1.webp"
 								alt="weekend mockup 1"
 							/>
 							<Image
-								src="/images/weekend-mockup-2.png"
+								src="/images/weekend-mockup-2.webp"
 								alt="weekend mockup 2"
 							/>
 							<Image
-								src="/images/weekend-mockup-3.png"
+								src="/images/weekend-mockup-3.webp"
 								alt="weekend mockup 3"
 							/>
 							<Image
-								src="/images/weekend-mockup-4.png"
+								src="/images/weekend-mockup-4.webp"
 								alt="weekend mockup 4"
 							/>
 						</Grid>
@@ -106,7 +110,7 @@ const OverviewSection = () => {
 								the Spring Sale message, ensuring clarity and visual consistency
 								across various sizes.
 							</Body1>
-							<Image src="/images/weekend-banners.png" alt="weekend banners" />
+							<Image src="/images/weekend-furniture-banners.webp" alt="weekend banners" />
 						</Grid>
 					</ProjectStepSection>
 				</div>
@@ -119,8 +123,8 @@ const OverviewSection = () => {
 								captions within a creatively designed layout.
 							</Body1>
 							<Image
-								src="/images/weekend-social-poster.png"
-								alt="weekend social poster"
+								src="/images/weekend-social-posts.webp"
+								alt="weekend social posts"
 							/>
 						</Grid>
 					</ProjectStepSection>

@@ -4,12 +4,12 @@ import { styled } from "@mui/material/styles";
 import Body1 from "components/shared/Body1/Body1";
 import H3 from "components/shared/H3/H3";
 
-const StyledListItemKey = styled("span")(({ theme }) => ({
-	fontSize: "1rem",
-	fontWeight: "bold",
-	paddingRight: "0.5rem",
-	textTransform: "uppercase",
-}));
+// const StyledListItemKey = styled("span")(({ theme }) => ({
+// 	fontSize: "1rem",
+// 	fontWeight: "bold",
+// 	paddingRight: "0.5rem",
+// 	textTransform: "uppercase",
+// }));
 
 const StyledListItem = styled("li")(({ theme }) => ({
 	paddingButtom: "0.7rem",
@@ -36,15 +36,19 @@ const ProjectOverviewList = ({ listItems }) => {
 		<StyledList>
 			{listItems.map((item, index) => (
 				<StyledListItem key={index}>
-					<StyledListItemKey>
-						<H3
-							sx={{
-								margin: "0",
-							}}
-						>
-							{item.key}
-						</H3>
-					</StyledListItemKey>
+					{/* <StyledListItemKey> */}
+					<H3
+						sx={{
+							margin: "0",
+							// fontSize: "1rem",
+							fontWeight: "500",
+							paddingRight: "0.5rem",
+							textTransform: "uppercase",
+						}}
+					>
+						{item.key}
+					</H3>
+					{/* </StyledListItemKey> */}
 					<Body1>{item.value}</Body1>
 				</StyledListItem>
 			))}

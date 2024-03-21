@@ -19,7 +19,7 @@ export const projects = [
 	},
 	{
 		title: "Weekends Catalog &  Campaign",
-		image: "/images/feature-work-7.png",
+		image: "/images/weekend-cover.webp",
 		link: "/furniture-banner-deisgn",
 		description: "Design branding, catalog and campaigns for Weekends.",
 		category: "Graphic Design",
@@ -59,12 +59,20 @@ export const projects = [
 		category: "Graphic Design",
 		tools: ["Illustrator", "Photoshop"],
 	},
-    {
-		title: "Summit Promotional Video",
-		image: "/images/feature-work-6.jpg",
-		link: "/summit-promotional-video",
+	{
+		title: "Summit | Promotional Video",
+		image: "https://www.youtube.com/embed/6uoTv0i-57Q?controls=0&rel=0",
+		link: "/summit-promotional-video", 
 		description: "Create a promotional video for Summit Sports.",
-		category: "Video Production",
-		tools: ["Adobe Premiere Pro", "After Effect", "Illustrator"],
-    }
+		category: "Motion Graphic",
+		tools: ["Premiere Pro", "After Effect", "Illustrator"],
+	},
+	{
+		title: "Cupid | Lyric Video",
+		image: "https://www.youtube.com/embed/yylNn0qRsiY?controls=0&rel=0",
+		link: "/cupid-lyric-video",
+		description: "Create a lyric video for K-pop song 'Cupid'.",
+		category: "Motion Graphic",
+		tools: ["After Effect", "Illustrator", "Photoshop"],
+	},
 ];

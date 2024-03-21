@@ -3,7 +3,6 @@ import { styled } from "@mui/material/styles";
 
 const MainContainer = styled(Box)(({ theme }) => ({
 	width: "1000px",
-	// justifyContent: "space-between",
 	height: "auto",
 	margin: "0 auto",
 	[theme.breakpoints.down("lg")]: {

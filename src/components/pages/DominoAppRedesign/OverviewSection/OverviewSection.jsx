@@ -31,7 +31,7 @@ const OverviewSection = () => {
 		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
-		{ key: "TIMELINE", value: "MAY - JUN 2023" },
+		{ key: "TIMELINE", value: "JUL - AUG 2023" },
 		{ key: "ROLE", value: "UI/UX Designer" },
 		{ key: "Tools", value: "Figma, Illustrator" },
 	];

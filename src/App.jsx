@@ -14,7 +14,8 @@ import ChineseZodiac from "./components/pages/ChineseZodiac/ChineseZodiac";
 import CyberEraPoster from "./components/pages/CyberEraPoster/CyberEraPoster";
 import FurnitureBannerDesign from "components/pages/FurnitureBannerDesign/FurnitureBannerDesign";
 import ScrollTop from "components/shared/ScrollUp/ScrollUp";
-// import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
+import SummitPromotionalVideo from "components/pages/SummitPromotionalVideo/SummitPromotionalVideo";
+import CupidLyricVideo from "components/pages/CupidLyricVideo/CupidLyric";
 
 import "./App.css";
 import { createGlobalStyle } from "styled-components";
@@ -70,7 +71,6 @@ function App() {
 				</script>
 			</Helmet>
 			<Header />
-			{/* <ScrollDownIndicator /> */}
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/domino-app-redesign" element={<DominoAppRedesign />} />
@@ -85,6 +85,11 @@ function App() {
 					path="/furniture-banner-deisgn"
 					element={<FurnitureBannerDesign />}
 				/>
+				<Route
+					path="/summit-promotional-video"
+					element={<SummitPromotionalVideo />}
+				/>
+				<Route path="/cupid-lyric-video" element={<CupidLyricVideo />} />
 			</Routes>
 			<ScrollTop />
 			<Footer />

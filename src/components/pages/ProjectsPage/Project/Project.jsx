@@ -7,9 +7,9 @@ import Body1 from "components/shared/Body1/Body1";
 import Body2 from "components/shared/Body2/Body2";
 import StyledLink from "components/shared/StyledLink/StyledLink";
 
-const Project = ({ title, image, link, description, category, tools }) => {
-	const isVideo = category === "Video Production";
-
+const Project = ({ title, image, link, description, category, tools, videoUrl}) => {
+	const isVideo = category === "Motion Graphic";
+	console.log(image);
 	return (
 		<Grid
 			item
@@ -29,7 +29,7 @@ const Project = ({ title, image, link, description, category, tools }) => {
 			<motion.div
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true, amount: 0.5 }}
+				viewport={{ once: true, amount: 0.01 }}
 				transition={{ duration: 0.5, ease: "easeOut" }}
 			>
 				<StyledLink to={link}>
@@ -69,7 +69,7 @@ const Project = ({ title, image, link, description, category, tools }) => {
 									width: "100%",
 									height: "100%",
 								}}
-								src="https://www.youtube.com/embed/6uoTv0i-57Q?si=r04rmSMHP1AodJlO"
+								src={image}
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

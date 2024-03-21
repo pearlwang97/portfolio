@@ -1,13 +1,12 @@
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { Box } from "@mui/material";
 
-const ScrollDownIndicator = () => (
+const ScrollDownIndicator = ({left}) => (
 	<Box
 		sx={{
 			position: "fixed",
 			bottom: "20px",
-			left: "50%",
+			left: left,
 			animation: "bounce 2s infinite",
 			color: "#dba39a",
 			zIndex: "1000",
@@ -25,7 +24,7 @@ const ScrollDownIndicator = () => (
 			},
 		}}
 	>
-		<KeyboardArrowDownIcon fontSize="large" />
+		<KeyboardDoubleArrowDownIcon sx={{ fontSize: 50 }} />
 	</Box>
 );
 

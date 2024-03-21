@@ -11,21 +11,8 @@ import MainContainer from "components/shared/MainContainer/MainContainer";
 const StyledMainContainer = styled(Box)(({ theme, isSmallScreen }) => ({
 	width: "100%",
 	maxWidth: "1140px",
-	// backgroundColor: "#fefcf3",
-	// color: "#250d00",
-	// paddingTop: "100px",
 	position: "relative",
 	minHeight: "100vh",
-	// [theme.breakpoints.down("md")]: {
-	// 	width: "80%",
-	// 	height: "auto",
-	// 	minHeight: "0",
-	// },
-	// [theme.breakpoints.down("sm")]: {
-	// 	width: "90%",
-	// 	height: "auto",
-	// 	minHeight: "0",
-	// },
 	"& .title": {
 		position: "absolute",
 		top: isSmallScreen ? "0%" : "30%",
@@ -170,46 +157,70 @@ const FloatingGallery = () => {
 					<>
 						<Box className="plane" ref={plane1}>
 							<Image
-								sx={{ width: "180px" }}
+								sx={{
+									width: "180px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-1.webp"
 								alt="plane1"
 							/>
 							<Image
-								sx={{ width: "120px" }}
+								sx={{
+									width: "120px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-2.webp"
 								alt="plane2"
 							/>
 							<Image
-								sx={{ width: "120px" }}
+								sx={{
+									width: "120px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-3.webp"
 								alt="plane3"
 							/>
 						</Box>
 						<Box className="plane" ref={plane2}>
 							<Image
-								sx={{ width: "180px" }}
+								sx={{
+									width: "180px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-4.webp"
 								alt="plane1"
 							/>
 							<Image
-								sx={{ width: "180px" }}
-								src="/images/about-me-gallery-5.webp"
+								sx={{
+									width: "150px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
+								src="/images/boardgame.webp"
 								alt="plane2"
 							/>
 							<Image
-								sx={{ width: "180px" }}
+								sx={{
+									width: "180px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-6.webp"
 								alt="plane3"
 							/>
 						</Box>
 						<Box className="plane" ref={plane3}>
 							<Image
-								sx={{ width: "120px" }}
+								sx={{
+									width: "120px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-7.webp"
 								alt="plane1"
 							/>
 							<Image
-								sx={{ width: "180px" }}
+								sx={{
+									width: "180px",
+									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+								}}
 								src="/images/about-me-gallery-8.webp"
 								alt="plane2"
 							/>
@@ -223,8 +234,8 @@ const FloatingGallery = () => {
 							<H2>More About Me</H2>
 							<Body1>
 								I have always been drawn to various forms of creative
-								expression. In my free time, you can find me watching movies,
-								engaging in crafts and DIY projects, playing games, and enjoying
+								expression. In my free time, you can find me playing board games,
+								engaging in crafts and DIY projects, and enjoying
 								the outdoors with my lovely dog. Moreover, I love traveling, as
 								seeing something different and new is very appealing to me.
 							</Body1>

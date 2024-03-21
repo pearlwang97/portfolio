@@ -30,7 +30,7 @@ const OverviewSection = () => {
 		{ to: "6", label: "deliverable" },
 	];
 	const listItems = [
-		{ key: "TIMELINE", value: "MAY - JUN 2023" },
+		{ key: "TIMELINE", value: "JUL - AUG 2023" },
 		{ key: "ROLE", value: "UI/UX Designer" },
 		{ key: "Tools", value: "Figma, Illustrator" },
 	];
@@ -93,18 +93,6 @@ const OverviewSection = () => {
 									width: "100%",
 								}}
 							/> */}
-							<Box sx={{ display: "block" }}>
-								<Body1>
-									Next I proceeded to create cybernetic details, using the pen
-									tool to draw lines across the body and face, simulating
-									artificial carvings by applying bevel and emboss effects. To
-									depict the AI robot's inner mechanics, I layered photographs
-									of electronic components beneath the carved facial features,
-									using adjustment layers and the pen tool to achieve a humanoid
-									appearance. The arms were created utilizing a photograph of a
-									microchip to maintain the cybernetic theme.
-								</Body1>
-							</Box>
 						</Grid>
 					</ProjectStepSection>
 					<ProjectStepSection title="Hi-Fi Wireframe & Prototype" id="4">

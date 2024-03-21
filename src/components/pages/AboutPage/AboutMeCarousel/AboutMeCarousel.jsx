@@ -46,7 +46,7 @@ const AboutMeCarousel = () => {
 		},
 		{
 			name: "Selfie5",
-			image: "/images/about-me-gallery-5-carousel.webp",
+			image: "/images/boardgame.webp",
 		},
 		{
 			name: "Selfie6",
@@ -89,8 +89,8 @@ const AboutMeCarousel = () => {
 					>More About Me</H2>
 					<Body1>
 						I have always been drawn to various forms of creative expression. In
-						my free time, you can find me watching movies, engaging in crafts
-						and DIY projects, playing games, and enjoying the outdoors with my
+						my free time, you can find me playing board games, engaging in crafts
+						and DIY projects, and enjoying the outdoors with my
 						lovely dog. Moreover, I love traveling, as seeing something
 						different and new is very appealing to me.
 					</Body1>
