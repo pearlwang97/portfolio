@@ -17,12 +17,18 @@ const OverviewSection = () => {
 
 	const [ref2, inView2] = useInView({
 		triggerOnce: false,
+		threshold: 0.6,
+	});
+
+	const [ref3, inView3] = useInView({
+		triggerOnce: false,
 		threshold: 0.1,
 	});
 
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "3", label: "deliverable" },
+		{ to: "2", label: "branding" },
+		{ to: "3", label: "Mockups" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "AUG - OCT 2023" },
@@ -34,7 +40,7 @@ const OverviewSection = () => {
 		},
 	];
 	return (
-		<InViewContext.Provider value={[inView1, inView2]}>
+		<InViewContext.Provider value={[inView1, inView2, inView3]}>
 			<ProjectContentContainer navItems={navItems}>
 				<div ref={ref1}>
 					<ProjectStepSection title="Overview" id="1">
@@ -77,6 +83,8 @@ const OverviewSection = () => {
 							/>
 						</Grid>
 					</ProjectStepSection>
+				</div>
+				<div ref={ref3}>
 					<ProjectStepSection title="Newsletter & Mockups" id="3">
 						<Grid container justifyContent="space-between">
 							<Body1>

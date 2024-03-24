@@ -16,16 +16,16 @@ const OverviewSection = () => {
 	});
 	const [ref2, inView2] = useInView({
 		triggerOnce: false,
-		threshold: 0.2,
+		threshold: 0.4,
 	});
 	const [ref3, inView3] = useInView({
 		triggerOnce: false,
-		threshold: 0.8,
+		threshold: 0.2,
 	});
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "2", label: "design process" },
-		{ to: "5", label: "deliverable" },
+		{ to: "2", label: "branding" },
+		{ to: "3", label: "catalog & campaign" },
 	];
 	const listItems = [
 		{ key: "TIMELINE", value: "March 2024" },
@@ -74,6 +74,8 @@ const OverviewSection = () => {
 							/>
 						</Grid>
 					</ProjectStepSection>
+				</div>
+				<div ref={ref3}>
 					<ProjectStepSection title="Catalog" id="3">
 						<Grid container justifyContent="space-between">
 							<Body1>
@@ -110,11 +112,13 @@ const OverviewSection = () => {
 								the Spring Sale message, ensuring clarity and visual consistency
 								across various sizes.
 							</Body1>
-							<Image src="/images/weekend-furniture-banners.webp" alt="weekend banners" />
+							<Image
+								src="/images/weekend-furniture-banners.webp"
+								alt="weekend banners"
+							/>
 						</Grid>
 					</ProjectStepSection>
-				</div>
-				<div ref={ref3}>
+
 					<ProjectStepSection title="Social Posts" id="5">
 						<Grid container justifyContent="space-between">
 							<Body1>
