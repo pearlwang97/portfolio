@@ -17,25 +17,24 @@ const OverviewSection = () => {
 
 	const [ref2, inView2] = useInView({
 		triggerOnce: false,
-		threshold: 0.2,
+		threshold: 0.1,
 	});
 
-	const [ref3, inView3] = useInView({
-		triggerOnce: false,
-		threshold: 0.5,
-	});
 	const navItems = [
 		{ to: "1", label: "overview" },
-		{ to: "2", label: "design process" },
-		{ to: "6", label: "deliverable" },
+		{ to: "3", label: "deliverable" },
 	];
 	const listItems = [
-		{ key: "TIMELINE", value: "AUG 2023" },
+		{ key: "TIMELINE", value: "AUG - OCT 2023" },
 		{ key: "ROLE", value: "Graphic Designer" },
-		{ key: "Tools", value: "Illustrator" },
+		{ key: "Tools", value: "Illustrator, Photoshop, InDesign" },
+		{
+			key: "Skills",
+			value: "Branding & Marketing, Layout Design, Email Newsletter Creation",
+		},
 	];
 	return (
-		<InViewContext.Provider value={[inView1, inView2, inView3]}>
+		<InViewContext.Provider value={[inView1, inView2]}>
 			<ProjectContentContainer navItems={navItems}>
 				<div ref={ref1}>
 					<ProjectStepSection title="Overview" id="1">
@@ -43,32 +42,33 @@ const OverviewSection = () => {
 						<Grid container justifyContent="space-between">
 							<Grid item xs={12}>
 								<Body1>
-									The aim of this assignment is to develop multiple logo
-									variations for a product or service. This project highlights
-									the student's skill in combining creativity with strategic
-									branding, showcasing proficiency in visual design, brand
-									consistency, and technical skills in Adobe Illustrator.
-									BloomBox, a Vancouver-based floral service, offers convenient
-									flower purchase options, including one-time buys and a monthly
-									subscription. Their signature service is a mystery box with a
-									themed assortment of fresh flowers delivered periodically.
+									The aim of this assignment is to develop branding for
+									BloomBox, a Vancouver-based floral service. This project
+									highlights the skill in combining creativity with strategic
+									branding and marketing, showcasing proficiency in brand
+									consistency and visual design.
 								</Body1>
-								<Image src="/images/bloom-box-overview.jpg" />
 							</Grid>
 						</Grid>
 					</ProjectStepSection>
 				</div>
 				<div ref={ref2}>
-					<ProjectStepSection title="BrainStorm" id="2">
+					<ProjectStepSection title="Branding" id="2">
 						<Grid container justifyContent="space-between">
 							<Body1 sx={{ marginTop: "1rem" }}>
-								The brainstorming phase focused on integrating BloomBox’s
-								essence into the design, combining floral elements with their
-								distinct box delivery. The designs aimed for simplicity and
-								modernity, reflecting bloom, growth, and tranquility.
+								BloomBox offers convenient flower purchase options, including
+								one-time buys and a monthly subscription. Their signature
+								service is a mystery box with a themed assortment of fresh
+								flowers delivered periodically.
+							</Body1>
+							<Body1 sx={{ marginTop: "1rem" }}>
+								The branding focused on integrating brand essence into the
+								design, combining floral elements with their distinct box
+								delivery. The designs aimed for simplicity and modernity,
+								reflecting bloom, growth, and tranquility.
 							</Body1>
 							<Image
-								src="/images/bloom-box-brainstorm.webp"
+								src="/images/bloombox-style-guide.webp"
 								alt="Problem"
 								sx={{
 									marginBottom: "10px",
@@ -77,65 +77,73 @@ const OverviewSection = () => {
 							/>
 						</Grid>
 					</ProjectStepSection>
-					<ProjectStepSection title="Logo Design" id="3">
+					<ProjectStepSection title="Newsletter & Mockups" id="3">
 						<Grid container justifyContent="space-between">
 							<Body1>
-								In the sketching phase, I came up with six designs that combined
-								geometric shapes and abstract floral patterns. These sketches
-								laid the groundwork for the final logos. From these initial
-								ideas, I selected one to develop into the main logo, a secondary
-								logo, and a submark. The main logo showcases an abstract flower
-								inside a square, representing a petal unfolding and a delivery
-								box. The secondary logo displays the brand name in a horizontal
-								layout. The submark simplifies BloomBox's "B," ensuring the
-								brand remains consistent across all versions.
+								After finalizing the style guide, I created a newsletter and
+								mockups to showcase the branding in various applications while
+								ensure the brand consistency.
 							</Body1>
 							<Image
-								src="/images/bloom-box-logo-design.jpg"
-								alt="Problem"
+								src="/images/bloombox-newsletter.webp"
+								alt="bloombox newsletter"
 								sx={{
-									marginBottom: "10px",
 									width: { sm: "100%" },
 								}}
 							/>
-						</Grid>
-					</ProjectStepSection>
-					<ProjectStepSection title="Typography and Color" id="4">
-						<Grid container justifyContent="space-between">
-							<Body1>
-								Antipol VF was selected as the primary font for its modernity,
-								and Century Gothic Pro as the secondary font for clarity. The
-								color palette consisted of soft pastels in pink and green,
-								representing flowers and leaves, complemented by off-white for
-								contrast and readability.
-							</Body1>
 							<Image
-								src="/images/bloom-box-color.jpg"
+								src="/images/bloombox-mockup-1.webp"
+								alt="bloombox mockup 1"
 								sx={{
-									marginBottom: "10px",
 									width: { sm: "100%" },
 								}}
 							/>
-						</Grid>
-					</ProjectStepSection>
-					<ProjectStepSection title="Finalization" id="5">
-						<Grid container justifyContent="space-between">
-							<Body1>
-								In the final stage, I brought together the chosen colors and
-								typography to finalize the BloomBox logo. We also created
-								mockups to showcase the logo in various applications.
-							</Body1>
-						</Grid>
-					</ProjectStepSection>
-				</div>
-				<div ref={ref3}>
-					<ProjectStepSection title="Deliverable" id="6">
-						<Grid container justifyContent="space-between">
 							<Image
-								src="/images/bloom-box-final.webp"
-								alt="Problem"
+								src="/images/bloombox-mockup-2.webp"
+								alt="bloombox mockup 2"
 								sx={{
-									marginBottom: "10px",
+									width: { sm: "100%" },
+								}}
+							/>
+							<Image
+								src="/images/bloombox-mockup-3.webp"
+								alt="bloombox mockup 3"
+								sx={{
+									width: { sm: "100%" },
+								}}
+							/>
+							<Image
+								src="/images/bloombox-mockup-4.webp"
+								alt="bloombox mockup 4"
+								sx={{
+									width: { sm: "100%" },
+								}}
+							/>
+							<Image
+								src="/images/bloombox-mockup-5.webp"
+								alt="bloombox mockup 5"
+								sx={{
+									width: { sm: "100%" },
+								}}
+							/>
+							<Image
+								src="/images/bloombox-mockup-6.webp"
+								alt="bloombox mockup 6"
+								sx={{
+									width: { sm: "100%" },
+								}}
+							/>
+							<Image
+								src="/images/bloombox-mockup-7.webp"
+								alt="bloombox mockup 7"
+								sx={{
+									width: { sm: "100%" },
+								}}
+							/>
+							<Image
+								src="/images/bloombox-mockup-8.webp"
+								alt="bloombox mockup 8"
+								sx={{
 									width: { sm: "100%" },
 								}}
 							/>

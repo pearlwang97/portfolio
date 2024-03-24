@@ -84,15 +84,6 @@ const OverviewSection = () => {
 								language that would make the app intuitive and engaging for
 								users.
 							</Body1>
-							{/* <Box
-								component="img"
-								src="/images/project-2-gallery-5.png"
-								alt="Problem"
-								sx={{
-									marginBottom: "10px",
-									width: "100%",
-								}}
-							/> */}
 						</Grid>
 					</ProjectStepSection>
 					<ProjectStepSection title="Hi-Fi Wireframe & Prototype" id="4">

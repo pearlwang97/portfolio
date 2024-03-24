@@ -7,7 +7,7 @@ import Body1 from "components/shared/Body1/Body1";
 import Body2 from "components/shared/Body2/Body2";
 import StyledLink from "components/shared/StyledLink/StyledLink";
 
-const Project = ({ title, image, link, description, category, tools, videoUrl}) => {
+const Project = ({ title, image, link, description, category, tools }) => {
 	const isVideo = category === "Motion Graphic";
 	console.log(image);
 	return (

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import OverviewSection from "./OverviewSection/OverviewSection";
 import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
+import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
 
 const DominoAppRedesign = () => {
 	useEffect(() => {
@@ -13,6 +14,7 @@ const DominoAppRedesign = () => {
 				imageSrc="images/project-1-banner.webp"
 			/>
 			<OverviewSection />
+			<ProjectNavButtons prevLink="/cupid-lyric-video" nextLink="/bloom-app-design" />
 		</div>
 	);
 };

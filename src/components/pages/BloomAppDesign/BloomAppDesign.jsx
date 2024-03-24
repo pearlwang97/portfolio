@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import OverviewSection from "./OverviewSection/OverviewSection";
 import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
+import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
 
 const BloomAppDesign = () => {
 	useEffect(() => {
@@ -13,6 +14,7 @@ const BloomAppDesign = () => {
 				imageSrc="/images/bloom-app-banner.webp"
 			/>
 			<OverviewSection />
+			<ProjectNavButtons prevLink="/furniture-banner-deisgn" nextLink="/furniture-banner-deisgn" />
 		</div>
 	);
 };

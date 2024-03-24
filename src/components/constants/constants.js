@@ -26,19 +26,19 @@ export const projects = [
 		tools: ["InDesign", "Illustrator", "Photoshop"],
 	},
 	{
+		title: "BloomBox Logo Design",
+		image: "/images/bloombox-cover.webp",
+		link: "/bloom-box-logo",
+		description: "Create branding with email newsletter design and mockups.",
+		category: "Graphic Design",
+		tools: ["Illustrator", "Photoshop", "InDesign"],
+	},
+	{
 		title: "2D Realistic Radio Vector Art",
 		image: "/images/feature-work-2.jpg",
 		link: "/2d-radio-vector-art",
 		description:
 			"Produce a photo-realistic 2D illustration that achieves a 3D effect.",
-		category: "Graphic Design",
-		tools: ["Illustrator"],
-	},
-	{
-		title: "BloomBox Logo Design",
-		image: "/images/feature-work-3.jpg",
-		link: "/bloom-box-logo",
-		description: "Develop multiple logo variations for brand BloomBox.",
 		category: "Graphic Design",
 		tools: ["Illustrator"],
 	},

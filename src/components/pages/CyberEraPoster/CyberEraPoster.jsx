@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import OverviewSection from "./OverviewSection/OverviewSection";
 import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
+import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
 
 const CyberEraPoster = () => {
 	useEffect(() => {
@@ -13,6 +14,7 @@ const CyberEraPoster = () => {
 				imageSrc="images/cyber-era-1.jpg"
 			/>
 			<OverviewSection />
+			<ProjectNavButtons prevLink="/chinese-zodiac" nextLink="/summit-promotional-video" />
 		</div>
 	);
 };

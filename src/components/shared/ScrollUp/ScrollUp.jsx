@@ -34,6 +34,7 @@ const ScrollTopButton = () => {
 
 	return (
 		<Zoom in={trigger}>
+			
 			<IconButton
 				onClick={handleClick}
 				aria-label="scroll back to top"
