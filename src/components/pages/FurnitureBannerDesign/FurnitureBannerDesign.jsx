@@ -11,7 +11,7 @@ const FurnitureBannerDesign = () => {
 		<div>
 			<ProjectBanner
 				title="Weekends Catalog &  Campaign"
-				imageSrc="images/weekend-banner.webp"
+				imageSrc="/images/weekend-banner.webp"
 			/>
 			<OverviewSection />
 			<ProjectNavButtons prevLink="/bloom-app-design" nextLink="/bloom-box-logo" />

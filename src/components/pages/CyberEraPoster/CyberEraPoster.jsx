@@ -11,7 +11,7 @@ const CyberEraPoster = () => {
 		<div>
 			<ProjectBanner
 				title="Cyber Era Poster Design"
-				imageSrc="images/cyber-era-1.jpg"
+				imageSrc="/images/cyber-era-1.jpg"
 			/>
 			<OverviewSection />
 			<ProjectNavButtons prevLink="/chinese-zodiac" nextLink="/summit-promotional-video" />

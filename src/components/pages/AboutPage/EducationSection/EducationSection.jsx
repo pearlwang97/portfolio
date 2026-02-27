@@ -81,7 +81,7 @@ const EducationSection = () => {
 			>
 				<Grid item xs={12} md={5.5}>
 					<EducationLogo
-						src="images/bcit-logo.svg"
+						src="/images/bcit-logo.svg"
 						alt="British Columbia Institute of Technology logo"
 					/>
 					<H3
@@ -113,7 +113,7 @@ const EducationSection = () => {
 				</Grid>
 				<Grid item xs={12} md={5.5}>
 					<EducationLogo
-						src="images/uvic-logo.svg"
+						src="/images/uvic-logo.svg"
 						alt="University of Victoria logo"
 					/>
 					<H3

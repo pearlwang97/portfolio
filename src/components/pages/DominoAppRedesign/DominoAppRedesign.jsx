@@ -11,7 +11,7 @@ const DominoAppRedesign = () => {
 		<div>
 			<ProjectBanner
 				title="Domino’s APP Redesign"
-				imageSrc="images/project-1-banner.webp"
+				imageSrc="/images/project-1-banner.webp"
 			/>
 			<OverviewSection />
 			<ProjectNavButtons prevLink="/cupid-lyric-video" nextLink="/bloom-app-design" />

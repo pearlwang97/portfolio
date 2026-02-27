@@ -11,7 +11,7 @@ const BloomBoxLogoDesign = () => {
 		<div>
 			<ProjectBanner
 				title="BloomBox Logo Design"
-				imageSrc="images/bloombox-banner.webp"
+				imageSrc="/images/bloombox-banner.webp"
 			/>
 			<OverviewSection />
 			<ProjectNavButtons prevLink="/furniture-banner-deisgn" nextLink="/2d-radio-vector-art" />
