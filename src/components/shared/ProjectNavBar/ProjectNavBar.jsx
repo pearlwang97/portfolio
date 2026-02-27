@@ -60,12 +60,16 @@ const StyledNavItem = styled(Link)(({ theme }) => ({
 }));
 
 const ProjectNavBar = ({ navItems }) => {
-	// Inside your component
-	const [inView1, inView2, inView3] = useContext(InViewContext);
+	const inViewStates = useContext(InViewContext) || [];
+	const activeIndex = inViewStates.reduce(
+		(currentActiveIndex, isInView, index) =>
+			isInView ? index : currentActiveIndex,
+		-1
+	);
+
 	return (
 		<StyledNav>
 			{navItems.map((navItem, index) => {
-				const inView = index === 0 ? inView1 : index === 1 ? inView2 : inView3;
 				return (
 					<StyledNavItem
 						key={index}
@@ -73,7 +77,7 @@ const ProjectNavBar = ({ navItems }) => {
 						spy={true}
 						smooth={true}
 						duration={500}
-						className={inView ? "active" : ""}
+						className={index === activeIndex ? "active" : ""}
 					>
 						{navItem.label}
 					</StyledNavItem>
