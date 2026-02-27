@@ -1,10 +1,11 @@
 import { styled } from "@mui/material/styles";
+import { FONTS } from "components/constants/styleTokens";
 
 const H2 = styled("h2")(({ theme }) => ({
 	fontSize: "2rem",
 	fontWeight: 600,
 	textAlign: "center",
-    fontFamily: "utopia-std, serif",
+	fontFamily: FONTS.serif,
 	[theme.breakpoints.down("lg")]: {
 		fontSize: "1.75rem",
 	},

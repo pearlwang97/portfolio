@@ -1,8 +1,9 @@
 import { styled } from "@mui/material/styles";
+import { FONTS } from "components/constants/styleTokens";
 
 const Body1 = styled("p")(({ theme }) => ({
 	fontSize: "1.125rem",
-    fontFamily: "'Montserrat', sans-serif",
+	fontFamily: FONTS.sans,
 	marginBottom: "10px",
 	lineHeight: "1.75",
 	[theme.breakpoints.down("lg")]: {

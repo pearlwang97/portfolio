@@ -16,6 +16,7 @@ import FurnitureBannerDesign from "components/pages/FurnitureBannerDesign/Furnit
 import ScrollTop from "components/shared/ScrollUp/ScrollUp";
 import SummitPromotionalVideo from "components/pages/SummitPromotionalVideo/SummitPromotionalVideo";
 import CupidLyricVideo from "components/pages/CupidLyricVideo/CupidLyric";
+import { COLORS, RADIUS } from "components/constants/styleTokens";
 
 import "./App.css";
 import { createGlobalStyle } from "styled-components";
@@ -26,16 +27,16 @@ const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: ${COLORS.scrollbarTrack};
     }
 
     ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 10px;
+        background: ${COLORS.scrollbarThumb};
+        border-radius: ${RADIUS.scrollbar};
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: ${COLORS.scrollbarThumbHover};
     }
 `;
 
@@ -59,11 +60,11 @@ function App() {
 		},
 	};
 	return (
-		<Box
-			sx={{
-				backgroundColor: "#fefcf3",
-			}}
-		>
+			<Box
+				sx={{
+					backgroundColor: COLORS.background,
+				}}
+			>
 			<GlobalStyle />
 			<Helmet>
 				<script type="application/ld+json">

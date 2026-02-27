@@ -263,6 +263,7 @@ const OverviewSection = () => {
 								<Grid container justifyContent="center">
 									<Image
 										src="/images/domino-app.gif"
+										alt="Domino app navigation demo"
 										sx={{
 											width: {
 												sm: "50%",
@@ -301,7 +302,7 @@ const OverviewSection = () => {
 								insights into the target audience's needs, pain points and
 								overall impressions.
 							</Body1>
-							<Image src="/images/domino-piechart.webp" alt="piechart" />
+							<Image src="/images/domino-piechart.webp" alt="Domino user survey chart" />
 							<H4
 								sx={{
 									fontWeight: "bold",
@@ -355,7 +356,7 @@ const OverviewSection = () => {
 								</ListItem>
 							</List>
 							<Body1>They said:</Body1>
-							<Image src="/images/domino-review.webp" alt="user review" />
+							<Image src="/images/domino-review.webp" alt="Domino user interview notes" />
 							<H4
 								sx={{
 									fontWeight: "bold",
@@ -372,7 +373,7 @@ const OverviewSection = () => {
 								competitors.
 							</Body1>
 						</Grid>
-						<Image src="/images/domino-competitor.webp" alt="competitor" />
+						<Image src="/images/domino-competitor.webp" alt="Domino competitor analysis" />
 					</ProjectStepSection>
 					<ProjectStepSection title="Define" id="3">
 						<Grid container justifyContent="space-between">
@@ -384,7 +385,7 @@ const OverviewSection = () => {
 							</Body1>
 							<Image
 								src="/images/domino-persona.webp"
-								alt="persona"
+								alt="Domino user personas"
 								sx={{
 									marginBottom: "10px",
 								}}
@@ -485,6 +486,7 @@ const OverviewSection = () => {
 							</Body1>
 							<Image
 								src="/images/domino-iteration.webp"
+								alt="Domino redesign iterations"
 								sx={{
 									marginBottom: "10px",
 									width: { sm: "100%" },
@@ -506,7 +508,7 @@ const OverviewSection = () => {
 								through these tasks by all testers affirmed the effectiveness of
 								the design modifications.
 							</Body1>
-							<Image src="/images/domino-usability.webp" alt="usability test" />
+							<Image src="/images/domino-usability.webp" alt="Domino usability testing results" />
 							<Body1>Testing highlighted some improvements, include</Body1>
 							<List>
 								<ListItem sx={{ fontFamily: "'Montserrat', sans-serif" }}>
@@ -547,7 +549,7 @@ const OverviewSection = () => {
 							</H4>
 							<Image
 								src="/images/domino-prototype.webp"
-								alt="prototype"
+								alt="Domino hi-fi prototype screens"
 								sx={{
 									marginBottom: "10px",
 									width: "100%",

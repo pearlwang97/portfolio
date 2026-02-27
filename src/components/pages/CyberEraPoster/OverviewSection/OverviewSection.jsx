@@ -66,7 +66,7 @@ const OverviewSection = () => {
 							</Body1>
 							<Image
 								src="/images/project-6-concept.jpg"
-								alt="Problem"
+								alt="cyber era concept sketch"
 								sx={{
 									marginBottom: "10px",
 									width: { sm: "100%" },
@@ -84,10 +84,9 @@ const OverviewSection = () => {
 								emboss, and overlay layers, further anchoring the character in a
 								futuristic realm.
 							</Body1>
-							<Box
-								component="img"
+							<Image
 								src="/images/cyber-era-glass.jpg"
-								alt="Problem"
+								alt="cyber era glass poster mockup"
 								sx={{
 									marginBottom: "10px",
 									width: { sm: "100%" },
@@ -154,7 +153,7 @@ const OverviewSection = () => {
 				<div ref={ref3}>
 					<ProjectStepSection title="Deliverable" id="6">
 						<Grid container justifyContent="space-between">
-							<Image src="/images/cyber-era-final.jpg" alt="Problem" />
+							<Image src="/images/cyber-era-final.jpg" alt="cyber era final poster" />
 						</Grid>
 					</ProjectStepSection>
 				</div>

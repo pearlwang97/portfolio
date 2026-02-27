@@ -9,6 +9,7 @@ import H3 from "components/shared/H3/H3";
 import Divider from "components/shared/Divider/Divider";
 import IconTooltip from "components/shared/IconTooltip/IconTooltip";
 import Image from "components/shared/Image/Image";
+import { FONTS } from "components/constants/styleTokens";
 
 const TitleContainer = styled(Box)(({ theme }) => ({
 	containerType: "inline-size",
@@ -30,7 +31,7 @@ const ImageContainer = styled(Box)(({ theme, width }) => ({
 	},
 }));
 
-const SubTitle = styled("H3")(({ textAlign, theme }) => ({
+const SubTitle = styled(H3)(({ textAlign, theme }) => ({
 	fontSize: "1.3rem",
 	fontWeight: "bold",
 	margin: `0 0 5px 0`,
@@ -40,20 +41,20 @@ const SubTitle = styled("H3")(({ textAlign, theme }) => ({
 		textAlign: "left",
 	},
 	[theme.breakpoints.down("md")]: {
-		fontSize: "1.1",
+		fontSize: "1.1rem",
 		textAlign: "left",
 	},
-	fontFamily: "utopia-std, serif",
+	fontFamily: FONTS.serif,
 }));
 
-const StyledIcon = styled("img")(({ theme }) => ({
+const StyledIcon = styled(Image)(({ theme }) => ({
 	height: "24px",
 	width: "auto",
 	[theme.breakpoints.up("sm")]: {
 		height: "30px", // Increase height on small devices and up
 	},
 	[theme.breakpoints.up("md")]: {
-		height: "2cqw", // Increase height on medium devices and up
+		height: "36px",
 	},
 }));
 

@@ -149,7 +149,7 @@ const IntroductionSection = () => {
 				</StyledTextContainer>
 			</StyledScrollTrigger>
 			<StyledImageContainer>
-				<Image src="/images/Artboard.svg" alt="painted woman" />
+				<Image src="/images/artboard.svg" alt="painted woman" />
 			</StyledImageContainer>
 		</MainContainer>
 	);

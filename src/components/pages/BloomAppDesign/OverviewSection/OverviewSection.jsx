@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
 import Body1 from "components/shared/Body1/Body1";
+import Image from "components/shared/Image/Image";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
 import { useInView } from "react-intersection-observer";
@@ -96,10 +97,9 @@ const OverviewSection = () => {
 								product. Special attention was paid to the UI components, such
 								as buttons, icons, and input fields.
 							</Body1>
-							<Box
-								component="img"
+							<Image
 								src="/images/project-2-gallery-7.png"
-								alt="Problem"
+								alt="bloom app hi-fi wireframe"
 								sx={{
 									marginBottom: "10px",
 									width: "100%",
@@ -130,10 +130,9 @@ const OverviewSection = () => {
 				<div ref={ref3}>
 					<ProjectStepSection title="Deliverable" id="6">
 						<Grid container justifyContent="space-between">
-							<Box
-								component="img"
+							<Image
 								src="/images/project-2-gallery-8.png"
-								alt="Problem"
+								alt="bloom app deliverable screens"
 								sx={{
 									marginBottom: "10px",
 									width: "100%",

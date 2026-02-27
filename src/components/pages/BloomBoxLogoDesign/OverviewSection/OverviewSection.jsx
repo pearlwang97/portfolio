@@ -75,7 +75,7 @@ const OverviewSection = () => {
 							</Body1>
 							<Image
 								src="/images/bloombox-style-guide.webp"
-								alt="Problem"
+								alt="bloombox style guide"
 								sx={{
 									marginBottom: "10px",
 									width: { sm: "100%" },

@@ -162,7 +162,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-1.webp"
-								alt="plane1"
+								alt="Peirong outdoors"
 							/>
 							<Image
 								sx={{
@@ -170,7 +170,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-2.webp"
-								alt="plane2"
+								alt="Peirong lifestyle photo"
 							/>
 							<Image
 								sx={{
@@ -178,7 +178,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-3.webp"
-								alt="plane3"
+								alt="Peirong creative hobby photo"
 							/>
 						</Box>
 						<Box className="plane" ref={plane2}>
@@ -188,7 +188,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-4.webp"
-								alt="plane1"
+								alt="Peirong portrait"
 							/>
 							<Image
 								sx={{
@@ -196,7 +196,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/boardgame.webp"
-								alt="plane2"
+								alt="board game photo"
 							/>
 							<Image
 								sx={{
@@ -204,7 +204,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-6.webp"
-								alt="plane3"
+								alt="Peirong outdoor activity"
 							/>
 						</Box>
 						<Box className="plane" ref={plane3}>
@@ -214,7 +214,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-7.webp"
-								alt="plane1"
+								alt="Peirong candid photo"
 							/>
 							<Image
 								sx={{
@@ -222,7 +222,7 @@ const FloatingGallery = () => {
 									boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
 								}}
 								src="/images/about-me-gallery-8.webp"
-								alt="plane2"
+								alt="Peirong travel photo"
 							/>
 						</Box>
 						<Box

@@ -3,26 +3,6 @@
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior: smooth;;
-}
-
-.App {
-  text-align: center;
-}
-
-h1 {
-  font-size: 48px;
-  font-family: 'Utopia Std', serif;
-}
-
-/* h2 {
-  font-size: 36px;
-  margin: 15px 0;
-  font-family: 'Utopia Std', serif;
-} */
-
-p {
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
+html {
+  scroll-behavior: smooth;
 }

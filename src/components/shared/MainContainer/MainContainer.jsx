@@ -1,19 +1,15 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { LAYOUT } from "components/constants/styleTokens";
 
 const MainContainer = styled(Box)(({ theme }) => ({
-	width: "1000px",
+	width: "100%",
+	maxWidth: LAYOUT.contentWidth,
 	height: "auto",
 	margin: "0 auto",
-	[theme.breakpoints.down("lg")]: {
-		width: "840px",
-		maxWidth: "912px",
-	},
-	[theme.breakpoints.down("md")]: {
-		width: "540px",
-	},
+	paddingInline: LAYOUT.gutter,
 	[theme.breakpoints.down("sm")]: {
-		width: "320px",
+		paddingInline: LAYOUT.gutterMobile,
 	},
 }));
 

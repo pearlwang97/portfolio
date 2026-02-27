@@ -1,47 +1,39 @@
 import { styled } from "@mui/material/styles";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
+import { COLORS } from "components/constants/styleTokens";
+import { buttonBaseStyles } from "components/shared/buttonBase";
 
 const AnimatedButton = styled("button")(({ theme }) => ({
-    backgroundColor: "#dba39a",
-    textAlign: "center",
-    display: "inline-block",
-    position: "relative",
-    textTransform: "capitalize",
-    fontFamily: "'Montserrat', sans-serif",
-    overflow: "hidden",
-    transition: "all 0.2s linear 0s",
-    color: "#250d00",
-    textDecoration: "none",
-    padding: "10px 10px",
-    border: "none",
-    width: "10rem",
-    borderRadius: "7px",
-    fontWeight: "600", // semi-bold
-    fontSize: "15px",
-    '&:before': {
-        content: "'\\f054'",
-        fontFamily: "FontAwesome",
-        fontSize: "15px",
-        position: "absolute",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        right: 0,
-        top: 0,
-        opacity: 0,
-        height: "100%",
-        width: "40px",
-        transition: "all 0.2s linear 0s",
-    },
-    '&:hover': {
-        textIndent: "-20px",
-        backgroundColor: "#e5c5c5",
-        // color: "white",
-        '&:before': {
-            opacity: 1,
-            textIndent: "0px",
-        },
-    },
+	...buttonBaseStyles,
+	display: "inline-block",
+	position: "relative",
+	textTransform: "capitalize",
+	overflow: "hidden",
+	transition: "all 0.2s linear 0s",
+	width: "10rem",
+	"&:before": {
+		content: "'\\f054'",
+		fontFamily: "FontAwesome",
+		fontSize: "15px",
+		position: "absolute",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		right: 0,
+		top: 0,
+		opacity: 0,
+		height: "100%",
+		width: "40px",
+		transition: "all 0.2s linear 0s",
+	},
+	"&:hover": {
+		textIndent: "-20px",
+		backgroundColor: COLORS.accentSoft,
+		"&:before": {
+			opacity: 1,
+			textIndent: "0px",
+		},
+	},
 }));
 
 export default AnimatedButton;

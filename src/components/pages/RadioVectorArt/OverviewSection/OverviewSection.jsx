@@ -70,7 +70,7 @@ const OverviewSection = () => {
 							<Box>
 								<Image
 									src="/images/project-3-gallery-2.png"
-									alt="Problem"
+									alt="radio vector illustration mockup"
 									sx={{
 										marginBottom: "10px",
 										// width: { sm: "100%", md: "50%" },

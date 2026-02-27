@@ -69,7 +69,7 @@ const OverviewSection = () => {
 							<Box sx={{ display: "block" }}>
 								<Image
 									src="/images/project-5-gallery-2.webp"
-									alt="Problem"
+									alt="chinese zodiac papercut gallery image 1"
 									sx={{
 										float: "right",
 										marginLeft: "20px",
@@ -110,7 +110,7 @@ const OverviewSection = () => {
 							</Body1>
 							<Image
 								src="/images/project-5-gallery-3.jpg"
-								alt="Problem"
+								alt="chinese zodiac papercut gallery image 2"
 								sx={{
 									marginBottom: "10px",
 								}}
@@ -136,18 +136,18 @@ const OverviewSection = () => {
 								<Grid item xs={12} sm={5.85}>
 									<Image
 										src="/images/project-5-gallery-1.webp"
-										alt="chinese zodiac gallery image 3"
+										alt="chinese zodiac mockup set"
 									/>
 								</Grid>
 								<Grid item xs={12} sm={6.15}>
 									<Image
 										src="/images/project-5-gallery-5.webp"
-										alt="chinese zodiac gallery image 4"
+										alt="chinese zodiac poster mockup"
 									/>
 								</Grid>
 								<Image
 									src="/images/chinese-zodiac-banner.webp"
-									alt="chinese zodiac gallery image 4"
+									alt="chinese zodiac collection banner"
 								/>
 							</Grid>
 						</Grid>

@@ -52,7 +52,7 @@ const SelfIntroductionSection = () => {
 						sx={{
 							maxWidth: "475px",
 						}}
-						src="/images/about-me-selfie.JPG"
+						src="/images/about-me-selfie.jpg"
 						alt="peirong wang selfies"
 					/>
 				</Grid>
