@@ -1,0 +1,5 @@
+RewriteEngine On
+# Redirect all requests not pointing directly to files to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
