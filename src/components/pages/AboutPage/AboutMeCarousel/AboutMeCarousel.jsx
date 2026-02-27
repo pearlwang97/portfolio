@@ -14,19 +14,6 @@ const CarouselImage = styled(Image)({
 	margin: "0 auto",
 });
 
-const StyledContainer = styled(Box)(({ theme }) => ({
-	width: "60%",
-	maxWidth: "1140px",
-	height: "auto",
-	margin: "0 auto",
-	[theme.breakpoints.down("md")]: {
-		width: "80%",
-	},
-	[theme.breakpoints.down("sm")]: {
-		width: "85%",
-	},
-}));
-
 const AboutMeCarousel = () => {
 	const items = [
 		{

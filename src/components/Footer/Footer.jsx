@@ -4,8 +4,6 @@ import { styled } from "@mui/material/styles";
 import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import H1 from "components/shared/H1/H1";
-import H2 from "components/shared/H2/H2";
-import H4 from "components/shared/H4/H4";
 import LinkedInIcon from "components/Icons/LinkedInIcon";
 import InstagramIcon from "components/Icons/InstagramIcon";
 import YoutubeIcon from "components/Icons/YoutubeIcon";

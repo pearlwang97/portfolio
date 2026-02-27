@@ -80,7 +80,6 @@ const NavItem = styled(NavLink)(({ theme }) => ({
     '&:after': {
         content: '""',
         position: 'absolute',
-        bottom: 0,
         left: 0,
         right: 0,
         height: '2px',

@@ -6,17 +6,10 @@ import MainContainer from "components/shared/MainContainer/MainContainer";
 import Project from "components/pages/ProjectsPage/Project/Project";
 import { projects } from "components/constants/constants";
 // import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 const ProjectsSection = () => {
 	const location = useLocation();
 	const [selectedTab, setSelectedTab] = useState(0);
-
-	const [isPastHalf, setIsPastHalf] = useState(false);
-
-    const theme = useTheme();
-    const isMidOrAbove = useMediaQuery(theme.breakpoints.up('md'));
 
 	const filteredProjects = projects.filter((project) => {
 		if (selectedTab === 0) {
@@ -28,22 +21,11 @@ const ProjectsSection = () => {
 		} else if (selectedTab === 3) {
 			return project.category === "Motion Graphic";
 		}
+
+		return false;
 	});
 
-	useEffect(() => {
-		const handleScroll = () => {
-			const isPastHalf = window.scrollY >= document.body.offsetHeight / 2;
-			setIsPastHalf(isPastHalf);
-		};
-
-		window.addEventListener("scroll", handleScroll);
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
-
-	const handleTabChange = (event, newValue) => {
+	const handleTabChange = (_, newValue) => {
 		setSelectedTab(newValue);
 	};
 
@@ -89,7 +71,6 @@ const ProjectsSection = () => {
 				>
 					My Projects
 				</H2>
-				{/* {isMidOrAbove && !isPastHalf && filteredProjects.length > 2 && <ScrollDownIndicator />} */}
 				<Tabs
 					role="navigation"
 					variant="scrollable"
@@ -117,7 +98,7 @@ const ProjectsSection = () => {
 					<Tab label="Motion Graphic" sx={{ minWidth: "auto" }} />
 				</Tabs>
 				<Grid container justifyContent={{ xs: "center", md: "space-between" }}>
-					{filteredProjects.map((item, index) => (
+					{filteredProjects.map((item) => (
 						<Project
 							key={item.title}
 							title={item.title}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useMediaQuery, useTheme, Tooltip } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 import { styled } from "@mui/material/styles";
 import Link from "components/shared/StyledLink/StyledLink";
@@ -89,7 +89,6 @@ const ProjectOverview = ({
 	const justifyContent =
 		isMobile || horizontalAlign === "left" ? "flex-start" : "flex-end";
 	const textAlign = isMobile || horizontalAlign === "left" ? "left" : "right";
-	console.log("horizontalAligh", horizontalAlign);
 	const sequenceNumber = formatNumber(index + 1);
 	return (
 		<MainContainer

@@ -1,7 +1,6 @@
 import React from "react";
 import SelfIntrocutionSection from "./SelfIntroductionSection/SelfIntroductionSection";
 import SkillSection from "./SkillSection/SkillSection";
-import WorkExperienceSection from "./WorkExperienceSection/WorkExperienceSection";
 import FloatingGallery from "./FloatingGallery/FloatingGallery";
 import EducationSection from "./EducationSection/EducationSection";
 

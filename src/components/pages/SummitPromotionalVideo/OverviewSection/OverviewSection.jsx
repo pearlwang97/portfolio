@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Grid, Box } from "@mui/material";
-import Image from "components/shared/Image/Image";
+import { Grid } from "@mui/material";
 import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
 import Body1 from "components/shared/Body1/Body1";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
@@ -14,11 +13,11 @@ const OverviewSection = () => {
 		triggerOnce: false,
 		threshold: 0.5,
 	});
-	const [ref2, inView2] = useInView({
+	const [, inView2] = useInView({
 		triggerOnce: false,
 		threshold: 0.2,
 	});
-	const [ref3, inView3] = useInView({
+	const [, inView3] = useInView({
 		triggerOnce: false,
 		threshold: 0.5,
 	});

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grid, Box, List, ListItem, Button } from "@mui/material";
+import { Grid, List, ListItem, Button } from "@mui/material";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Image from "components/shared/Image/Image";

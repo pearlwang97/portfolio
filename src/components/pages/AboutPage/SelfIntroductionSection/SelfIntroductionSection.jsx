@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MainContainer from "components/shared/MainContainer/MainContainer";

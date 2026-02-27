@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import ProjectsSection from "components/pages/ProjectsPage/ProjectsSection/ProjectsSection";
 // import { useTheme } from "@mui/material/styles";

@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Box from "@mui/material/Box";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import Body1 from "components/shared/Body1/Body1";
 
 const ProjectNavButtons = ({ prevLink, nextLink }) => {
 	const navigate = useNavigate();
