@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
+import Image from "components/shared/Image/Image";
 
 const Nav = styled("nav")(({ theme }) => ({
 	padding: "0 20px",
@@ -13,7 +14,7 @@ const Nav = styled("nav")(({ theme }) => ({
 	fontSize: "1.1rem",
 }));
 
-const Logo = styled("img")(({ theme }) => ({
+const Logo = styled(Image)(({ theme }) => ({
 	width: "62.4px",
 	height: "52px",
 }));

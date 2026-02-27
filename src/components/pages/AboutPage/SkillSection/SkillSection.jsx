@@ -4,8 +4,9 @@ import MainContainer from "components/shared/MainContainer/MainContainer";
 import H2 from "components/shared/H2/H2";
 import IconTooltip from "components/shared/IconTooltip/IconTooltip";
 import Divider from "components/shared/Divider/Divider";
+import Image from "components/shared/Image/Image";
 
-const StyledIcon = styled("img")(({ theme }) => ({
+const StyledIcon = styled(Image)(({ theme }) => ({
 	height: "35px",
 	width: "auto",
 	[theme.breakpoints.up("sm")]: {

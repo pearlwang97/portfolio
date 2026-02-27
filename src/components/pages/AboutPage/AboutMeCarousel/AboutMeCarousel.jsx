@@ -5,8 +5,9 @@ import Carousel from "react-material-ui-carousel";
 import Body1 from "components/shared/Body1/Body1";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
+import Image from "components/shared/Image/Image";
 
-const Image = styled("img")({
+const CarouselImage = styled(Image)({
 	width: "100%",
 	height: "auto",
 	maxWidth: "500px",
@@ -97,7 +98,7 @@ const AboutMeCarousel = () => {
 				</Box>
 				<Carousel swipe>
 					{items.map((item, i) => (
-						<Image key={i} src={item.image} alt={item.name} />
+						<CarouselImage key={i} src={item.image} alt={item.name} />
 					))}
 				</Carousel>
 			</MainContainer>
