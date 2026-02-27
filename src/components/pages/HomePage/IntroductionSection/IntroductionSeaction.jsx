@@ -105,7 +105,7 @@ const IntroductionSection = () => {
 					<StyledName>
 						<Typewriter
 							onInit={(typewriter) => {
-								typewriter.typeString("A Creative Designer").start();
+								typewriter.typeString("Marketing & Design").start();
 							}}
 							options={{
 								delay: 18,
@@ -115,8 +115,7 @@ const IntroductionSection = () => {
 
 					{/* <Designer>A Creative Designer.</Designer> */}
 					<Body1>
-						I put my passion into crafting meaningful experiences and
-						connections via design. My journey revolves around &nbsp;
+					I combine marketing, design, and analytics to create engaging and effective brand experiences.<br/> With a strong visual sense and data-driven approach, I design intuitive user experiences and impactful content.<br/> My skills include &nbsp;
 						<Link
 							sx={{
 								textDecoration: "underline",
@@ -142,8 +141,7 @@ const IntroductionSection = () => {
 						>
 							<Box component="strong">Graphic Design</Box>
 						</Link>
-						&nbsp; including graphic and branding. Let's dive into impactful
-						visual stories together.
+						,&nbsp; digital marketing, and SEO—helping brands tell their story in a meaningful way.
 					</Body1>
 					<Link to="/about">
 						<AnimatedButton>LEARN MORE</AnimatedButton>

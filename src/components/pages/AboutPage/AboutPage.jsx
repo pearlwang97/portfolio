@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div>
             <SelfIntrocutionSection />
             <SkillSection />
-            <WorkExperienceSection />
+            {/* <WorkExperienceSection /> */}
             <EducationSection />
             <FloatingGallery />
         </div>

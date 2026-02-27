@@ -6,7 +6,7 @@ export const projects = [
 		description:
 			"Create a user-centered, modern interface for the existing Domino's App.",
 		category: "UI/UX Design",
-		tools: ["Figma", "Illustrator"],
+		tools: ["Figma", "Illustrator", "Photoshop", "Google Form"],
 	},
 	{
 		title: "Bloom App Design",

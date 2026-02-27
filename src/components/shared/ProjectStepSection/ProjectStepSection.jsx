@@ -26,11 +26,12 @@ const ProjectStepSection = ({ children, title, id, noPadding }) => {
 				id={id}
 				sx={{
 					textAlign: "left",
+					marginBottom: "1rem",
 				}}
 			>
 				{title}
 			</H2>
-			<Divider width={"90%"} alignLeft />
+			{/* <Divider width={"90%"} alignLeft /> */}
 			{children}
 		</StyledSection>
 	);

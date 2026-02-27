@@ -109,7 +109,7 @@ const EducationSection = () => {
 					>
 						British Columbia Institute of Technology
 					</Company>
-					<Time>Jan 2023 – Present</Time>
+					<Time>Jan 2023 – Aug 2024</Time>
 				</Grid>
 				<Grid item xs={12} md={5.5}>
 					<EducationLogo

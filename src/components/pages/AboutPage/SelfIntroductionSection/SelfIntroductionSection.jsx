@@ -74,7 +74,7 @@ const SelfIntroductionSection = () => {
 							}}
 						>
 							<Body1>
-								A{" "}
+								{/* A{" "}
 								<span
 									style={{
 										backgroundImage:
@@ -84,7 +84,31 @@ const SelfIntroductionSection = () => {
 								>
 									UI/UX and graphic designer
 								</span>{" "}
-								who is originally from China, currently based in Vancouver, BC.
+								who is originally from China, currently based in Vancouver, BC. */}
+								Originally from China and now based in Vancouver, I started in economics before transitioning into
+								{" "}
+								<span
+									style={{
+										backgroundImage:
+											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
+										// backgroundSize: "100% 200%",
+									}}
+								>
+									digital design
+								</span>{" "}
+								and
+								{" "}
+								<span
+									style={{
+										backgroundImage:
+											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
+										// backgroundSize: "100% 200%",
+									}}
+								>
+									marketing
+								</span>{" "}
+								—a blend of analytical thinking and creativity that shapes my approach.
+
 							</Body1>
 							<Body1
 								sx={
@@ -93,9 +117,11 @@ const SelfIntroductionSection = () => {
 									}
 								}
 							>
-								With a solid foundation in economics from the University of
+								{/* With a solid foundation in economics from the University of
 								Victoria, I discovered my passion for new media design
-								post-graduation.
+								post-graduation. */}
+								Through my experiences in content strategy, branding, and digital marketing, I've learned to balance data-driven insights with impactful storytelling. I’m passionate about how design, marketing, and analytics work together to shape brands and create meaningful user experiences.
+
 							</Body1>
 							<Body1
 								sx={
@@ -104,7 +130,7 @@ const SelfIntroductionSection = () => {
 									}
 								}
 							>
-								Committed to creating meaningful, user-centric graphics, I
+								{/* Committed to creating meaningful, user-centric graphics, I
 								infuse each project with{" "}
 								<span
 									style={{
@@ -125,10 +151,20 @@ const SelfIntroductionSection = () => {
 								</span>{" "}
 								mindset. Eager to continually learn and grow in the dynamic
 								world of design, I'm dedicated to bridging cultures and ideas
-								through innovative and impactful visual solutions.
+								through innovative and impactful visual solutions. */}
+								<span
+									style={{
+										backgroundImage:
+											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
+										// backgroundSize: "100% 200%",
+									}}
+								>
+									Always eager to learn and grow
+								</span>{" "}
+								, I thrive on solving challenges and exploring new ideas. Let's connect!
 							</Body1>
 						</Box>
-						<a
+						{/* <a
 							href="/files/resume.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -145,7 +181,7 @@ const SelfIntroductionSection = () => {
 							>
 								View Resume
 							</Button>
-						</a>
+						</a> */}
 
 						<a
 							href="mailto:pearlwang1997@gmail.com"
