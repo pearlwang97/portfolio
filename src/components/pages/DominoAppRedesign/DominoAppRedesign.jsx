@@ -1,18 +1,21 @@
 import React from "react";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
-import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
+import {
+	getDominoAppRedesignNavGroups,
+	dominoAppRedesignOverviewItems,
+	dominoAppRedesignProject,
+} from "../../../content/projects/dominoAppRedesignContent";
 
 const DominoAppRedesign = () => {
+	const navGroups = getDominoAppRedesignNavGroups({
+		OverviewList: () => (
+			<ProjectOverviewList listItems={dominoAppRedesignOverviewItems} />
+		),
+	});
+
 	return (
-		<div>
-			<ProjectBanner
-				title="Domino’s APP Redesign"
-				imageSrc="/images/project-1-banner.webp"
-			/>
-			<OverviewSection />
-			<ProjectNavButtons prevLink="/cupid-lyric-video" nextLink="/bloom-app-design" />
-		</div>
+		<ProjectDetailTemplate {...dominoAppRedesignProject} navGroups={navGroups} />
 	);
 };
 
