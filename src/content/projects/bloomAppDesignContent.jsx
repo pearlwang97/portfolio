@@ -1,42 +1,52 @@
 import React from "react";
-
 import { Grid } from "@mui/material";
-import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
 import Body1 from "components/shared/Body1/Body1";
 import Image from "components/shared/Image/Image";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
-import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
-const OverviewSection = () => {
+import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
 
-	const navItems = [
-		{ to: "1", label: "overview" },
-		{ to: "2", label: "design process" },
-		{ to: "6", label: "deliverable" },
-	];
-	const listItems = [
-		{ key: "TIMELINE", value: "JUL - AUG 2023" },
-		{ key: "ROLE", value: "UI/UX Designer" },
-		{ key: "Tools", value: "Figma, Illustrator" },
-	];
-	return (
-		<ProjectContentContainer navItems={navItems}>
-					<ProjectStepSection title="Overview" id="1">
-						<ProjectOverviewList listItems={listItems} />
-						<Grid container justifyContent="space-between">
-							<Grid item xs={12}>
-								<Body1>
-									The Bloom project aimed to design a user-friendly flower
-									delivery app, focusing on delivering a visually appealing and
-									intuitive interface for users. As the UI designer on the team,
-									I played a role in shaping the visual aspects of the app,
-									utilizing Figma to bring the concept to life. This project was
-									executed following the structured phases of the waterfall
-									methodology, ensuring a systematic approach from concept to
-									final design.
-								</Body1>
-							</Grid>
+export const bloomAppDesignProject = {
+	title: "Bloom App Design",
+	imageSrc: "/images/bloom-app-banner.webp",
+	prevLink: "/furniture-banner-design",
+	nextLink: "/furniture-banner-design",
+};
+
+export const bloomAppDesignOverviewItems = [
+	{ key: "TIMELINE", value: "JUL - AUG 2023" },
+	{ key: "ROLE", value: "UI/UX Designer" },
+	{ key: "Tools", value: "Figma, Illustrator" },
+];
+
+export const getBloomAppDesignNavGroups = ({ OverviewList }) => {
+	return [
+		{
+			id: "1",
+			label: "overview",
+			render: () => (
+				<ProjectStepSection title="Overview" id="1">
+					<OverviewList />
+					<Grid container justifyContent="space-between">
+						<Grid item xs={12}>
+							<Body1>
+								The Bloom project aimed to design a user-friendly flower
+								delivery app, focusing on delivering a visually appealing and
+								intuitive interface for users. As the UI designer on the team,
+								I played a role in shaping the visual aspects of the app,
+								utilizing Figma to bring the concept to life. This project was
+								executed following the structured phases of the waterfall
+								methodology, ensuring a systematic approach from concept to
+								final design.
+							</Body1>
 						</Grid>
-					</ProjectStepSection>
+					</Grid>
+				</ProjectStepSection>
+			),
+		},
+		{
+			id: "2",
+			label: "design process",
+			render: () => (
+				<>
 					<ProjectStepSection title="Initiation" id="2">
 						<Grid container justifyContent="space-between">
 							<Body1 sx={{ marginTop: "1rem" }}>
@@ -105,20 +115,26 @@ const OverviewSection = () => {
 							</Body1>
 						</Grid>
 					</ProjectStepSection>
-					<ProjectStepSection title="Deliverable" id="6">
-						<Grid container justifyContent="space-between">
-							<Image
-								src="/images/project-2-gallery-8.png"
-								alt="bloom app deliverable screens"
-								sx={{
-									marginBottom: "10px",
-									width: "100%",
-								}}
-							/>
-						</Grid>
-					</ProjectStepSection>
-		</ProjectContentContainer>
-	);
+				</>
+			),
+		},
+		{
+			id: "6",
+			label: "deliverable",
+			render: () => (
+				<ProjectStepSection title="Deliverable" id="6">
+					<Grid container justifyContent="space-between">
+						<Image
+							src="/images/project-2-gallery-8.png"
+							alt="bloom app deliverable screens"
+							sx={{
+								marginBottom: "10px",
+								width: "100%",
+							}}
+						/>
+					</Grid>
+				</ProjectStepSection>
+			),
+		},
+	];
 };
-
-export default OverviewSection;

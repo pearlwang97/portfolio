@@ -1,21 +1,21 @@
 import React from "react";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
-import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
+import {
+	bloomAppDesignOverviewItems,
+	bloomAppDesignProject,
+	getBloomAppDesignNavGroups,
+} from "../../../content/projects/bloomAppDesignContent";
 
 const BloomAppDesign = () => {
+	const navGroups = getBloomAppDesignNavGroups({
+		OverviewList: () => (
+			<ProjectOverviewList listItems={bloomAppDesignOverviewItems} />
+		),
+	});
+
 	return (
-		<div>
-			<ProjectBanner
-				title="Bloom App Design"
-				imageSrc="/images/bloom-app-banner.webp"
-			/>
-			<OverviewSection />
-			<ProjectNavButtons
-				prevLink="/furniture-banner-design"
-				nextLink="/furniture-banner-design"
-			/>
-		</div>
+		<ProjectDetailTemplate {...bloomAppDesignProject} navGroups={navGroups} />
 	);
 };
 
