@@ -10,7 +10,6 @@ import { profile, schemaSocialLinks } from "components/constants/profile";
 import { COLORS, RADIUS } from "components/constants/styleTokens";
 import { projectRegistry } from "content/projects/projectRegistry";
 
-import "./App.css";
 import { createGlobalStyle } from "styled-components";
 
 const HomePage = lazy(() => import("./components/pages/HomePage/HomePage"));
