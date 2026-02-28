@@ -143,7 +143,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								navigation, and overall ineffectiveness.
 							</Body1>
 							<Grid container justifyContent="space-between">
-								<Grid xs={4}>
+								<Grid item xs={4}>
 									<Body1
 										sx={{
 											fontWeight: "bold",
@@ -152,7 +152,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 										Outdated interface
 									</Body1>
 								</Grid>
-								<Grid xs={7}>
+								<Grid item xs={7}>
 									<Body1>
 										The overall appearance is unappealing, lacking visual
 										attractiveness and a modern feel.
@@ -160,7 +160,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								</Grid>
 							</Grid>
 							<Grid container justifyContent="space-between">
-								<Grid xs={4}>
+								<Grid item xs={4}>
 									<Body1
 										sx={{
 											fontWeight: "bold",
@@ -169,7 +169,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 										Overwhelming Layout
 									</Body1>
 								</Grid>
-								<Grid xs={7}>
+								<Grid item xs={7}>
 									<Body1>
 										The app is cluttered with text-heavy sections, making quick
 										scanning and understanding difficult for users.
@@ -177,7 +177,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								</Grid>
 							</Grid>
 							<Grid container justifyContent="space-between">
-								<Grid xs={4}>
+								<Grid item xs={4}>
 									<Body1
 										sx={{
 											marginTop: "20px",
@@ -187,7 +187,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 										Ineffective design elements
 									</Body1>
 								</Grid>
-								<Grid xs={7}>
+								<Grid item xs={7}>
 									<Body1>
 										Inappropriate use of font sizes, spacing, and margins blurs
 										the distinction between primary and secondary information.{" "}
@@ -195,7 +195,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								</Grid>
 							</Grid>
 							<Grid container justifyContent="space-between">
-								<Grid xs={4}>
+								<Grid item xs={4}>
 									<Body1
 										sx={{
 											fontWeight: "bold",
@@ -204,7 +204,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 										Misleading CTA
 									</Body1>
 								</Grid>
-								<Grid xs={7}>
+								<Grid item xs={7}>
 									<Body1>
 										Some CTAs are not adequately highlighted, while other
 										elements misleadingly appear interactive, confusing users.
@@ -212,7 +212,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								</Grid>
 							</Grid>
 							<Grid container justifyContent="space-between">
-								<Grid xs={4}>
+								<Grid item xs={4}>
 									<Body1
 										sx={{
 											fontWeight: "bold",
@@ -221,7 +221,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 										Non-intuitive Navigation
 									</Body1>
 								</Grid>
-								<Grid xs={7}>
+								<Grid item xs={7}>
 									<Body1>
 										The reliance on a hamburger menu obscures access to key
 										features, making navigation less intuitive.

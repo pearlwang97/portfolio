@@ -4,7 +4,9 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import H2 from "components/shared/H2/H2";
 
-const StyledSection = styled(Box)(({ theme, noPadding }) => ({
+const StyledSection = styled(Box, {
+	shouldForwardProp: (prop) => prop !== "noPadding",
+})(({ theme, noPadding }) => ({
 	textAlign: "left",
 	padding: "0",
 	[theme.breakpoints.up("sm")]: {
