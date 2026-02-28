@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Portfolio Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React 18 portfolio site built on Create React App. It uses `react-router-dom`, `@mui/material`, `styled-components`, `framer-motion`, and `gsap`.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+- `src/App.jsx`: app shell, route registration, metadata, header/footer.
+- `src/content/projects`: project content files for portfolio detail pages.
+- `src/content/projects/projectRegistry.js`: single source of truth for project routes, prev/next links, and project card data.
+- `src/components/pages/ProjectDetailPage/ProjectDetailPage.jsx`: shared detail route that renders any registered project.
+- `src/components/shared/ProjectDetailTemplate/ProjectDetailTemplate.jsx`: shared project detail layout and section rendering.
+- `src/components/shared/ProjectCard/ProjectCard.jsx`: shared project card used by both the home page and projects page.
 
-### `npm start`
+## Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+Start the dev server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm start
+```
 
-### `npm run build`
+Build for production:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run tests:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm test -- --watchAll=false
+```
 
-### `npm run eject`
+Deploy to GitHub Pages:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run deploy
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Adding Or Updating Projects
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Portfolio project data is registry-driven.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Add or update the project content file in `src/content/projects`.
+2. Export a default object that includes:
+   - route metadata (`slug`, `route`, `category`)
+   - card metadata (`cardTitle` optional, `cardImage`, `cardDescription`, `tools`)
+   - detail metadata (`project`, `overviewItems`, `getNavGroups`)
+3. Register the content module in `src/content/projects/projectRegistry.js`.
 
-## Learn More
+The registry automatically derives:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- project detail routes in `src/App.jsx`
+- `prevLink` / `nextLink`
+- project card data for the home page and projects page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Validation And Tests
 
-### Code Splitting
+The project registry includes development-only validation. In non-production environments, invalid project data will throw during app startup.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Current smoke coverage includes:
 
-### Analyzing the Bundle Size
+- `src/content/projects/projectRegistry.test.js`: registry integrity and card alignment
+- `src/components/pages/ProjectDetailPage/ProjectDetailPage.test.jsx`: shared detail page and shared project card rendering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+When changing project data, routes, or shared project UI, run both:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm test -- --watchAll=false
+npm run build
+```
