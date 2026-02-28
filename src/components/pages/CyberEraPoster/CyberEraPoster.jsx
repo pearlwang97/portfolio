@@ -1,18 +1,21 @@
 import React from "react";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
-import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
+import {
+	cyberEraPosterOverviewItems,
+	cyberEraPosterProject,
+	getCyberEraPosterNavGroups,
+} from "../../../content/projects/cyberEraPosterContent";
 
 const CyberEraPoster = () => {
+	const navGroups = getCyberEraPosterNavGroups({
+		OverviewList: () => (
+			<ProjectOverviewList listItems={cyberEraPosterOverviewItems} />
+		),
+	});
+
 	return (
-		<div>
-			<ProjectBanner
-				title="Cyber Era Poster Design"
-				imageSrc="/images/cyber-era-1.jpg"
-			/>
-			<OverviewSection />
-			<ProjectNavButtons prevLink="/chinese-zodiac" nextLink="/summit-promotional-video" />
-		</div>
+		<ProjectDetailTemplate {...cyberEraPosterProject} navGroups={navGroups} />
 	);
 };
 

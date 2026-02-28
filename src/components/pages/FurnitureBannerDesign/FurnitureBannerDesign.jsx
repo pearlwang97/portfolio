@@ -1,18 +1,24 @@
 import React from "react";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
-import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
+import {
+	furnitureBannerDesignOverviewItems,
+	furnitureBannerDesignProject,
+	getFurnitureBannerDesignNavGroups,
+} from "../../../content/projects/furnitureBannerDesignContent";
 
 const FurnitureBannerDesign = () => {
+	const navGroups = getFurnitureBannerDesignNavGroups({
+		OverviewList: () => (
+			<ProjectOverviewList listItems={furnitureBannerDesignOverviewItems} />
+		),
+	});
+
 	return (
-		<div>
-			<ProjectBanner
-				title="Weekends Catalog &  Campaign"
-				imageSrc="/images/weekend-banner.webp"
-			/>
-			<OverviewSection />
-			<ProjectNavButtons prevLink="/bloom-app-design" nextLink="/bloom-box-logo" />
-		</div>
+		<ProjectDetailTemplate
+			{...furnitureBannerDesignProject}
+			navGroups={navGroups}
+		/>
 	);
 };
 

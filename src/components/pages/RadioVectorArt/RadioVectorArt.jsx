@@ -1,18 +1,21 @@
 import React from "react";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
-import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
+import {
+	getRadioVectorArtNavGroups,
+	radioVectorArtOverviewItems,
+	radioVectorArtProject,
+} from "../../../content/projects/radioVectorArtContent";
 
 const RadioVectorArt = () => {
+	const navGroups = getRadioVectorArtNavGroups({
+		OverviewList: () => (
+			<ProjectOverviewList listItems={radioVectorArtOverviewItems} />
+		),
+	});
+
 	return (
-		<div>
-			<ProjectBanner
-				title="2D Realistic Radio Vector Art"
-				imageSrc="/images/design-3.webp"
-			/>
-			<OverviewSection />
-			<ProjectNavButtons prevLink="/bloom-box-logo" nextLink="/chinese-zodiac" />
-		</div>
+		<ProjectDetailTemplate {...radioVectorArtProject} navGroups={navGroups} />
 	);
 };
 

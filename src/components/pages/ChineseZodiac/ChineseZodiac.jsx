@@ -1,18 +1,21 @@
 import React from "react";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
-import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
+import {
+	chineseZodiacOverviewItems,
+	chineseZodiacProject,
+	getChineseZodiacNavGroups,
+} from "../../../content/projects/chineseZodiacContent";
 
 const ChineseZodiac = () => {
+	const navGroups = getChineseZodiacNavGroups({
+		OverviewList: () => (
+			<ProjectOverviewList listItems={chineseZodiacOverviewItems} />
+		),
+	});
+
 	return (
-		<div>
-			<ProjectBanner
-				title="Papercut Illustrations: Chinese Zodiac Collection"
-				imageSrc="/images/chinese-zodiac-banner.webp"
-			/>
-			<OverviewSection />
-			<ProjectNavButtons prevLink="/bloom-box-logo" nextLink="/cyber-era-poster" />
-		</div>
+		<ProjectDetailTemplate {...chineseZodiacProject} navGroups={navGroups} />
 	);
 };
 
