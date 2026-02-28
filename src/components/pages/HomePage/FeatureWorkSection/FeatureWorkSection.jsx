@@ -1,43 +1,35 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
-import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import ProjectCard from "components/shared/ProjectCard/ProjectCard";
 import Link from "components/shared/StyledLink/StyledLink";
 import AnimatedButton from "components/shared/AnimatedButton/AnimatedButton";
 import { projects } from "components/constants/constants";
+import {
+	SECTION_HEADERS,
+	SECTION_LAYOUTS,
+	SECTION_MARGINS,
+} from "components/constants/styleTokens";
+import SectionHeader from "components/shared/SectionHeader/SectionHeader";
 
 const FeatureWorksSection = () => {
 	const FeatureWorkItems = projects.slice(0, 4);
 	return (
 		<Box
 			sx={{
-				marginBottom: {
-					xs: "75px",
-					md: "100px",
-					lg: "150px",
-				},
+				marginBottom: SECTION_MARGINS.featured,
 			}}
 		>
 			<MainContainer
 				sx={{
-					display: "flex",
-					flexWrap: "wrap",
+					...SECTION_LAYOUTS.wrapped,
 				}}
 			>
-				<H2
-					sx={{
-						width: "100%",
-						marginBottom: {
-							xs: "25px",
-							sm: "25px",
-							md: "50px",
-							lg: "75px",
-						},
-					}}
-				>
-					Featured Works
-				</H2>
+				<SectionHeader
+					title="Featured Works"
+					titleMargin={null}
+					titleSx={{ marginBottom: SECTION_HEADERS.featureTitleMargin }}
+				/>
 				<Grid container justifyContent={{ xs: "center", md: "space-between" }}>
 					{FeatureWorkItems.map((item) => (
 						<ProjectCard key={item.title} project={item} variant="featured" />
@@ -47,12 +39,12 @@ const FeatureWorksSection = () => {
 					sx={{
 						display: "flex",
 						justifyContent: "center",
-						width: "100%", // take full width of the parent
+						width: "100%",
 					}}
 				>
-					<Link sx={{marginTop: "30px"}}to="/works">
+					<Link sx={{ marginTop: "30px" }} to="/works">
 						<AnimatedButton>
-							MORE WORKS 
+							MORE WORKS
 						</AnimatedButton>
 					</Link>
 				</Box>

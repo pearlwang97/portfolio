@@ -7,6 +7,7 @@ import Image from "components/shared/Image/Image";
 import Body1 from "components/shared/Body1/Body1";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
+import { SECTION_LAYOUTS, SECTION_SPACING } from "components/constants/styleTokens";
 
 const StyledMainContainer = styled(Box)(({ theme, isSmallScreen }) => ({
 	width: "100%",
@@ -137,11 +138,9 @@ const FloatingGallery = () => {
 	return (
 		<MainContainer
 			sx={{
-				width: "100%",
-				height: "100%",
-				backgroundColor: "#fefcf3",
-				color: "#250d00",
+				...SECTION_LAYOUTS.surface,
 				paddingTop: "100px",
+				paddingBottom: SECTION_SPACING,
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",

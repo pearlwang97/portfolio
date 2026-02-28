@@ -1,12 +1,16 @@
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import Divider from "components/shared/Divider/Divider";
-import H2 from "components/shared/H2/H2";
 import H3 from "components/shared/H3/H3";
 import H4 from "components/shared/H4/H4";
 import H5 from "components/shared/H5/H5";
 import Image from "components/shared/Image/Image";
+import SectionHeader from "components/shared/SectionHeader/SectionHeader";
+import {
+	SECTION_LAYOUTS,
+	SECTION_MARGINS,
+	TEXT_SCALES,
+} from "components/constants/styleTokens";
 
 const Time = styled(H5)({
 	fontStyle: "italic",
@@ -31,41 +35,11 @@ const EducationSection = () => {
 	return (
 		<MainContainer
 			sx={{
-				marginBottom: {
-					xs: "20px",
-					sm: "30px",
-					md: "40px",
-					lg: "50px",
-				},
-				display: "flex",
-				flexWrap: "wrap",
+				marginBottom: SECTION_MARGINS.compact,
+				...SECTION_LAYOUTS.wrapped,
 			}}
 		>
-			<Box sx={{ width: "100%" }}>
-				<Divider
-					sx={{
-						width: {
-							xs: "50%",
-							md: "40%",
-							lg: "25%",
-						},
-					}}
-					alignLeft={true}
-				/>
-				<H2
-					sx={{
-						textAlign: "left",
-						margin: {
-							xs: "20px 0",
-							sm: "20px 0",
-							md: "40px 0",
-							lg: "40px 0",
-						},
-					}}
-				>
-					Education
-				</H2>
-			</Box>
+			<SectionHeader title="Education" showDivider alignLeft />
 
 			<Grid
 				container
@@ -86,25 +60,14 @@ const EducationSection = () => {
 					/>
 					<H3
 						sx={{
-							fontSize: {
-								xs: "1.125rem",
-								sm: "1.125rem",
-								md: "1.25rem",
-								lg: "1.375rem",
-							},
-							fontWeight: "550",
+							...TEXT_SCALES.detailTitle,
 						}}
 					>
 						New Media Design & Web Development
 					</H3>
 					<Company
 						sx={{
-							fontSize: {
-								xs: "1.025rem",
-								sm: "1.025rem",
-								md: "1.15rem",
-								lg: "1.275rem",
-							},
+							...TEXT_SCALES.detailSubtitle,
 						}}
 					>
 						British Columbia Institute of Technology
@@ -118,25 +81,14 @@ const EducationSection = () => {
 					/>
 					<H3
 						sx={{
-							fontSize: {
-								xs: "1.125rem",
-								sm: "1.125rem",
-								md: "1.25rem",
-								lg: "1.375rem",
-							},
-							fontWeight: "550",
+							...TEXT_SCALES.detailTitle,
 						}}
 					>
 						Bachelor in Economics
 					</H3>
 					<Company
 						sx={{
-							fontSize: {
-								xs: "1.025rem",
-								sm: "1.025rem",
-								md: "1.15rem",
-								lg: "1.275rem",
-							},
+							...TEXT_SCALES.detailSubtitle,
 						}}
 					>
 						University of Victoria

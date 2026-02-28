@@ -3,9 +3,13 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Carousel from "react-material-ui-carousel";
 import Body1 from "components/shared/Body1/Body1";
-import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
+import SectionHeader from "components/shared/SectionHeader/SectionHeader";
+import {
+	SECTION_LAYOUTS,
+	SECTION_SPACING,
+} from "components/constants/styleTokens";
 
 const CarouselImage = styled(Image)({
 	width: "100%",
@@ -52,29 +56,13 @@ const AboutMeCarousel = () => {
 	return (
 		<Box
 			sx={{
-				width: "100%",
-				height: "100%",
-				backgroundColor: "#fefcf3",
-				color: "#250d00",
-				marginBottom: { xs: "50px", md: "75px", lg: "100px" },
+				...SECTION_LAYOUTS.surface,
+				marginBottom: SECTION_SPACING,
 			}}
 		>
 			<MainContainer>
-				<Box
-					sx={{
-						marginBottom: "50px",
-					}}
-				>
-					<H2
-						sx={{
-							margin: {
-								xs: "20px 0",
-								sm: "20px 0",
-								md: "40px 0",
-								lg: "40px 0",
-							},
-						}}
-					>More About Me</H2>
+				<Box sx={{ marginBottom: "50px" }}>
+					<SectionHeader title="More About Me" />
 					<Body1>
 						I have always been drawn to various forms of creative expression. In
 						my free time, you can find me playing board games, engaging in crafts

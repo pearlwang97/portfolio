@@ -1,10 +1,13 @@
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import H2 from "components/shared/H2/H2";
 import IconTooltip from "components/shared/IconTooltip/IconTooltip";
-import Divider from "components/shared/Divider/Divider";
 import Image from "components/shared/Image/Image";
+import SectionHeader from "components/shared/SectionHeader/SectionHeader";
+import {
+	SECTION_LAYOUTS,
+	SECTION_SPACING,
+} from "components/constants/styleTokens";
 
 const StyledIcon = styled(Image)(({ theme }) => ({
 	height: "35px",
@@ -21,40 +24,11 @@ const SkillSection = () => {
 	return (
 		<MainContainer
 			sx={{
-				marginBottom: {
-					xs: "50px",
-					md: "75px",
-					lg: "100px",
-				},
-				display: "flex",
-				flexWrap: "wrap",
+				marginBottom: SECTION_SPACING,
+				...SECTION_LAYOUTS.wrapped,
 			}}
 		>
-			<Box sx={{ width: "100%" }}>
-				<Divider
-					sx={{
-						width: {
-							xs: "50%",
-							md: "40%",
-							lg: "25%",
-						},
-					}}
-					alignLeft={true}
-				/>
-				<H2
-					sx={{
-						margin: {
-							xs: "20px 0",
-							sm: "20px 0",
-							md: "40px 0",
-							lg: "40px 0",
-						},
-						textAlign: "left",
-					}}
-				>
-					Skills
-				</H2>
-			</Box>
+			<SectionHeader title="Skills" showDivider alignLeft />
 			<Grid
 				container
 				sx={{

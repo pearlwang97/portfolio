@@ -7,6 +7,12 @@ import Body1 from "components/shared/Body1/Body1";
 import Button from "components/shared/Button/Button";
 import SocialLinks from "components/shared/SocialLinks/SocialLinks";
 import {
+	COLORS,
+	SECTION_LAYOUTS,
+	SECTION_SPACING,
+	TEXT_HIGHLIGHTS,
+} from "components/constants/styleTokens";
+import {
 	formatNaturalList,
 	profile,
 	siteContent,
@@ -25,20 +31,16 @@ const H1 = styled("h1")(({ theme }) => ({
 	fontFamily: "utopia-std, serif",
 }));
 
+const HighlightText = styled("span")(TEXT_HIGHLIGHTS.accentUnderline);
+
 const SelfIntroductionSection = () => {
 	return (
 		<MainContainer
 			sx={{
-				marginBottom: {
-					xs: "50px",
-					md: "75px",
-					lg: "100px",
-				},
-				display: "flex",
-				flexWrap: "wrap",
+				marginBottom: SECTION_SPACING,
+				...SECTION_LAYOUTS.wrapped,
 			}}
 		>
-			<Grid container></Grid>
 			<Grid
 				container
 				sx={{
@@ -97,49 +99,25 @@ const SelfIntroductionSection = () => {
 								who is originally from China, currently based in Vancouver, BC. */}
 								Originally from {profile.originCountry} and now based in {profile.currentLocation}, I started in {profile.previousField} before transitioning into
 								{" "}
-								<span
-									style={{
-										backgroundImage:
-											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
-										// backgroundSize: "100% 200%",
-									}}
-								>
+								<HighlightText>
 									{profile.primaryDisciplines[0]}
-								</span>{" "}
+								</HighlightText>{" "}
 								and
 								{" "}
-								<span
-									style={{
-										backgroundImage:
-											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
-										// backgroundSize: "100% 200%",
-									}}
-								>
+								<HighlightText>
 									{profile.primaryDisciplines[1]}
-								</span>{" "}
+								</HighlightText>{" "}
 								—a blend of analytical thinking and creativity that shapes my approach.
 
 							</Body1>
-							<Body1
-								sx={
-									{
-										// marginBottom: "20px",
-									}
-								}
-							>
+							<Body1>
 								{/* With a solid foundation in economics from the University of
 								Victoria, I discovered my passion for new media design
 								post-graduation. */}
 								Through my experiences in content strategy, branding, and digital marketing, I've learned to balance data-driven insights with impactful storytelling. I’m passionate about how {formatNaturalList(profile.coreStrengths)} work together to shape brands and create meaningful user experiences.
 
 							</Body1>
-							<Body1
-								sx={
-									{
-										// marginBottom: "20px",
-									}
-								}
-							>
+							<Body1>
 								{/* Committed to creating meaningful, user-centric graphics, I
 								infuse each project with{" "}
 								<span
@@ -162,15 +140,9 @@ const SelfIntroductionSection = () => {
 								mindset. Eager to continually learn and grow in the dynamic
 								world of design, I'm dedicated to bridging cultures and ideas
 								through innovative and impactful visual solutions. */}
-								<span
-									style={{
-										backgroundImage:
-											"linear-gradient(180deg, transparent 50%, rgba(219, 163, 154, 0.6) 50%)",
-										// backgroundSize: "100% 200%",
-									}}
-								>
+								<HighlightText>
 									{siteContent.about.growthHighlight}
-								</span>{" "}
+								</HighlightText>{" "}
 								, I thrive on solving challenges and exploring new ideas. Let's connect!
 							</Body1>
 						</Box>
@@ -196,12 +168,12 @@ const SelfIntroductionSection = () => {
 						<a href={profile.mailto}>
 							<Button
 								sx={{
-									border: "1px solid #dba39a",
+									border: `1px solid ${COLORS.accent}`,
 									backgroundColor: "transparent",
-									color: "#d5927c",
+									color: COLORS.accentText,
 									"&:hover": {
-										backgroundColor: "#dba39a",
-										color: "white",
+										backgroundColor: COLORS.accent,
+										color: COLORS.white,
 									},
 								}}
 							>
@@ -209,7 +181,7 @@ const SelfIntroductionSection = () => {
 							</Button>
 						</a>
 						<SocialLinks
-							iconColor="#d5927c"
+							iconColor={COLORS.accentText}
 							sx={{
 								marginTop: "20px",
 							}}
