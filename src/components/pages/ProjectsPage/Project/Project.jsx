@@ -9,7 +9,7 @@ import StyledLink from "components/shared/StyledLink/StyledLink";
 
 const Project = ({ title, image, link, description, category, tools }) => {
 	const isVideo = category === "Motion Graphic";
-	console.log(image);
+
 	return (
 		<Grid
 			item
@@ -71,9 +71,10 @@ const Project = ({ title, image, link, description, category, tools }) => {
 								}}
 								src={image}
 								title="YouTube video player"
-								frameborder="0"
+								frameBorder="0"
+								loading="lazy"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen
+								allowFullScreen
 							></iframe>
 						</Box>
 					)}
@@ -111,7 +112,7 @@ const Project = ({ title, image, link, description, category, tools }) => {
 					<StyledLink to={link}>
 						<Body1>{description}</Body1>
 					</StyledLink>
-					{tools.map((tool, index) => (
+					{tools.map((tool) => (
 						<Chip
 							variant="outlined"
 							label={tool}

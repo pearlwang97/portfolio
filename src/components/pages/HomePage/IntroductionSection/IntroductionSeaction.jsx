@@ -51,7 +51,7 @@ const StyledHello = styled("p")(({ theme }) => ({
 	},
 }));
 
-const StyledName = styled("p")(({ theme }) => ({
+const StyledName = styled("div")(({ theme }) => ({
 	backgroundColor: "#DBA39A",
 	color: "#FEFCF3",
 	display: "inline-block",

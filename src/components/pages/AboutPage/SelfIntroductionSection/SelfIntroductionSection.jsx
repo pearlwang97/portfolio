@@ -5,6 +5,8 @@ import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
 import Body1 from "components/shared/Body1/Body1";
 import Button from "components/shared/Button/Button";
+import SocialLinks from "components/shared/SocialLinks/SocialLinks";
+import { profile } from "components/constants/profile";
 
 const H1 = styled("h1")(({ theme }) => ({
 	fontSize: "2.5rem",
@@ -182,11 +184,7 @@ const SelfIntroductionSection = () => {
 							</Button>
 						</a> */}
 
-						<a
-							href="mailto:pearlwang1997@gmail.com"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<a href={profile.mailto}>
 							<Button
 								sx={{
 									border: "1px solid #dba39a",
@@ -201,6 +199,12 @@ const SelfIntroductionSection = () => {
 								Contact Me
 							</Button>
 						</a>
+						<SocialLinks
+							iconColor="#d5927c"
+							sx={{
+								marginTop: "20px",
+							}}
+						/>
 					</Grid>
 				</Grid>
 			</Grid>

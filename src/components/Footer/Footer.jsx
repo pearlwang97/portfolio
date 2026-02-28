@@ -4,16 +4,13 @@ import { styled } from "@mui/material/styles";
 import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import H1 from "components/shared/H1/H1";
-import LinkedInIcon from "components/Icons/LinkedInIcon";
-import InstagramIcon from "components/Icons/InstagramIcon";
-import YoutubeIcon from "components/Icons/YoutubeIcon";
-import MailIcon from "components/Icons/MailIcon";
-import FacebookIcon from "components/Icons/FacebookIcon";
+import SocialLinks from "components/shared/SocialLinks/SocialLinks";
+import { profile } from "components/constants/profile";
 
-const Link = styled("a")(({ theme }) => ({
+const Link = styled("a")({
 	color: "inherit",
 	textDecoration: "none",
-}));
+});
 
 const Footer = () => {
 	return (
@@ -61,46 +58,17 @@ const Footer = () => {
 					Currently looking for new opportunities and would love to connect.
 					Please don't hesitate to{" "}
 					<Link
-						href="mailto:pearlwang1997@gmail.com"
-						target="_blank"
+						href={profile.mailto}
 						sx={{ textDecoration: "underline" }}
 					>
 						send me an email.
 					</Link>
 				</Body1>
-				<Box
+				<SocialLinks
 					sx={{
 						margin: "30px 0",
 					}}
-				>
-					<Link href="https://www.linkedin.com/in/peirong-wang-123a83208/">
-						<LinkedInIcon
-							sx={{ fontSize: 30, marginRight: "10px" }}
-							fill="white"
-						/>
-					</Link>
-					<Link href="https://www.instagram.com/_w_ong/" target="_blank">
-						<InstagramIcon
-							sx={{ fontSize: 30, marginRight: "10px" }}
-							fill="white"
-						/>
-					</Link>
-					<Link href="https://www.youtube.com/@pearlwang9426" target="_blank">
-						<YoutubeIcon
-							sx={{ fontSize: 30, marginRight: "10px" }}
-							fill="white"
-						/>
-					</Link>
-					<Link href="https://www.facebook.com/pearl.wang.10" target="_blank">
-						<FacebookIcon
-							sx={{ fontSize: 30, marginRight: "10px" }}
-							fill="white"
-						/>
-					</Link>
-					<Link href="mailto:pearlwang1997@gmail.com" target="_blank">
-						<MailIcon sx={{ fontSize: 30, marginRight: "10px" }} fill="white" />
-					</Link>
-				</Box>
+				/>
 				<Body1
 					sx={{
 						margin: "20px 0 0 0",

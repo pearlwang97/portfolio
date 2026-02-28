@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ScrollTop from "components/shared/ScrollUp/ScrollUp";
 import ScrollToTopOnRouteChange from "components/shared/ScrollToTopOnRouteChange/ScrollToTopOnRouteChange";
+import { profile, schemaSocialLinks } from "components/constants/profile";
 import { COLORS, RADIUS } from "components/constants/styleTokens";
 
 import "./App.css";
@@ -67,16 +68,12 @@ function App() {
 	const personSchema = {
 		"@context": "http://schema.org",
 		"@type": "Person",
-		name: "Peirong Wang",
-		url: "https://portfolio.peirongwang.com",
-		image: "https://portfolio.peirongwang.com/logo.png", // Replace with your actual image URL
-		jobTitle: "New Media and Web Development Student",
-		alumniOf: "British Columbia Institute of Technology",
-		sameAs: [
-			"https://www.instagram.com/_w_ong/",
-			"https://www.youtube.com/@pearlwang9426",
-			"https://www.linkedin.com/in/peirong-wang-123a83208",
-		],
+		name: profile.name,
+		url: profile.url,
+		image: profile.image,
+		jobTitle: profile.jobTitle,
+		alumniOf: profile.alumniOf,
+		sameAs: schemaSocialLinks,
 		seeks: {
 			"@type": "JobPosting",
 			title: "Job Opportunities in Web Development and New Media", // Modify this based on the type of job you're seeking

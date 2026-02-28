@@ -1,32 +1,16 @@
 import React from "react";
-import SvgIcon from "@mui/material/SvgIcon";
-import { styled } from "@mui/material/styles";
+import SocialIconBase from "components/Icons/SocialIconBase";
 
-const StyledSvgIcon = styled(SvgIcon)({
-	"& path": {
-		transition: "fill 0.3s ease-in-out",
-	},
-	"&:hover path": {
-		fill: "#dcdddd",
-	},
-});
-
-const YoutubeIcon = ({ sx, fill }) => {
+const YoutubeIcon = ({ sx, fill, cutoutFill = "white" }) => {
 	return (
-		<StyledSvgIcon
-			viewBox="0 0 48 48"
-			sx={{ ...sx }}
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
+		<SocialIconBase sx={sx}>
+			<circle cx="24" cy="24" r="24" fill={fill} />
+			<rect x="11.2" y="15.2" width="25.6" height="18.4" rx="4.2" fill={cutoutFill} />
 			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM34.0016 15.7493C35.1031 16.0516 35.9706 16.9422 36.265 18.0732C36.8 20.123 36.8 24.4 36.8 24.4C36.8 24.4 36.8 28.6768 36.265 30.7268C35.9706 31.8578 35.1031 32.7484 34.0016 33.0508C32.0054 33.6 24 33.6 24 33.6C24 33.6 15.9946 33.6 13.9983 33.0508C12.8967 32.7484 12.0292 31.8578 11.7348 30.7268C11.2 28.6768 11.2 24.4 11.2 24.4C11.2 24.4 11.2 20.123 11.7348 18.0732C12.0292 16.9422 12.8967 16.0516 13.9983 15.7493C15.9946 15.2 24 15.2 24 15.2C24 15.2 32.0054 15.2 34.0016 15.7493Z"
-				fill="white"
+				d="M21.6001 28.8V20.8L28.0001 24.8001L21.6001 28.8Z"
+				fill={fill}
 			/>
-			<path d="M21.6001 28.8V20.8L28.0001 24.8001L21.6001 28.8Z" fill={fill} />
-		</StyledSvgIcon>
+		</SocialIconBase>
 	);
 };
 
