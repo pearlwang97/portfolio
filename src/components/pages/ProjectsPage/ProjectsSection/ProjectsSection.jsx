@@ -3,7 +3,7 @@ import { Box, Grid, Tabs, Tab } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import Project from "components/pages/ProjectsPage/Project/Project";
+import ProjectCard from "components/shared/ProjectCard/ProjectCard";
 import { projects } from "components/constants/constants";
 // import ScrollDownIndicator from "components/shared/ScrollDownIndicator/ScrollDownIndicator";
 
@@ -99,15 +99,7 @@ const ProjectsSection = () => {
 				</Tabs>
 				<Grid container justifyContent={{ xs: "center", md: "space-between" }}>
 					{filteredProjects.map((item) => (
-						<Project
-							key={item.title}
-							title={item.title}
-							image={item.image}
-							link={item.link}
-							description={item.description}
-							category={item.category}
-							tools={item.tools}
-						/>
+						<ProjectCard key={item.title} project={item} />
 					))}
 				</Grid>
 			</MainContainer>

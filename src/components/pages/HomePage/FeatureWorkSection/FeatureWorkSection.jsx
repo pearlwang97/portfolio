@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Grid } from "@mui/material";
 import H2 from "components/shared/H2/H2";
 import MainContainer from "components/shared/MainContainer/MainContainer";
-import FeatureWorkItem from "components/pages/HomePage/FeatureWorksItem/FeatureWorksItem";
+import ProjectCard from "components/shared/ProjectCard/ProjectCard";
 import Link from "components/shared/StyledLink/StyledLink";
 import AnimatedButton from "components/shared/AnimatedButton/AnimatedButton";
 import { projects } from "components/constants/constants";
@@ -39,16 +39,8 @@ const FeatureWorksSection = () => {
 					Featured Works
 				</H2>
 				<Grid container justifyContent={{ xs: "center", md: "space-between" }}>
-					{FeatureWorkItems.map((item, index) => (
-						<FeatureWorkItem
-							key={item.title}
-							title={item.title}
-							image={item.image}
-							link={item.link}
-							description={item.description}
-							category={item.category}
-							tools={item.tools}
-						/>
+					{FeatureWorkItems.map((item) => (
+						<ProjectCard key={item.title} project={item} variant="featured" />
 					))}
 				</Grid>
 				<Box

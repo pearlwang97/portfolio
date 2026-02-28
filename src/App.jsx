@@ -8,6 +8,7 @@ import ScrollTop from "components/shared/ScrollUp/ScrollUp";
 import ScrollToTopOnRouteChange from "components/shared/ScrollToTopOnRouteChange/ScrollToTopOnRouteChange";
 import { profile, schemaSocialLinks } from "components/constants/profile";
 import { COLORS, RADIUS } from "components/constants/styleTokens";
+import { projectRegistry } from "content/projects/projectRegistry";
 
 import "./App.css";
 import { createGlobalStyle } from "styled-components";
@@ -17,32 +18,8 @@ const AboutPage = lazy(() => import("./components/pages/AboutPage/AboutPage"));
 const ProjectsPage = lazy(() =>
 	import("./components/pages/ProjectsPage/ProjectsPage")
 );
-const DominoAppRedesign = lazy(() =>
-	import("./components/pages/DominoAppRedesign/DominoAppRedesign")
-);
-const BloomAppDesign = lazy(() =>
-	import("./components/pages/BloomAppDesign/BloomAppDesign")
-);
-const RadioVectorArt = lazy(() =>
-	import("./components/pages/RadioVectorArt/RadioVectorArt")
-);
-const BloomBoxLogoDesign = lazy(() =>
-	import("./components/pages/BloomBoxLogoDesign/BloomBoxLogoDesign")
-);
-const ChineseZodiac = lazy(() =>
-	import("./components/pages/ChineseZodiac/ChineseZodiac")
-);
-const CyberEraPoster = lazy(() =>
-	import("./components/pages/CyberEraPoster/CyberEraPoster")
-);
-const FurnitureBannerDesign = lazy(() =>
-	import("components/pages/FurnitureBannerDesign/FurnitureBannerDesign")
-);
-const SummitPromotionalVideo = lazy(() =>
-	import("components/pages/SummitPromotionalVideo/SummitPromotionalVideo")
-);
-const CupidLyricVideo = lazy(() =>
-	import("components/pages/CupidLyricVideo/CupidLyric")
+const ProjectDetailPage = lazy(() =>
+	import("./components/pages/ProjectDetailPage/ProjectDetailPage")
 );
 
 const GlobalStyle = createGlobalStyle`
@@ -96,27 +73,19 @@ function App() {
 			<Suspense fallback={null}>
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/domino-app-redesign" element={<DominoAppRedesign />} />
-					<Route path="/2d-radio-vector-art" element={<RadioVectorArt />} />
-					<Route path="/bloom-app-design" element={<BloomAppDesign />} />
-					<Route path="/bloom-box-logo" element={<BloomBoxLogoDesign />} />
-					<Route path="/chinese-zodiac" element={<ChineseZodiac />} />
-					<Route path="/cyber-era-poster" element={<CyberEraPoster />} />
+					{projectRegistry.map((project) => (
+						<Route
+							key={project.route}
+							path={project.route}
+							element={<ProjectDetailPage projectRoute={project.route} />}
+						/>
+					))}
 					<Route path="/about" element={<AboutPage />} />
 					<Route path="/works" element={<ProjectsPage />} />
-					<Route
-						path="/furniture-banner-design"
-						element={<FurnitureBannerDesign />}
-					/>
 					<Route
 						path="/furniture-banner-deisgn"
 						element={<Navigate replace to="/furniture-banner-design" />}
 					/>
-					<Route
-						path="/summit-promotional-video"
-						element={<SummitPromotionalVideo />}
-					/>
-					<Route path="/cupid-lyric-video" element={<CupidLyricVideo />} />
 				</Routes>
 			</Suspense>
 			<ScrollTop />
