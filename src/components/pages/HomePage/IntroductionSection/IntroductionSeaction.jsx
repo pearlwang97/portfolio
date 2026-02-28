@@ -8,6 +8,11 @@ import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import Image from "components/shared/Image/Image";
 import AnimatedButton from "components/shared/AnimatedButton/AnimatedButton";
+import {
+	formatNaturalList,
+	profile,
+	siteContent,
+} from "components/constants/profile";
 
 const StyledImageContainer = styled(Box)(({ theme }) => ({
 	width: "50%",
@@ -100,12 +105,12 @@ const IntroductionSection = () => {
 				transition={{ duration: 0.5, ease: "easeOut" }}
 			>
 				<StyledTextContainer>
-					<StyledHello>hello, I’m</StyledHello>
-					<Designer>Peirong Wang.</Designer>
+					<StyledHello>{siteContent.home.greeting}</StyledHello>
+					<Designer>{profile.name}.</Designer>
 					<StyledName>
 						<Typewriter
 							onInit={(typewriter) => {
-								typewriter.typeString("Marketing & Design").start();
+								typewriter.typeString(profile.heroTitle).start();
 							}}
 							options={{
 								delay: 18,
@@ -115,7 +120,10 @@ const IntroductionSection = () => {
 
 					{/* <Designer>A Creative Designer.</Designer> */}
 					<Body1>
-					I combine marketing, design, and analytics to create engaging and effective brand experiences.<br/> With a strong visual sense and data-driven approach, I design intuitive user experiences and impactful content.<br/> My skills include &nbsp;
+					{siteContent.home.heroSummary.replace(
+						"{coreStrengths}",
+						formatNaturalList(profile.coreStrengths)
+					)}<br/> {siteContent.home.heroDetail}<br/> {siteContent.home.skillsLeadIn} &nbsp;
 						<Link
 							sx={{
 								textDecoration: "underline",
@@ -141,10 +149,10 @@ const IntroductionSection = () => {
 						>
 							<Box component="strong">Graphic Design</Box>
 						</Link>
-						,&nbsp; digital marketing, and SEO—helping brands tell their story in a meaningful way.
+						,&nbsp; {siteContent.home.skillsClosing}
 					</Body1>
 					<Link to="/about">
-						<AnimatedButton>LEARN MORE</AnimatedButton>
+						<AnimatedButton>{siteContent.home.learnMoreLabel}</AnimatedButton>
 					</Link>
 				</StyledTextContainer>
 			</StyledScrollTrigger>

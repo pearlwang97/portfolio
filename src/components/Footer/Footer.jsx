@@ -5,7 +5,7 @@ import Body1 from "components/shared/Body1/Body1";
 import MainContainer from "components/shared/MainContainer/MainContainer";
 import H1 from "components/shared/H1/H1";
 import SocialLinks from "components/shared/SocialLinks/SocialLinks";
-import { profile } from "components/constants/profile";
+import { profile, siteContent } from "components/constants/profile";
 
 const Link = styled("a")({
 	color: "inherit",
@@ -39,7 +39,7 @@ const Footer = () => {
 						},
 					}}
 				>
-					Get In Touch
+					{siteContent.footer.heading}
 				</H1>
 				<Body1
 					sx={{
@@ -55,13 +55,12 @@ const Footer = () => {
 						},
 					}}
 				>
-					Currently looking for new opportunities and would love to connect.
-					Please don't hesitate to{" "}
+					{siteContent.footer.availabilityMessage}{" "}
 					<Link
 						href={profile.mailto}
 						sx={{ textDecoration: "underline" }}
 					>
-						send me an email.
+						{siteContent.footer.emailLinkLabel}
 					</Link>
 				</Body1>
 				<SocialLinks
@@ -82,7 +81,7 @@ const Footer = () => {
 						},
 					}}
 				>
-					&#169; 2024 All Rights Reserved | Peirong Wang
+					&#169; {siteContent.footer.copyrightYear} {siteContent.footer.rightsLabel} | {profile.name}
 				</Body1>
 			</MainContainer>
 			<Box></Box>

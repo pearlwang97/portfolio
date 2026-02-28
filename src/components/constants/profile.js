@@ -6,14 +6,64 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 export const profile = {
 	name: "Peirong Wang",
+	firstName: "Peirong",
 	email: "pearlwang1997@gmail.com",
+	mailto: "mailto:pearlwang1997@gmail.com",
 	url: "https://portfolio.peirongwang.com",
 	image: "https://portfolio.peirongwang.com/logo.png",
 	jobTitle: "New Media and Web Development Student",
+	heroTitle: "Marketing & Design",
 	alumniOf: "British Columbia Institute of Technology",
+	originCountry: "China",
+	currentLocation: "Vancouver, BC",
+	previousField: "economics",
+	primaryDisciplines: ["digital design", "marketing"],
+	coreStrengths: ["marketing", "design", "analytics"],
 };
 
-profile.mailto = `mailto:${profile.email}`;
+export const siteContent = {
+	home: {
+		greeting: "hello, I’m",
+		learnMoreLabel: "LEARN MORE",
+		heroSummary:
+			"I combine {coreStrengths} to create engaging and effective brand experiences.",
+		heroDetail:
+			"With a strong visual sense and data-driven approach, I design intuitive user experiences and impactful content.",
+		skillsLeadIn: "My skills include",
+		skillsClosing:
+			"digital marketing, and SEO, helping brands tell their story in a meaningful way.",
+	},
+	about: {
+		greeting: "Hiii",
+		introHeading: "I'm {firstName}!",
+		contactButtonLabel: "Contact Me",
+		growthHighlight: "Always eager to learn and grow",
+	},
+	footer: {
+		heading: "Get In Touch",
+		availabilityMessage:
+			"Currently looking for new opportunities and would love to connect. Please don't hesitate to",
+		emailLinkLabel: "send me an email.",
+		copyrightYear: new Date().getFullYear(),
+		rightsLabel: "All Rights Reserved",
+	},
+};
+
+export const formatNaturalList = (items = []) => {
+	if (items.length === 0) {
+		return "";
+	}
+
+	if (items.length === 1) {
+		return items[0];
+	}
+
+	if (items.length === 2) {
+		return `${items[0]} and ${items[1]}`;
+	}
+
+	return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+};
 
 export const socialLinks = [
 	{

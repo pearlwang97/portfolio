@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import App from "./App";
+import Header from "components/Header/Header";
 
 test("renders the main navigation", async () => {
 	render(
 		<MemoryRouter>
-			<App />
+			<Header />
 		</MemoryRouter>
 	);
 

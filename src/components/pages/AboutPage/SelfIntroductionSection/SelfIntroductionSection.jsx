@@ -6,7 +6,11 @@ import Image from "components/shared/Image/Image";
 import Body1 from "components/shared/Body1/Body1";
 import Button from "components/shared/Button/Button";
 import SocialLinks from "components/shared/SocialLinks/SocialLinks";
-import { profile } from "components/constants/profile";
+import {
+	formatNaturalList,
+	profile,
+	siteContent,
+} from "components/constants/profile";
 
 const H1 = styled("h1")(({ theme }) => ({
 	fontSize: "2.5rem",
@@ -65,8 +69,13 @@ const SelfIntroductionSection = () => {
 								marginBottom: "10px",
 							}}
 						>
-							<H1>Hiii</H1>
-							<H1>I'm Peirong!</H1>
+							<H1>{siteContent.about.greeting}</H1>
+							<H1>
+								{siteContent.about.introHeading.replace(
+									"{firstName}",
+									profile.firstName
+								)}
+							</H1>
 						</Box>
 
 						<Box
@@ -86,7 +95,7 @@ const SelfIntroductionSection = () => {
 									UI/UX and graphic designer
 								</span>{" "}
 								who is originally from China, currently based in Vancouver, BC. */}
-								Originally from China and now based in Vancouver, I started in economics before transitioning into
+								Originally from {profile.originCountry} and now based in {profile.currentLocation}, I started in {profile.previousField} before transitioning into
 								{" "}
 								<span
 									style={{
@@ -95,7 +104,7 @@ const SelfIntroductionSection = () => {
 										// backgroundSize: "100% 200%",
 									}}
 								>
-									digital design
+									{profile.primaryDisciplines[0]}
 								</span>{" "}
 								and
 								{" "}
@@ -106,7 +115,7 @@ const SelfIntroductionSection = () => {
 										// backgroundSize: "100% 200%",
 									}}
 								>
-									marketing
+									{profile.primaryDisciplines[1]}
 								</span>{" "}
 								—a blend of analytical thinking and creativity that shapes my approach.
 
@@ -121,7 +130,7 @@ const SelfIntroductionSection = () => {
 								{/* With a solid foundation in economics from the University of
 								Victoria, I discovered my passion for new media design
 								post-graduation. */}
-								Through my experiences in content strategy, branding, and digital marketing, I've learned to balance data-driven insights with impactful storytelling. I’m passionate about how design, marketing, and analytics work together to shape brands and create meaningful user experiences.
+								Through my experiences in content strategy, branding, and digital marketing, I've learned to balance data-driven insights with impactful storytelling. I’m passionate about how {formatNaturalList(profile.coreStrengths)} work together to shape brands and create meaningful user experiences.
 
 							</Body1>
 							<Body1
@@ -160,7 +169,7 @@ const SelfIntroductionSection = () => {
 										// backgroundSize: "100% 200%",
 									}}
 								>
-									Always eager to learn and grow
+									{siteContent.about.growthHighlight}
 								</span>{" "}
 								, I thrive on solving challenges and exploring new ideas. Let's connect!
 							</Body1>
@@ -196,7 +205,7 @@ const SelfIntroductionSection = () => {
 									},
 								}}
 							>
-								Contact Me
+								{siteContent.about.contactButtonLabel}
 							</Button>
 						</a>
 						<SocialLinks
