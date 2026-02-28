@@ -20,7 +20,7 @@ export const projects = [
 	{
 		title: "Weekends Catalog &  Campaign",
 		image: "/images/weekend-cover.webp",
-		link: "/furniture-banner-deisgn",
+		link: "/furniture-banner-design",
 		description: "Design branding, catalog and campaigns for Weekends.",
 		category: "Graphic Design",
 		tools: ["InDesign", "Illustrator", "Photoshop"],

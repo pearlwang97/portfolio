@@ -8,25 +8,9 @@ import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStep
 import Body1 from "components/shared/Body1/Body1";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
-import { useInView } from "react-intersection-observer";
-import InViewContext from "components/context/InViewContext";
 import H4 from "components/shared/H4/H4";
 
 const OverviewSection = () => {
-	const [ref1, inView1] = useInView({
-		triggerOnce: false,
-		threshold: 0.3,
-	});
-
-	const [ref2, inView2] = useInView({
-		triggerOnce: false,
-		threshold: 0.1,
-	});
-
-	const [ref3, inView3] = useInView({
-		triggerOnce: false,
-		threshold: 0.3,
-	});
 
 	const navItems = [
 		{ to: "1", label: "overview" },
@@ -40,9 +24,7 @@ const OverviewSection = () => {
 		{ key: "Skills", value: "User Research" },
 	];
 	return (
-		<InViewContext.Provider value={[inView1, inView2, inView3]}>
-			<ProjectContentContainer navItems={navItems}>
-				<div ref={ref1}>
+		<ProjectContentContainer navItems={navItems}>
 					<ProjectStepSection title="Overview" id="1">
 						<ProjectOverviewList listItems={listItems} />
 						<Grid container justifyContent="space-between">
@@ -156,8 +138,6 @@ const OverviewSection = () => {
 							</Grid>
 						</Grid>
 					</ProjectStepSection>
-				</div>
-				<div ref={ref2}>
 					<ProjectStepSection title="Discover" id="2">
 						<Grid item xs={12}>
 							<H4
@@ -534,8 +514,6 @@ const OverviewSection = () => {
 							</List>
 						</Grid>
 					</ProjectStepSection>
-				</div>
-				<div ref={ref3}>
 					<ProjectStepSection title="Delivery" id="5">
 						<Grid container justifyContent="space-between">
 							<H4
@@ -603,9 +581,7 @@ const OverviewSection = () => {
 							rather than focusing broadly on general issues.
 						</Body1>
 					</ProjectStepSection>
-				</div>
-			</ProjectContentContainer>
-		</InViewContext.Provider>
+		</ProjectContentContainer>
 	);
 };
 

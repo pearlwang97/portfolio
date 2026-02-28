@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { styled } from "@mui/material/styles";
-// StyledNavItem.js
-import { useContext } from "react";
-import InViewContext from "components/context/InViewContext";
 
 const StyledNav = styled("nav")(({ theme }) => ({
 	alignItems: "center",
@@ -60,13 +57,6 @@ const StyledNavItem = styled(Link)(({ theme }) => ({
 }));
 
 const ProjectNavBar = ({ navItems }) => {
-	const inViewStates = useContext(InViewContext) || [];
-	const activeIndex = inViewStates.reduce(
-		(currentActiveIndex, isInView, index) =>
-			isInView ? index : currentActiveIndex,
-		-1
-	);
-
 	return (
 		<StyledNav>
 			{navItems.map((navItem, index) => {
@@ -74,10 +64,11 @@ const ProjectNavBar = ({ navItems }) => {
 					<StyledNavItem
 						key={index}
 						to={navItem.to}
+						activeClass="active"
 						spy={true}
 						smooth={true}
 						duration={500}
-						className={index === activeIndex ? "active" : ""}
+						hashSpy={true}
 					>
 						{navItem.label}
 					</StyledNavItem>

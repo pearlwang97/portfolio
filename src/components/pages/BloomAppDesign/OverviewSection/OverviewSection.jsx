@@ -6,24 +6,7 @@ import Body1 from "components/shared/Body1/Body1";
 import Image from "components/shared/Image/Image";
 import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
-import { useInView } from "react-intersection-observer";
-import InViewContext from "components/context/InViewContext";
-
 const OverviewSection = () => {
-	const [ref1, inView1] = useInView({
-		triggerOnce: false,
-		threshold: 0.5,
-	});
-
-	const [ref2, inView2] = useInView({
-		triggerOnce: false,
-		threshold: 0.2,
-	});
-
-	const [ref3, inView3] = useInView({
-		triggerOnce: false,
-		threshold: 0.5,
-	});
 
 	const navItems = [
 		{ to: "1", label: "overview" },
@@ -36,9 +19,7 @@ const OverviewSection = () => {
 		{ key: "Tools", value: "Figma, Illustrator" },
 	];
 	return (
-		<InViewContext.Provider value={[inView1, inView2, inView3]}>
-			<ProjectContentContainer navItems={navItems}>
-				<div ref={ref1}>
+		<ProjectContentContainer navItems={navItems}>
 					<ProjectStepSection title="Overview" id="1">
 						<ProjectOverviewList listItems={listItems} />
 						<Grid container justifyContent="space-between">
@@ -56,8 +37,6 @@ const OverviewSection = () => {
 							</Grid>
 						</Grid>
 					</ProjectStepSection>
-				</div>
-				<div ref={ref2}>
 					<ProjectStepSection title="Initiation" id="2">
 						<Grid container justifyContent="space-between">
 							<Body1 sx={{ marginTop: "1rem" }}>
@@ -126,8 +105,6 @@ const OverviewSection = () => {
 							</Body1>
 						</Grid>
 					</ProjectStepSection>
-				</div>
-				<div ref={ref3}>
 					<ProjectStepSection title="Deliverable" id="6">
 						<Grid container justifyContent="space-between">
 							<Image
@@ -140,9 +117,7 @@ const OverviewSection = () => {
 							/>
 						</Grid>
 					</ProjectStepSection>
-				</div>
-			</ProjectContentContainer>
-		</InViewContext.Provider>
+		</ProjectContentContainer>
 	);
 };
 
