@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	cyberEraPosterOverviewItems,
-	cyberEraPosterProject,
-	getCyberEraPosterNavGroups,
-} from "../../../content/projects/cyberEraPosterContent";
 
 const CyberEraPoster = () => {
-	const navGroups = getCyberEraPosterNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={cyberEraPosterOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/cyber-era-poster");
 
-	return (
-		<ProjectDetailTemplate {...cyberEraPosterProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default CyberEraPoster;

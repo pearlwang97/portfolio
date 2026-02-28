@@ -1,25 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	getSummitPromotionalVideoNavGroups,
-	summitPromotionalVideoOverviewItems,
-	summitPromotionalVideoProject,
-} from "../../../content/projects/summitPromotionalVideoContent";
 
 const SummitPromotionalVideo = () => {
-	const navGroups = getSummitPromotionalVideoNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={summitPromotionalVideoOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/summit-promotional-video");
 
-	return (
-		<ProjectDetailTemplate
-			{...summitPromotionalVideoProject}
-			navGroups={navGroups}
-		/>
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default SummitPromotionalVideo;

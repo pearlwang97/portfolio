@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	cupidLyricVideoOverviewItems,
-	cupidLyricVideoProject,
-	getCupidLyricVideoNavGroups,
-} from "../../../content/projects/cupidLyricVideoContent";
 
 const CupidLyricVideo = () => {
-	const navGroups = getCupidLyricVideoNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={cupidLyricVideoOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/cupid-lyric-video");
 
-	return (
-		<ProjectDetailTemplate {...cupidLyricVideoProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default CupidLyricVideo;

@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	bloomAppDesignOverviewItems,
-	bloomAppDesignProject,
-	getBloomAppDesignNavGroups,
-} from "../../../content/projects/bloomAppDesignContent";
 
 const BloomAppDesign = () => {
-	const navGroups = getBloomAppDesignNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={bloomAppDesignOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/bloom-app-design");
 
-	return (
-		<ProjectDetailTemplate {...bloomAppDesignProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default BloomAppDesign;

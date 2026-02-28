@@ -135,3 +135,18 @@ export const getRadioVectorArtNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const radioVectorArtContent = {
+	slug: "2d-radio-vector-art",
+	route: "/2d-radio-vector-art",
+	category: "Graphic Design",
+	cardImage: "/images/feature-work-2.jpg",
+	cardDescription:
+		"Produce a photo-realistic 2D illustration that achieves a 3D effect.",
+	tools: ["Illustrator"],
+	project: radioVectorArtProject,
+	overviewItems: radioVectorArtOverviewItems,
+	getNavGroups: getRadioVectorArtNavGroups,
+};
+
+export default radioVectorArtContent;

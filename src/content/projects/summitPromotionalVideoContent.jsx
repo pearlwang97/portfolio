@@ -41,3 +41,19 @@ export const getSummitPromotionalVideoNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const summitPromotionalVideoContent = {
+	slug: "summit-promotional-video",
+	route: "/summit-promotional-video",
+	category: "Motion Graphic",
+	hideNav: true,
+	cardTitle: "Summit | Promotional Video",
+	cardImage: "https://www.youtube.com/embed/6uoTv0i-57Q?controls=0&rel=0",
+	cardDescription: "Create a promotional video for Summit Sports.",
+	tools: ["Premiere Pro", "After Effect", "Illustrator"],
+	project: summitPromotionalVideoProject,
+	overviewItems: summitPromotionalVideoOverviewItems,
+	getNavGroups: getSummitPromotionalVideoNavGroups,
+};
+
+export default summitPromotionalVideoContent;

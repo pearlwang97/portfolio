@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	chineseZodiacOverviewItems,
-	chineseZodiacProject,
-	getChineseZodiacNavGroups,
-} from "../../../content/projects/chineseZodiacContent";
 
 const ChineseZodiac = () => {
-	const navGroups = getChineseZodiacNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={chineseZodiacOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/chinese-zodiac");
 
-	return (
-		<ProjectDetailTemplate {...chineseZodiacProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default ChineseZodiac;

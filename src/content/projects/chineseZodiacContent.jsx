@@ -151,3 +151,19 @@ export const getChineseZodiacNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const chineseZodiacContent = {
+	slug: "chinese-zodiac",
+	route: "/chinese-zodiac",
+	category: "Graphic Design",
+	cardTitle: "Chinese Zodiac Collection",
+	cardImage: "/images/feature-work-4.jpg",
+	cardDescription:
+		"Reimagine the Chinese zodiacs through the traditional art of papercutting.",
+	tools: ["Illustrator", "Photoshop"],
+	project: chineseZodiacProject,
+	overviewItems: chineseZodiacOverviewItems,
+	getNavGroups: getChineseZodiacNavGroups,
+};
+
+export default chineseZodiacContent;

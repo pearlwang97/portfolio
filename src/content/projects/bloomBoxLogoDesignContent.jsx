@@ -97,3 +97,17 @@ export const getBloomBoxLogoDesignNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const bloomBoxLogoDesignContent = {
+	slug: "bloom-box-logo",
+	route: "/bloom-box-logo",
+	category: "Graphic Design",
+	cardImage: "/images/bloombox-cover.webp",
+	cardDescription: "Create branding with email newsletter design and mockups.",
+	tools: ["Illustrator", "Photoshop", "InDesign"],
+	project: bloomBoxLogoDesignProject,
+	overviewItems: bloomBoxLogoDesignOverviewItems,
+	getNavGroups: getBloomBoxLogoDesignNavGroups,
+};
+
+export default bloomBoxLogoDesignContent;

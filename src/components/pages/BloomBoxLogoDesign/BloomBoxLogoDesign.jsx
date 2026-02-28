@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	bloomBoxLogoDesignOverviewItems,
-	bloomBoxLogoDesignProject,
-	getBloomBoxLogoDesignNavGroups,
-} from "../../../content/projects/bloomBoxLogoDesignContent";
 
 const BloomBoxLogoDesign = () => {
-	const navGroups = getBloomBoxLogoDesignNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={bloomBoxLogoDesignOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/bloom-box-logo");
 
-	return (
-		<ProjectDetailTemplate {...bloomBoxLogoDesignProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default BloomBoxLogoDesign;

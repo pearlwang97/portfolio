@@ -490,3 +490,18 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 		},
 	];
 };
+
+const dominoAppRedesignContent = {
+	slug: "domino-app-redesign",
+	route: "/domino-app-redesign",
+	category: "UI/UX Design",
+	cardImage: "/images/feature-work-1.jpg",
+	cardDescription:
+		"Create a user-centered, modern interface for the existing Domino's App.",
+	tools: ["Figma", "Illustrator", "Photoshop", "Google Form"],
+	project: dominoAppRedesignProject,
+	overviewItems: dominoAppRedesignOverviewItems,
+	getNavGroups: getDominoAppRedesignNavGroups,
+};
+
+export default dominoAppRedesignContent;

@@ -2,9 +2,12 @@ import React from "react";
 import { Element } from "react-scroll";
 import ProjectBanner from "components/shared/ProjectBanner/ProjectBanner";
 import ProjectContentContainer from "components/shared/ProjectContentContainer/ProjectContentContainer";
+import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
 import ProjectNavButtons from "components/shared/ProjectsNavButtons/ProjectsNavButtons";
+import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStepSection";
 
 const ProjectDetailTemplate = ({
+	project,
 	title,
 	imageSrc,
 	videoSrc,
@@ -14,22 +17,80 @@ const ProjectDetailTemplate = ({
 	nextLink,
 	children,
 }) => {
+	const resolvedProject = project || {
+		title,
+		imageSrc,
+		videoSrc,
+		navGroups,
+		prevLink,
+		nextLink,
+	};
+
+	const overviewList = () => (
+		<ProjectOverviewList listItems={resolvedProject.overviewItems || []} />
+	);
+
+	const rawNavGroups =
+		resolvedProject.navGroups ||
+		resolvedProject.getNavGroups?.({
+			OverviewList: overviewList,
+		});
+
+	const resolvedNavGroups =
+		rawNavGroups?.map((navGroup) =>
+			navGroup.sections
+				? navGroup
+				: {
+						id: navGroup.id,
+						label: navGroup.label,
+						spyId: navGroup.spyId,
+						sections: [
+							{
+								id: navGroup.id,
+								content:
+									typeof navGroup.render === "function"
+										? navGroup.render()
+										: navGroup.render,
+							},
+						],
+				  }
+		) || null;
+
+	const shouldShowNav = !resolvedProject.hideNav;
+
 	const resolvedNavItems =
-		navGroups?.map((navGroup) => ({
-			to: navGroup.spyId || navGroup.id,
-			label: navGroup.label,
-		})) || navItems;
+		shouldShowNav
+			? resolvedNavGroups?.map((navGroup) => ({
+					to: navGroup.spyId || navGroup.id,
+					label: navGroup.label,
+			  })) || navItems
+			: null;
 
-	const renderedContent = navGroups
-		? navGroups.map((navGroup) => {
-				const groupContent =
-					typeof navGroup.render === "function"
-						? navGroup.render()
-						: navGroup.render;
-
+	const renderedContent = resolvedNavGroups
+		? resolvedNavGroups.map((navGroup) => {
 				return (
 					<Element key={navGroup.id} name={navGroup.spyId || navGroup.id}>
-						{groupContent}
+						{navGroup.sections.map((section, index) => {
+							if (section.title) {
+								return (
+									<ProjectStepSection
+										key={section.id || `${navGroup.id}-${index}`}
+										title={section.title}
+										id={section.id}
+										noPadding={section.noPadding}
+									>
+										{section.showOverviewList && overviewList()}
+										{section.content}
+									</ProjectStepSection>
+								);
+							}
+
+							return (
+								<React.Fragment key={section.id || `${navGroup.id}-${index}`}>
+									{section.content}
+								</React.Fragment>
+							);
+						})}
 					</Element>
 				);
 		  })
@@ -37,12 +98,19 @@ const ProjectDetailTemplate = ({
 
 	return (
 		<div>
-			<ProjectBanner title={title} imageSrc={imageSrc} videoSrc={videoSrc} />
+			<ProjectBanner
+				title={resolvedProject.title}
+				imageSrc={resolvedProject.imageSrc}
+				videoSrc={resolvedProject.videoSrc}
+			/>
 			<ProjectContentContainer navItems={resolvedNavItems}>
 				{renderedContent}
 			</ProjectContentContainer>
-			{(prevLink || nextLink) && (
-				<ProjectNavButtons prevLink={prevLink} nextLink={nextLink} />
+			{(resolvedProject.prevLink || resolvedProject.nextLink) && (
+				<ProjectNavButtons
+					prevLink={resolvedProject.prevLink}
+					nextLink={resolvedProject.nextLink}
+				/>
 			)}
 		</div>
 	);

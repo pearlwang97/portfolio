@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	getRadioVectorArtNavGroups,
-	radioVectorArtOverviewItems,
-	radioVectorArtProject,
-} from "../../../content/projects/radioVectorArtContent";
 
 const RadioVectorArt = () => {
-	const navGroups = getRadioVectorArtNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={radioVectorArtOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/2d-radio-vector-art");
 
-	return (
-		<ProjectDetailTemplate {...radioVectorArtProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default RadioVectorArt;

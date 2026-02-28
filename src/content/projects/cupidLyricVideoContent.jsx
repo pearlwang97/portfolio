@@ -39,3 +39,19 @@ export const getCupidLyricVideoNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const cupidLyricVideoContent = {
+	slug: "cupid-lyric-video",
+	route: "/cupid-lyric-video",
+	category: "Motion Graphic",
+	hideNav: true,
+	cardTitle: "Cupid | Lyric Video",
+	cardImage: "https://www.youtube.com/embed/yylNn0qRsiY?controls=0&rel=0",
+	cardDescription: "Create a lyric video for K-pop song 'Cupid'.",
+	tools: ["After Effect", "Illustrator", "Photoshop"],
+	project: cupidLyricVideoProject,
+	overviewItems: cupidLyricVideoOverviewItems,
+	getNavGroups: getCupidLyricVideoNavGroups,
+};
+
+export default cupidLyricVideoContent;

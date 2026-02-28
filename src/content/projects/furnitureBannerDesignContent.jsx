@@ -118,3 +118,17 @@ export const getFurnitureBannerDesignNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const furnitureBannerDesignContent = {
+	slug: "furniture-banner-design",
+	route: "/furniture-banner-design",
+	category: "Graphic Design",
+	cardImage: "/images/weekend-cover.webp",
+	cardDescription: "Design branding, catalog and campaigns for Weekends.",
+	tools: ["InDesign", "Illustrator", "Photoshop"],
+	project: furnitureBannerDesignProject,
+	overviewItems: furnitureBannerDesignOverviewItems,
+	getNavGroups: getFurnitureBannerDesignNavGroups,
+};
+
+export default furnitureBannerDesignContent;

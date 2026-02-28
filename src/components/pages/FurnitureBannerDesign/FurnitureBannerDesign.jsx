@@ -1,25 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	furnitureBannerDesignOverviewItems,
-	furnitureBannerDesignProject,
-	getFurnitureBannerDesignNavGroups,
-} from "../../../content/projects/furnitureBannerDesignContent";
 
 const FurnitureBannerDesign = () => {
-	const navGroups = getFurnitureBannerDesignNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={furnitureBannerDesignOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/furniture-banner-design");
 
-	return (
-		<ProjectDetailTemplate
-			{...furnitureBannerDesignProject}
-			navGroups={navGroups}
-		/>
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default FurnitureBannerDesign;

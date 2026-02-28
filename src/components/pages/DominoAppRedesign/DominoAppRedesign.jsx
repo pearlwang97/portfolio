@@ -1,22 +1,11 @@
 import React from "react";
-import ProjectOverviewList from "components/shared/ProjectOverviewList/ProjectOverviewList";
+import { getProjectByRoute } from "content/projects/projectRegistry";
 import ProjectDetailTemplate from "components/shared/ProjectDetailTemplate/ProjectDetailTemplate";
-import {
-	getDominoAppRedesignNavGroups,
-	dominoAppRedesignOverviewItems,
-	dominoAppRedesignProject,
-} from "../../../content/projects/dominoAppRedesignContent";
 
 const DominoAppRedesign = () => {
-	const navGroups = getDominoAppRedesignNavGroups({
-		OverviewList: () => (
-			<ProjectOverviewList listItems={dominoAppRedesignOverviewItems} />
-		),
-	});
+	const project = getProjectByRoute("/domino-app-redesign");
 
-	return (
-		<ProjectDetailTemplate {...dominoAppRedesignProject} navGroups={navGroups} />
-	);
+	return <ProjectDetailTemplate project={project} />;
 };
 
 export default DominoAppRedesign;

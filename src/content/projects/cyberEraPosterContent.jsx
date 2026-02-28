@@ -155,3 +155,17 @@ export const getCyberEraPosterNavGroups = ({ OverviewList }) => [
 		),
 	},
 ];
+
+const cyberEraPosterContent = {
+	slug: "cyber-era-poster",
+	route: "/cyber-era-poster",
+	category: "Graphic Design",
+	cardImage: "/images/feature-work-6.jpg",
+	cardDescription: "Design a poster that represents the cyber era.",
+	tools: ["Illustrator", "Photoshop"],
+	project: cyberEraPosterProject,
+	overviewItems: cyberEraPosterOverviewItems,
+	getNavGroups: getCyberEraPosterNavGroups,
+};
+
+export default cyberEraPosterContent;

@@ -138,3 +138,18 @@ export const getBloomAppDesignNavGroups = ({ OverviewList }) => {
 		},
 	];
 };
+
+const bloomAppDesignContent = {
+	slug: "bloom-app-design",
+	route: "/bloom-app-design",
+	category: "UI/UX Design",
+	cardImage: "/images/feature-work-5.jpg",
+	cardDescription:
+		"Create a user-centered, modern interface for the existing Bloom App.",
+	tools: ["Figma"],
+	project: bloomAppDesignProject,
+	overviewItems: bloomAppDesignOverviewItems,
+	getNavGroups: getBloomAppDesignNavGroups,
+};
+
+export default bloomAppDesignContent;
