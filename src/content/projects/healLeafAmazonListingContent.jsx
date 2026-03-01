@@ -103,7 +103,7 @@ const FullWidthGallery = ({ images }) => (
 );
 
 export const healLeafAmazonListingProject = {
-	title: "Heal Leaf Amazon Listing Visuals",
+	title: "Amazon Listing Design",
 	imageSrc: "/images/heal-leaf/project-banner.png",
 	prevLink: "/industrial-graphic-design",
 	nextLink: "/summit-promotional-video",
@@ -160,7 +160,7 @@ const healLeafAmazonListingContent = {
 	cardImage: "/images/heal-leaf/thumbnail-1.png",
 	cardDescription:
 		"AI-assisted Amazon listing visuals for Heal Leaf, including square gallery images and A+ detail content.",
-	tools: ["AI Image Generation", "Photoshop", "Image Compositing"],
+	tools: ["AI Image Generation", "Photoshop", "Illustrator"],
 	project: healLeafAmazonListingProject,
 	overviewItems: healLeafAmazonListingOverviewItems,
 	getNavGroups: getHealLeafAmazonListingNavGroups,

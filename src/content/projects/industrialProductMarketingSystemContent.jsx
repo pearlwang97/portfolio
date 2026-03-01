@@ -23,12 +23,7 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 				<Grid container justifyContent="space-between">
 					<Grid item xs={12}>
 						<Body1>
-							This project focused on building a cohesive visual system for an
-							industrial product line, centered around a technical brochure and
-							extended into digital marketing and large-format applications.
-							The goal was to present complex product information in a clearer,
-							more structured, and more visually engaging way while keeping the
-							overall identity consistent across every touchpoint.
+This project focused on building cohesive marketing collateral for an industrial product line, including a brochure, datasheet, social media assets, website banners, and other print materials. The goal was to present product information in a clearer, more structured way.
 						</Body1>
 						<Image
 							src="/images/industrial-brand-system/gasket-brochure-overview.png"
@@ -45,22 +40,6 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 		render: () => (
 			<ProjectStepSection title="Brochure and Datasheet Design" id="2">
 				<Grid container justifyContent="space-between">
-					<Body1>
-						The brochure layout was designed to make dense technical content
-						easier to scan. Product families, configuration charts, section
-						views, and performance details were organized into a repeatable
-						editorial structure using strong header bands, modular columns, and
-						clear content blocks. Product photography was paired with diagrams
-						and specification tables so the pages could feel informative without
-						becoming visually overwhelming.
-					</Body1>
-					<Body1>
-						A consistent blue, gold, and neutral palette helped unify the
-						brochure while reinforcing an industrial tone. Subtle grid-based
-						graphics and technical linework added context and supported the
-						engineering-focused subject matter without distracting from the core
-						information.
-					</Body1>
 					<Image
 						src="/images/industrial-brand-system/gasket-product-lineup.jpg"
 						alt="industrial gasket product lineup"
@@ -75,20 +54,6 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 		render: () => (
 			<ProjectStepSection title="Website Banner" id="3">
 				<Grid container justifyContent="space-between">
-					<Body1>
-						The digital banner set translated the same visual language into web
-						and social formats. Diagonal compositions, blueprint-inspired
-						background textures, isolated product photography, and concise
-						benefit-led headlines were used to keep each banner clear and
-						immediately legible at a glance.
-					</Body1>
-					<Body1>
-						Although the featured products vary, the layouts maintain a shared
-						system through repeated spacing, consistent typography, and the same
-						color hierarchy. This made it possible to create multiple campaign
-						assets that feel connected while still highlighting different
-						product categories.
-					</Body1>
 					<Image
 						src="/images/industrial-brand-system/gaskets-banner.jpg"
 						alt="industrial gaskets website banner"
@@ -115,20 +80,6 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 		render: () => (
 			<ProjectStepSection title="Other" id="4">
 				<Grid container justifyContent="space-between">
-					<Body1>
-						The system was also extended into physical applications, including
-						facility signage, a fabricated specification tag, and trade show
-						display graphics. These pieces required the identity to hold up at
-						different scales and in real-world production contexts, from outdoor
-						visibility to engraved information panels.
-					</Body1>
-					<Body1>
-						Across these applications, the design approach stayed focused on
-						clarity, durability, and recognition. Strong contrast, simplified
-						information zones, and repeatable framing elements helped the
-						graphics remain functional while still feeling part of the same
-						marketing system.
-					</Body1>
 					<Image
 						src="/images/industrial-brand-system/facility-signage.png"
 						alt="facility signage mockup"
