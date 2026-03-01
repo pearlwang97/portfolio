@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d178fa2d.css",
-    "main.js": "/portfolio/static/js/main.829943ec.js",
-    "static/js/882.7429b7c7.chunk.js": "/portfolio/static/js/882.7429b7c7.chunk.js",
+    "main.js": "/portfolio/static/js/main.416e6695.js",
+    "static/js/882.c308e896.chunk.js": "/portfolio/static/js/882.c308e896.chunk.js",
     "static/js/214.1ee6e6eb.chunk.js": "/portfolio/static/js/214.1ee6e6eb.chunk.js",
-    "static/js/550.72e9fae7.chunk.js": "/portfolio/static/js/550.72e9fae7.chunk.js",
-    "static/js/737.9c82d4e0.chunk.js": "/portfolio/static/js/737.9c82d4e0.chunk.js",
+    "static/js/550.7359dbce.chunk.js": "/portfolio/static/js/550.7359dbce.chunk.js",
+    "static/js/737.8c7f7a1b.chunk.js": "/portfolio/static/js/737.8c7f7a1b.chunk.js",
     "static/js/787.8a0def8b.chunk.js": "/portfolio/static/js/787.8a0def8b.chunk.js",
     "static/js/771.148f2f5f.chunk.js": "/portfolio/static/js/771.148f2f5f.chunk.js",
     "static/js/312.f04681be.chunk.js": "/portfolio/static/js/312.f04681be.chunk.js",
@@ -20,11 +20,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/portfolio/index.html",
     "main.d178fa2d.css.map": "/portfolio/static/css/main.d178fa2d.css.map",
-    "main.829943ec.js.map": "/portfolio/static/js/main.829943ec.js.map",
-    "882.7429b7c7.chunk.js.map": "/portfolio/static/js/882.7429b7c7.chunk.js.map",
+    "main.416e6695.js.map": "/portfolio/static/js/main.416e6695.js.map",
+    "882.c308e896.chunk.js.map": "/portfolio/static/js/882.c308e896.chunk.js.map",
     "214.1ee6e6eb.chunk.js.map": "/portfolio/static/js/214.1ee6e6eb.chunk.js.map",
-    "550.72e9fae7.chunk.js.map": "/portfolio/static/js/550.72e9fae7.chunk.js.map",
-    "737.9c82d4e0.chunk.js.map": "/portfolio/static/js/737.9c82d4e0.chunk.js.map",
+    "550.7359dbce.chunk.js.map": "/portfolio/static/js/550.7359dbce.chunk.js.map",
+    "737.8c7f7a1b.chunk.js.map": "/portfolio/static/js/737.8c7f7a1b.chunk.js.map",
     "787.8a0def8b.chunk.js.map": "/portfolio/static/js/787.8a0def8b.chunk.js.map",
     "771.148f2f5f.chunk.js.map": "/portfolio/static/js/771.148f2f5f.chunk.js.map",
     "312.f04681be.chunk.js.map": "/portfolio/static/js/312.f04681be.chunk.js.map",
@@ -35,6 +35,6 @@
   },
   "entrypoints": [
     "static/css/main.d178fa2d.css",
-    "static/js/main.829943ec.js"
+    "static/js/main.416e6695.js"
   ]
 }
