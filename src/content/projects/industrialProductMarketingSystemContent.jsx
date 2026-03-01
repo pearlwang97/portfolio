@@ -5,21 +5,13 @@ import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStep
 import Body1 from "components/shared/Body1/Body1";
 
 export const industrialProductMarketingSystemProject = {
-	title: "Industrial Product Marketing System",
+	title: "Industrial Graphic Design",
 	imageSrc: "/images/industrial-brand-system/gaskets-banner.jpg",
 	prevLink: "/cyber-era-poster",
 	nextLink: "/summit-promotional-video",
 };
 
-export const industrialProductMarketingSystemOverviewItems = [
-	{ key: "TIMELINE", value: "2024" },
-	{ key: "ROLE", value: "Graphic Designer" },
-	{ key: "Tools", value: "InDesign, Illustrator, Photoshop" },
-	{
-		key: "Skills",
-		value: "Editorial Design, Marketing Collateral, Environmental Graphics",
-	},
-];
+export const industrialProductMarketingSystemOverviewItems = [];
 
 export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) => [
 	{
@@ -72,10 +64,6 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 					<Image
 						src="/images/industrial-brand-system/gasket-product-lineup.jpg"
 						alt="industrial gasket product lineup"
-					/>
-					<Image
-						src="/images/industrial-brand-system/gasket-brochure-overview.png"
-						alt="industrial brochure layout system"
 					/>
 				</Grid>
 			</ProjectStepSection>
