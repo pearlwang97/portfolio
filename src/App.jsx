@@ -85,6 +85,10 @@ function App() {
 						path="/furniture-banner-deisgn"
 						element={<Navigate replace to="/furniture-banner-design" />}
 					/>
+					<Route
+						path="/industrial-product-marketing-system"
+						element={<Navigate replace to="/industrial-graphic-design" />}
+					/>
 				</Routes>
 			</Suspense>
 			<ScrollTop />

@@ -6,7 +6,7 @@ import Body1 from "components/shared/Body1/Body1";
 
 export const industrialProductMarketingSystemProject = {
 	title: "Industrial Graphic Design",
-	imageSrc: "/images/industrial-brand-system/gaskets-banner.jpg",
+	imageSrc: "/images/industrial-brand-system/project-banner-2.png",
 	prevLink: "/cyber-era-poster",
 	nextLink: "/summit-promotional-video",
 };
@@ -148,8 +148,8 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 ];
 
 const industrialProductMarketingSystemContent = {
-	slug: "industrial-product-marketing-system",
-	route: "/industrial-product-marketing-system",
+	slug: "industrial-graphic-design",
+	route: "/industrial-graphic-design",
 	category: "Graphic Design",
 	cardImage: "/images/industrial-brand-system/gaskets-banner.jpg",
 	cardDescription:

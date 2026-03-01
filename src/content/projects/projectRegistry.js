@@ -79,8 +79,8 @@ const validateProjectRegistry = (projects) => {
 			throw new Error(`Project "${project.slug}" must define at least one tool.`);
 		}
 
-		if (!Array.isArray(project.overviewItems) || project.overviewItems.length === 0) {
-			throw new Error(`Project "${project.slug}" must define overview items.`);
+		if (!Array.isArray(project.overviewItems)) {
+			throw new Error(`Project "${project.slug}" must define overview items as an array.`);
 		}
 
 		if (typeof project.getNavGroups !== "function") {
