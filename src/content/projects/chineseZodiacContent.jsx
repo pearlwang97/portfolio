@@ -6,7 +6,7 @@ import Body1 from "components/shared/Body1/Body1";
 
 export const chineseZodiacProject = {
 	title: "Papercut Illustrations: Chinese Zodiac Collection",
-	imageSrc: "/images/chinese-zodiac-banner.webp",
+	imageSrc: "/images/chinese-zodiac/chinese-zodiac-banner.webp",
 	prevLink: "/bloom-box-logo",
 	nextLink: "/cyber-era-poster",
 };
@@ -59,7 +59,7 @@ export const getChineseZodiacNavGroups = ({ OverviewList }) => [
 					<Grid container justifyContent="space-between">
 						<Box sx={{ display: "block" }}>
 							<Image
-								src="/images/project-5-gallery-2.webp"
+								src="/images/chinese-zodiac/project-5-gallery-2.webp"
 								alt="chinese zodiac papercut gallery image 1"
 								sx={{
 									float: "right",
@@ -100,7 +100,7 @@ export const getChineseZodiacNavGroups = ({ OverviewList }) => [
 							collection.
 						</Body1>
 						<Image
-							src="/images/project-5-gallery-3.jpg"
+							src="/images/chinese-zodiac/project-5-gallery-3.jpg"
 							alt="chinese zodiac papercut gallery image 2"
 							sx={{
 								marginBottom: "10px",
@@ -131,18 +131,18 @@ export const getChineseZodiacNavGroups = ({ OverviewList }) => [
 					<Grid item container xs={12}>
 						<Grid item xs={12} sm={5.85}>
 							<Image
-								src="/images/project-5-gallery-1.webp"
+								src="/images/chinese-zodiac/project-5-gallery-1.webp"
 								alt="chinese zodiac mockup set"
 							/>
 						</Grid>
 						<Grid item xs={12} sm={6.15}>
 							<Image
-								src="/images/project-5-gallery-5.webp"
+								src="/images/chinese-zodiac/project-5-gallery-5.webp"
 								alt="chinese zodiac poster mockup"
 							/>
 						</Grid>
 						<Image
-							src="/images/chinese-zodiac-banner.webp"
+							src="/images/chinese-zodiac/chinese-zodiac-banner.webp"
 							alt="chinese zodiac collection banner"
 						/>
 					</Grid>
@@ -157,7 +157,7 @@ const chineseZodiacContent = {
 	route: "/chinese-zodiac",
 	category: "Graphic Design",
 	cardTitle: "Chinese Zodiac Collection",
-	cardImage: "/images/feature-work-4.jpg",
+	cardImage: "/images/chinese-zodiac/feature-work-4.jpg",
 	cardDescription:
 		"Reimagine the Chinese zodiacs through the traditional art of papercutting.",
 	tools: ["Illustrator", "Photoshop"],

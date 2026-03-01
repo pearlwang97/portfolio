@@ -19,7 +19,7 @@ const listItemSx = {
 
 export const dominoAppRedesignProject = {
 	title: "Domino’s APP Redesign",
-	imageSrc: "/images/project-1-banner.webp",
+	imageSrc: "/images/domino-app-redesign/project-1-banner.webp",
 	prevLink: "/cupid-lyric-video",
 	nextLink: "/bloom-app-design",
 };
@@ -56,7 +56,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								understand our audience and developing solutions to make the
 								app more user-friendly
 							</Body1>
-							<Image src="/images/domino-timeline.webp" alt="timeline" />
+							<Image src="/images/domino-app-redesign/domino-timeline.webp" alt="timeline" />
 							<H4 sx={sectionHeadingSx}>Why Domino’s?</H4>
 							<Body1>
 								I chose Domino's for my first approach into user research for
@@ -229,7 +229,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								</Grid>
 								<Grid container justifyContent="center">
 									<Image
-										src="/images/domino-app.gif"
+										src="/images/domino-app-redesign/domino-app.gif"
 										alt="Domino app navigation demo"
 										sx={{
 											width: {
@@ -253,7 +253,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								insights into the target audience's needs, pain points and
 								overall impressions.
 							</Body1>
-							<Image src="/images/domino-piechart.webp" alt="Domino user survey chart" />
+							<Image src="/images/domino-app-redesign/domino-piechart.webp" alt="Domino user survey chart" />
 							<H4 sx={sectionHeadingSx}>Survey</H4>
 							<Body1>
 								I conducted interviews with 4 participants to delve into their
@@ -298,7 +298,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								</ListItem>
 							</List>
 							<Body1>They said:</Body1>
-							<Image src="/images/domino-review.webp" alt="Domino user interview notes" />
+							<Image src="/images/domino-app-redesign/domino-review.webp" alt="Domino user interview notes" />
 							<H4 sx={sectionHeadingSx}>Competitive Analysis</H4>
 							<Body1>
 								Following initial research, a detailed competitive analysis was
@@ -307,7 +307,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								competitors.
 							</Body1>
 						</Grid>
-						<Image src="/images/domino-competitor.webp" alt="Domino competitor analysis" />
+						<Image src="/images/domino-app-redesign/domino-competitor.webp" alt="Domino competitor analysis" />
 					</ProjectStepSection>
 					<ProjectStepSection title="Define" id="3">
 						<Grid container justifyContent="space-between">
@@ -318,7 +318,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								first time.
 							</Body1>
 							<Image
-								src="/images/domino-persona.webp"
+								src="/images/domino-app-redesign/domino-persona.webp"
 								alt="Domino user personas"
 								sx={{
 									marginBottom: "10px",
@@ -376,7 +376,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 						</List>
 						<H4 sx={sectionHeadingSx}>User Flow</H4>
 						<Body1>Afterwards, I created the user flow.</Body1>
-						<Image src="/images/domino-userflow.webp" alt="user flow" />
+						<Image src="/images/domino-app-redesign/domino-userflow.webp" alt="user flow" />
 					</ProjectStepSection>
 					<ProjectStepSection title="Design" id="4">
 						<Grid container justifyContent="space-between">
@@ -395,7 +395,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								with it.
 							</Body1>
 							<Image
-								src="/images/domino-iteration.webp"
+								src="/images/domino-app-redesign/domino-iteration.webp"
 								alt="Domino redesign iterations"
 								sx={{
 									marginBottom: "10px",
@@ -410,7 +410,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 								through these tasks by all testers affirmed the effectiveness of
 								the design modifications.
 							</Body1>
-							<Image src="/images/domino-usability.webp" alt="Domino usability testing results" />
+							<Image src="/images/domino-app-redesign/domino-usability.webp" alt="Domino usability testing results" />
 							<Body1>Testing highlighted some improvements, include</Body1>
 							<List>
 								<ListItem sx={listItemSx}>
@@ -447,7 +447,7 @@ export const getDominoAppRedesignNavGroups = ({ OverviewList }) => {
 					<Grid container justifyContent="space-between">
 						<H4 sx={sectionHeadingSx}>Hi-Fi Prototype</H4>
 						<Image
-							src="/images/domino-prototype.webp"
+							src="/images/domino-app-redesign/domino-prototype.webp"
 							alt="Domino hi-fi prototype screens"
 							sx={{
 								marginBottom: "10px",
@@ -495,7 +495,7 @@ const dominoAppRedesignContent = {
 	slug: "domino-app-redesign",
 	route: "/domino-app-redesign",
 	category: "UI/UX Design",
-	cardImage: "/images/feature-work-1.jpg",
+	cardImage: "/images/domino-app-redesign/feature-work-1.jpg",
 	cardDescription:
 		"Create a user-centered, modern interface for the existing Domino's App.",
 	tools: ["Figma", "Illustrator", "Photoshop", "Google Form"],

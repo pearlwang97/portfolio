@@ -6,7 +6,7 @@ import Body1 from "components/shared/Body1/Body1";
 
 export const radioVectorArtProject = {
 	title: "2D Realistic Radio Vector Art",
-	imageSrc: "/images/design-3.webp",
+	imageSrc: "/images/radio-vector-art/design-3.webp",
 	prevLink: "/bloom-box-logo",
 	nextLink: "/chinese-zodiac",
 };
@@ -60,7 +60,7 @@ export const getRadioVectorArtNavGroups = ({ OverviewList }) => [
 					<Grid container justifyContent="space-between">
 						<Box>
 							<Image
-								src="/images/project-3-gallery-2.png"
+								src="/images/radio-vector-art/project-3-gallery-2.png"
 								alt="radio vector illustration mockup"
 								sx={{
 									marginBottom: "10px",
@@ -72,7 +72,7 @@ export const getRadioVectorArtNavGroups = ({ OverviewList }) => [
 								vector closely mimicked the real object's form.
 							</Body1>
 							<Image
-								src="/images/project-3-gallery-1.png"
+								src="/images/radio-vector-art/project-3-gallery-1.png"
 								sx={{
 									marginRight: "20px",
 								}}
@@ -123,7 +123,7 @@ export const getRadioVectorArtNavGroups = ({ OverviewList }) => [
 				<Grid container justifyContent="space-between">
 					<Box sx={{ display: "block" }}>
 						<Image
-							src="/images/design-3.webp"
+							src="/images/radio-vector-art/design-3.webp"
 							sx={{
 								marginBottom: "10px",
 								width: { sm: "100%", md: "100%" },
@@ -140,7 +140,7 @@ const radioVectorArtContent = {
 	slug: "2d-radio-vector-art",
 	route: "/2d-radio-vector-art",
 	category: "Graphic Design",
-	cardImage: "/images/feature-work-2.jpg",
+	cardImage: "/images/radio-vector-art/feature-work-2.jpg",
 	cardDescription:
 		"Produce a photo-realistic 2D illustration that achieves a 3D effect.",
 	tools: ["Illustrator"],

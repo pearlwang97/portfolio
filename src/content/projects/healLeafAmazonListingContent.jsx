@@ -113,17 +113,7 @@ export const healLeafAmazonListingOverviewItems = [
 	{ key: "Client", value: "Heal Leaf" },
 	{
 		key: "Deliverables",
-		value: "12 square Amazon listing images and 6 Amazon A+ content modules",
-	},
-	{
-		key: "AI Workflow",
-		value:
-			"Used AI image generation to build scenes, model visuals, and ingredient compositions, then refined each asset through retouching, compositing, and layout polishing.",
-	},
-	{
-		key: "Focus",
-		value:
-			"Balanced Amazon compliance, product clarity, and a clean botanical brand story across both conversion-focused hero images and longer-form detail content.",
+		value: "Amazon listing images and A+ content modules",
 	},
 ];
 
@@ -135,18 +125,10 @@ export const getHealLeafAmazonListingNavGroups = ({ OverviewList }) => [
 			<ProjectStepSection title="Overview" id="1">
 				<OverviewList />
 				<Body1>
-					This project brought together two connected Amazon asset systems for
-					Heal Leaf: a square-format listing image set built to perform inside
-					search and product detail pages, and a companion A+ content series
-					designed to carry more brand story, usage guidance, and ingredient
-					context further down the funnel.
+					This project involved the design of Amazon product listing visuals, including both the main product images and the A+ / detail page graphics.
 				</Body1>
 				<Body1 sx={{ marginTop: "1rem" }}>
-					My role centered on AI-assisted art direction. I used generative
-					imagery to accelerate concept exploration, build polished lifestyle
-					scenes, and create ingredient-led composites, then moved into manual
-					post-production to keep the final visuals aligned with Amazon
-					requirements, product accuracy, and Heal Leaf’s soft natural palette.
+					I was responsible for the visual design and layout, creating a clean, engaging, and conversion-focused presentation tailored for e-commerce. While all design direction, composition, and page structure were developed by me, I also used AI tools strategically to generate realistic product imagery that supported the visual storytelling. All images used in this project were AI-generated, then refined and integrated into the final designs to create polished, brand-ready marketing assets.
 				</Body1>
 			</ProjectStepSection>
 		),
@@ -156,60 +138,16 @@ export const getHealLeafAmazonListingNavGroups = ({ OverviewList }) => [
 		label: "main images",
 		render: () => (
 			<ProjectStepSection title="Amazon Main Images" id="2">
-				<Body1>
-					The first image set was designed for the core listing gallery, where
-					clarity and consistency matter most. The sequence starts with clean
-					hero images, then expands into multi-angle views, formula highlights,
-					hair-benefit storytelling, lifestyle use cases, and clean-ingredient
-					claims. Because these deliverables were created for Amazon’s square
-					image format, they are presented here in a two-column layout to
-					preserve their intended composition.
-				</Body1>
 				<SquareGallery images={amazonMainImages} />
 			</ProjectStepSection>
 		),
 	},
 	{
 		id: "3",
-		label: "a+ content",
+		label: "a+ design",
 		render: () => (
-			<ProjectStepSection title="Amazon A+ Content" id="3">
-				<Body1>
-					The A+ series extends the listing beyond quick-scan benefits into a
-					more narrative product story. These modules explain the botanical
-					formula, show the full wash-and-care bundle, map the usage flow,
-					reinforce sustainability messaging, and frame the product as a
-					premium but practical everyday routine.
-				</Body1>
-				<Body1 sx={{ marginTop: "1rem" }}>
-					Compared with the main gallery, the A+ layouts lean more heavily on
-					structured information design. I kept the visual system cohesive by
-					repeating Heal Leaf’s blue-and-neutral palette, echoing the same
-					product photography language, and pairing AI-generated imagery with
-					cleaner text hierarchy for readability.
-				</Body1>
+			<ProjectStepSection title="Amazon A+ Page Design" id="3">
 				<FullWidthGallery images={amazonAplusImages} />
-			</ProjectStepSection>
-		),
-	},
-	{
-		id: "4",
-		label: "ai process",
-		render: () => (
-			<ProjectStepSection title="AI-Assisted Design Process" id="4">
-				<Body1>
-					AI was not used here as a shortcut to skip design decisions; it was
-					used as a production accelerator. It helped generate believable
-					lifestyle setups, broaden visual options for model-based scenes, and
-					build supporting imagery that would have been time-intensive to stage
-					or source manually.
-				</Body1>
-				<Body1 sx={{ marginTop: "1rem" }}>
-					The final step was deliberate human refinement: selecting usable
-					outputs, correcting details, retouching surfaces, balancing lighting,
-					adjusting typography, and tightening layouts so every image felt
-					consistent, on-brand, and ready for a real ecommerce environment.
-				</Body1>
 			</ProjectStepSection>
 		),
 	},

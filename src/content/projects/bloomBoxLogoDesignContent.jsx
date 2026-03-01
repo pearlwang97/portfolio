@@ -6,7 +6,7 @@ import Body1 from "components/shared/Body1/Body1";
 
 export const bloomBoxLogoDesignProject = {
 	title: "BloomBox Logo Design",
-	imageSrc: "/images/bloombox-banner.webp",
+	imageSrc: "/images/bloom-box-logo/bloombox-banner.webp",
 	prevLink: "/furniture-banner-design",
 	nextLink: "/2d-radio-vector-art",
 };
@@ -61,7 +61,7 @@ export const getBloomBoxLogoDesignNavGroups = ({ OverviewList }) => [
 						reflecting bloom, growth, and tranquility.
 					</Body1>
 					<Image
-						src="/images/bloombox-style-guide.webp"
+						src="/images/bloom-box-logo/bloombox-style-guide.webp"
 						alt="bloombox style guide"
 						sx={{
 							marginBottom: "10px",
@@ -83,15 +83,15 @@ export const getBloomBoxLogoDesignNavGroups = ({ OverviewList }) => [
 						mockups to showcase the branding in various applications while
 						ensure the brand consistency.
 					</Body1>
-					<Image src="/images/bloombox-newsletter.webp" alt="bloombox newsletter" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-1.webp" alt="bloombox mockup 1" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-2.webp" alt="bloombox mockup 2" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-3.webp" alt="bloombox mockup 3" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-4.webp" alt="bloombox mockup 4" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-5.webp" alt="bloombox mockup 5" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-6.webp" alt="bloombox mockup 6" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-7.webp" alt="bloombox mockup 7" sx={{ width: { sm: "100%" } }} />
-					<Image src="/images/bloombox-mockup-8.webp" alt="bloombox mockup 8" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-newsletter.webp" alt="bloombox newsletter" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-1.webp" alt="bloombox mockup 1" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-2.webp" alt="bloombox mockup 2" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-3.webp" alt="bloombox mockup 3" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-4.webp" alt="bloombox mockup 4" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-5.webp" alt="bloombox mockup 5" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-6.webp" alt="bloombox mockup 6" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-7.webp" alt="bloombox mockup 7" sx={{ width: { sm: "100%" } }} />
+					<Image src="/images/bloom-box-logo/bloombox-mockup-8.webp" alt="bloombox mockup 8" sx={{ width: { sm: "100%" } }} />
 				</Grid>
 			</ProjectStepSection>
 		),
@@ -102,7 +102,7 @@ const bloomBoxLogoDesignContent = {
 	slug: "bloom-box-logo",
 	route: "/bloom-box-logo",
 	category: "Graphic Design",
-	cardImage: "/images/bloombox-cover.webp",
+	cardImage: "/images/bloom-box-logo/bloombox-cover.webp",
 	cardDescription: "Create branding with email newsletter design and mockups.",
 	tools: ["Illustrator", "Photoshop", "InDesign"],
 	project: bloomBoxLogoDesignProject,

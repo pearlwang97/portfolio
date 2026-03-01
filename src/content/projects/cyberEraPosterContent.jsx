@@ -6,7 +6,7 @@ import Body1 from "components/shared/Body1/Body1";
 
 export const cyberEraPosterProject = {
 	title: "Cyber Era Poster Design",
-	imageSrc: "/images/cyber-era-1.jpg",
+	imageSrc: "/images/cyber-era-poster/cyber-era-1.jpg",
 	prevLink: "/chinese-zodiac",
 	nextLink: "/summit-promotional-video",
 };
@@ -56,7 +56,7 @@ export const getCyberEraPosterNavGroups = ({ OverviewList }) => [
 							cybernetic theme.
 						</Body1>
 						<Image
-							src="/images/project-6-concept.jpg"
+							src="/images/cyber-era-poster/project-6-concept.jpg"
 							alt="cyber era concept sketch"
 							sx={{
 								marginBottom: "10px",
@@ -76,7 +76,7 @@ export const getCyberEraPosterNavGroups = ({ OverviewList }) => [
 							futuristic realm.
 						</Body1>
 						<Image
-							src="/images/cyber-era-glass.jpg"
+							src="/images/cyber-era-poster/cyber-era-glass.jpg"
 							alt="cyber era glass poster mockup"
 							sx={{
 								marginBottom: "10px",
@@ -85,7 +85,7 @@ export const getCyberEraPosterNavGroups = ({ OverviewList }) => [
 						/>
 						<Box sx={{ display: "block" }}>
 							<Image
-								src="/images/cyber-era-vertical.webp"
+								src="/images/cyber-era-poster/cyber-era-vertical.webp"
 								sx={{
 									float: "right",
 									marginLeft: "20px",
@@ -149,7 +149,7 @@ export const getCyberEraPosterNavGroups = ({ OverviewList }) => [
 		render: () => (
 			<ProjectStepSection title="Deliverable" id="6">
 				<Grid container justifyContent="space-between">
-					<Image src="/images/cyber-era-final.jpg" alt="cyber era final poster" />
+					<Image src="/images/cyber-era-poster/cyber-era-final.jpg" alt="cyber era final poster" />
 				</Grid>
 			</ProjectStepSection>
 		),
@@ -160,7 +160,7 @@ const cyberEraPosterContent = {
 	slug: "cyber-era-poster",
 	route: "/cyber-era-poster",
 	category: "Graphic Design",
-	cardImage: "/images/feature-work-6.jpg",
+	cardImage: "/images/cyber-era-poster/feature-work-6.jpg",
 	cardDescription: "Design a poster that represents the cyber era.",
 	tools: ["Illustrator", "Photoshop"],
 	project: cyberEraPosterProject,

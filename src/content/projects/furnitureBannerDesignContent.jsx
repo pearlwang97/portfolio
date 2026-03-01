@@ -6,7 +6,7 @@ import Image from "components/shared/Image/Image";
 
 export const furnitureBannerDesignProject = {
 	title: "Weekends Catalog &  Campaign",
-	imageSrc: "/images/weekend-banner.webp",
+	imageSrc: "/images/furniture-banner-design/weekend-banner.webp",
 	prevLink: "/bloom-app-design",
 	nextLink: "/bloom-box-logo",
 };
@@ -37,7 +37,7 @@ export const getFurnitureBannerDesignNavGroups = ({ OverviewList }) => [
 						</Body1>
 					</Grid>
 					<Grid container justifyContent="space-between">
-						<Image src="/images/weekend-slogan.png" alt="weekend slogan" />
+						<Image src="/images/furniture-banner-design/weekend-slogan.png" alt="weekend slogan" />
 					</Grid>
 				</Grid>
 			</ProjectStepSection>
@@ -59,7 +59,7 @@ export const getFurnitureBannerDesignNavGroups = ({ OverviewList }) => [
 						weekends" concept of the brand was set.
 					</Body1>
 					<Image
-						src="/images/weekend-style-guide.jpg"
+						src="/images/furniture-banner-design/weekend-style-guide.jpg"
 						alt="weekend style guide"
 					/>
 				</Grid>
@@ -82,10 +82,10 @@ export const getFurnitureBannerDesignNavGroups = ({ OverviewList }) => [
 							resonates with the target audience’s expectations of a
 							leisurely, weekend lifestyle at home.
 						</Body1>
-						<Image src="/images/weekend-mockup-1.webp" alt="weekend mockup 1" />
-						<Image src="/images/weekend-mockup-2.webp" alt="weekend mockup 2" />
-						<Image src="/images/weekend-mockup-3.webp" alt="weekend mockup 3" />
-						<Image src="/images/weekend-mockup-4.webp" alt="weekend mockup 4" />
+						<Image src="/images/furniture-banner-design/weekend-mockup-1.webp" alt="weekend mockup 1" />
+						<Image src="/images/furniture-banner-design/weekend-mockup-2.webp" alt="weekend mockup 2" />
+						<Image src="/images/furniture-banner-design/weekend-mockup-3.webp" alt="weekend mockup 3" />
+						<Image src="/images/furniture-banner-design/weekend-mockup-4.webp" alt="weekend mockup 4" />
 					</Grid>
 				</ProjectStepSection>
 				<ProjectStepSection title="Digital Banner" id="4">
@@ -96,7 +96,7 @@ export const getFurnitureBannerDesignNavGroups = ({ OverviewList }) => [
 							across various sizes.
 						</Body1>
 						<Image
-							src="/images/weekend-furniture-banners.webp"
+							src="/images/furniture-banner-design/weekend-furniture-banners.webp"
 							alt="weekend banners"
 						/>
 					</Grid>
@@ -109,7 +109,7 @@ export const getFurnitureBannerDesignNavGroups = ({ OverviewList }) => [
 							captions within a creatively designed layout.
 						</Body1>
 						<Image
-							src="/images/weekend-social-posts.webp"
+							src="/images/furniture-banner-design/weekend-social-posts.webp"
 							alt="weekend social posts"
 						/>
 					</Grid>
@@ -123,7 +123,7 @@ const furnitureBannerDesignContent = {
 	slug: "furniture-banner-design",
 	route: "/furniture-banner-design",
 	category: "Graphic Design",
-	cardImage: "/images/weekend-cover.webp",
+	cardImage: "/images/furniture-banner-design/weekend-cover.webp",
 	cardDescription: "Design branding, catalog and campaigns for Weekends.",
 	tools: ["InDesign", "Illustrator", "Photoshop"],
 	project: furnitureBannerDesignProject,

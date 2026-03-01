@@ -6,7 +6,7 @@ import ProjectStepSection from "components/shared/ProjectStepSection/ProjectStep
 
 export const bloomAppDesignProject = {
 	title: "Bloom App Design",
-	imageSrc: "/images/bloom-app-banner.webp",
+	imageSrc: "/images/bloom-app-design/bloom-app-banner.webp",
 	prevLink: "/furniture-banner-design",
 	nextLink: "/furniture-banner-design",
 };
@@ -87,7 +87,7 @@ export const getBloomAppDesignNavGroups = ({ OverviewList }) => {
 								as buttons, icons, and input fields.
 							</Body1>
 							<Image
-								src="/images/project-2-gallery-7.png"
+								src="/images/bloom-app-design/project-2-gallery-7.png"
 								alt="bloom app hi-fi wireframe"
 								sx={{
 									marginBottom: "10px",
@@ -125,7 +125,7 @@ export const getBloomAppDesignNavGroups = ({ OverviewList }) => {
 				<ProjectStepSection title="Deliverable" id="6">
 					<Grid container justifyContent="space-between">
 						<Image
-							src="/images/project-2-gallery-8.png"
+							src="/images/bloom-app-design/project-2-gallery-8.png"
 							alt="bloom app deliverable screens"
 							sx={{
 								marginBottom: "10px",
@@ -143,7 +143,7 @@ const bloomAppDesignContent = {
 	slug: "bloom-app-design",
 	route: "/bloom-app-design",
 	category: "UI/UX Design",
-	cardImage: "/images/feature-work-5.jpg",
+	cardImage: "/images/bloom-app-design/feature-work-5.jpg",
 	cardDescription:
 		"Create a user-centered, modern interface for the existing Bloom App.",
 	tools: ["Figma"],

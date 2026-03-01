@@ -43,7 +43,7 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 		id: "2",
 		label: "brochure design",
 		render: () => (
-			<ProjectStepSection title="Brochure Design" id="2">
+			<ProjectStepSection title="Brochure and Datasheet Design" id="2">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						The brochure layout was designed to make dense technical content
@@ -71,9 +71,9 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 	},
 	{
 		id: "3",
-		label: "digital campaign",
+		label: "website banner",
 		render: () => (
-			<ProjectStepSection title="Digital Campaign" id="3">
+			<ProjectStepSection title="Website Banner" id="3">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						The digital banner set translated the same visual language into web
@@ -111,9 +111,9 @@ export const getIndustrialProductMarketingSystemNavGroups = ({ OverviewList }) =
 	},
 	{
 		id: "4",
-		label: "environmental graphics",
+		label: "other",
 		render: () => (
-			<ProjectStepSection title="Environmental Graphics" id="4">
+			<ProjectStepSection title="Other" id="4">
 				<Grid container justifyContent="space-between">
 					<Body1>
 						The system was also extended into physical applications, including
