@@ -151,7 +151,7 @@ const industrialProductMarketingSystemContent = {
 	slug: "industrial-graphic-design",
 	route: "/industrial-graphic-design",
 	category: "Graphic Design",
-	cardImage: "/images/industrial-brand-system/gaskets-banner.jpg",
+	cardImage: "/images/industrial-brand-system/thumbnail-2.png",
 	cardDescription:
 		"Designed a cohesive brochure, banner suite, and environmental graphics system for industrial products.",
 	tools: ["InDesign", "Illustrator", "Photoshop"],

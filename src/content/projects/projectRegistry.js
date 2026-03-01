@@ -5,6 +5,7 @@ import cupidLyricVideoContent from "./cupidLyricVideoContent";
 import cyberEraPosterContent from "./cyberEraPosterContent";
 import dominoAppRedesignContent from "./dominoAppRedesignContent";
 import furnitureBannerDesignContent from "./furnitureBannerDesignContent";
+import healLeafAmazonListingContent from "./healLeafAmazonListingContent";
 import industrialProductMarketingSystemContent from "./industrialProductMarketingSystemContent";
 import radioVectorArtContent from "./radioVectorArtContent";
 import summitPromotionalVideoContent from "./summitPromotionalVideoContent";
@@ -18,6 +19,7 @@ const rawProjectContents = [
 	chineseZodiacContent,
 	cyberEraPosterContent,
 	industrialProductMarketingSystemContent,
+	healLeafAmazonListingContent,
 	summitPromotionalVideoContent,
 	cupidLyricVideoContent,
 ];
