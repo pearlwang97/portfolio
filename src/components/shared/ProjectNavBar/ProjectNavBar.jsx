@@ -68,7 +68,6 @@ const ProjectNavBar = ({ navItems }) => {
 						spy={true}
 						smooth={true}
 						duration={500}
-						hashSpy={true}
 					>
 						{navItem.label}
 					</StyledNavItem>
